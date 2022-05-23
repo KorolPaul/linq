@@ -1,28 +1,20 @@
 .logo {
     position: relative;
     z-index: 1;
-    transition: .2s $easing filter,
-                .5s linear transform;
+    transition: .5s linear opacity;
 
     &:hover {
-        filter: brightness(4) grayscale(1);
-        //transform: rotate(360deg);
-        transition: .2s $easing filter,
-                    5s linear transform;
+        opacity: .6;
+    }
+    &:active {
+        opacity: .8;
     }
 
     &_image {
         display: block;
-        transition: .5s linear transform;
+        width: 67px;
         @include desktop {
-            width: 74px;
-        }
-        @include desktop-large {
-            width: 5.4vw;
-        }
-
-        .logo:hover & {
-            transform: scale(1.1);
+            width: 110px;
         }
     }
 }

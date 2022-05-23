@@ -37,21 +37,12 @@
 }
 
 @mixin layout {
-    padding-left: $side-indent;
-    padding-right: $side-indent;
+    padding-left: $indent;
+    padding-right: $indent;
     @include tablet {
         max-width: $max-width;
         margin-left: auto;
         margin-right: auto;
-        padding-left: $side-indent__tablet;
-        padding-right: $side-indent__tablet;
-    }
-    @include desktop {
-        padding-left: $side-indent__desktop;
-        padding-right: $side-indent__desktop;
-    }
-    @include desktop-large() {
-        max-width: $max-width__desktop-large;
     }
 }
 

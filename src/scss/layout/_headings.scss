@@ -3,7 +3,7 @@
     line-height: .95;
     font-weight: 400;
     margin: 0 0 70px;
-    @include desktop {
+    @include tablet {
         font-size: 140px;
         margin-bottom: 120px;
     }

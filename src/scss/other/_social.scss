@@ -1,0 +1,28 @@
+.social {
+    display: flex;
+
+    &__menu {
+        display: block;
+        @include desktop {
+            display: flex;
+        }
+    }
+
+    &_link {
+        background-color: $cPurple;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 16px 0 0;
+
+        .social__menu & {
+            margin: 0 0 16px;
+            @include desktop {
+                margin: 0 16px 0 0;
+            }
+        }
+    }
+}

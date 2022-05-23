@@ -2,27 +2,29 @@
     display: inline-block;
     background: transparent;
     box-sizing: border-box;
-    border: 2px solid currentColor;
-    border-radius: 14px;
+    border: 2px solid $cGreen;
+    border-radius: 8px 0px;
+    background-color: $cGreen;
     cursor: pointer;
     color: $color;
-    font-weight: bold;
-    font-size: 20px;
-    height: 56px;
-    line-height: 56px;
+    font-size: 17px;
+    font-weight: 600;
+    height: 70px;
+    line-height: 70px;
     padding: 0 24px;
     min-width: 146px;
     text-align: center;
-    transition: .2s ease-in-out border-color,
-                .2s ease-in-out color;
-    @include desktop {
-        font-size: 24px;
-        height: 72px;
-        line-height: 60px;
-        min-width: 220px;
+    transform: scale(1);
+    transition: .2s $easing color,
+                .2s $easing background-color,
+                .2s $easing transform;
+    
+    &:hover {
+        background-color: transparent;
+        transform: scale(1.02);
     }
-
     &:active {
+        transform: scale(.98);
     }
     &:disabled {
         opacity: .6;
@@ -47,24 +49,14 @@ input[type="submit"] {
     @include button;
 }
 
-.secondary-button {
-    border: 1px solid rgba(196, 196, 196, .5);
-    background: #fff;
-    color: $color;
-}
+.button {
+    &__dark {
+        color: $bg_color;
+        background-color: $color;
 
-.light-button {
-    @include button;
-    display: inline-block;
-    border: 1px solid $cRed;
-    background: #fff;
-    color: $cRed;
-    width: auto;
-    transition: .2s $easing color,
-                .2s $easing background;
-
-    &:hover {
-        color: $color;
-        background-color: $cRed;
+        &:hover {
+            color: $color;
+            background-color: $bg_color;
+        }
     }
 }

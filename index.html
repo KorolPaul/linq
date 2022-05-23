@@ -17,53 +17,1168 @@
 </head>
 <body>
     <header class="header">
-        <a class="logo" href="#">
-            <img class="logo_image" src="src/img/logo.svg" alt="">
-        </a>
-        <div class="header_right">
-            <button class="get-quote js-popup-toggle" data-popup="request">
-                <div class="get-quote_filled-bg"></div>
-                <span class="get-quote_text">Get a quote</span>
-            </button>
+        <div class="header_holder">
+            <a class="logo" href="/">
+                <img class="logo_image" src="src/img/logo.svg" alt="logo">
+            </a>
             <button class="menu-toggle">
-                <div class="menu-toggle_bg"></div>
-                <div class="menu-toggle_filled-bg"></div>
-                <div class="menu-toggle_close-bg"></div>
+                <div class="menu-toggle_line"></div>
+                <div class="menu-toggle_line"></div>
+                <div class="menu-toggle_line"></div>
             </button>
+            <div class="menu">
+                <nav class="menu_links">
+                    <div class="menu_link">Speakers</div>
+                    <div class="menu_link">Agenda</div>
+                    <div class="menu_link">Partners</div>
+                    <div class="menu_link">Location</div>
+                    <div class="menu_link">About us</div>
+                    <div class="menu_link">Contact us</div>
+                    <div class="menu_link">FAQ</div>
+                </nav>
+                <div class="menu_button">
+                    <a class="button" href="#">
+                        Get Tickets
+                    </a>
+                </div>
+                <div class="menu_social">
+                    <div class="social social__menu">
+                        <a href="#" class="social_link">
+                            <img src="src/img/social/fb.svg" alt="facebook">
+                        </a>
+                        <a href="#" class="social_link">
+                            <img src="src/img/social/insta.svg" alt="instagram">
+                        </a>
+                        <a href="#" class="social_link">
+                            <img src="src/img/social/tg.svg" alt="telegram">
+                        </a>
+                        <a href="#" class="social_link">
+                            <img src="src/img/social/in.svg" alt="linkedin">
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <nav class="menu">
-            <a href="#what-we-do" class="menu_link">
-                <span class="menu_link-text">
-                    <strong>What</strong> we <strong>do</strong>
-                </span>
-            </a>
-            <a href="#partners" class="menu_link">
-                <span class="menu_link-text">
-                    <strong>Partners</strong>
-                </span>
-            </a>
-            <a href="#what-we-did" class="menu_link">
-                <span class="menu_link-text">
-                    What <strong>we did</strong>
-                </span>
-            </a>
-            <a href="#team" class="menu_link">
-                <span class="menu_link-text">
-                    <strong>team</strong>
-                </span>
-            </a>
-            <a href="#careers" class="menu_link">
-                <span class="menu_link-text">
-                    <span>careers</span>
-                </span>
-            </a>
-        </nav>
     </header>
 
-    <main>
-        <div class="particles js-particles" data-image="images/canvas.webp"></div>
+    <main class="main">
+        <div class="showcase">
+            <div class="showcase_holder">
+                <div class="showcase_bg">
+                    <img src="src/img/showcase-photo.jpg" alt="" class="showcase_image">
+                </div>
+                <div class="showcase_content">
+                    <h2 class="showcase_title">
+                        <strong>Linq Conference</strong>
+                        For tech minds and souls
+                    </h2>
+                    <h3 class="showcase_subtitle">
+                        October 13-14, 2022 Minthis hills, Paphos, Cyprus
+                    </h3>
+                </div>
+            </div>
+        </div>
 
+        <!--
+
+        <section class="info">
+            <div class="container">
+                <div class="info-inner">
+                    <a href="#" class="notify-label">
+                        Welcome to Linq
+                    </a>
+                    <h2 class="main-title">Conference in the heart of Cyprus tech scene</h2>
+                    <div class="info-text__wrap">
+                        <img class="info-pic" src="src/img/info-bg.png" alt="figure">
+                        <div class="info-text__items">
+                            <div class="info-text">
+                                Join Linq - a place where tech executives, investors, policymakers and tech-lovers come together to inspire, educate and connect, all while having an unparalleled experience.
+                            </div>
+                            <a class="get-ticket__btn" href="/tickets">Get Tickets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="who">
+            <div class="container">
+                <div class="who-inner">
+                    <h2 class="main-title who-title">Who you will meet at Linq</h2>
+                    <div class="who-item__box">
+                        <div class="who-item__row who-item__row-one">
+                            <div class="who-item who-item__first">
+                                <div class="who-item__number">
+                                    700
+                                </div>
+                                <div class="who-item__text">
+                                    attendees
+                                </div>
+                            </div>
+                            <div class="who-item who-item__second">
+                                <div class="who-item__number">
+                                    70%
+                                </div>
+                                <div class="who-item__text">
+                                    owners and c-level executives
+                                </div>
+                            </div>
+                            <div class="who-item who-item__third">
+                                <div class="who-item__number">
+                                    15
+                                </div>
+                                <div class="who-item__text">
+                                    countries
+                                </div>
+                            </div>
+                        </div>
+                        <div class="who-item__row who-item__row-two">
+                            <div class="who-item who-item__fourth">
+                                <div class="who-item__number">
+                                    100%
+                                </div>
+                                <div class="who-item__text">
+                                    decision-makers
+                                </div>
+                            </div>
+                            <div class="who-item who-item__fifth">
+                                <div class="who-item__number">
+                                    130+
+                                </div>
+                                <div class="who-item__text">
+                                    companies
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="who-item__row-mobile">
+                            <div class="who-item__col-mobile who-item__col-one">
+                                <div class="who-item-mobile who-item__first-mobile">
+                                    <div class="who-item__number-mobile">
+                                        700
+                                    </div>
+                                    <div class="who-item__text-mobile">
+                                        attendees
+                                    </div>
+                                </div>
+                                <div class="who-item-mobile who-item__second-mobile">
+                                    <div class="who-item__number-mobile">
+                                        100%
+                                    </div>
+                                    <div class="who-item__text-mobile">
+                                        decision-makers
+                                    </div>
+                                </div>
+                                <div class="who-item-mobile who-item__third-mobile">
+                                    <div class="who-item__number-mobile">
+                                        130+
+                                    </div>
+                                    <div class="who-item__text-mobile">
+                                        companies
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="who-item__col-mobile who-item__col-two">
+                                <div class="who-item-mobile who-item__fourth-mobile">
+                                    <div class="who-item__number-mobile">
+                                        70%
+                                    </div>
+                                    <div class="who-item__text-mobile">
+                                        owners
+                                        and c-level
+                                        executives
+                                    </div>
+                                </div>
+                                <div class="who-item-mobile who-item__fifth-mobile">
+                                    <div class="who-item__number-mobile">
+                                        15
+                                    </div>
+                                    <div class="who-item__text-mobile">
+                                        countries
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="events">
+            <div class="container">
+                <div class="events-inner">
+                    <a href="#" class="notify-label">
+                        What to expect at Linq
+                    </a>
+                    <div class="events-slider__nav-wrap">
+                        <div class="events-slider events-slider__nav slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 30000px; transform: translate3d(-1538px, 0px, 0px);"><div class="slick-slide slick-cloned" data-slick-index="-3" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Relax</div></div></div><div class="slick-slide slick-cloned" data-slick-index="-2" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Location</div></div></div><div class="slick-slide slick-cloned" data-slick-index="-1" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Party</div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Content</div></div></div><div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Network</div></div></div><div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">VIP Events</div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Relax</div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Location</div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Party</div></div></div><div class="slick-slide slick-cloned" data-slick-index="6" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Content</div></div></div><div class="slick-slide slick-cloned" data-slick-index="7" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Network</div></div></div><div class="slick-slide slick-cloned" data-slick-index="8" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">VIP Events</div></div></div><div class="slick-slide slick-cloned" data-slick-index="9" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Relax</div></div></div><div class="slick-slide slick-cloned" data-slick-index="10" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Location</div></div></div><div class="slick-slide slick-cloned" data-slick-index="11" id="" aria-hidden="true" tabindex="-1"><div><div class="events-slider__tab" style="width: 100%; display: inline-block;">Party</div></div></div></div></div></div>
+                    </div>
+                    <div class="events-slider events-slider__single slick-initialized slick-slider"><div class="slick-list draggable"><div class="slick-track" style="opacity: 1; width: 7278px;"><div class="slick-slide slick-current slick-active" data-slick-index="0" aria-hidden="false" style="width: 1213px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    Gain unparalleled insights from expert speakers in an intimate setting.
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="0">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/2bccdfcc06d9262468871fd68612439b.jpg" alt="events">
+                            </div>
+                        </div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1213px; position: relative; left: -1213px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    Tap into a rich and diverse network of top-level professionals
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="-1">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/5cf51da3a4e0fa6b7aa4511ef3dc90f3.jpg" alt="events">
+                            </div>
+                        </div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1213px; position: relative; left: -2426px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    Get access to exclusive networking events: Speaker’s dinner, VIP Dinner and lounge area
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="-1">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/5156a7cc00ff4b62bef0c2b0b036de93.jpg" alt="events">
+                            </div>
+                        </div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 1213px; position: relative; left: -3639px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    Take a break from the bustle of the conference and relax in our tea&amp;shisha area
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="-1">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/a22a9c7d7a5b2a5ff6babc81baaaf223.jpg" alt="events">
+                            </div>
+                        </div></div></div><div class="slick-slide" data-slick-index="4" aria-hidden="true" style="width: 1213px; position: relative; left: -4852px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    Enjoy unique experiences and breathtaking surroundings
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="-1">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/18e2151536c0af0527d19917a22473f4.jpg" alt="events">
+                            </div>
+                        </div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 1213px; position: relative; left: -6065px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1"><div><div class="events-slider__content" style="width: 100%; display: inline-block;">
+                            <div class="events-slider__items">
+                                <div class="events-slider__text">
+                                    End your conference experience on a high note with cocktails and dancing
+                                </div>
+                                <a class="get-ticket__btn" href="/tickets" tabindex="-1">Get Tickets</a>
+                            </div>
+                            <div class="events-slider__images">
+                                <img class="events-slider__img" src="/storage/content/00d1f439df717de9b179bfab5e449224.jpg" alt="events">
+                            </div>
+                        </div></div></div></div></div></div>
+                </div>
+            </div>
+        </section>
+        <section class="stage">
+            <div class="stage-wrapper__fist">
+                <div class="stage-wrapper__second">
+                    <div class="container">
+                        <div class="stage-inner">
+                            <a href="#" class="notify-label stage-label">
+                                What we’ll be talking about
+                            </a>
+                            <h2 class="main-title events-title">Main stage and 6 tracks</h2>
+                            <div class="stage-text__wrap">
+                                <div class="stage-text">
+                                    We're committed to giving you an experience like no other - a vibrant hub for innovation in tech with our main stage and  6 workshop areas designed by industry leaders and focused on your needs.
+                                </div>
+
+                                <a class="get-ticket__btn" href="#">Get Tickets</a>
+                            </div>
+                            <div class="stage-row">
+                                <div class="stage-col__wrap-one">
+                                    <div class="stage-col">
+                                        <a href="#" class="stage-item stage-item__or">ML / AI</a>
+                                        <a href="#" class="stage-item stage-item__gr">Marketing</a>
+                                    </div>
+                                    <div class="stage-col">
+                                        <a href="#" class="stage-item stage-item__bl">Crypto/NFT</a>
+                                        <a href="#" class="stage-item stage-item__pn">GameDev</a>
+                                    </div>
+                                </div>
+                                <div class="stage-col__wrap-two">
+                                    <div class="stage-col stage-col__mobile">
+                                        <a href="#" class="stage-item stage-item__vi">Relocate.IT</a>
+                                        <a href="#" class="stage-item stage-item__pu">
+                                            <span class="stage-item__limit">Investments in Tech</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="location">
+            <div class="container">
+                <div class="location-inner">
+                    <h2 class="main-title">Location</h2>
+                    <div class="location-content">
+                        <div class="location-content__info">
+                            <div class="location-sticky__box">
+                                <div class="location-text">
+                                    The location of this year's conference is everything and we can't wait for you to experience it firsthand! <br>
+<br>
+We’re so glad we're able to offer our attendees an immersive experience with stunning scenery, unique architecture, and delicious food. Join Linq 2022 and discover it yourself!
+                                </div>
+
+                                <a class="get-ticket__btn" href="#">Get Tickets</a>
+                            </div>
+                        </div>
+                        <div class="location-content__images">
+                                                        <div class="location-images__wrap
+                                                            ">
+                                <img class="location-content__img" src="/storage/content/3b0f27388874860005f6031c57a62945.jpg" alt="location">
+                            </div>
+                                                        <div class="location-images__wrap
+                                                            loc-images__wrap-mobile
+                                                            ">
+                                <img class="location-content__img" src="/storage/content/eacae5dbb00a2a38a46f01d74dd0ce46.jpg" alt="location">
+                            </div>
+                                                        <div class="location-images__wrap
+                                                            loc-images__wrap-mobile
+                                                            ">
+                                <img class="location-content__img" src="/storage/content/66b6ac34e8df217d0e725491f565cf95.jpg" alt="location">
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="comments">
+            <div class="container">
+                <h2 class="main-title comments-title__desktop">What people say</h2>
+            </div>
+            <div class="comments-wrapper__first">
+                <div class="comments-wrapper__second">
+                    <div class="container">
+                        <div class="comments-inner">
+                            <h2 class="main-title comments-title__mobile">What people say</h2>
+                            <div class="swiper comments-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1213px, 0px, 0px);" id="swiper-wrapper-b8ac914b40b93cd1" aria-live="polite"><div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 1213px;" role="group" aria-label="4 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “The best IT event on the island so far, by far.”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Alexey Kvasov
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    CIO, GAme Insight
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/a0d40c3c163d4f3d13c9e95ec2eaca56.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 1213px;" role="group" aria-label="1 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “It was very nice to see a warm, friendly atmosphere, high professionalism of the team and an excellent selection of speakers.”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Dmitry Danilenko
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    Founder, PIKE
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/346ab7c5fd8abb95d35404b694662d75.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 1213px;" role="group" aria-label="2 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “Great experience after a long pause”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Vladimir Polakov
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    Head of Sales, Eccompay
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/6b75f53c91fef2bcf9d845caa1a93157.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="swiper-slide" data-swiper-slide-index="2" style="width: 1213px;" role="group" aria-label="3 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “A well-organized event for IT specialists with productive networking and an interesting program of speeches.”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Denys Garmash
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    CEO, Physarium Development
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/1789b2dd22aa722e649865b1b11a2f78.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 1213px;" role="group" aria-label="4 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “The best IT event on the island so far, by far.”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Alexey Kvasov
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    CIO, GAme Insight
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/a0d40c3c163d4f3d13c9e95ec2eaca56.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div>
+                                                                    <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 1213px;" role="group" aria-label="1 / 4">
+                                        <div class="comments-card">
+                                            <div class="comments-card__info">
+                                                <div class="comments-card__text">
+                                                    “It was very nice to see a warm, friendly atmosphere, high professionalism of the team and an excellent selection of speakers.”
+                                                </div>
+                                                <div class="comments-card__name">
+                                                    Dmitry Danilenko
+                                                </div>
+                                                <div class="comments-card__position">
+                                                    Founder, PIKE
+                                                </div>
+                                            </div>
+                                            <div class="comments-card__image">
+                                                <img class="comments-card__img" src="/storage/content/346ab7c5fd8abb95d35404b694662d75.jpg" alt="comment">
+                                            </div>
+                                        </div>
+                                    </div></div>
+
+                                <div class="swiper-navigation comments-navigation">
+                                    <img id="swiperPrev" src="src/img/arrow-prev.svg" alt="prev">
+                                    <img id="swiperNext" src="src/img/arrow-next.svg" alt="next">
+                                </div>
+                                <div class="swiper-pagination comments-pagination swiper-pagination-fraction swiper-pagination-horizontal"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span></div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <a class="get-ticket__btn" href="#">Get Tickets</a>
+            </div>
+        </section>
+        <section class="speakers">
+            <div class="container">
+                <h2 class="main-title">Speakers</h2>
+                <div class="swiper speaker-slider swiper-initialized swiper-horizontal swiper-pointer-events">
+                    <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1756px, 0px, 0px);" id="swiper-wrapper-a13ee1192d2f1be6" aria-live="polite"><div class="swiper-slide speaker-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="margin-right: 19px;" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-org">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/0a0197aece8886cf423cfd1d1357f5b1.png" alt="Christopher Blankenship">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Christopher Blankenship
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="margin-right: 19px;" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-pin">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/2fd50997f0a2bd98a357eec8a1fc60c3.png" alt="Anastasia Vasilevich">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Anastasia Vasilevich
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate" style="margin-right: 19px;" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-blu">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/c5cc0591861cca59ee76a2d8d7f2688c.png" alt="Madison Hutchinson">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Madison Hutchinson
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate swiper-slide-prev" style="margin-right: 19px;" role="group" aria-label="4 / 4" data-swiper-slide-index="3">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-all">
+                                    <div class="speakers-card__all">
+                                        See all speakers
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                    <div class="swiper-slide speaker-slide swiper-slide-active" style="margin-right: 19px;" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-org">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/0a0197aece8886cf423cfd1d1357f5b1.png" alt="Christopher Blankenship">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Christopher Blankenship
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                                                <div class="swiper-slide speaker-slide swiper-slide-next" style="margin-right: 19px;" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-pin">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/2fd50997f0a2bd98a357eec8a1fc60c3.png" alt="Anastasia Vasilevich">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Anastasia Vasilevich
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                                                <div class="swiper-slide speaker-slide" style="margin-right: 19px;" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-blu">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/c5cc0591861cca59ee76a2d8d7f2688c.png" alt="Madison Hutchinson">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Madison Hutchinson
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                                                                            <div class="swiper-slide speaker-slide swiper-slide-duplicate-prev" style="margin-right: 19px;" role="group" aria-label="4 / 4" data-swiper-slide-index="3">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-all">
+                                    <div class="speakers-card__all">
+                                        See all speakers
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    <div class="swiper-slide speaker-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="margin-right: 19px;" role="group" aria-label="1 / 4" data-swiper-slide-index="0">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-org">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/0a0197aece8886cf423cfd1d1357f5b1.png" alt="Christopher Blankenship">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Christopher Blankenship
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="margin-right: 19px;" role="group" aria-label="2 / 4" data-swiper-slide-index="1">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-pin">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/2fd50997f0a2bd98a357eec8a1fc60c3.png" alt="Anastasia Vasilevich">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Anastasia Vasilevich
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate" style="margin-right: 19px;" role="group" aria-label="3 / 4" data-swiper-slide-index="2">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-blu">
+                                    <div class="speakers-card__label">Microsoft</div>
+                                    <img class="speakers-img" src="/storage/content/c5cc0591861cca59ee76a2d8d7f2688c.png" alt="Madison Hutchinson">
+                                    <div class="speakers-card__bottom speakers-card__bottom-org">
+                                        <div class="speakers-name">
+                                            Madison Hutchinson
+                                        </div>
+                                        <div class="speakers-position">
+                                            Senior project manager
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div><div class="swiper-slide speaker-slide swiper-slide-duplicate" style="margin-right: 19px;" role="group" aria-label="4 / 4" data-swiper-slide-index="3">
+                            <a href="#" class="speakers-card">
+                                <div class="speakers-card__inner speakers-card__inner-all">
+                                    <div class="speakers-card__all">
+                                        See all speakers
+                                    </div>
+                                </div>
+                            </a>
+                        </div></div>
+                    <div class="speakers-slider__box">
+
+                        <a class="get-ticket__btn" href="#">Get Tickets</a>
+                        <div class="swiper-navigation speakers-navigation">
+                            <img id="speakerSwiperPrev" src="src/img/arrow-prev.svg" alt="prev">
+                            <img id="speakerSwiperNext" src="src/img/arrow-next.svg" alt="next">
+                        </div>
+                        <div class="swiper-pagination speaker-pagination swiper-pagination-fraction swiper-pagination-horizontal"><span class="swiper-pagination-current">1</span> / <span class="swiper-pagination-total">4</span></div>
+                    </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+            </div>
+        </section>
+        <section class="history">
+            <div class="container">
+                <h2 class="main-title history-title">How it was in 2021</h2>
+                <div class="history-inner">
+                    <div class="history-item">
+                        <video poster="src/img/video-poster.png" preload="" class="history-item__video">
+                            <source src="video/sea.webm" type="video/webm">
+                            <source src="video/sea.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="solutions">
+            <div class="container">
+                <a href="#" class="notify-label">
+                    Tickets
+                </a>
+                <h2 class="main-title">Find solutions to your most pressing issues</h2>
+                <div class="solutions-inner">
+                    <div class="solutions-mode__box">
+                        <div class="solutions-mode__row">
+                            <div class="solutions-mode__items mode-ended">
+                                <div class="solutions-mode">
+                                    <span class="solutions-break">Super Early Bird</span>
+                                </div>
+                                <div class="solutions-date">ended</div>
+                            </div>
+                            <div class="solutions-mode__items mode-current">
+                                <div class="solutions-mode">Early Bird</div>
+                                <div class="solutions-date">ends July 1</div>
+                            </div>
+                            <div class="solutions-mode__items">
+                                <div class="solutions-mode">Regular</div>
+                                <div class="solutions-date">ends September 1</div>
+                            </div>
+                            <div class="solutions-mode__items">
+                                <div class="solutions-mode">Late</div>
+                                <div class="solutions-date">Ends October 1</div>
+                            </div>
+                            <div class="solutions-mode__items">
+                                <div class="solutions-mode">Final</div>
+                                <div class="solutions-date">Ends October 13</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="swiper solutions-slider swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+                        <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1314px, 0px, 0px);" id="swiper-wrapper-f6ed83f3f681e086" aria-live="polite"><div class="swiper-slide solutions-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="margin-right: 19px;" role="group" aria-label="1 / 3" data-swiper-slide-index="0">
+                                <div class="solutions-card solutions-card__orange">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Business
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency ">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">400</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div><div class="swiper-slide solutions-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="margin-right: 19px;" role="group" aria-label="2 / 3" data-swiper-slide-index="1">
+                                <div class="solutions-card solutions-card__pink">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div><div class="swiper-slide solutions-slide swiper-slide-duplicate swiper-slide-prev" style="margin-right: 19px;" role="group" aria-label="3 / 3" data-swiper-slide-index="2">
+                                <div class="solutions-card solutions-card__green">
+                                    <div class="solutions-card__label">Limited offer</div>
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive + Accommodation
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                            <li class="solutions-card__text">Stay at the Luxurious suite on the premises of Minthis Hills resort </li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide solutions-slide swiper-slide-active" style="margin-right: 19px;" role="group" aria-label="1 / 3" data-swiper-slide-index="0">
+                                <div class="solutions-card solutions-card__orange">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Business
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency ">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">400</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide solutions-slide swiper-slide-next" style="margin-right: 19px;" role="group" aria-label="2 / 3" data-swiper-slide-index="1">
+                                <div class="solutions-card solutions-card__pink">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide solutions-slide swiper-slide-duplicate-prev" style="margin-right: 19px;" role="group" aria-label="3 / 3" data-swiper-slide-index="2">
+                                <div class="solutions-card solutions-card__green">
+                                    <div class="solutions-card__label">Limited offer</div>
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive + Accommodation
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                            <li class="solutions-card__text">Stay at the Luxurious suite on the premises of Minthis Hills resort </li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <div class="swiper-slide solutions-slide swiper-slide-duplicate swiper-slide-duplicate-active" style="margin-right: 19px;" role="group" aria-label="1 / 3" data-swiper-slide-index="0">
+                                <div class="solutions-card solutions-card__orange">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Business
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency ">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">400</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div><div class="swiper-slide solutions-slide swiper-slide-duplicate swiper-slide-duplicate-next" style="margin-right: 19px;" role="group" aria-label="2 / 3" data-swiper-slide-index="1">
+                                <div class="solutions-card solutions-card__pink">
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div><div class="swiper-slide solutions-slide swiper-slide-duplicate" style="margin-right: 19px;" role="group" aria-label="3 / 3" data-swiper-slide-index="2">
+                                <div class="solutions-card solutions-card__green">
+                                    <div class="solutions-card__label">Limited offer</div>
+                                    <div class="solutions-card__top">
+                                        <div class="solutions-card__title">
+                                            Executive + Accommodation
+                                        </div>
+                                        <div class="solutions-card__vat">
+                                            Excluding VAT
+                                        </div>
+                                        <div class="solutions-card__price-box">
+                                            <div class="pricing__anim pricing__anim--1">
+                                                <div class="solutions-card__currency">
+                                                    $
+                                                </div>
+                                            </div>
+                                            <div class="pricing__anim pricing__anim--2">
+                                                <div class="solutions-card__price">650</div>
+                                            </div>
+                                        </div>
+                                        <ul class="solutions-card__list">
+                                            <li class="solutions-card__text">Connect with tech entrepreneurs, investors and policymakers</li>
+                                            <li class="solutions-card__text">Match with the right people through our AI-based networking tool</li>
+                                            <li class="solutions-card__text">Get insights from the top minds on the main stage and in 6 workshop areas</li>
+                                            <li class="solutions-card__text">Get exclusive access to the Speaker’s Dinner an VIP Dinner</li>
+                                            <li class="solutions-card__text">Stay at the Luxurious suite on the premises of Minthis Hills resort </li>
+                                        </ul>
+                                    </div>
+                                    <div class="solutions-card__bottom">
+                                        <a class="get-ticket__btn solutions-btn" href="#">Get Tickets</a>
+                                    </div>
+                                </div>
+                            </div></div>
+                        <div class="swiper-pagination solutions-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                </div>
+            </div>
+        </section>
+        <section class="sponsors">
+            <div class="sponsors-wrapper__first">
+                <div class="sponsors-wrapper__second">
+                    <div class="container">
+                        <div class="sponsors-inner">
+                            <h2 class="main-title sponsors-title">Our sponsors</h2>
+                            <div class="sponsors-row__pro">
+                                <div class="sponsors-card__pro">
+                                    <div class="sponsors-card__inner-pro">
+                                        <img class="sponsors-card__img-pro" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__pro">
+                                    <div class="sponsors-card__inner-pro">
+                                        <img class="sponsors-card__img-pro" src="src/img/sponsors-pro-2.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__pro">
+                                    <div class="sponsors-card__inner-pro">
+                                        <img class="sponsors-card__img-pro" src="src/img/sponsors-pro-3.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__pro">
+                                    <div class="sponsors-card__inner-pro">
+                                        <img class="sponsors-card__img-pro" src="src/img/sponsors-pro-4.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sponsors-row__lead">
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__lead">
+                                    <div class="sponsors-card__inner-lead">
+                                        <img class="sponsors-card__img-lead" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sponsors-row__starter">
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-2.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-3.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-3.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                                <div class="sponsors-card__starter">
+                                    <div class="sponsors-card__inner-starter">
+                                        <img class="sponsors-card__img-starter" src="src/img/sponsors-pro-1.svg" alt="sponsor icon">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partners">
+            <div class="container">
+                <h2 class="main-title">Media partners</h2>
+            </div>
+            <div class="partners-inner">
+                <div class="partners-row__top">
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-1.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-2.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-3.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-4.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-1.svg" alt="partners logo">
+                    </div>
+                </div>
+                <div class="partners-row__bottom">
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-5.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-3.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-4.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-1.svg" alt="partners logo">
+                    </div>
+                    <div class="partners-item">
+                        <img class="partners-img" src="src/img/partners-5.svg" alt="partners logo">
+                    </div>
+                </div>
+
+                <div class="partners-col__mobile">
+                    <div class="partners-col__left">
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-1.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-2.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-1.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-2.svg" alt="partners logo">
+                        </div>
+                    </div>
+                    <div class="partners-col__right">
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-2.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-3.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-2.svg" alt="partners logo">
+                        </div>
+                        <div class="partners-item__mobile">
+                            <img class="partners-img__mobile" src="src/img/partners-mobile-3.svg" alt="partners logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    -->
     </main>
 
     <footer class="footer">
@@ -81,7 +1196,7 @@
                             <div class="footer-form__control">
                                 <input class="footer-form__input" type="text" placeholder="Enter your email address">
                                 <a class="footer-mail__send" href="#">
-                                    <img class="footer-mail__send-img" src="/images/icon/footer-send.svg" alt="send">
+                                    <img class="footer-mail__send-img" src="/src/img/icon/footer-send.svg" alt="send">
                                 </a>
                             </div>
                         </form>
@@ -112,24 +1227,24 @@
                             <div class="footer-item__inner">
                                 <div class="footer-social__list">
                                     <a class="footer-social__link" href="#">
-                                        <img src="/images/icon/footer-facebook.svg" alt="facebook">
+                                        <img src="/src/img/icon/footer-facebook.svg" alt="facebook">
                                     </a>
                                     <a class="footer-social__link" href="#">
-                                        <img src="/images/icon/footer-instagram.svg" alt="instagram">
+                                        <img src="/src/img/icon/footer-instagram.svg" alt="instagram">
                                     </a>
                                     <a class="footer-social__link" href="#">
-                                        <img src="/images/icon/footer-telegram.svg" alt="telegram">
+                                        <img src="/src/img/icon/footer-telegram.svg" alt="telegram">
                                     </a>
                                     <a class="footer-social__link" href="#">
-                                        <img src="/images/icon/footer-linkedin.svg" alt="linkedin">
+                                        <img src="/src/img/icon/footer-linkedin.svg" alt="linkedin">
                                     </a>
                                 </div>
                                 <div class="footer-bottom__card-box">
                                     <a class="footer-card" href="#">
-                                        <img src="/images/icon/footer-visa.svg" alt="visa">
+                                        <img src="/src/img/icon/footer-visa.svg" alt="visa">
                                     </a>
                                     <a class="footer-card" href="#">
-                                        <img src="/images/icon/footer-mastercard.svg" alt="master card">
+                                        <img src="/src/img/icon/footer-mastercard.svg" alt="master card">
                                     </a>
                                 </div>
                             </div>
@@ -151,10 +1266,10 @@
                         </div>
                         <div class="footer-bottom__card-mobile">
                             <a class="footer-card" href="#">
-                                <img src="/images/icon/footer-visa.svg" alt="visa">
+                                <img src="/src/img/icon/footer-visa.svg" alt="visa">
                             </a>
                             <a class="footer-card" href="#">
-                                <img src="/images/icon/footer-mastercard.svg" alt="master card">
+                                <img src="/src/img/icon/footer-mastercard.svg" alt="master card">
                             </a>
                         </div>
                     </div>
@@ -178,7 +1293,7 @@
         </div>
     </div>
 
-
+    <div class="fade"></div>
     <div class="popup" data-popup="request">
         <button class="popup_close"></button>
         <div class="popup_content">

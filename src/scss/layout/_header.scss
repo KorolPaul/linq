@@ -1,26 +1,12 @@
 .header {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: $indent;
     left: 0;
     right: 0;
-    padding: 35px $side-indent 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 2;
-    @include tablet {
-        padding-left: $side-indent__tablet;
-        padding-right: $side-indent__tablet;
-    }
-    @include desktop() {
-        padding-left: $side-indent__desktop;
-        padding-right: $side-indent__desktop;
-        padding-top: 50px
-    }
-
-    &_right {
-        @include button-reset;
+    
+    &_holder {
+        @include layout;
         display: flex;
-        align-items: center;
+        justify-content: space-between;
     }
 }
