@@ -9,7 +9,7 @@
     }
 
     &_link {
-        background-color: $cPurple;
+        background-color: $cBlue;
         width: 48px;
         height: 48px;
         border-radius: 50%;
@@ -17,12 +17,17 @@
         align-items: center;
         justify-content: center;
         margin: 0 16px 0 0;
-
+        
         .social__menu & {
+            background-color: $cPurple;
             margin: 0 0 16px;
             @include desktop {
                 margin: 0 16px 0 0;
             }
+        }
+
+        &:last-child {
+            margin: 0;
         }
     }
 }
