@@ -1,0 +1,70 @@
+@mixin button {
+    display: inline-block;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    border-radius: 14px;
+    cursor: pointer;
+    color: $color;
+    font-weight: bold;
+    font-size: 20px;
+    height: 56px;
+    line-height: 56px;
+    padding: 0 24px;
+    min-width: 146px;
+    text-align: center;
+    transition: .2s ease-in-out border-color,
+                .2s ease-in-out color;
+    @include desktop {
+        font-size: 24px;
+        height: 72px;
+        line-height: 60px;
+        min-width: 220px;
+    }
+
+    &:active {
+    }
+    &:disabled {
+        opacity: .6;
+    }
+}
+
+@mixin button-reset {
+    border: none;
+    padding: 0;
+    background: transparent;
+    height: auto;
+    line-height: 1.2;
+    min-width: 0;
+    width: auto;
+    border-radius: 0;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"] {
+    @include button;
+}
+
+.secondary-button {
+    border: 1px solid rgba(196, 196, 196, .5);
+    background: #fff;
+    color: $color;
+}
+
+.light-button {
+    @include button;
+    display: inline-block;
+    border: 1px solid $cRed;
+    background: #fff;
+    color: $cRed;
+    width: auto;
+    transition: .2s $easing color,
+                .2s $easing background;
+
+    &:hover {
+        color: $color;
+        background-color: $cRed;
+    }
+}

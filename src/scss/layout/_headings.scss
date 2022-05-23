@@ -1,0 +1,76 @@
+%heading-1 {
+    font-size: 48px;
+    line-height: .95;
+    font-weight: 400;
+    margin: 0 0 70px;
+    @include desktop {
+        font-size: 140px;
+        margin-bottom: 120px;
+    }
+}
+%heading-2 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 0 0 20px;
+    @include desktop {
+        font-size: 72px;
+    }
+}
+%heading-3 {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+    @include desktop {
+        font-size: 60px;
+    }
+}
+%heading-4 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 400;
+    @include desktop {
+        font-size: 40px;
+    }
+}
+%heading-5 {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    @include desktop {
+        font-size: 32px;
+    }
+}
+%heading-6 {
+    font-size: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    @include desktop {
+        font-size: 24px;
+    }
+}
+
+h1,
+.heading-1{
+    @extend %heading-1;
+}
+h2,
+.heading-2 {
+    @extend %heading-2;
+}
+h3,
+.heading-3 {
+    @extend %heading-3;
+}
+h4,
+.heading-4 {
+    @extend %heading-4;
+}
+h5,
+.heading-5 {
+    @extend %heading-5;
+}
+h6,
+.heading-6 {
+    @extend %heading-6;
+}

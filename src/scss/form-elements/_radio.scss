@@ -1,0 +1,64 @@
+input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+
+    & + label:not([class]) {
+        cursor: pointer;
+        display: block;
+        box-sizing: border-box;
+        padding: 25px 0 25px 50px;
+        color: rgba($color, .5);
+        font-weight: bold;
+        font-size: 14px;
+        position: relative;
+        margin: 0 0 20px;
+        border: 1px solid #E5E5E5;
+        min-height: 63px;
+        line-height: .7;
+        border-radius: 3px;
+        transition: .2s $easing color;
+        @include tablet {
+            font-size: 22px;
+        }
+
+        &::before {
+            content: '';
+            border: 1px solid #313235;
+            border-radius: 50%;
+            height: 17px;
+            width: 17px;
+            position: absolute;
+            top: 22px;
+            left: 17px;
+            transition: .1s ease-in-out border-color;
+        }
+        &::after {
+            content: '';
+            background: transparent;
+            border-radius: 50%;
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            top: 26px;
+            left: 21px;
+            transform: scale(.6);
+            transition: .15s $easing background,
+                        .15s $easing transform;
+        }
+    }
+    &:checked + label {
+        color: $color;
+
+        &::before {
+            border-color: $cRed;
+        }
+        &::after {
+            background-color: $cRed;
+            transform: scale(1);
+        }
+        &:hover::after {
+            transform: scale(.8);
+        }
+    }
+}

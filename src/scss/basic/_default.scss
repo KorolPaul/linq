@@ -1,0 +1,70 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: $color;
+    background: $bg_color url(#{$img}/bg.jpg) repeat;
+    font: #{$font-size__small}/#{1.4} $font-family;
+    padding: 0;
+    scroll-behavior: smooth;
+    @include tablet {
+        font-size: $font-size;
+    }
+}
+
+a {
+    color: $cRed;
+    text-decoration: none;
+    transition: .2s $easing color;
+
+    &:hover,
+    &.hover {
+        outline: none;
+    }
+    &:active,
+    &.active {
+        outline: none;
+    }
+
+    &[href^='tel'] {
+        white-space: nowrap;
+    }
+}
+
+p {
+    margin: 0 0 10px;
+    @include tablet {
+        margin-bottom: 18px;
+    }
+}
+
+img {
+    max-width: 100%;
+
+    h3 & {
+        vertical-align: middle;
+        margin: 0 20px 0 0;
+    }
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}
+
+table {
+    min-width: 100%;
+}
+
+ul {
+    padding: 0;
+}
+
+a[name] {
+    position: relative;
+    top: -50px;
+}

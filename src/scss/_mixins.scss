@@ -1,0 +1,82 @@
+@mixin invisible-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin cutted-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin tablet() {
+    @media all and (min-width: 640px) { @content; }
+}
+@mixin desktop() {
+    @media all and (min-width: 1070px) { @content; }
+}
+@mixin desktop-large() {
+    @media all and (min-width: 1360px) { @content; }
+}
+@mixin media($resolution) {
+    @media all and (min-width: $resolution) { @content; }
+}
+@mixin mediaHeight($resolution) {
+    @media all and (min-height: $resolution) { @content; }
+}
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $color;
+    }
+}
+
+@mixin layout {
+    padding-left: $side-indent;
+    padding-right: $side-indent;
+    @include tablet {
+        max-width: $max-width;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: $side-indent__tablet;
+        padding-right: $side-indent__tablet;
+    }
+    @include desktop {
+        padding-left: $side-indent__desktop;
+        padding-right: $side-indent__desktop;
+    }
+    @include desktop-large() {
+        max-width: $max-width__desktop-large;
+    }
+}
+
+@mixin gradiented-text($color1, $color2, $degree: 65deg) {
+    @supports(-webkit-background-clip: text) {
+        background: linear-gradient($degree, $color1 0%, $color2 40%,$color2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@mixin gradiented-animated-text($color1, $color2, $degree: 65deg) {
+    @supports(-webkit-background-clip: text) {
+        animation: 1s gradient-rotation linear infinite both;
+        background: linear-gradient($degree, $color1 0%, $color2 40%,$color2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes gradient-rotation {
+        0% {
+            background: linear-gradient(65deg, $color1 0%, $color2 40%,$color2 100%);
+        }
+        100% {
+            background: linear-gradient(65deg, $color1 0%, $color2 40%,$color2 100%);
+        }
+    }
+}

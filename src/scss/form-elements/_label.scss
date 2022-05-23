@@ -1,0 +1,12 @@
+label {
+    font-size: 14px;
+    line-height: 18px;
+    color: $color;
+    display: block;
+    text-align: left;
+    position: relative;
+    @include tablet {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

@@ -1,0 +1,85 @@
+.popup {
+    background: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 96px 24px 24px;
+    box-sizing: border-box;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(30%);
+    transition: .3s $easingSmooth transform,
+                .3s $easingSmooth opacity;
+    @include desktop {
+        padding: 64px;
+    }
+
+    &.opened {
+        opacity: 1;
+        transform: translateY(0%);
+        pointer-events: all;
+    }
+
+    &_close {
+        background: url(#{$img}/popup-close.svg) no-repeat center center / contain;
+        border: none;
+        height: 56px;
+        width: 56px;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        z-index: 3;
+        transition: .2s $easing opacity;
+        @include desktop {
+            top: 50px;
+            right: 64px;
+        }
+
+
+        &:hover {
+            opacity: .6;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+    &_content {
+        overflow: auto;
+        height: 100%;
+        max-width: 910px;
+        margin: auto;
+
+        &__center {
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-family: $font-family;
+        font-size: 24px;
+        font-weight: 700;
+        @include desktop {
+            font-size: 32px;
+        }
+    }
+    h3 {
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 40px 0 20px;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+}

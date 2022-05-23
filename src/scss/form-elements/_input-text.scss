@@ -1,0 +1,23 @@
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"] {
+    @include placeholder-color($color);
+    color: $color;
+    background: #fff;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    font: 300 16px $font-family;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    width: 100%;
+    transition: .2s ease-in border-color, .2s ease-in color;
+
+    &:focus,
+    &.focus {
+        color: $color;
+    }
+}
