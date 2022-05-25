@@ -3,20 +3,20 @@ const thresholdSteps = [...Array(10).keys()].map(i => i / 10);
 const isMobile = screen.width <= 768
 
 // sliders
-const gallerySliders = document.querySelectorAll('.js-slider-gallery');
-gallerySliders.forEach(el => {
+const ticketsSlider = document.querySelectorAll('.js-tickets-slider');
+ticketsSlider.forEach(el => {
     tns({
         container: el,
         autoWidth: true,
-        items: 2,
-        gutter: 0,
+        items: 1.1,
+        gutter: 16,
         mouseDrag: true,
         autoplay: false,
         nav: false,
         controls: false,
         loop: false,
         responsive: {
-            1070: {
+            1344: {
                 disable: true
             }
         }

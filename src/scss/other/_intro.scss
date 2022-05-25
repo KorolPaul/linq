@@ -1,0 +1,51 @@
+.intro {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_title {
+        font-size: 48px;
+        line-height: .94;
+        font-weight: 400;
+        margin: 0 0 32px;
+        @include desktop {
+            font-size: 140px;
+            line-height: 132px;
+            margin-bottom: 56px;
+        }
+    }
+    &_label {
+        display: block;
+        color: $cPurpleDark;
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 16px;
+        @include desktop {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 24px;
+        }
+    }
+    &_content {
+        @include desktop {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &_text {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin: 0 0 24px;
+        @include desktop {
+            font-size: 24px;
+            line-height: 36px;
+            margin-bottom: 40px;
+            max-width: 638px;
+        }
+    }
+}

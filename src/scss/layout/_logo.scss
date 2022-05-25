@@ -1,7 +1,12 @@
 .logo {
-    position: relative;
-    z-index: 1;
+    position: absolute;
+    top: $indent;
+    left: $indent;
+    z-index: 2;
     transition: .5s linear opacity;
+    @include desktop {
+        left: 74px;
+    }
 
     &:hover {
         opacity: .6;

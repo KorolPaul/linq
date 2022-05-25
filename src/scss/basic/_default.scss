@@ -57,6 +57,7 @@ textarea {
 }
 
 table {
+    border-collapse: collapse;
     min-width: 100%;
 }
 
@@ -67,4 +68,11 @@ ul {
 a[name] {
     position: relative;
     top: -50px;
+}
+
+main {
+    padding: 176px 0 0;
+    @include desktop {
+        padding-top: 318px;
+    }
 }

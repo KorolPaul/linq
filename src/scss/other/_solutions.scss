@@ -1,0 +1,96 @@
+.solutions {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_cards {
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+    }
+    &_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 419px;
+        height: 726px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 57px 42px 66px 48px;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &__orange {
+            background-image: url(#{$img}/ticket-orange.svg);
+        }
+
+        &__pink {
+            background-image: url(#{$img}/ticket-pink.svg);
+        }
+
+        &__green {
+            background-image: url(#{$img}/ticket-green.svg);
+        }
+    }
+    &_card-label {
+        position: absolute;
+        width: 172px;
+        height: 51px;
+        background-color: #382d4d;
+        color: $bg_color;
+        border-radius: 8px;
+        top: -6px;
+        left: 48px;
+        font-size: 24px;
+        line-height: 28px;
+        z-index: 1;
+    }
+    &_card-title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 57px;
+    }
+    &_card-vat {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    &_card-price {
+        font-weight: 600;
+        margin-bottom: 23px;
+    }
+    &_card-price-currency {
+        margin-right: 6px;
+        font-size: 60px;
+        line-height: 72px;
+    }
+    &_card-price-value {
+        font-size: 140px;
+        line-height: 125px;
+    }
+    &_list {
+        max-width: 305px;
+        margin-left: 16px;
+        font-size: 16px;
+        line-height: 22px;
+        list-style: none;
+
+        li {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: url("../images/icon/solutions-list.svg");
+                top: -1px;
+                left: -23px;
+            }
+        }
+    }
+}

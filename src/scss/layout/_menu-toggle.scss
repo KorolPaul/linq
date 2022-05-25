@@ -11,6 +11,7 @@
     @include desktop {
         width: 72px;
         height: 72px;
+        right: 74px;
     }
 
     &:hover {
@@ -35,7 +36,10 @@
             }
 
             .menu-opened & {
-                transform: rotate(45deg) translate(7px, 7px);
+                transform: rotate(45deg) translate(5px, 4px);
+                @include desktop {
+                    transform: rotate(45deg) translate(7px, 7px);
+                }
             }
         }
         &:nth-child(2) {
@@ -50,7 +54,10 @@
             }
 
             .menu-opened & {
-                transform: rotate(-45deg) translate(7px, -7px);
+                transform: rotate(-45deg) translate(5px, -4px);
+                @include desktop {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
             }
         }
     }

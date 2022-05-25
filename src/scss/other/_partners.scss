@@ -1,0 +1,30 @@
+.partners {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+    }
+    &_item {
+        display: flex;
+        max-width: 286px;
+        width: 100%;
+        height: 145px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 0 1px #E5E4E9;
+    }
+    &_image {
+        max-width: 178px;
+    }
+}

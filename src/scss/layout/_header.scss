@@ -1,11 +1,37 @@
 .header {
     position: absolute;
-    top: $indent;
+    top: 0;
     left: 0;
     right: 0;
+    box-sizing: border-box;
+    padding: $indent 0 0;
+    height: 82px;
+    background-color: $cPurpleDark;
+    @include desktop {
+        height: 134px;
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 30%;
+        height:130px;
+        @include desktop {
+            height:238px;
+        }
+    }
+    &::before {
+        background: url(#{$img}/header-bg-left.svg) no-repeat top left / auto 100%;
+        left: 0;
+    }
+    &::after {
+        background: url(#{$img}/header-bg-right.svg) no-repeat top right / auto 100%;
+        right: 0;
+    }
     
     &_holder {
-        @include layout;
         display: flex;
         justify-content: space-between;
     }

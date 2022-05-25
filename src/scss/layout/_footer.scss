@@ -63,7 +63,7 @@
         font-size: 12px;
         line-height: 16px;
         margin-right: 20px;
-        color: rgba(56, 45, 77, .3);
+        color: $cGreyLight;
         @include desktop {
             order: initial;
             font-size: 16px;
@@ -71,7 +71,7 @@
         }
     }
     &_copyrights-link {
-        color: rgba(56, 45, 77, .3);
+        color: $cGreyLight;
         text-decoration: underline;
     }
     &_copyrights-text {
@@ -98,7 +98,7 @@
     }
     &_link {
         max-width: 200px;
-        color: rgba(56, 45, 77, .3);
+        color: $cGreyLight;
         font-size: 12px;
         line-height: 16px;
         margin: 0 0 16px;
@@ -129,10 +129,10 @@
         position: relative;
     }
     &_form-input[type] {
-        @include placeholder-color(rgba(56, 45, 77, .3));
+        @include placeholder-color($cGreyLight);
         border-radius: 0;
         border: none;
-        border-bottom: 1px solid rgba(56, 45, 77, .3);
+        border-bottom: 1px solid $cGreyLight;
         background-color: transparent;
         padding: 0 40px 0 0;
     }
