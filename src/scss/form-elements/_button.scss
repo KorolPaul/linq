@@ -7,10 +7,10 @@
     background-color: $cGreen;
     cursor: pointer;
     color: $color;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 600;
-    height: 70px;
-    line-height: 70px;
+    height: 49px;
+    line-height: 45px;
     padding: 0 24px;
     min-width: 146px;
     text-align: center;
@@ -18,7 +18,12 @@
     transition: .2s $easing color,
                 .2s $easing background-color,
                 .2s $easing transform;
-    
+    @include desktop {
+        font-size: 17px;
+        height: 70px;
+        line-height: 70px;
+    }
+
     &:hover {
         background-color: transparent;
         transform: scale(1.02);

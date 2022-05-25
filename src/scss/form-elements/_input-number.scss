@@ -1,0 +1,29 @@
+.input-number {
+    display: inline-block;
+    position: relative;
+
+    &_count {
+        font-size: 18px;
+        line-height: 1.4;
+        min-width: 20px;
+        padding: 0 10px;
+    }
+    &_button {
+        @include button-reset;
+        text-align: center;
+        background-color: $cGrey;
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 400;
+        box-sizing: border-box;
+        padding-bottom: 3px;
+
+        &:hover {
+            background-color: $cBlue;
+            color: $bg_color;
+            transform: none;
+        }
+    }
+}

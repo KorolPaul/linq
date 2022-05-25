@@ -1,0 +1,184 @@
+.cart {
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: stretch;
+    }
+
+    &_section {
+        border-bottom: 1px solid $cGrey;
+        padding: 62px 0 32px;
+        width: 100%;
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &__small {
+            max-width: 310px;
+            display: block;
+            padding-top: 24px;
+            border-bottom: none;
+        }
+    }
+    &_table {
+        display: block;
+        @include tablet {
+            display: table;
+        }
+
+        thead {
+            display: block;
+            @include tablet {
+                display: table-header-group;
+            }
+        }
+        tbody {
+            display: block;
+            @include tablet {
+                display: table-row-group;
+            }
+        }
+        tr {
+            display: block;
+            @include tablet {
+                display: table-row;
+            }
+        }
+        th {
+            font-size: 18px;
+            line-height: 1.4;
+            color: $cGreyLight;
+            padding: 15px 0;
+            display: none;
+            text-align: left;
+            font-weight: 400;
+            @include tablet {
+                display: table-cell;
+            }
+
+            &:first-child {
+                display: block;
+                @include tablet {
+                    display: table-cell;
+                }
+            }
+            &:last-child {
+                @include tablet {
+                    text-align: right;
+                }
+            }
+        }
+        td {
+            font-size: 18px;
+            line-height: 1.4;
+            padding: 8px 0;
+            display: block;
+            text-align: center;
+            @include tablet {
+                width: 15%;
+                display: table-cell;
+                padding: 68px 0;
+                border-top: 1px solid $cGrey;
+                border-bottom: 1px solid $cGrey;
+                text-align: left;
+            }
+
+            &:first-child {
+                @include tablet {
+                    width: 30%;
+                }
+            }
+            &:last-child {
+                display: none;
+                @include tablet {
+                    display: table-cell;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    &_promo-title {
+        color: $cPurpleDark;
+        font-size: 18px;
+        line-height: 140%;
+        @include tablet {
+            display: none;
+        }
+    }
+    &_promo-checkbox {
+        position: absolute;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    &_promo {
+        display: none;
+        margin: 24px 0 0;
+        @include tablet {
+            display: flex;
+            align-items: flex-end;
+            gap: 32px;
+            margin: 0;
+        }
+
+        input:checked + & {
+            display: block;
+            @include tablet {
+                display: flex;
+            }
+        }
+    }
+    &_promo-label {
+        display: block;
+        font-size: 16px;
+        line-height: 140%;
+        margin: 0 0 8px;
+    }
+    &_promo-input[type] {
+        margin: 0 0 24px;
+        @include tablet {
+            width: 260px;
+            margin: 0;
+        }
+    }
+    &_promo-button {
+        height: 54px;
+        line-height: 54px;
+    }
+    &_summary {
+        margin: 0 0 40px;
+
+        td {
+            padding: 8px 0;
+        }
+        td + td {
+            text-align: right;
+        }
+        tr:nth-last-child(-n+2) td {
+            padding-bottom: 32px;
+            @include tablet {
+                padding-bottom: 24px;
+            }
+        }
+    }
+    &_summary-total[class] {
+        color: $cPurpleDark;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 1.5;
+        padding: 32px 0;
+        border-top: 1px solid $cGrey;
+    }
+    &_submit[type] {
+        font-size: 17px;
+        height: 54px;
+        line-height: 50px;
+        width: 100%;
+        @include tablet {
+            height: 70px;
+            line-height: 66px;
+            min-width: 300px;
+        }
+    }
+}

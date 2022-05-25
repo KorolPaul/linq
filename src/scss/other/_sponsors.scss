@@ -1,14 +1,57 @@
 .sponsors {
     background-color: $cPurpleDark;
-    margin: 0 0 64px;
+    margin: 0 0 112px;
     position: relative;
     padding: 53px 0 173px;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: 309px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -16px;
+        width: 172px;
+        height: 75px;
+        background-color: $cPurpleDark;
+        border-radius: 4px;
+        @include desktop {
+            top: -52px;
+            width: 363px;
+            height: 107px;
+            border-radius: 8px;
+        }
+    }
+    &::after {
+        @include desktop {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -53px;
+            width: 362px;
+            height: 231px;
+            background: url(#{$img}/sponsors-top-right-bg.svg) no-repeat top right / 100%;
+        }
     }
     
     &_holder {
         @include layout;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -48px;
+            width: 147px;
+            height: 91px;
+            background: url(#{$img}/sponsors-bottom-left-bg.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 319px;
+                height: 242px;
+                bottom: -107px;
+            }
+        }
     }
     &_title {
         color: $bg_color;

@@ -17,6 +17,7 @@
 @import  "form-elements/radio";
 @import  "form-elements/label";
 @import  "form-elements/form";
+@import  "form-elements/input-number";
 
 /*layout*/
 @import  "layout/headings";
@@ -41,6 +42,8 @@
 @import  "other/timeline";
 @import  "other/tickets-comparison";
 @import  "other/rates";
+@import  "other/cart";
+@import  "other/checkout";
 
 /* plugins */
 @import  "plugins/tiny-slider";

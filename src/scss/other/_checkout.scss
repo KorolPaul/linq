@@ -1,0 +1,26 @@
+.checkout {
+    padding: 0 $indent;
+    @include tablet {
+        padding: 0;
+        max-width: 858px;
+        margin: auto;
+    }
+
+    &_title {
+        color: $cGreen;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0 0 8px;
+    }
+    &_subtitle {
+        color: $cPurpleDark;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 1.5;
+        margin: 0 0 48px;
+        @include tablet {
+            margin-bottom: 40px;
+        }
+    }
+}

@@ -4,6 +4,36 @@
         margin-bottom: 150px;
     }
 
+    &__background-1 {
+        &::before {
+            @include desktop {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 492px;
+                width: 194px;
+                height: 219px;
+                background: url(#{$img}/tickets-page-left.svg) no-repeat top right / 100%;
+                z-index: -1;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 152px;
+            width: 107px;
+            height: 114px;
+            background: url(#{$img}/tickets-page-right.svg) no-repeat top right / 100%;
+            z-index: -1;
+            @include desktop {
+                width: 178px;
+                height: 190px;
+                top: 302px
+            }
+        }
+    }
+
     &_holder {
         @include layout;
     }
