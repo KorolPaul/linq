@@ -45,6 +45,13 @@
     min-width: 0;
     width: auto;
     border-radius: 0;
+
+    &:hover {
+        transform: none;
+    }
+    &:active {
+        transform: none;
+    }
 }
 
 .button,

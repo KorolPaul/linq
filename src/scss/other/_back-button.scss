@@ -1,0 +1,18 @@
+.back-button {
+    display: inline-block;
+    background: url(#{$img}/back-button.svg) no-repeat center center / contain;
+    height: 48px;
+    width: 48px;
+    transition: .2s $easing transform;
+    @include tablet {
+        height: 64px;
+        width: 64px;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+    &:active {
+        transform: scale(.98);
+    }
+}

@@ -116,3 +116,13 @@ inputNumberElements.forEach((el) => {
         countElement.innerText = count + 1;
     })
 });
+
+/* Cart */
+/* checkout tickets collapse */
+const checkoutTicketTitleElements = document.querySelectorAll('.checkout_position-title');
+checkoutTicketTitleElements.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.target.classList.toggle('active');
+    })
+});

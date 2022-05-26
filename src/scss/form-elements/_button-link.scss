@@ -1,0 +1,13 @@
+.button-link {
+    @include button-reset;
+    color: $cPurpleDark;
+    text-decoration: underline;
+    font-weight: 400;
+
+    &:hover {
+        color: $cPurple;
+    }
+    &:active {
+        text-decoration: none;
+    }
+}

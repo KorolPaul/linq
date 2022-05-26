@@ -21,4 +21,8 @@ input[type="tel"] {
     &.focus {
         color: $color;
     }
+
+    .error & {
+        border-color: $cRed;
+    }
 }

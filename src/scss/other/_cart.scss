@@ -13,13 +13,16 @@
         @include tablet {
             display: flex;
             justify-content: flex-end;
+            padding-top: 32px;
         }
 
         &__small {
-            max-width: 310px;
             display: block;
             padding-top: 24px;
             border-bottom: none;
+            @include tablet {
+                max-width: 310px;
+            }
         }
     }
     &_table {
@@ -103,8 +106,11 @@
         color: $cPurpleDark;
         font-size: 18px;
         line-height: 140%;
-        @include tablet {
-            display: none;
+
+        input:checked + & {
+            @include tablet {
+                display: none;
+            }
         }
     }
     &_promo-checkbox {
@@ -116,13 +122,12 @@
         display: none;
         margin: 24px 0 0;
         @include tablet {
-            display: flex;
             align-items: flex-end;
             gap: 32px;
             margin: 0;
         }
 
-        input:checked + & {
+        input:checked + * + & {
             display: block;
             @include tablet {
                 display: flex;
