@@ -1,38 +1,28 @@
 
 .showcase {
     width: 100%;
-    padding: 0 0 5vh;
     position: relative;
-
-    &::before {
-        content: '';
-        background-color: $cPurpleDark;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 95%;
-    }
     
     &_holder {
-        @include layout;
         display: flex;
         position: relative;
         justify-content: space-between;
+        padding: 0 0 123px;
     }
     &_bg {
         position: relative;
         width: 100%;
+        background-color: $cPurpleDark;
 
         &::after {
             content: '';
             pointer-events: none;
-            background: url(#{$img}/showcase-figure.svg) no-repeat center bottom / 100% 100%;
+            background: url(#{$img}/showcase-figure.svg) no-repeat center top / 100% auto;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: -5vh;
+            bottom: -97px;
         }
     }
     &_image {
@@ -46,6 +36,7 @@
         @include desktop {
             top: 164px;
             max-width: 564px;
+            left: 72px;
         }
     }
     &_title {

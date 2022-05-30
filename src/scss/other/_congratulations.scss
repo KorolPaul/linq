@@ -1,0 +1,63 @@
+.congratulations {
+    text-align: center;
+    padding: 0 24px;
+    margin: 0 0 128px;
+    @include tablet {
+        padding: 0;
+        margin-bottom: 150px;
+        position: relative;
+    }
+
+    &::before,
+    &::after {
+        @include desktop {
+            content: '';
+            position: absolute;
+        }
+    }
+    &::before {
+        @include desktop {
+            background: url(#{$img}/congratulations-left.svg) no-repeat center / 100%;
+            width: 202px;
+            height: 236px;
+            left: 0;
+            top: 20px;
+        }
+    }
+    &::after {
+        @include desktop {
+            background: url(#{$img}/congratulations-right.svg) no-repeat center / contain;
+            width: 219px;
+            height: 194px;
+            right: -27px;
+            top: -33px;
+        }
+    }
+
+    &_holder {
+        @include tablet {
+            margin: auto;
+            max-width: 640px;
+        }
+    }
+
+    &_title {
+        font-size: 32px;
+        line-height: 1.2;
+        color: $cPurpleDark;
+        font-weight: 600;
+        margin: 0 0 32px;
+        @include tablet {
+            font-size: 60px;
+            margin-bottom: 24px;
+        }
+    }
+    &_button {
+        width: 100%;
+        margin: 64px 0 0;
+        @include tablet {
+            width: auto;
+            margin: 72px auto 0;
+        }
+    }
+}

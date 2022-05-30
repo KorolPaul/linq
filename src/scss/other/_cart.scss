@@ -82,14 +82,16 @@
             @include tablet {
                 width: 15%;
                 display: table-cell;
-                padding: 68px 0;
+                padding: 34px 0;
                 border-top: 1px solid $cGrey;
                 border-bottom: 1px solid $cGrey;
                 text-align: left;
+                min-height: 160px;
             }
 
             &:first-child {
                 @include tablet {
+                    padding-right: 20px;
                     width: 30%;
                 }
             }
@@ -101,6 +103,10 @@
                 }
             }
         }
+    }
+    &_table-caption {
+        display: block;
+        color: $cGreyLight;
     }
     &_promo-title {
         color: $cPurpleDark;

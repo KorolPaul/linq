@@ -33,18 +33,17 @@ a {
 }
 
 p {
-    margin: 0 0 10px;
-    @include tablet {
-        margin-bottom: 18px;
-    }
+    margin: 0 0 20px;
 }
 
 img {
     max-width: 100%;
 
-    h3 & {
-        vertical-align: middle;
-        margin: 0 20px 0 0;
+    &[data-src] {
+        display: none;
+        @include desktop {
+            display: initial;
+        }
     }
 }
 

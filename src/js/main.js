@@ -16,11 +16,105 @@ ticketsSlider.forEach(el => {
         controls: false,
         loop: false,
         responsive: {
-            1344: {
+            1070: {
                 disable: true
             }
         }
     });
+})
+
+const commentsSlider = document.querySelectorAll('.comments_slider');
+commentsSlider.forEach(el => {
+    tns({
+        container: el,
+        items: 1,
+        gutter: 24,
+        mouseDrag: true,
+        autoplay: false,
+        nav: false,
+        controlsPosition: 'bottom',
+        controls: true,
+        loop: true,
+        responsive: {
+            1070: {
+                gutter: 74,
+            }
+        }
+    });
+});
+
+const speakersSlider = document.querySelectorAll('.speakers_slider');
+speakersSlider.forEach(el => {
+    tns({
+        autoWidth: true,
+        container: el,
+        items: 1.1,
+        gutter: 16,
+        mouseDrag: true,
+        autoplay: false,
+        nav: false,
+        controlsPosition: 'bottom',
+        controls: true,
+        loop: false,
+        responsive: {
+            1070: {
+                gutter: 20,
+                items: 3,
+            }
+        }
+    });
+});
+
+
+const eventsGalleryElements = document.querySelectorAll('.events_gallery');
+eventsGalleryElements.forEach(el => {
+    const gallery = tns({
+        container: el,
+        mode: 'gallery',
+        items: 1,
+        animateIn: "jello",
+        autoplay: false,
+        nav: false,
+        controls: false,
+        loop: false,
+        navContainer: '.events_slider',
+    });
+
+    const eventsSliderElement = el.parentElement.parentElement.parentElement.querySelector('.events_slider');
+    if (eventsSliderElement) {
+        const slider = tns({
+            container: eventsSliderElement,
+            autoWidth: true,
+            items: 1.1,
+            gutter: 24,
+            mouseDrag: true,
+            autoplay: false,
+            nav: false,
+            controls: false,
+            loop: true,
+            responsive: {
+                1024: {
+                    gutter: 100,
+                }
+            },
+            onInit: () => {
+                eventsSliderElement.querySelector('.tns-slide-active .events_slider-tab[data-tab="1"]').classList.add('active');
+            }
+        });
+
+        const slides = eventsSliderElement.querySelectorAll('.events_slider-tab');
+        slides.forEach((slide) => {
+            slide.addEventListener('click', function (e) {
+                const index = parseInt(e.target.dataset.tab);
+                gallery.goTo(index - 1);
+                slider.goTo(index - 1);
+
+                slides.forEach(el => el.classList.remove('active'))
+                const { displayIndex } = gallery.getInfo();
+                eventsSliderElement.querySelector(`.tns-slide-active .events_slider-tab[data-tab="${displayIndex}"]`).classList.add('active');
+            })
+        });
+    }
 })
 
 // menu
@@ -99,6 +193,16 @@ popupCloseElements.forEach(el => el.addEventListener('click', (e) => {
     closePopup();
 }));
 
+/* desktop-only images */
+const imagesWihoutSrc = document.querySelectorAll('img[data-src]');
+console.log(!isMobile);
+if (!isMobile) {
+    imagesWihoutSrc.forEach((img) => {
+        img.src = img.dataset.src;
+    });
+}
+
+/* Number input */
 const inputNumberElements = document.querySelectorAll('.input-number');
 inputNumberElements.forEach((el) => {
     const minusButton = el.querySelector('button:first-child');

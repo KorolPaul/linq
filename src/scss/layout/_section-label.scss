@@ -1,0 +1,16 @@
+.section-label {
+    display: block;
+    color: $cPurpleDark;
+    margin: 0 0 8px;
+    font-size: 12px;
+    line-height: 16px;
+    @include desktop {
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 24px;
+    }
+
+    &__white {
+        color: $bg_color;
+    }
+}

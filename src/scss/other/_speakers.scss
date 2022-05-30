@@ -1,0 +1,255 @@
+.speakers {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+        position: relative;
+        padding-bottom: 45px;
+        @include desktop {
+            padding-bottom: 0;
+        }
+    }
+    &_slider-counter {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-size: 16px;
+        left: $indent;
+        @include desktop {
+            left: auto;
+            right: 277px;
+            bottom: -100px;
+        }
+    }
+    &_bottom {
+        @include layout;
+        margin-top: 24px;
+        @include desktop {
+            margin-top: 56px;
+        }
+    }
+    &_grid {
+        @include tablet {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            row-gap: 48px;
+            column-gap: 20px;
+        }
+        @include desktop {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    &_grid-item {
+        margin: 0 0 34px;
+        @include tablet {
+            margin-bottom: 0;
+        }
+    }
+
+    .tns-ovh {
+        padding-top: 10px;
+        @include desktop {
+            padding-top: 16px;
+        }
+    }
+    .tns-outer {
+        margin-bottom: 24px;
+    }
+    .tns-controls {
+        position: absolute;
+        right: $indent;
+        bottom: 4px;
+        @include desktop {
+            bottom: -103px;
+        }
+    }
+}
+
+.speakers-card {
+    display: flex;
+    width: 100%x;
+    height: 442px;
+    padding: 0 0 100px;
+    border-radius: 4px;
+    position: relative;
+    color: $color;
+    text-decoration: none;
+    box-sizing: border-box;
+    @include desktop {
+        width: 419px;
+        height: 640px;
+        padding-bottom: 142px;
+        border-radius: 8px;
+    }
+
+    &__all {
+        background-color: $cBlueLight;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+        &::before {
+            content: "";
+            background-color: $cBlueLight;
+            position: absolute;
+            left: 0;
+            top: -10px;
+            height: 40px;
+            width: 35%;
+            border-radius: 4px;
+            @include desktop {
+                top: -14px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &_all-link {
+        font-weight: 600;
+        font-size: 24px;
+
+        &::after {
+            content: url(#{$img}/arrow-right-small.svg);
+            vertical-align: middle;
+            margin: 0 0 0 16px;
+        }
+    }
+    &_label {
+        font-size: 16px;
+        line-height: 1.26;
+        font-weight: 600;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        max-width: 120px;
+        width: 100%;
+        padding: 16px $indent;
+        border-radius: 4px;
+        z-index: 1;
+        @include desktop {
+            font-size: 24px;
+            padding: $indent 40px;
+            border-radius: 8px;
+            top: -16px;
+        }
+
+        &::before {
+            content: "";
+            height: 35px;
+            width: 58px;
+            border-radius: 4px;
+            position: absolute;
+            left: 0;
+            bottom: -25px;
+            z-index: 0;
+            @include desktop {
+                border-radius: 8px;
+                height: 45px;
+                width: 85px;
+                bottom: -37px;
+            }
+        }
+
+        .speakers-card__blue &,
+        .speakers-card__blue &::before {
+            background-color: $cBlueLight;
+        }
+        .speakers-card__pink &,
+        .speakers-card__pink &::before {
+            background-color: $cPink;
+        }
+        .speakers-card__orange &,
+        .speakers-card__orange &::before {
+            background-color: $cOrange;
+        }
+    }
+    &_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    &_bottom {
+        padding: 32px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 0 0 4px 4px;
+        @include desktop {
+            border-radius: 0 0 8px 8px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 90%;
+            height: 55px;
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: auto 100%;
+            @include desktop {
+                height: 70px;
+            }
+        }
+
+        .speakers-card__blue & {
+            background-color: $cBlueLight;
+
+            &::before {
+                background-image: url(#{$img}/speakers-figure-blue.svg);
+            }
+        }
+        .speakers-card__pink & {
+            background-color: $cPink;
+
+            &::before {
+                background-image: url(#{$img}/speakers-figure-pink.svg);
+                background-position: right top;
+            }
+        }
+        .speakers-card__orange & {
+            background-color: $cOrange;
+
+            &::before {
+                background-image: url(#{$img}/speakers-figure-orange.svg);
+            }
+        }
+    }
+    &_name {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 4px;
+        display: block;
+        @include desktop {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+    }
+    &_position {
+        font-size: 16px;
+        line-height: 1.4;
+        color: $cGreyLight;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+    &_text {
+        overflow: hidden;
+        max-height: 0;
+        transition: .3s $easing max-height;
+
+        .speakers-card:hover & {
+            max-height: 400px;
+            @include desktop {
+                max-height: 600px;
+            }
+        }
+    }
+}

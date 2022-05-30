@@ -1,6 +1,7 @@
 .intro {
     margin: 0 0 64px;
     @include desktop {
+        position: relative;
         margin-bottom: 150px;
     }
 
@@ -30,6 +31,49 @@
                 width: 178px;
                 height: 190px;
                 top: 302px
+            }
+        }
+    }
+    &__background-2 {
+        &::before {
+            @include desktop {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: 50px;
+                width: 202px;
+                height: 236px;
+                background: url(#{$img}/main-page-intro.svg) no-repeat top left / 100%;
+                z-index: -1;
+            }
+        }
+    }
+    &__background-3 {
+        &::before {
+            @include desktop {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 132px;
+                width: 137px;
+                height: 209px;
+                background: url(#{$img}/speakers-page-left.svg) no-repeat top right / 100%;
+                z-index: -1;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 172px;
+            width: 72px;
+            height: 76px;
+            background: url(#{$img}/speakers-page-right.svg) no-repeat top right / 100%;
+            z-index: -1;
+            @include desktop {
+                width: 164px;
+                height: 174px;
+                top: 0;
             }
         }
     }
@@ -76,6 +120,13 @@
             line-height: 36px;
             margin-bottom: 40px;
             max-width: 638px;
+        }
+    }
+
+    .button {
+        margin: 24px 0 0;
+        @include desktop {
+            margin-top: 40px;
         }
     }
 }

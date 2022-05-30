@@ -121,4 +121,30 @@
     float: left;
 }
 
-/*# sourceMappingURL=sourcemaps/tiny-slider.css.map */
+.tns-controls {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+    @include desktop {
+        gap: 60px
+    }
+
+    button {
+        @include button-reset;
+        width: 46px;
+        height: 15px;
+        font-size: 0;
+        line-height: 0;
+        @include desktop {
+            width: 70px;
+            height: 25px;
+        }
+    }
+
+    button[data-controls="prev"]{
+        background: url(#{$img}/arrow-left.svg) no-repeat center / 100% auto;
+    }
+    button[data-controls="next"]{
+        background: url(#{$img}/arrow-right.svg) no-repeat center / 100% auto;
+    }
+}

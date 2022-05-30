@@ -3,8 +3,13 @@
     line-height: .94;
     font-weight: 400;
     margin: 0 0 32px;
+    width: 70%;
     @include desktop {
         font-size: 140px;
         margin-bottom: 56px;
+    }
+
+    &__wide {
+        width: 100%;
     }
 }

@@ -84,6 +84,7 @@
         padding: 16px;
         margin: 0 0 48px;
         display: none;
+        flex-shrink: 0;
         @include tablet {
             padding: 32px 16px 8px;
             width: 310px;
