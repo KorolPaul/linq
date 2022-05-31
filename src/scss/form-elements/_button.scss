@@ -72,4 +72,22 @@ input[type="submit"] {
             background-color: $bg_color;
         }
     }
+    &__pink {
+        color: $bg_color;
+        background-color: $cPink;
+        border-color: $cPink;
+
+        &:hover {
+            
+        }
+    }
+    &__purple {
+        color: $bg_color;
+        background-color: $cPurpleLight;
+        border-color: $cPurpleLight;
+
+        &:hover {
+            
+        }
+    }
 }

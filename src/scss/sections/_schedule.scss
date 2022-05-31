@@ -1,0 +1,100 @@
+.schedule {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_content {
+        display: flex;
+        gap: 55px;
+    }
+    &_filters {
+        width: 274px;
+    }
+    &_timeline {
+        flex-grow: 1;
+    }
+    &_date {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0 0 56px;
+    }
+    &_day {
+        margin: 0 0 56px;
+    }
+    &_time {
+        display: block;
+        font-weight: 600;
+        font-size: 72px;
+        line-height: 1;
+        margin: 0 0 32px;
+    }
+    &_day-content {
+        border-radius: 10px;
+        padding: 32px;
+        border: 1px solid $color;
+        
+        & + & {
+            margin-top: 16px;
+        }
+
+        &__orange {
+            background-color: $cOrange;
+            border: 1px solid $cOrange;
+        }
+        &__violet {
+            background-color: $cPurple;
+            border: 1px solid $cPurple;
+        }
+        &__blue {
+            background-color: $cBlue;
+            border: 1px solid $cBlue;
+        }
+        &__pink {
+            background-color: $cPink;
+            border: 1px solid $cPink;
+        }
+        &__green {
+            background-color: $cGreen;
+            border: 1px solid $cGreen;
+        }
+        &__purple {
+            background-color: $cPurpleLight;
+            border: 1px solid $cPurpleLight;
+        }
+    }
+    &_duration {
+        font-size: 16px;
+        line-height: 1.4;
+        display: block;
+        margin: 0 0 16px;
+    }
+    &_day-title {
+        font-weight: 600;
+        font-size: 32px;
+        margin: 0;
+    }
+    &_day-caption {
+        display: block;
+        font-size: 16px;
+        line-height: 1.4;
+        margin: 16px 0 0;
+    }
+    &_day-button {
+        margin-top: 24px;
+    }
+    &_day-button {
+        font-weight: 400;
+        font-size: 16px;
+        height: 44px;
+        line-height: 42px;
+
+        & + & {
+            margin-left: 16px;
+        }
+    }
+}

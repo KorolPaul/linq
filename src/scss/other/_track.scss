@@ -1,0 +1,112 @@
+.track {
+    box-sizing: border-box;
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top left;
+    position: relative;
+    @include desktop {
+        min-height: 368px;
+        padding: 40px;
+    }
+
+    &__orange {
+        background-image: url(#{$img}/track-orange.svg);
+    }
+    &__violet {
+        background-image: url(#{$img}/track-orange.svg);
+    }
+    &__blue {
+        background-image: url(#{$img}/track-blue.svg);
+    }
+    &__pink {
+        background-image: url(#{$img}/track-pink.svg);
+    }
+    &__green {
+        background-image: url(#{$img}/track-green.svg);
+    }
+    &__purple {
+        background-image: url(#{$img}/track-purple.svg);
+    }
+
+    &_top,
+    &_bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 30px;
+    }
+    &_bottom {
+        align-items: center;
+    }
+    &_participants {
+        display: flex;
+    }
+    &_participant {
+        height: 44px;
+        width: 44px;
+        background-color: $cPurpleDark;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $bg_color;
+        font-size: 12px;
+        position: relative;
+        z-index: 3;
+        @include desktop {
+            height: 90px;
+            width: 90px;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        & + & {
+            margin-left: -6px;
+            z-index: 2;
+            @include desktop {
+                margin-left: -13px;
+            }
+        }
+        &:nth-child(3) {
+            z-index: 1;
+        }
+        &:nth-child(4) {
+            z-index: 0;
+        }
+    }
+    &_title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 1.2;
+        margin: 0;
+        @include desktop {
+            font-size: 60px;
+        }
+    }
+    &_date {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    &_button {
+        color: $bg_color;
+        background-color: $color;
+        font-weight: 600;
+        font-size: 8px;
+        width: 85px;
+        height: 35px;
+        border-radius: 8px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include desktop {
+            width: 172px;
+            height: 70px;
+            font-size: 17px;
+        }
+    }
+}

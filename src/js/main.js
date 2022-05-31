@@ -230,3 +230,37 @@ checkoutTicketTitleElements.forEach((el) => {
         e.target.classList.toggle('active');
     })
 });
+
+/* filters collapse */
+const filtersSectionTitleElements = document.querySelectorAll('.filters_section-title');
+filtersSectionTitleElements.forEach((el) => {
+    el.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.target.classList.toggle('inactive');
+    })
+});
+
+/* Tabs */
+const tabsContainers = document.querySelectorAll('.tabs');
+
+tabsContainers.forEach(tabContainer => {
+    const tabsButtons = tabContainer.querySelectorAll('.tabs_button');
+    const tabsBlocks = tabContainer.querySelectorAll('.tabs_content');
+
+    if (tabsButtons.length) {
+        function switchTab(e) {
+            e.preventDefault();
+
+            const index = e.target.dataset.tab;
+            tabsButtons.forEach(el => el.classList.remove('active'));
+            tabsBlocks.forEach(el => el.classList.remove('active'));
+
+            tabsButtons[index - 1].classList.add('active');
+            tabsBlocks[index - 1].classList.add('active');
+        }
+
+        tabsButtons.forEach(el => el.addEventListener('click', switchTab));
+    }
+});
+
+

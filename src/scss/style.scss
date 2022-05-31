@@ -1,39 +1,40 @@
 @charset "UTF-8";
 
-@import  "const";
-@import  "mixins";
-@import  "placeholders";
+@import "const";
+@import "mixins";
+@import "placeholders";
 
 /* basic */
-@import  "basic/normalize";
-@import  "basic/fonts";
-@import  "basic/default";
+@import "basic/normalize";
+@import "basic/fonts";
+@import "basic/default";
 
 /*Form elements*/
-@import  "form-elements/button";
-@import  "form-elements/input-text";
-@import  "form-elements/textarea";
-@import  "form-elements/checkbox";
-@import  "form-elements/radio";
-@import  "form-elements/label";
-@import  "form-elements/form";
-@import  "form-elements/input-number";
-@import  "form-elements/button-link";
+@import "form-elements/button";
+@import "form-elements/input-text";
+@import "form-elements/textarea";
+@import "form-elements/checkbox";
+@import "form-elements/radio";
+@import "form-elements/label";
+@import "form-elements/form";
+@import "form-elements/input-number";
+@import "form-elements/button-link";
 
 /*layout*/
-@import  "layout/headings";
-@import  "layout/header";
-@import  "layout/logo";
-@import  "layout/footer";
-@import  "layout/menu";
-@import  "layout/menu-toggle";
-@import  "layout/content";
-@import  "layout/popup";
-@import  "layout/fade";
-@import  "layout/section-title";
-@import  "layout/section-label";
-@import  "layout/table-wrapper";
-@import  "layout/main";
+@import "layout/headings";
+@import "layout/header";
+@import "layout/logo";
+@import "layout/footer";
+@import "layout/menu";
+@import "layout/menu-toggle";
+@import "layout/content";
+@import "layout/popup";
+@import "layout/fade";
+@import "layout/section-title";
+@import "layout/section-label";
+@import "layout/table-wrapper";
+@import "layout/main";
+@import "layout/tabs";
 
 /* sections */
 @import "sections/terms";
@@ -51,16 +52,20 @@
 @import "sections/video";
 @import "sections/timeline";
 @import "sections/speaker-form";
+@import "sections/agenda";
+@import "sections/schedule";
 
 /* other */
-@import  "other/social";
-@import  "other/tickets-comparison";
-@import  "other/rates";
-@import  "other/cart";
-@import  "other/checkout";
-@import  "other/back-button";
-@import  "other/statistics";
-@import  "other/congratulations";
+@import "other/social";
+@import "other/tickets-comparison";
+@import "other/rates";
+@import "other/cart";
+@import "other/checkout";
+@import "other/back-button";
+@import "other/statistics";
+@import "other/congratulations";
+@import "other/track";
+@import "other/filters";
 
 /* plugins */
-@import  "plugins/tiny-slider";
+@import "plugins/tiny-slider";

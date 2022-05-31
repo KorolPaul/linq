@@ -1,0 +1,53 @@
+.filters {
+    &_section {
+        border: 1px solid $color;
+        border-radius: 10px;
+        margin: 0 0 32px;
+    }
+    &_section-title {
+        @include button-reset;
+        width: 100%;
+        text-align: left;
+        font-size: 18px;
+        padding: 12px 16px;
+        border-radius: 10px 10px 0 0;
+        background-color: $cOrange;
+        border-bottom: 1px solid $color;
+        position: relative;
+        transition: .2s $easing border-radius;
+
+        &.inactive {
+            border-radius: 10px 10px;
+        }
+    }
+    &_section-title-arrow {
+        background: url(#{$img}/chevron.svg) no-repeat center / auto 100%;
+        height: 8px;
+        width: 16px;
+        position: absolute;
+        right: 16px;
+        top: 45%;
+        transform: rotate(0);
+        transition: .2s $easing transform;
+
+        .filters_section-title.inactive & {
+            transform: rotate(-180deg);
+        }
+    }
+    &_section-content {
+        max-height: 500px;
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: .3s linear max-height;
+
+        .filters_section-title.inactive + & {
+            max-height: 0;
+        }
+    }
+    &_items {
+        padding: 20px 16px;
+    }
+    &_item {
+        margin-bottom: 10px;
+    }
+}

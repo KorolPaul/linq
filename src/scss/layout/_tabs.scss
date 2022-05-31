@@ -1,0 +1,51 @@
+.tabs {
+    &_header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        border-bottom: 1px solid currentColor;
+    }
+    &_header-label {
+        font-size: 18px;
+        line-height: 140%;
+        display: block;
+        margin: 0 0 11px
+    }
+    &_button {
+        @include button-reset;
+        font-size: 24px;
+        padding: 11px;
+        font-weight: 600;
+        position: relative;
+        transition: .2s $easing color;
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2px;
+            height: 3px;
+            border-radius: 2px;
+            transition: .2s $easing background;
+        }
+
+        &:hover,
+        &.active {
+            color: $cBlue;
+
+            &::after {
+                background-color:$cBlue;
+
+            }
+        }
+    }
+    &_content {
+        padding: 56px 0 0;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

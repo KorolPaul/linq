@@ -1,0 +1,21 @@
+.agenda {
+    margin: 0 0 64px;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 16px;
+        @include desktop {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 20px;
+        }
+    }
+}
