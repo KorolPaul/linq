@@ -2,12 +2,15 @@
 .showcase {
     width: 100%;
     position: relative;
+    margin: 0 0 103px;
+    @include desktop {
+        margin-bottom: 213px;
+    }
     
     &_holder {
         display: flex;
         position: relative;
         justify-content: space-between;
-        padding: 0 0 123px;
     }
     &_bg {
         position: relative;
@@ -17,12 +20,12 @@
         &::after {
             content: '';
             pointer-events: none;
-            background: url(#{$img}/figures/showcase-figure.svg) no-repeat center top / 100% auto;
+            background: url(#{$img}/figures/showcase-figure.svg) no-repeat center top / 100% 100%;
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            bottom: -97px;
+            bottom: -10vw;
         }
     }
     &_image {
