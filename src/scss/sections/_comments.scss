@@ -1,0 +1,147 @@
+.comments {
+    margin: 0 0 64px;
+    overflow: hidden;
+    @include desktop {
+        margin-bottom: 150px;
+        
+    }
+
+    &_title {
+        width: 100%;
+        @include desktop {
+            margin-bottom: 120px;
+        }
+    }
+    &_background {
+        background-color: $cOrange;
+        padding: 32px 0 110px;
+        margin: 0 0 22px;
+        position: relative;
+        @include desktop {
+            position: relative;
+            padding: 89px 0 47px 0;
+            margin-bottom: 66px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -32px;
+            border-radius: 8px;
+            width: 187px;
+            height: 80px;
+            background-color: $cOrange;
+            z-index: -1;
+            @include desktop {
+                width: 187px;
+                height: 80px;
+                top: -58px;
+            }
+        }
+
+        .tns-controls {
+            position: absolute;
+            right: $indent;
+            bottom: 35px;
+            @include desktop {
+                bottom: 30px;
+                right: auto;
+                left: $indent;
+            }
+        }
+    }
+    &_holder {
+        @include layout;
+        @include desktop {
+            position: relative;
+        }
+
+        .tns-ovh {
+            overflow: visible;
+        }
+        .tns-outer:first-of-type {
+            margin-right: -$indent;
+            @include desktop {
+                margin-right: calc(-50vh + 83px);
+            }
+        }
+    }
+
+    &_card {
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+            gap: 40px;
+        }
+    }
+    &_card-info {
+        max-width: 638px;
+        font-size: 20px;
+        line-height: 28px;
+        order: 2;
+        @include desktop {
+            font-size: 40px;
+            line-height: 48px;
+            order: 1;
+        }
+    }
+    &_card-text {
+        margin-bottom: 32px;
+        @include desktop {
+            margin-bottom: 64px;
+        }
+    }
+    &_card-name,
+    &_card-position {
+        font-size: 16px;
+        line-height: 1.4;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+    &_card-image-wrapper {
+        position: relative;
+        width: 70%;
+        order: 1;
+        margin: 0 0 50px;
+        @include desktop {
+            width: auto;
+            order: 2;
+            margin: 0;
+        }
+
+        &::before {
+            content: '';
+            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / 100% auto;
+            width: 253px;
+            height: 341px;
+            position: absolute;
+            right: -107;
+            top: -70px;
+            z-index: 0;
+            @include desktop {
+                width: 572px;
+                height: 745px;
+                top: -170px;
+                right: -290px;
+            }
+        }
+    }
+    &_card-image {
+        width: 100%;
+        @include desktop {
+            max-width: 419px;
+        }
+    }
+    &_slider-counter {
+        position: absolute;
+        left: $indent;
+        bottom: 35px;
+        font-size: 16px;
+        @include desktop {
+            display: none;
+        }
+    }
+}

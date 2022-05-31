@@ -1,0 +1,131 @@
+.events {
+    overflow: hidden;
+    margin: 0 0 64px;
+    @include desktop {
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    &_holder {
+        @include layout;
+
+        .tns-outer:first-of-type {
+            margin-right: -$indent;
+            @include desktop {
+                margin-right: calc(-50vh + 83px);
+            }
+        }
+    }
+    &_label {
+        display: block;
+        color: $cPurpleDark;
+        margin: 0 0 8px;
+        font-size: 12px;
+        line-height: 16px;
+        @include desktop {
+            font-size: 18px;
+            line-height: 25px;
+            margin-bottom: 24px;
+        }
+    }
+    &_slider {
+
+        
+    }
+    &_slider-tab {
+        cursor: pointer;
+        font-size: 48px;
+        color: rgba(0, 0, 0, .15);
+        user-select: none;
+        transition: .2s $easing color;
+        @include desktop {
+            font-size: 140px;
+            line-height: 156px;
+        }
+
+        &.active {
+            color: $color;
+        }
+    }
+    &_gallery-item {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 50px;
+        @include desktop {
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 100px;
+            padding-bottom: 79px;
+            gap: 80px;
+        }
+    }
+    &_gallery-item-content {
+        order: 2;
+        @include desktop {
+            order: initial;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 40%;
+        }
+    }
+    &_gallery-item-text {
+        font-size: 16px;
+        line-height: 1.4;
+        padding: 0 26px 0 0;
+        margin: 0 0 24px;
+        @include desktop {
+            font-size: 24px;
+            max-width: 420px;
+            padding: 26px 0 0;
+        }
+    }
+    &_gallery-image-wrapper {
+        position: relative;
+        order: 1;
+        margin: 0 0 44px;
+        padding: 0 26px 0 15px;
+        @include desktop {
+            order: initial;
+            padding: 0;
+        }
+
+        &::before {
+            content: '';
+            background: url(#{$img}/figures/event-image-top.svg) no-repeat center / 100%;
+            position: absolute;
+            right: 0;
+            top: -26px;
+            height: 144px;
+            width: 99px;
+            @include desktop {
+                right: -72px;
+                top: -70px;
+                height: 398px;
+                width: 272px;
+            }
+        }
+        &::after {
+            content: '';
+            background: url(#{$img}/figures/event-image-bottom.svg) no-repeat center / 100%;
+            position: absolute;
+            left: 0;
+            bottom: -22px;
+            height: 79px;
+            width: 72px;
+            @include desktop {
+                left: -41px;
+                bottom: -81px;
+                height: 259px;
+                width: 239px;
+            }
+        }
+    }
+    &_gallery-image {
+        @include desktop {
+            max-width: 748px;
+        }
+    }
+}

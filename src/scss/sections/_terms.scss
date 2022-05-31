@@ -1,0 +1,126 @@
+.terms {
+    margin: 0 0 64px;
+    background: $cPurpleDark;
+    color: $bg_color;
+    position: relative;
+    @include desktop {
+        margin-bottom: 150px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -16px;
+        width: 172px;
+        height: 25px;
+        background-color: $cPurpleDark;
+        border-radius: 4px;
+        @include desktop {
+            top: -25px;
+            width: 363px;
+            height: 107px;
+            border-radius: 8px;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -22px;
+        width: 170px;
+        height: 90px;
+        background: url(#{$img}/figures/terms-top-right.svg) no-repeat top right / 100%;
+        @include desktop {
+            width: 446px;
+            height: 236px;
+            top: -60px;
+        }
+    }
+
+    &_bg-wrapper {
+        padding: 100px 0 90px;
+        position: relative;
+        @include desktop {
+            padding: 64px 0 110px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -28px;
+            width: 123px;
+            height: 78px;
+            background: url(#{$img}/figures/terms-bottom-left.svg) no-repeat top right / 100%;
+            @include desktop {
+                display: none;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -28px;
+            width: 98px;
+            height: 142px;
+            background: url(#{$img}/figures/terms-bottom-right.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 186px;
+                height: 297px;
+                bottom: -60px;
+            }
+        }
+    }
+    &_holder {
+        @include layout;
+    }
+    &_title {
+        font-size: 32px;
+        line-height: 1.2;
+        font-weight: 600;
+        margin: 0 0 46px;
+        @include desktop {
+            width: 50%;
+            margin-bottom: 68px;
+        }
+    }
+    &_list {
+        list-style: none;
+        @include desktop {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        li {
+            font-size: 16px;
+            line-height: 1.4;
+            margin: 0 0 30px;
+            position: relative;
+            padding: 0 0 0 18px;
+            @include desktop {
+                font-size: 24px;
+                line-height: 1.5;
+                margin-bottom: 44px;
+                padding-left: 28px;
+                width: 35%;
+            }
+
+            &::before {
+                content: '';
+                background-color: $cGreen;
+                position: absolute;
+                left: 0;
+                top: -4px;
+                width: 10px;
+                height: 10px;
+                @include desktop {
+                    width: 20px;
+                    height: 20px;
+                    top: -10px;
+                }
+            }
+        }
+    }
+}

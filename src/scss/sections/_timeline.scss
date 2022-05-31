@@ -1,0 +1,87 @@
+.timeline {
+    margin: 0 0 60px;
+    position: relative;
+    @include desktop {
+        margin-bottom: 87px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: rgba(56, 45, 77, 0.3);
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 73px;
+        z-index: -1;
+        @include desktop {
+            height: 1px;
+            top: 46px;
+            width: 100%;
+            left: 0;
+        }
+    }
+
+    &_item {
+        width: 100%;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin: 0 0 16px;
+        @include desktop {
+            max-width: 199px;
+            display: block;
+            margin: 0;
+        }
+    }
+    &_item-title {
+        background-color: $bg_color;
+        border: 1px solid $cGreyLight;
+        border-radius: 4px 0;
+        color: $cGreyLight;
+        font-size: 16px;
+        line-height: 1.2;
+        height: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 10px;
+        min-width: 146px;
+        box-sizing: border-box;
+        @include desktop {
+            margin-bottom: 16px;
+            font-size: 24px;
+            height: 94px;
+            border-radius: 8px 0;
+        }
+
+        .timeline_item__ended & {
+            background-color: #EBE8F2;
+            border: transparent;
+            color: rgba(56, 45, 77, .2);
+        }
+        .timeline_item__current & {
+            background-color: #7360E6;
+            border: transparent;
+            color: #ffffff;
+        }
+    }
+    &_item-date {
+        color: $cGreyLight;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+
+        .timeline_item__ended & {
+            color: rgba(56, 45, 77, .2);
+        }
+        .timeline_item__current & {
+            color: #7360E6;
+        }
+    }
+}

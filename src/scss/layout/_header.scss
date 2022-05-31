@@ -23,11 +23,11 @@
         }
     }
     &::before {
-        background: url(#{$img}/header-bg-left.svg) no-repeat top left / auto 100%;
+        background: url(#{$img}/figures/header-bg-left.svg) no-repeat top left / auto 100%;
         left: 0;
     }
     &::after {
-        background: url(#{$img}/header-bg-right.svg) no-repeat top right / auto 100%;
+        background: url(#{$img}/figures/header-bg-right.svg) no-repeat top right / auto 100%;
         right: 0;
     }
     

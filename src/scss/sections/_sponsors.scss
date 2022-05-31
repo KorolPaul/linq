@@ -1,0 +1,175 @@
+.sponsors {
+    background-color: $cPurpleDark;
+    margin: 0 0 112px;
+    position: relative;
+    padding: 31px 0 75px;
+    @include desktop {
+        margin-bottom: 309px;
+        padding: 53px 0 173px;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -16px;
+        width: 172px;
+        height: 25px;
+        background-color: $cPurpleDark;
+        border-radius: 4px;
+        @include desktop {
+            top: -52px;
+            width: 363px;
+            height: 107px;
+            border-radius: 8px;
+        }
+    }
+    &::after {
+        @include desktop {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: -53px;
+            width: 362px;
+            height: 231px;
+            background: url(#{$img}/figures/sponsors-top-right-bg.svg) no-repeat top right / 100%;
+        }
+    }
+    
+    &_holder {
+        @include layout;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -48px;
+            width: 147px;
+            height: 91px;
+            background: url(#{$img}/figures/sponsors-bottom-left-bg.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 319px;
+                height: 242px;
+                bottom: -107px;
+            }
+        }
+    }
+    &_title {
+        color: $bg_color;
+    }
+
+    &_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        column-gap: 12px;
+        row-gap: 28px;
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            column-gap: 35px;
+            row-gap: 40px;
+        }
+
+        &__pro {
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 40px;
+            @include tablet {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                margin-bottom: 76px;
+            }
+        }
+        &__lead {
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-bottom: 35px;
+            @include tablet {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                margin-bottom: 70px;
+            }
+        }
+    }
+    &_card {
+        background-color: $bg_color;
+        border-radius: 4px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include tablet {
+            border-radius: 8px;
+            height: 110px;
+        }
+
+        &__pro {
+            height: 80px;
+            @include tablet {
+                height: 170px;
+            }
+        }
+        &__lead {
+            height: 55px;
+            @include tablet {
+                height: 133px;
+            }
+        }
+    }
+    &_card-label {
+        background-color: $cPurple;
+        position: absolute;
+        left: -5px;
+        bottom: calc(100% - 8px);
+        font-size: 6px;
+        line-height: 1.26;
+        font-weight: 600;
+        padding: 2px 4px 8px;
+        @include tablet {
+            border-radius: 8px;
+            font-size: 16px;
+            padding: 5px 12px 24px;
+            bottom: calc(100% - 18px);
+            left: -15px;
+        }
+
+        &::before {
+            content: '';
+            background: $cPurpleDark;
+            width: calc(100% - 5px);
+            height: 7px;
+            border-radius: 4px 0 4px 0;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            @include tablet {
+                border-radius: 8px 0 8px 0;
+                height: 18px;
+                width: calc(100% - 15px);
+            }
+        }
+
+        .sponsors_card__lead & {
+            background-color: $cGreen;
+            left: -6px;
+
+            &::before {
+                width: calc(100% - 6px);
+            }
+        }
+        .sponsors_card__pro & {
+            background-color: $cOrange;
+            left: -9px;
+            @include tablet {
+                left: -20px;
+            }
+
+            &::before {
+                width: calc(100% - 9px);
+                @include tablet {
+                    width: calc(100% - 20px);
+                }
+            }
+        }
+    }
+    &_card-image {
+        max-width: 80%;
+    }
+}

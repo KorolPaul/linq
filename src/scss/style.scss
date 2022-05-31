@@ -35,14 +35,25 @@
 @import  "layout/table-wrapper";
 @import  "layout/main";
 
+/* sections */
+@import "sections/terms";
+@import "sections/partners";
+@import "sections/showcase";
+@import "sections/sponsors";
+@import "sections/intro";
+@import "sections/solutions";
+@import "sections/events";
+@import "sections/topics";
+@import "sections/location";
+@import "sections/speakers";
+@import "sections/participation-banner";
+@import "sections/comments";
+@import "sections/video";
+@import "sections/timeline";
+@import "sections/speaker-form";
+
 /* other */
-@import  "other/partners";
 @import  "other/social";
-@import  "other/showcase";
-@import  "other/sponsors";
-@import  "other/intro";
-@import  "other/solutions";
-@import  "other/timeline";
 @import  "other/tickets-comparison";
 @import  "other/rates";
 @import  "other/cart";
@@ -50,13 +61,6 @@
 @import  "other/back-button";
 @import  "other/statistics";
 @import  "other/congratulations";
-@import  "other/events";
-@import  "other/topics";
-@import  "other/location";
-@import  "other/comments";
-@import  "other/speakers";
-@import  "other/video";
-@import  "other/participation-banner";
 
 /* plugins */
 @import  "plugins/tiny-slider";
