@@ -25,7 +25,10 @@ ticketsSlider.forEach(el => {
 
 const commentsSlider = document.querySelectorAll('.comments_slider');
 commentsSlider.forEach(el => {
-    tns({
+    const totalSlidesElement = el.parentElement.parentElement.querySelector('.comments_slider-counter-total');
+    const activeSlideElemwent = el.parentElement.parentElement.querySelector('.comments_slider-counter-active');
+
+    const slider = tns({
         container: el,
         items: 1,
         gutter: 24,
@@ -39,13 +42,28 @@ commentsSlider.forEach(el => {
             1070: {
                 gutter: 74,
             }
+        },
+        onInit: (info) => {
+            if (totalSlidesElement) {
+                totalSlidesElement.innerText = info.slideCount;
+            }
+        }
+    });
+
+    slider.events.on('transitionEnd', (info) => {
+        console.log(info.displayIndex);
+        if (activeSlideElemwent) {
+            activeSlideElemwent.innerText = info.displayIndex;
         }
     });
 });
 
 const speakersSlider = document.querySelectorAll('.speakers_slider');
 speakersSlider.forEach(el => {
-    tns({
+    const totalSlidesElement = el.parentElement.parentElement.querySelector('.speakers_slider-counter-total');
+    const activeSlideElemwent = el.parentElement.parentElement.querySelector('.speakers_slider-counter-active');
+
+    const slider = tns({
         autoWidth: true,
         container: el,
         items: 1.1,
@@ -61,6 +79,18 @@ speakersSlider.forEach(el => {
                 gutter: 20,
                 items: 3,
             }
+        },
+        onInit: (info) => {
+            if (totalSlidesElement) {
+                totalSlidesElement.innerText = info.slideCount;
+            }
+        }
+    });
+
+    slider.events.on('transitionEnd', (info) => {
+        console.log(info.displayIndex);
+        if (activeSlideElemwent) {
+            activeSlideElemwent.innerText = info.displayIndex;
         }
     });
 });

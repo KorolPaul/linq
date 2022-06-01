@@ -34,6 +34,9 @@ a {
 
 p {
     margin: 0 0 20px;
+    @include desktop {
+        margin-bottom: 22px;
+    }
 }
 
 img {
@@ -60,8 +63,13 @@ table {
     min-width: 100%;
 }
 
+ol,
 ul {
-    padding: 0;
+    padding: 0 0 0 26px;
+    margin: 0 0 22px;
+    @include desktop {
+        padding-left: 30px;
+    }
 }
 
 a[name] {

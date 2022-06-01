@@ -1,0 +1,62 @@
+.article {
+    margin: 0 0 90px;
+    @include desktop {
+        position: relative;
+        margin-bottom: 150px;
+    }
+
+    &::before {
+        @include desktop {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 340px;
+            width: 200px;
+            height: 507px;
+            background: url(#{$img}/figures/terms-left.svg) no-repeat top left / auto 100%;
+            z-index: -1;
+        }
+    }
+    &::after {
+        @include desktop {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            width: 100px;
+            height: 470px;
+            background: url(#{$img}/figures/terms-right.svg) no-repeat top right / auto 100%;
+            z-index: -1;
+        }
+    }
+
+    &_holder {
+        @include layout;
+    }
+    h1 {
+        font-size: 48px;
+        line-height: .94;
+        font-weight: 400;
+        margin: 0 0 32px;
+        @include desktop {
+            font-size: 140px;
+            line-height: 132px;
+            margin-bottom: 56px;
+        }
+    }
+    &_content {
+        @include desktop {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+    &_text {
+        line-height: 1.4;
+        font-weight: 400;
+        margin: 0 0 24px;
+        @include desktop {
+            margin-bottom: 40px;
+            max-width: 860px;
+        }
+    }
+}
