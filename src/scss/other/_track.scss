@@ -58,6 +58,7 @@
         width: 44px;
         background-color: $cPurpleDark;
         border-radius: 50%;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,6 +98,7 @@
     }
     &_participant-avatar {
         width: 100%;
+        border-radius: 50%;
     }
     &_title {
         font-weight: 600;

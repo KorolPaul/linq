@@ -271,26 +271,28 @@ filtersSectionTitleElements.forEach((el) => {
 });
 
 /* Tabs */
-const tabsContainers = document.querySelectorAll('.tabs');
-
-tabsContainers.forEach(tabContainer => {
-    const tabsButtons = tabContainer.querySelectorAll('.tabs_button');
-    const tabsBlocks = tabContainer.querySelectorAll('.tabs_content');
-
-    if (tabsButtons.length) {
-        function switchTab(e) {
-            e.preventDefault();
-
-            const index = e.target.dataset.tab;
-            tabsButtons.forEach(el => el.classList.remove('active'));
-            tabsBlocks.forEach(el => el.classList.remove('active'));
-
-            tabsButtons[index - 1].classList.add('active');
-            tabsBlocks[index - 1].classList.add('active');
+function initTabs() {
+    const tabsContainers = document.querySelectorAll('.tabs');
+    
+    tabsContainers.forEach(tabContainer => {
+        const tabsButtons = tabContainer.querySelectorAll('.tabs_button');
+        const tabsBlocks = tabContainer.querySelectorAll('.tabs_content');
+    
+        if (tabsButtons.length) {
+            function switchTab(e) {
+                e.preventDefault();
+    
+                const index = e.target.dataset.tab;
+                tabsButtons.forEach(el => el.classList.remove('active'));
+                tabsBlocks.forEach(el => el.classList.remove('active'));
+    
+                tabsButtons[index - 1].classList.add('active');
+                tabsBlocks[index - 1].classList.add('active');
+            }
+    
+            tabsButtons.forEach(el => el.addEventListener('click', switchTab));
         }
+    });
+}
 
-        tabsButtons.forEach(el => el.addEventListener('click', switchTab));
-    }
-});
-
-
+initTabs()
