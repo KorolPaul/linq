@@ -15,7 +15,7 @@
     }
     &_background {
         background-color: $cOrange;
-        padding: 32px 0 110px;
+        padding: 40px 0 110px;
         margin: 0 0 22px;
         position: relative;
         @include desktop {
@@ -25,19 +25,16 @@
         }
 
         &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: -32px;
-            border-radius: 8px;
-            width: 187px;
-            height: 80px;
-            background-color: $cOrange;
-            z-index: -1;
             @include desktop {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -58px;
+                border-radius: 8px;
                 width: 187px;
                 height: 80px;
-                top: -58px;
+                background-color: $cOrange;
+                z-index: -1;
             }
         }
 

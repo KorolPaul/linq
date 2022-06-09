@@ -64,7 +64,6 @@ speakersSlider.forEach(el => {
     const activeSlideElemwent = el.parentElement.parentElement.querySelector('.speakers_slider-counter-active');
 
     const slider = tns({
-        autoWidth: true,
         container: el,
         items: 1.1,
         gutter: 16,
@@ -76,6 +75,7 @@ speakersSlider.forEach(el => {
         loop: false,
         responsive: {
             1070: {
+                autoWidth: true,
                 gutter: 20,
                 items: 3,
             }

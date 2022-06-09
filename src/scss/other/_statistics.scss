@@ -191,6 +191,7 @@
     &_item-text {
         font-size: 16px;
         line-height: 1.4;
+        width: 90%;
         @include desktop {
             font-size: vw(32);
         }

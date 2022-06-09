@@ -57,8 +57,9 @@
         }
     }
     .tns-outer {
-        margin-bottom: 24px;
+        margin-right: -$indent;
         @include desktop {
+            margin-bottom: 24px;
             margin-right: -72px;
         }
     }
@@ -77,7 +78,6 @@
     display: flex;
     width: 100%x;
     height: 442px;
-    padding: 0 0 100px;
     border-radius: 4px;
     position: relative;
     color: $color;
@@ -86,7 +86,6 @@
     @include desktop {
         width: 33.52vw;
         height: 51.2vw;
-        padding-bottom: vw(142);
         border-radius: 8px;
     }
 
@@ -129,8 +128,6 @@
         position: absolute;
         top: -10px;
         left: 0;
-        max-width: 120px;
-        width: 100%;
         padding: 16px $indent;
         border-radius: 4px;
         z-index: 1;
@@ -176,6 +173,16 @@
         height: 100%;
         object-fit: cover;
     }
+    &_content {
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        padding: 0 0 100px;
+        @include desktop {
+            border-radius: 8px;
+            padding-bottom: vw(142);
+        }
+    }
     &_bottom {
         padding: 32px;
         position: absolute;
@@ -183,7 +190,12 @@
         right: 0;
         bottom: 0;
         border-radius: 0 0 4px 4px;
+        top: 0;
+        z-index: 2;
+        transform: translateY(332px);
+        transition: .3s $easing transform;
         @include desktop {
+            transform: translateY(498px);
             border-radius: 0 0 8px 8px;
         }
 
@@ -192,7 +204,7 @@
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 90%;
+            bottom: 97%;
             height: 55px;
             background-repeat: no-repeat;
             background-position: left top;
@@ -200,6 +212,10 @@
             @include desktop {
                 height: 70px;
             }
+        }
+
+        .speakers-card:hover & {
+            transform: translateY(0);
         }
 
         .speakers-card__blue & {
@@ -240,20 +256,19 @@
         font-size: 16px;
         line-height: 1.4;
         color: $cGreyLight;
+        display: block;
+        margin: 0 0 20px;
         @include desktop {
             font-size: vw(24);
+            margin-bottom: 56px;
         }
     }
     &_text {
-        overflow: hidden;
-        max-height: 0;
-        transition: .3s $easing max-height;
+        opacity: 0;
+        transition: .2s $easing opacity;
 
         .speakers-card:hover & {
-            max-height: 400px;
-            @include desktop {
-                max-height: 600px;
-            }
+            opacity: 1;
         }
     }
 }

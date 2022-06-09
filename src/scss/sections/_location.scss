@@ -51,7 +51,7 @@
     }
     &_images {
         order: 1;
-        margin: 53px 0 52px;
+        margin: 0 0 50px;
         @include desktop {
             order: initial;
             margin: 0;
@@ -80,7 +80,10 @@
         }
 
         .button {
-            margin: 24px 0 0;
+            margin: 4px 0 0;
+            @include desktop {
+                margin-top: vw(24);
+            }
         }
     }
 }

@@ -9,10 +9,19 @@
     &_holder {
         @include layout;
 
-        .tns-outer:first-of-type {
-            margin-right: -$indent;
+        .tns-outer {
+            margin-top: -12px;
+            margin-bottom: 10px;
             @include desktop {
-                margin-right: calc(-50vh + 83px);
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+
+            &:first-of-type {
+                margin-right: -$indent;
+                @include desktop {
+                    margin-right: calc(-50vh + 83px);
+                }
             }
         }
     }
@@ -42,6 +51,10 @@
             font-size: vw(140);
         }
 
+        &:hover {
+            color: rgba($color, .5);
+        }
+        &:active,
         &.active {
             color: $color;
         }

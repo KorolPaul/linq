@@ -5,6 +5,7 @@
     font-size: 12px;
     line-height: 1.3;
     @include desktop {
+        margin-bottom: vw(8);
         font-size: vw(18);
         margin-bottom: vw(24);
     }
