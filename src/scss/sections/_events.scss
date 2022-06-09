@@ -3,7 +3,7 @@
     margin: 0 0 64px;
     @include desktop {
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &_holder {
@@ -39,8 +39,7 @@
         user-select: none;
         transition: .2s $easing color;
         @include desktop {
-            font-size: 140px;
-            line-height: 156px;
+            font-size: vw(140);
         }
 
         &.active {
@@ -55,8 +54,8 @@
         @include desktop {
             flex-direction: row;
             justify-content: space-between;
-            margin-top: 100px;
-            padding-bottom: 79px;
+            margin-top: vw(100);
+            padding-bottom: vw(80);
             gap: 80px;
         }
     }
@@ -77,9 +76,9 @@
         padding: 0 26px 0 0;
         margin: 0 0 24px;
         @include desktop {
-            font-size: 24px;
-            max-width: 420px;
-            padding: 26px 0 0;
+            font-size: vw(24);
+            max-width: 80%;
+            padding: vw(26) 0 0;
         }
     }
     &_gallery-image-wrapper {
@@ -125,7 +124,7 @@
     }
     &_gallery-image {
         @include desktop {
-            max-width: 748px;
+            width: 55vw;
         }
     }
 }

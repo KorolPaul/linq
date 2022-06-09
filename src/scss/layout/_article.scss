@@ -2,7 +2,7 @@
     margin: 0 0 90px;
     @include desktop {
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &::before {
@@ -39,9 +39,8 @@
         font-weight: 400;
         margin: 0 0 32px;
         @include desktop {
-            font-size: 140px;
-            line-height: 132px;
-            margin-bottom: 56px;
+            font-size: vw(140);
+            margin-bottom: vw(56);
         }
     }
     &_content {
@@ -55,8 +54,8 @@
         font-weight: 400;
         margin: 0 0 24px;
         @include desktop {
-            margin-bottom: 40px;
-            max-width: 860px;
+            margin-bottom: vw(40);
+            max-width: 50%;
         }
     }
 }

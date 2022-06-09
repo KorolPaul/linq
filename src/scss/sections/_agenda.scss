@@ -1,7 +1,7 @@
 .agenda {
     margin: 0 0 64px;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &_holder {
@@ -14,8 +14,8 @@
         row-gap: 16px;
         @include desktop {
             grid-template-columns: 1fr 1fr;
-            column-gap: 20px;
-            row-gap: 20px;
+            column-gap: vw(20);
+            row-gap: vw(20);
         }
     }
 }

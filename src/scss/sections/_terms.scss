@@ -4,7 +4,7 @@
     color: $bg_color;
     position: relative;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &::before {

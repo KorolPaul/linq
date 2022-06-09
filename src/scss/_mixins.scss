@@ -40,9 +40,8 @@
     padding-left: $indent;
     padding-right: $indent;
     @include tablet {
-        max-width: $max-width;
-        margin-left: auto;
-        margin-right: auto;
+        padding-left: 72px;
+        padding-right: 72px;
     }
 }
 
@@ -54,20 +53,6 @@
     }
 }
 
-@mixin gradiented-animated-text($color1, $color2, $degree: 65deg) {
-    @supports(-webkit-background-clip: text) {
-        animation: 1s gradient-rotation linear infinite both;
-        background: linear-gradient($degree, $color1 0%, $color2 40%,$color2 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    @keyframes gradient-rotation {
-        0% {
-            background: linear-gradient(65deg, $color1 0%, $color2 40%,$color2 100%);
-        }
-        100% {
-            background: linear-gradient(65deg, $color1 0%, $color2 40%,$color2 100%);
-        }
-    }
+@function vw($px) {
+    @return $px * 0.08vw
 }

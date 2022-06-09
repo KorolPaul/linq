@@ -2,7 +2,7 @@
     margin: 0 0 64px;
     @include desktop {
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: vw(12);
     }
 
     &_holder {
@@ -17,7 +17,7 @@
         padding: 16px 0 0;
         @include desktop {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            padding-top: 40px;
+            padding-top: vw(40);
         }
     }
     &_item {
@@ -26,8 +26,7 @@
         flex-direction: column;
         justify-content: space-between;
         @include desktop {
-            max-height: 244px;
-            padding: 21px 32px 24px 32px;
+            padding: vw(21) vw(32) vw(24) vw(32);
         }
 
         &::after {
@@ -185,16 +184,15 @@
         margin-bottom: 25px;
         z-index: 5;
         @include desktop {
-            font-size: 140px;
-            margin-bottom: 29px;
+            font-size: vw(140);
+            margin-bottom: vw(29);
         }
     }
     &_item-text {
         font-size: 16px;
         line-height: 1.4;
         @include desktop {
-            font-size: 32px;
-            line-height: 38px;
+            font-size: vw(32);
         }
     }
 }

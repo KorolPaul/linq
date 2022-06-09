@@ -1,7 +1,7 @@
 .location {
     margin: 0 0 64px;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
         position: relative;
     }
 
@@ -55,10 +55,10 @@
         @include desktop {
             order: initial;
             margin: 0;
+            width: 45%;
         }
     }
     &_image {
-        max-width: 638px;
         flex-shrink: 0;
         margin-top: 40px;
         width: 100%;
@@ -69,14 +69,14 @@
     }
     &_info {
         font-size: 16px;
-        line-height: 22px;
+        line-height: 1.5;
         order: 2;
         @include desktop {
+            width: 45%;
             order: initial;
-            font-size: 24px;
-            line-height: 36px;
-            max-width: 588px;
-            margin-bottom: 40px;
+            font-size: vw(24);
+            max-width: 48%;
+            margin-bottom: vw(40);
         }
 
         .button {

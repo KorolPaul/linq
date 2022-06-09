@@ -19,7 +19,7 @@
                 .2s $easing background-color,
                 .2s $easing transform;
     @include desktop {
-        font-size: 17px;
+        font-size: vw(17);
         height: 70px;
         line-height: 70px;
     }

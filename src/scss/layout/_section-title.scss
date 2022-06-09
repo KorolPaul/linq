@@ -5,8 +5,11 @@
     margin: 0 0 32px;
     width: 70%;
     @include desktop {
-        font-size: 140px;
-        margin-bottom: 56px;
+        font-size: vw(140);
+        margin-bottom: vw(56);
+    }
+    @include desktop-large {
+        width: 80%;
     }
 
     &__wide {

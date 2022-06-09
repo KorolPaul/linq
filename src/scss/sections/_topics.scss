@@ -4,7 +4,7 @@
     background: $cPurpleDark;
     position: relative;
     @include desktop {
-        margin-bottom: 258px;
+        margin-bottom: vw(258);
         background: $cPurpleDark url(#{$img}/figures/topics-left-middle.svg) no-repeat left 48% / 222px 243px;
     }
 
@@ -90,21 +90,21 @@
             flex-direction: column;
             justify-content: end;
             align-items: flex-end;
-            margin-bottom: 80px;
+            margin-bottom: vw(80);
         }
     }
     &_text {
         font-size: 16px;
         line-height: 1.4;
         @include desktop {
-            font-size: 24px;
-            max-width: 638px;
+            font-size: vw(24);
+            max-width: 50%;
         }
 
         .button {
             margin: 24px 0 0;
             @include desktop {
-                margin-top: 40px;
+                margin-top: vw(40);
             }
         }
     }
@@ -117,7 +117,7 @@
         z-index: 1;
         @include tablet {
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 20px;
+            gap: vw(29);
         }
     }
     &_item {
@@ -141,10 +141,10 @@
         @include desktop {
             min-height: 200px;
             font-size: 54px;
-            padding: 26px;
+            padding: vw(26);
         }
 
-        &_hover {
+        &:hover {
             color: $color;
             border-color: transparent;
         }

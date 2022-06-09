@@ -1,7 +1,7 @@
 .partners {
     margin: 0 0 64px;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &_holder {

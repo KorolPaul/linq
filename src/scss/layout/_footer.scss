@@ -3,8 +3,8 @@
     margin-top: 64px;
     padding-bottom: 60px;
     @include desktop {
-        margin-top: 150px;
-        padding-bottom: 120px;
+        margin-top: vw(150);
+        padding-bottom: vw(120);
     }
 
     &_top {
@@ -12,7 +12,7 @@
         @include desktop {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 84px;
+            margin-bottom: vw(84);
         }
     }
     &_bottom {
@@ -27,8 +27,7 @@
     &_left {
         @include desktop {
             max-width: 420px;
-                margin-right: 30px;
-
+            margin-right: 30px;
         }
     }
     &_right {
@@ -40,10 +39,13 @@
         }
     }
     &_column {
-        font-size: 18px;
+        font-size: 16px;
         line-height: 25px;
         margin: 0 0 50px;
         position: relative;
+        @include desktop {
+            font-size: 1.44vw;
+        }
 
         &:nth-child(2) {
             @include desktop {
@@ -57,17 +59,19 @@
         line-height: 1.2;
         display: block;
         margin-bottom: 24px;
+        @include desktop {
+            font-size: vw(32);
+        }
     }
     &_copyrights {
         order: 2;
         font-size: 12px;
-        line-height: 16px;
+        line-height: 1.4;
         margin-right: 20px;
         color: $cGreyLight;
         @include desktop {
             order: initial;
-            font-size: 16px;
-            line-height: 22px;
+            font-size: vw(16);
         }
     }
     &_copyrights-link {
@@ -100,12 +104,11 @@
         max-width: 200px;
         color: $cGreyLight;
         font-size: 12px;
-        line-height: 16px;
+        line-height: 1.33;
         margin: 0 0 16px;
         display: block;
         @include desktop {
-            font-size: 16px;
-            line-height: 22px;
+            font-size: vw(16);
             margin: 0;
             flex-grow: 1;
             padding-right: 10%;
@@ -115,7 +118,7 @@
         font-size: 16px;
         line-height: 1.4;
         @include desktop {
-            font-size: 18px;
+            font-size: vw(16);
         }
 
         a,
@@ -170,7 +173,7 @@
         display: block;
         margin: 0 0 8px;
         @include desktop {
-            margin: 0 0 0 30px;
+            margin: 0 0 0 vw(30);
         }
     }
 }

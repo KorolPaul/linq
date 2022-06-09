@@ -3,9 +3,9 @@
     line-height: .95;
     font-weight: 400;
     margin: 0 0 70px;
-    @include tablet {
-        font-size: 140px;
-        margin-bottom: 120px;
+    @include desktop {
+        font-size: vw(140);
+        margin-bottom: vw(120);
     }
 }
 %heading-2 {
@@ -14,7 +14,7 @@
     font-weight: 600;
     margin: 0 0 20px;
     @include desktop {
-        font-size: 72px;
+        font-size: vw(72);
     }
 }
 %heading-3 {
@@ -22,7 +22,7 @@
     line-height: 1.4;
     font-weight: 400;
     @include desktop {
-        font-size: 60px;
+        font-size: vw(60);
     }
 }
 %heading-4 {
@@ -30,7 +30,7 @@
     line-height: 1.2;
     font-weight: 400;
     @include desktop {
-        font-size: 40px;
+        font-size: vw(40);
     }
 }
 %heading-5 {
@@ -38,7 +38,7 @@
     line-height: 1.2;
     font-weight: 400;
     @include desktop {
-        font-size: 32px;
+        font-size: vw(32);
     }
 }
 %heading-6 {
@@ -46,7 +46,7 @@
     line-height: 1.4;
     font-weight: 400;
     @include desktop {
-        font-size: 24px;
+        font-size: vw(24);
     }
 }
 

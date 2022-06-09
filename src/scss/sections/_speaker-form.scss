@@ -2,7 +2,7 @@
     margin: 0 0 64px;
     position: relative;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &::before {

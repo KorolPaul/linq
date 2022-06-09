@@ -2,11 +2,9 @@
     padding: 14px 0 87px 0;
     margin: 0 0 64px;
     @include desktop {
-        margin-bottom: 150px;
-        padding: 67px 0 59px 0;
+        margin-bottom: vw(150);
+        padding: vw(66) 0 vw(60) 0;
     }
-
-
 
     &_holder {
         padding: 0 24px;

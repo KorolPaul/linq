@@ -4,8 +4,8 @@
     position: relative;
     padding: 31px 0 75px;
     @include desktop {
-        margin-bottom: 309px;
-        padding: 53px 0 173px;
+        margin-bottom: vw(310);
+        padding: vw(54) 0 vw(174);
     }
 
     &::before {
@@ -66,8 +66,8 @@
         row-gap: 28px;
         @include tablet {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-            column-gap: 35px;
-            row-gap: 40px;
+            column-gap: vw(35);
+            row-gap: vw(40);
         }
 
         &__pro {
@@ -75,7 +75,7 @@
             margin-bottom: 40px;
             @include tablet {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
-                margin-bottom: 76px;
+                margin-bottom: vw(76);
             }
         }
         &__lead {
@@ -83,7 +83,7 @@
             margin-bottom: 35px;
             @include tablet {
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-                margin-bottom: 70px;
+                margin-bottom: vw(70);
             }
         }
     }
@@ -97,19 +97,19 @@
         position: relative;
         @include tablet {
             border-radius: 8px;
-            height: 110px;
+            height: vw(110);
         }
 
         &__pro {
             height: 80px;
             @include tablet {
-                height: 170px;
+                height: vw(170);
             }
         }
         &__lead {
             height: 55px;
             @include tablet {
-                height: 133px;
+                height: vw(133);
             }
         }
     }

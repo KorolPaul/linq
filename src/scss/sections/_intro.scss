@@ -2,7 +2,7 @@
     margin: 0 0 64px;
     @include desktop {
         position: relative;
-        margin-bottom: 150px;
+        margin-bottom: vw(150);
     }
 
     &__background-1 {
@@ -102,9 +102,8 @@
         font-weight: 400;
         margin: 0 0 32px;
         @include desktop {
-            font-size: 140px;
-            line-height: 132px;
-            margin-bottom: 56px;
+            font-size: vw(140);
+            margin-bottom: vw(56);
         }
     }
     &_label {
@@ -112,11 +111,10 @@
         color: $cPurpleDark;
         margin: 0 0 8px;
         font-size: 12px;
-        line-height: 16px;
+        line-height: 1.3;
         @include desktop {
-            font-size: 18px;
-            line-height: 25px;
-            margin-bottom: 24px;
+            font-size: vw(18);
+            margin-bottom: vw(24);
         }
     }
     &_content {
@@ -131,23 +129,22 @@
         font-weight: 400;
         margin: 0 0 24px;
         @include desktop {
-            font-size: 24px;
-            line-height: 36px;
-            margin-bottom: 40px;
-            max-width: 638px;
+            font-size: vw(24);
+            margin-bottom: vw(40);
+            max-width: 56%;
         }
     }
     &_back {
         margin-bottom: 32px;
         @include desktop {
-            margin-bottom: 64px;
+            margin-bottom: vw(64);
         }
     }
 
     .button {
         margin: 24px 0 0;
         @include desktop {
-            margin-top: 40px;
+            margin-top: vw(40);
         }
     }
 }
