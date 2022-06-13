@@ -25,10 +25,14 @@
             top: 0;
             left: 0;
             right: 0;
-            bottom: -10vw;
+            bottom: -16vw;
+            @include desktop {
+                bottom: -10.3vw;
+            }
         }
     }
-    &_image {
+    &_image,
+    &_video {
         width: 100%;
     }
     &_content {
@@ -37,8 +41,9 @@
         left: 24px;
         top: 100px;
         @include desktop {
-            top: 164px;
-            max-width: 45%;
+            top: 50%;
+            transform: translateY(-50%);
+            max-width: 50%;
             left: 72px;
         }
     }
@@ -46,6 +51,7 @@
         color: $cPurple;
         margin-bottom: 20px;
         @include desktop {
+            line-height: 1.05;
             margin-bottom: 1.6vw;
         }
 
@@ -62,7 +68,7 @@
         width: 100%;
         margin: 0 0 0 16px;
         @include desktop {
-            margin-left: 110px;
+            margin-left: vw(110);
             max-width: 80%;
         }
     }

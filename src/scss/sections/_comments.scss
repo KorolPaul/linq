@@ -3,7 +3,6 @@
     overflow: hidden;
     @include desktop {
         margin-bottom: vw(150);
-        
     }
 
     &_title {
@@ -20,8 +19,8 @@
         position: relative;
         @include desktop {
             position: relative;
-            padding: vw(29) 0 vw(47) 0;
-            margin-bottom: vw(66);
+            padding: vw(92) 0 vw(40) 0;
+            margin-bottom: vw(54);
         }
 
         &::before {
@@ -43,7 +42,7 @@
             right: $indent;
             bottom: 35px;
             @include desktop {
-                bottom: 30px;
+                bottom: 15px;
                 right: auto;
                 left: 72px;
             }
@@ -112,18 +111,20 @@
 
         &::before {
             content: '';
-            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / 100% auto;
+            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / auto 100%;
             width: 253px;
             height: 341px;
             position: absolute;
             right: -107;
             top: -70px;
             z-index: 0;
+            pointer-events: none;
             @include desktop {
-                width: 572px;
-                height: 745px;
-                top: -170px;
-                right: -290px;
+                width: 200%;
+                height: 160%;
+                top: 40%;
+                transform: translateY(-50%);
+                right: vw(-420);
             }
         }
     }

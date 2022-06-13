@@ -2,8 +2,9 @@
     padding: 14px 0 87px 0;
     margin: 0 0 14px;
     @include desktop {
-        margin-bottom: vw(150);
-        padding: vw(66) 0 vw(60) 0;
+        margin-bottom: vw(140);
+        padding: 0 0 vw(60) 0;
+        overflow: hidden;
     }
 
     &_holder {
@@ -16,6 +17,9 @@
         position: relative;
         padding: 0 0 56%;
         margin-top: 44px;
+        @include desktop {
+            margin-top: vw(140);
+        }
 
         &::before {
             content: '';

@@ -32,8 +32,11 @@
         margin: 4px 0;
         transition: .3s $easing color;
         @include desktop {
-            font-size: 72px;
+            font-size: 48px;
             line-height: 1;
+        }
+        @include desktop-large {
+            font-size: 72px;
         }
 
         &:hover {
@@ -42,6 +45,12 @@
     }
     &_button {
         margin: 100px 0 150px;
+        @include desktop {
+            margin: 50px 0 75px;
+        }
+        @include desktop-large {
+            margin: 100px 0 150px;
+        }
     }
     &_social {
         position: absolute;

@@ -25,6 +25,14 @@
         align-items: center;
         justify-content: center;
         background-color: $bg_color;
+        transition: .2s $easing opacity;
+
+        &[href]:hover {
+            opacity: .6;
+        }
+        &[href]:active {
+            opacity: .8;
+        }
     }
     &_image {
         max-width: 80%;

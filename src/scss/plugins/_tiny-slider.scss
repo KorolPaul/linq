@@ -135,9 +135,17 @@
         height: 15px;
         font-size: 0;
         line-height: 0;
+        transition: .2s $easing transform;
         @include desktop {
             width: 70px;
             height: 25px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(.98);
         }
     }
 

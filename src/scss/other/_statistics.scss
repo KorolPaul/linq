@@ -2,7 +2,7 @@
     margin: 0 0 64px;
     @include desktop {
         position: relative;
-        margin-bottom: vw(12);
+        margin-bottom: vw(150);
     }
 
     &_holder {
@@ -46,7 +46,6 @@
             grid-row: 1;
             grid-column: 1;
             @include desktop {
-                min-height: 284px;
                 grid-column: 1 / 4;
             }
 
@@ -63,7 +62,6 @@
                 }
             }
         }
-
         &__second {
             position: relative;
             background-color: $cPurpleLight;
@@ -72,7 +70,6 @@
             grid-column: 2;
             border-top-left-radius: 0;
             @include desktop {
-                min-height: 284px;
                 grid-row: 1;
                 grid-column: 4 / 8;
             }
@@ -105,14 +102,12 @@
                 }
             }
         }
-
         &__third {
             border-radius: 8px;
             background-color: $cOrange;
             grid-row: 3;
             grid-column: 2 / 3;
             @include desktop {
-                min-height: 284px;
                 grid-row: 1;
                 grid-column: 8 / 11;
             }
@@ -121,7 +116,6 @@
                 content: none;
             }
         }
-
         &__fourth {
             position: relative;
             background-color: $cPink;
@@ -148,7 +142,6 @@
                 }
             }
         }
-
         &__fifth {
             position: relative;
             background-color: $cGreen;

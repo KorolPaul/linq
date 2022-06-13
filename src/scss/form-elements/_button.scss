@@ -20,12 +20,16 @@
                 .2s $easing transform;
     @include desktop {
         font-size: vw(17);
+        height: 56px;
+        line-height: 52px;
+    }
+    @include desktop-large {
         height: 70px;
-        line-height: 70px;
+        line-height: 64px;
     }
 
     &:hover {
-        background-color: transparent;
+        background-color: $bg_color;
         transform: scale(1.02);
     }
     &:active {
@@ -78,7 +82,8 @@ input[type="submit"] {
         border-color: $cPink;
 
         &:hover {
-            
+            background-color: $bg_color;
+            color: $cPink;
         }
     }
     &__purple {
@@ -87,7 +92,18 @@ input[type="submit"] {
         border-color: $cPurpleLight;
 
         &:hover {
-            
+            background-color: $bg_color;
+            color: $cPurpleLight;
+        }
+    }
+    &__orange {
+        color: $bg_color;
+        background-color: $cOrange;
+        border-color: $cOrange;
+
+        &:hover {
+            background-color: $bg_color;
+            color: $cOrange;
         }
     }
 }

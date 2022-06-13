@@ -15,7 +15,7 @@
     @media all and (min-width: 1070px) { @content; }
 }
 @mixin desktop-large() {
-    @media all and (min-width: 1360px) { @content; }
+    @media all and (min-width: 1440px) { @content; }
 }
 @mixin media($resolution) {
     @media all and (min-width: $resolution) { @content; }
@@ -40,6 +40,10 @@
     padding-left: $indent;
     padding-right: $indent;
     @include tablet {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+    @include desktop-large() {
         padding-left: 72px;
         padding-right: 72px;
     }
@@ -54,5 +58,5 @@
 }
 
 @function vw($px) {
-    @return $px * 0.08vw
+    @return $px * 0.068vw
 }

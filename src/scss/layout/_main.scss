@@ -1,4 +1,9 @@
 .main {
+    padding: 176px 0 0;
+    @include desktop {
+        padding-top: 318px;
+    }
+
     &__small-top-indent {
         padding-top: 0;
     }

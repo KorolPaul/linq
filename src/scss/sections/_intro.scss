@@ -2,7 +2,7 @@
     margin: 0 0 64px;
     @include desktop {
         position: relative;
-        margin-bottom: vw(150);
+        margin-bottom: vw(105);
     }
 
     &__background-1 {
@@ -49,18 +49,7 @@
         }
     }
     &__background-3 {
-        &::before {
-            @include desktop {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 132px;
-                width: 137px;
-                height: 209px;
-                background: url(#{$img}/figures/speakers-page-left.svg) no-repeat top right / 100%;
-                z-index: -1;
-            }
-        }
+
         &::after {
             content: '';
             position: absolute;
@@ -131,7 +120,7 @@
         @include desktop {
             font-size: vw(24);
             margin-bottom: vw(40);
-            max-width: 56%;
+            max-width: 46%;
         }
     }
     &_back {
@@ -144,7 +133,7 @@
     .button {
         margin: 4px 0 0;
         @include desktop {
-            margin-top: vw(40);
+            margin-top: vw(22);
         }
     }
 }

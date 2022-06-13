@@ -6,16 +6,30 @@
         }
     }
     &_cell {
-        margin: 0 0 16px;
+        margin: 0 0 18px;
         width: 100%;
         @include tablet {
-            margin-bottom: 30px;
+            margin-bottom: 26px;
             flex-grow: 1;
             width: 50%;
         }
     }
     &_accept {
-        margin: 16px 0 56px;
+        margin: 66px 0 56px;
+        @include desktop {
+            margin-top: 8px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+        a[href] {
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
     }
     &_submit[type] {
         width: 100%;

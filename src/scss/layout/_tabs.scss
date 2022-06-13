@@ -6,19 +6,32 @@
         border-bottom: 1px solid currentColor;
     }
     &_header-label {
-        font-size: 18px;
-        line-height: 140%;
-        display: block;
-        margin: 0 0 11px
+        display: none;
+        @include desktop {
+            font-size: 18px;
+            line-height: 140%;
+            display: block;
+            margin: 0 0 11px;
+        }
     }
     &_button {
         @include button-reset;
-        font-size: 24px;
-        padding: 11px;
+        font-size: 18px;
+        padding: 7px;
         font-weight: 600;
         position: relative;
         transition: .2s $easing color;
+        @include desktop {
+            font-size: 24px;
+            padding: 11px;
+        }
 
+        &:first-child {
+            padding-left: 0;
+            @include desktop {
+                padding-left: 11px;
+            }
+        }
         &::after {
             content: '';
             position: absolute;
@@ -42,6 +55,9 @@
     }
     &_content {
         display: none;
+        @include desktop {
+            flex-grow: 1;
+        }
 
         &.active {
             display: block;

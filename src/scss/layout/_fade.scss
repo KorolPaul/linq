@@ -1,14 +1,15 @@
 .fade {
-    pointer-events: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 10;
+    pointer-events: none;
     transition: .3s $easing background;
-
+    
     .menu-opened & {
         background-color: rgba(0, 0, 0, 0.6);
+        pointer-events: all;
+        z-index: 10;
     }
 } 

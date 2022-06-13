@@ -27,8 +27,13 @@
         left: 0;
     }
     &::after {
-        background: url(#{$img}/figures/header-bg-right.svg) no-repeat top right / auto 100%;
+        background: url(#{$img}/figures/header-bg-right-mobile.svg) no-repeat top right / auto 100%;
         right: 0;
+        height:110px;
+        @include desktop {
+            height:238px;
+            background-image: url(#{$img}/figures/header-bg-right.svg);
+        }
     }
     
     &_holder {

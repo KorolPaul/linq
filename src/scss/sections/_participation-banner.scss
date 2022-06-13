@@ -1,12 +1,13 @@
 .participation-banner {
-    margin: 0 0 64px;
+    margin: 0 0 110px;
     background-color: $cPurpleDark;
     color: $bg_color;
     padding: 56px 40px;
     text-align: center;
     position: relative;
     @include desktop {
-        margin-bottom: vw(150);
+        margin-top: vw(260);
+        margin-bottom: vw(210);
         padding: vw(72) 0;
     }
 
@@ -20,23 +21,25 @@
         top: 50%;
         transform: translateY(-50%);
         @include desktop {
-            width: 254px;
-            height: 545px;
+            top: -68px;
+            bottom: -48px;
             left: 0;
+            width: 50%;
+            height: auto;
+            transform: none;
         }
     }
     &::after {
         content: '';
-        background: url(#{$img}/figures/participation-banner-right-figure.svg) no-repeat left center / auto 100%;
-        width: 117px;
-        height: 260px;
+        background: url(#{$img}/figures/participation-banner-right-figure.svg) no-repeat right center / auto 100%;
+        width: 50%;
         position: absolute;
-        right: -10px;
-        top: 50%;
-        transform: translateY(-50%);
+        right: 0;
+        top: -50px;
+        bottom: -50px;
         @include desktop {
-            width: 234px;
-            height: 519px;
+            top: -63px;
+            bottom: -58px;
         }
     }
 

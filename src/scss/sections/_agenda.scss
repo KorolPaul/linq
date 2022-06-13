@@ -4,18 +4,40 @@
         margin-bottom: vw(150);
     }
 
+    &_back {
+        margin: 0 0 32px;
+        @include desktop {
+            margin-bottom: 70px
+        }
+    }
     &_holder {
         @include layout;
+        overflow: hidden;
+        @include desktop {
+            overflow: auto;
+        }
+
+        & > p {
+            font-size: 12px;
+            line-height: 1.4;
+            color: $cPurpleDark;
+            @include desktop {
+                font-size: 18px;
+                margin-bottom: 28px;
+            }
+        }
     }
     &_grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        row-gap: 16px;
         @include desktop {
+            display: grid;
+            grid-template-rows: auto;
             grid-template-columns: 1fr 1fr;
             column-gap: vw(20);
             row-gap: vw(20);
         }
+    }
+
+    .tns-ovh {
+        overflow: visible;
     }
 }

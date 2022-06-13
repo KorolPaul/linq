@@ -108,10 +108,12 @@
         margin: 0 0 16px;
         display: block;
         @include desktop {
+            flex-grow: 0;
+            max-width: none;
             font-size: vw(16);
             margin: 0;
-            flex-grow: 1;
-            padding-right: 10%;
+            flex-grow: 0;
+            padding-left: 10%;
         }
     }
     &_text {
@@ -130,6 +132,10 @@
     }
     &_form {
         position: relative;
+
+        &.hidden {
+            display: none;
+        }
     }
     &_form-input[type] {
         @include placeholder-color($cGreyLight);
@@ -168,6 +174,21 @@
         }
         &:active {
             transform: scale(0.9);
+        }
+    }
+    &_form-success {
+        display: none;
+        color: $cBlue;
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 0 0 0 33px;
+        background: url(#{$img}/success-check.svg) no-repeat top left;
+        @include desktop {
+            font-size: vw(16);
+        }
+
+        &.shown {
+            display: block;
         }
     }
     &_cards {

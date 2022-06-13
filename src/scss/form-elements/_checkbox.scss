@@ -39,6 +39,11 @@ input[type="checkbox"] {
             transition: .1s $easing opacity, .2s $easing transform;
         }
     }
+    &:hover + label {
+        &::before {
+            border-color: $color;
+        }
+    }
     &:checked + label {
         &::before {
             background-color: $cBlue ;
@@ -50,6 +55,16 @@ input[type="checkbox"] {
         }
         &:hover::before {
             opacity: .9;
+        }
+    }
+
+    &:disabled + label {
+        opacity: .6;
+        cursor: default;
+        &::before {
+            opacity: .6;
+            filter: grayscale(1);
+            pointer-events: none;
         }
     }
     .error & + label:not([class])::before {

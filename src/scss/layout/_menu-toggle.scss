@@ -8,9 +8,14 @@
     z-index: 12;
     border-radius: 8px 0 8px 0;
     background-color: $cGreen;
+    @include tablet {
+        right: 48px;
+    }
     @include desktop {
         width: 72px;
         height: 72px;
+    }
+    @include desktop-large {
         right: 74px;
     }
 

@@ -1,5 +1,5 @@
 .article {
-    margin: 0 0 90px;
+    margin: 0 0 106px;
     @include desktop {
         position: relative;
         margin-bottom: vw(150);
@@ -55,7 +55,7 @@
         margin: 0 0 24px;
         @include desktop {
             margin-bottom: vw(40);
-            max-width: 50%;
+            max-width: 70%;
         }
     }
 }

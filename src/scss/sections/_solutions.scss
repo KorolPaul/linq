@@ -29,7 +29,12 @@
         background-position: top left;
         position: relative;
         @include desktop {
-            width: 33.52vw;
+            width: vw(419);
+            min-height: vw(800);
+            padding: vw(38) vw(34) vw(44) vw(40);
+        }
+        @include desktop-large {
+            width: vw(419);
             min-height: vw(726);
             padding: vw(57) vw(42) vw(66) vw(48);
         }
@@ -83,7 +88,7 @@
     }
     &_card-price {
         margin-bottom: 16px;
-        @include desktop {
+        @include desktop-large {
             margin-bottom: vw(22);
         }
     }
@@ -95,6 +100,10 @@
         vertical-align: middle;
         top: -1.4em;
         @include desktop {
+            font-size: 40px;
+            top: -1.35em;
+        }
+        @include desktop-large {
             font-size: vw(60);
             top: -1.25em;
         }
@@ -103,16 +112,22 @@
         font-size: 80px;
         line-height: .94;
         @include desktop {
+            font-size: 100px;
+        }
+        @include desktop-large {
             font-size: vw(140);
         }
     }
     &_card-list {
         max-width: 305px;
-        margin-left: 16px;
         font-size: 13px;
         line-height: 1.4;
         list-style: none;
         @include desktop {
+            font-size: 14px;
+            margin-left: 0;
+        }
+        @include desktop-large {
             font-size: vw(16);
         }
 
@@ -135,6 +150,13 @@
                     top: 8px;
                 }
             }
+        }
+    }
+
+    .tns-outer {
+        margin-right: -$indent;
+        @include desktop {
+            margin-right: 0;
         }
     }
 }

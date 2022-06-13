@@ -4,8 +4,9 @@
     position: relative;
     padding: 31px 0 75px;
     @include desktop {
+        margin-top: vw(190);
         margin-bottom: vw(310);
-        padding: vw(54) 0 vw(174);
+        padding: vw(54) 0 vw(200);
     }
 
     &::before {
@@ -45,18 +46,21 @@
             left: 0;
             bottom: -48px;
             width: 147px;
-            height: 91px;
+            height:109px;
             background: url(#{$img}/figures/sponsors-bottom-left-bg.svg) no-repeat top right / 100%;
             @include desktop {
                 width: 319px;
                 height: 242px;
-                bottom: -107px;
+                bottom: -153px;
             }
         }
     }
     &_title {
         color: $bg_color;
         margin-bottom: 56px;
+        @include desktop {
+            margin-bottom: vw(110);
+        }
     }
 
     &_grid {
@@ -86,6 +90,7 @@
             @include tablet {
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
                 margin-bottom: vw(70);
+                row-gap: vw(60);
             }
         }
     }
@@ -154,6 +159,9 @@
             background-color: $cGreen;
             left: -6px;
             font-size: 8px;
+            @include desktop {
+                font-size: 18px;
+            }
 
             &::before {
                 width: calc(100% - 6px);
@@ -163,8 +171,9 @@
             background-color: $cOrange;
             left: -9px;
             font-size: 12px;
-            @include tablet {
+            @include desktop {
                 left: -20px;
+                font-size: 24px;
             }
 
             &::before {
@@ -177,5 +186,13 @@
     }
     &_card-image {
         max-width: 80%;
+        transition: .2s $easing opacity;
+
+        .sponsors_card[href]:hover & {
+            opacity: .6;
+        }
+        .sponsors_card[href]:active & {
+            opacity: .8;
+        }
     }
 }
