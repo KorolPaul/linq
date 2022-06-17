@@ -1,0 +1,156 @@
+.accordion {
+    position: relative;
+    @include desktop {
+        padding: 0 0 0 30%
+    }
+
+    &_button {
+        @include button-reset;
+        display: block;
+        font-size: 32px;
+        font-weight: 600;
+        margin: 8px 0 24px;
+        text-align: left;
+        position: relative;
+        width: 100%;
+        line-height: 1.2;
+        @include desktop {
+            position: absolute;
+            left: 0;
+            font-size: vw(60);
+            width: auto;
+        }
+
+        &__inner {
+            font-weight: 600;
+            font-size: 20px;
+            margin: 0 0 16px;
+            cursor: default;
+            position: static;
+            @include desktop {
+                font-size: vw(32);
+                position: relative;
+                top: inherit;
+                border-top: 1px solid $color;
+                border-bottom: 1px solid $color;
+                padding: 40px 0;
+                margin: 0;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+
+        &.active,
+        &:hover {
+            color: $cGreen;
+            line-height: 1.2;
+        }
+        &__inner.active {
+            color: $color;
+        }
+
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                @include desktop {
+                    top: vw(($i - 1) * 112)
+                }
+            }
+        }
+    }
+    &_button-icon {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -16px;
+        background-color: $cGreen;
+        border-radius: 4px 0 4px;
+        text-align: center;
+        color: $color;
+        @include desktop {
+            display: none;
+        }
+
+        &::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 400;
+        }
+        .accordion_button.active &::after {
+            content: '-';
+        }
+
+        .accordion_button__inner & {
+            display: none;
+            @include desktop {
+                display: block;
+            }
+        }
+    }
+    &_item {
+        padding: $indent 0 6px;
+        border-bottom: 1px solid currentColor;
+        @include desktop {
+            font-size: 24px;
+            border: none;
+            padding: 0;
+        }
+
+        &:first-child {
+            border-top: 1px solid currentColor;
+            @include desktop {
+                border: none;
+            }
+        }
+
+        & + & {
+            @include desktop {
+                margin-top: -1px;
+            }
+        }
+    }
+    &_content {
+        max-height: 0;
+        overflow: hidden;
+        transition: .3s linear max-height,
+                    .1s linear margin .2s;
+        @include desktop {
+            max-height: none;
+            display: none;
+            margin: 0;
+        }
+
+        &.active {
+            max-height: 1000px;
+            margin: 0 0 16px;
+             transition: .3s linear max-height,
+                         .1s linear margin;
+            @include desktop {
+                max-height: none;
+                display: block;
+                margin-bottom: 0;
+                padding-bottom: 1px;
+            }
+        }
+
+        &__inner {
+            max-height: none;
+            @include desktop {
+                max-height: 0;
+                display: block;
+            }
+
+            &.active {
+                @include desktop {
+                    max-height: 1000px;
+                }
+            }
+        }
+    }
+    &_text {
+        @include desktop {
+            padding: 40px 0 18px;
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.faq {
+    margin: 0 0 64px;
+    position: relative;
+    @include desktop {
+        margin-bottom: vw(150);
+    }
+
+    &::before {
+        @include desktop {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 750px;
+            width: 243px;
+            height:  243px;
+            background: url(#{$img}/figures/faq-left.svg) no-repeat top right / 100%;
+            z-index: -1;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 88px;
+        height: 88px;
+        background: url(#{$img}/figures/faq-right.svg) no-repeat top right / 100%;
+        z-index: -1;
+        @include desktop {
+            width: 226px;
+            height: 246px;
+            top: -8px
+        }
+    }
+
+    &_holder {
+        @include layout;
+    }
+    &_content {
+        padding: 24px 0 0;
+        @include desktop {
+            padding-top: 100px;
+            min-height: 800px;
+        }
+    }
+}

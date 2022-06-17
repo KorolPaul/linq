@@ -1,6 +1,7 @@
 const wheelEvent = 'onwheel' in document.createElement('div') ? 'wheel' : 'mousewheel';
 const thresholdSteps = [...Array(10).keys()].map(i => i / 10);
-const isMobile = screen.width <= 768
+const isMobile = window.innerWidth <= 768
+const isDesktop = window.innerWidth >= 1070
 
 // sliders
 const ticketsSlider = document.querySelectorAll('.js-tickets-slider');
@@ -276,7 +277,6 @@ popupCloseElements.forEach(el => el.addEventListener('click', (e) => {
 
 /* desktop-only images */
 const imagesWihoutSrc = document.querySelectorAll('img[data-src]');
-console.log(!isMobile);
 if (!isMobile) {
     imagesWihoutSrc.forEach((img) => {
         img.src = img.dataset.src;
@@ -402,20 +402,59 @@ if (subscribeFormElement) {
 }
 
 /* cookies */
-const hasCookies = Cookies.get('CookieNotificationCookie');
-
-const cookiesBanner = document.querySelector('.cookies');
-const cookiesAcceptButton = document.querySelector('.cookies_button');
-
-if (cookiesAcceptButton) {
-    cookiesAcceptButton.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        cookiesBanner.style.display = 'none';
-        Cookies.set('CookieNotificationCookie', 'true', { expires: 365 });
-    });
+if (Cookies) {
+    const hasCookies = Cookies.get('CookieNotificationCookie');
+    
+    const cookiesBanner = document.querySelector('.cookies');
+    const cookiesAcceptButton = document.querySelector('.cookies_button');
+    
+    if (cookiesAcceptButton) {
+        cookiesAcceptButton.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            cookiesBanner.style.display = 'none';
+            Cookies.set('CookieNotificationCookie', 'true', { expires: 365 });
+        });
+    }
+    
+    if (cookiesBanner && !hasCookies) {
+        cookiesBanner.style.display = 'block';
+    }
 }
 
-if (cookiesBanner && !hasCookies) {
-    cookiesBanner.style.display = 'block';
-}
+
+/* Accordion */
+const accordionElements = document.querySelectorAll('.accordion');
+
+accordionElements.forEach(accordion => {
+    const accordionButtons = accordion.querySelectorAll('.accordion_button:not(.accordion_button__inner)');
+    const accordionContent = accordion.querySelectorAll('.accordion_content:not(.accordion_content__inner)');
+    const accordionInnerButtons = accordion.querySelectorAll('.accordion_button__inner');
+
+
+    if (accordionButtons.length) {
+        function toggle(e) {
+            e.preventDefault();
+
+            if (isDesktop) {
+                accordionButtons.forEach(el => el.classList.remove('active'))
+                accordionContent.forEach(el => el.classList.remove('active'))
+                e.currentTarget.classList.add('active');
+                e.currentTarget.nextElementSibling.classList.add('active');
+            } else {
+                e.currentTarget.classList.toggle('active');
+                e.currentTarget.nextElementSibling.classList.toggle('active');
+            }
+        }
+
+        function toggleInner(e) {
+            e.preventDefault();
+
+            e.currentTarget.classList.toggle('active');
+            e.currentTarget.nextElementSibling.classList.toggle('active');
+        }
+
+        accordionButtons.forEach(el => el.addEventListener('click', toggle));
+        accordionInnerButtons.forEach(el => el.addEventListener('click', toggleInner));
+    }
+});
