@@ -85,8 +85,13 @@
     }
     .tns-outer {
         margin-right: -$indent;
+        @include tablet {
+            margin-right: -48px;
+        }
         @include desktop {
             margin-bottom: 24px;
+        }
+        @include desktop-large {
             margin-right: -72px;
         }
     }
@@ -123,6 +128,37 @@
         justify-content: center;
         align-items: center;
         padding: 0 30px;
+        min-height: calc(101.2vw - 48px + 100px);
+        @include tablet {
+             min-height: calc(100.5vw - 96px + 100px);
+        }
+        @include desktop {
+            min-height: calc(46.9vw - 48px - 20px);
+        }
+        @include media(1190px) {
+            min-height: calc(46.5vw - 48px - 20px);
+        }
+        @include media(1260px) {
+            min-height: calc(46.3vw - 48px - 20px);
+        }
+        @include desktop-large {
+            min-height: calc(47.1vw - 72px - 20px);
+        }
+        @include media(1500px) {
+            min-height: calc(47vw - 72px - 20px);
+        }
+        @include media(1600px) {
+            min-height: calc(46.9vw - 72px - 20px);
+        }
+        @include media(1700px) {
+            min-height: calc(46.8vw - 72px - 20px);
+        }
+        @include media(1800px) {
+            min-height: calc(46.7vw - 72px - 20px);
+        }
+        @include media(1900px) {
+            min-height: calc(46.5vw - 72px - 20px);
+        }
 
         &::before {
             content: "";
@@ -210,7 +246,7 @@
         width: 100%;
         @include desktop {
             border-radius: 8px;
-            padding-bottom: vw(142);
+            padding-bottom: 31%;
         }
     }
     &_bottom {

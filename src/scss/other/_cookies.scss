@@ -1,0 +1,59 @@
+.cookies {
+    background: $cBlue;
+    position: fixed;
+    z-index: 9;
+    bottom: $indent;
+    left: $indent;
+    right: $indent;
+    padding:$indent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: right;
+    max-width: vw(850);
+    display: none;
+    @include tablet {
+        bottom: 40px;
+        right: auto;
+        left: 48px;
+        padding: 40px;
+    }
+    @include desktop-large {
+        left: 72px;
+    }
+
+    &_content {
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: vw(140);
+        }
+    }
+    &_text {
+        text-align: left;
+        color: $bg_color;
+        font-size: 16px;
+        margin: 0 0 16px;
+        @include desktop {
+            font-size: vw(18);
+        }
+
+        a {
+            color: $bg_color;
+            text-decoration: underline;
+            transition: .2s $easing opacity;
+
+            &:hover {
+                opacity: .6;
+            }
+            &:hover {
+                opacity: .8;
+            }
+        }
+    }
+    &_button {
+        @include desktop {
+            flex-shrink: 0;
+        }
+    }
+}

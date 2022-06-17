@@ -18,6 +18,7 @@
     &_filters {
         @include desktop {
             width: 274px;
+            flex-shrink: 0;
         }
     }
     &_timeline {

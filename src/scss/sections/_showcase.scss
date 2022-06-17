@@ -16,6 +16,7 @@
         position: relative;
         width: 100%;
         background-color: $cPurpleDark;
+        line-height: 0;
 
         &::after {
             content: '';

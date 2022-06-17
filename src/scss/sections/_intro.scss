@@ -11,7 +11,7 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                top: 492px;
+                top: 170px;
                 width: 194px;
                 height: 219px;
                 background: url(#{$img}/figures/tickets-page-left.svg) no-repeat top right / 100%;
@@ -30,7 +30,7 @@
             @include desktop {
                 width: 178px;
                 height: 190px;
-                top: 302px
+                top: 0px
             }
         }
     }

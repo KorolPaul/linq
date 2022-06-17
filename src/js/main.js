@@ -400,3 +400,22 @@ if (subscribeFormElement) {
         subscribeFormElement.parentElement.querySelector('.footer_form-success').classList.add('shown');
     });
 }
+
+/* cookies */
+const hasCookies = Cookies.get('CookieNotificationCookie');
+
+const cookiesBanner = document.querySelector('.cookies');
+const cookiesAcceptButton = document.querySelector('.cookies_button');
+
+if (cookiesAcceptButton) {
+    cookiesAcceptButton.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        cookiesBanner.style.display = 'none';
+        Cookies.set('CookieNotificationCookie', 'true', { expires: 365 });
+    });
+}
+
+if (cookiesBanner && !hasCookies) {
+    cookiesBanner.style.display = 'block';
+}

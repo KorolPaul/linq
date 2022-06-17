@@ -1,0 +1,19 @@
+.fixed-button {
+    position: fixed;
+    left: $indent;
+    right: $indent;
+    bottom: $indent;
+    z-index: 5;
+    @include tablet {
+        left: auto;
+        right: 48px;
+        bottom: 48px;
+    }
+    @include desktop-large {
+        right: 72px;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

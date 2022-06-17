@@ -47,4 +47,13 @@
             display: block;
         }
     }
+    &_success {
+        display: none;
+        font-size: 14px;
+        margin: 8px 0 0 10px;
+
+        &.active {
+            display: block;
+        }
+    }
 }

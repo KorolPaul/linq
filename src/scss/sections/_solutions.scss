@@ -35,8 +35,8 @@
         }
         @include desktop-large {
             width: vw(419);
-            min-height: vw(726);
-            padding: vw(57) vw(42) vw(66) vw(48);
+            min-height: vw(746);
+            padding: vw(57) vw(35) vw(66) vw(48);
         }
 
         &__orange {
@@ -124,6 +124,7 @@
         line-height: 1.4;
         list-style: none;
         @include desktop {
+            max-width: none;
             font-size: 14px;
             margin-left: 0;
         }

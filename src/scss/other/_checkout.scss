@@ -21,6 +21,9 @@
         font-size: 32px;
         line-height: 1.2;
         margin: 0 0 8px;
+        @include tablet {
+            font-size: 72px;
+        }
     }
     &_subtitle {
         color: $cPurpleDark;

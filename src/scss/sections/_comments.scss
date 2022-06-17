@@ -64,7 +64,9 @@
             }
         }
     }
-
+    &_slider {
+        will-change: transform;
+    }
     &_card {
         display: flex;
         flex-direction: column;
@@ -115,7 +117,7 @@
             width: 253px;
             height: 341px;
             position: absolute;
-            right: -107;
+            right: -107px;
             top: -70px;
             z-index: 0;
             pointer-events: none;
