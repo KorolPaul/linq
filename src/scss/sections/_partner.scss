@@ -1,0 +1,61 @@
+.partner {
+    margin: 0 0 84px;
+    @include desktop {
+        position: relative;
+        margin-bottom: vw(105);
+    }
+
+    &_holder {
+        @include layout;
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+    &_title {
+        font-size: 48px;
+        line-height: .94;
+        font-weight: 400;
+        margin: 0 0 32px;
+        @include desktop {
+            font-size: vw(140);
+            margin-bottom: vw(56);
+        }
+    }
+    &_text {
+        font-size: 16px;
+        line-height: 1.4;
+        font-weight: 400;
+        margin: 0 0 24px;
+        @include desktop {
+            font-size: vw(24);
+            margin-bottom: vw(40);
+            max-width: 46%;
+        }
+    }
+    &_accordion {
+        margin: 0 0 64px;
+        @include desktop {
+            width: 100%;
+        }
+    }
+    &_label {
+        font-size: 12px;
+        line-height: 1.4;
+        color: $cPurpleDark;
+        margin-bottom: 24px;
+        @include desktop {
+            font-size: 18px;
+            margin-bottom: 28px;
+            width: 100%;
+        }
+    }
+
+    .button {
+        margin: 6px 0 0;
+        @include desktop {
+            margin-top: vw(22);
+        }
+    }
+}

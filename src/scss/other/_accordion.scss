@@ -4,6 +4,18 @@
         padding: 0 0 0 30%
     }
 
+    &__simple {
+        @include desktop {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-left: 0;
+        }
+    }
+
+    &_holder {
+        @include layout;
+    }
     &_button {
         @include button-reset;
         display: block;
@@ -56,6 +68,43 @@
                 }
             }
         }
+
+        .accordion__simple &[class] {
+            border-top: 1px solid $color;
+            border-bottom: 1px solid $color;
+            padding: 32px 0;
+            margin: -1px 0 0;
+            font-size: 48px;
+            line-height: .94;
+            font-weight: 400;
+            transition: .2s $easing border-color .2s;
+            @include desktop {
+                position: relative;
+                top: inherit;
+                width: 100%;
+                font-size: 140px;
+                padding: 56px 0;
+            }
+
+            &:first-child {
+                border-top: 1px solid $color;
+            }
+            &.active,
+            &:hover {
+                color: $cBlue;
+            }
+            &.active {
+                border-bottom-color: transparent;
+                transition: .1s $easing border-color;
+            }
+
+            .button {
+                margin: 24px 0 0;
+                @include desktop {
+                    margin-top: vw(22);
+                }
+            }
+        }
     }
     &_button-icon {
         width: 32px;
@@ -68,6 +117,8 @@
         border-radius: 4px 0 4px;
         text-align: center;
         color: $color;
+        font-size: 24px;
+        line-height: 1.2;
         @include desktop {
             display: none;
         }
@@ -76,6 +127,7 @@
             content: '+';
             font-size: 24px;
             font-weight: 400;
+            line-height: 1.2;
         }
         .accordion_button.active &::after {
             content: '-';
@@ -147,10 +199,22 @@
                 }
             }
         }
+
+        .accordion__simple & {
+            @include desktop {
+                width: 50%;
+            }
+        }
     }
     &_text {
         @include desktop {
             padding: 40px 0 18px;
+        }
+
+        .accordion__simple & {
+            @include desktop {
+                padding-bottom: 80px;
+            }
         }
     }
 }

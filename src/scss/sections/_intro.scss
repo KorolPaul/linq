@@ -81,6 +81,20 @@
             }
         }
     }
+    &__background-5 {
+        &::after {
+            @include desktop {
+                content: '';
+                position: absolute;
+                right: 0;
+                top: 102px;
+                width: 168px;
+                height: 178px;
+                background: url(#{$img}/figures/partners-page-right.svg) no-repeat top right / 100%;
+                z-index: -1;
+            }
+        }
+    }
 
     &_holder {
         @include layout;

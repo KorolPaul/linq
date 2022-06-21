@@ -1,0 +1,83 @@
+.form-popup {
+    background: $bg_color;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 35px 24px;
+    box-sizing: border-box;
+    z-index: 20;
+    pointer-events: none;
+    opacity: 0;
+    overflow: auto;
+    transform: translateX(100%);
+    transition: .3s $easingSmooth transform,
+                .3s $easingSmooth opacity;
+    @include desktop {
+        padding: 82px 110px 40px;
+    }
+
+    &.opened {
+        opacity: 1;
+        transform: translateX(0%);
+        pointer-events: all;
+    }
+
+    &_close {
+        background: url(#{$img}/popup-close.svg) no-repeat center center / contain;
+        border: none;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 32px;
+        right: 24px;
+        z-index: 3;
+        min-width: 0;
+        padding: 0;
+        transition: .2s $easing opacity;
+
+
+        &:hover {
+            opacity: .6;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+    &_content {
+        overflow: auto;
+        height: 100%;
+        max-width: 910px;
+        margin: auto;
+
+        &__center {
+            @include tablet {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+
+    h1 {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    h2 {
+        font-family: $font-family;
+        font-size: 24px;
+        font-weight: 700;
+        @include desktop {
+            font-size: 32px;
+        }
+    }
+    h3 {
+        font-family: $font-family;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 40px 0 20px;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+}

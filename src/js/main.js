@@ -213,6 +213,7 @@ function closeAllOpened() {
     document.querySelectorAll('.opened').forEach(el => el.classList.remove('opened'));
     document.body.classList.remove('menu-opened');
     document.querySelectorAll('.popup-opened').forEach(el => el.classList.remove('popup-opened'));
+    document.querySelectorAll('.js-form-popup').forEach(el => el.classList.remove('opened'));
 }
 
 const fadeElement = document.querySelector('.fade');
@@ -457,4 +458,21 @@ accordionElements.forEach(accordion => {
         accordionButtons.forEach(el => el.addEventListener('click', toggle));
         accordionInnerButtons.forEach(el => el.addEventListener('click', toggleInner));
     }
+});
+
+/* popup form */
+const popupFormTriggers = document.querySelectorAll('.js-popup-form-trigger');
+
+function toggleFormPopup(e) {
+    e.preventDefault();
+
+    document.querySelector('.js-form-popup').classList.toggle('opened');
+    if (fadeElement) {
+        fadeElement.classList.toggle('opened');
+    }
+}
+
+popupFormTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', toggleFormPopup);
+    document.querySelector('.form-popup_close').addEventListener('click', toggleFormPopup);
 });
