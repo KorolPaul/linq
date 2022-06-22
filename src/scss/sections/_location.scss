@@ -28,6 +28,21 @@
         }
     }
 
+    &__no-background {
+        margin-top: -20px;
+        @include desktop {
+            margin-top: -75px;
+            overflow: hidden;
+            padding: 33px 0 92px;
+            margin-bottom: vw(100);
+        }
+
+        &::before,
+        &::after {
+            content: none;
+        }
+    }
+
     &_holder {
         @include layout;
     }
@@ -86,5 +101,221 @@
                 margin-top: vw(24);
             }
         }
+    }
+    &_main-image-wrapper {
+        position: relative;
+        margin: 0 0 80px;
+        @include desktop {
+            margin-bottom: vw(250);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            right: -24px;
+            top: -16px;
+            width: 128px;
+            height: 85px;
+            background: url(#{$img}/figures/location-image-top-right.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 381px;
+                height: 293px;
+                top: -33px;
+                right: -72px;
+            }
+        }
+    }
+    &_main-image-background {
+        &::before {
+            content: '';
+            position: absolute;
+            right: -$indent;
+            bottom: -13px;
+            width: 64px;
+            height: 65px;
+            background: url(#{$img}/figures/location-image-bottom-right.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 268px;
+                height: 271px;
+                bottom: -53px;
+                right: -72px;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            left: -$indent;
+            bottom: -13px;
+            width: 90px;
+            height: 101px;
+            background: url(#{$img}/figures/location-image-bottom-left.svg) no-repeat top right / 100%;
+            @include desktop {
+                width: 271px;
+                height: 313px;
+                bottom: -53px;
+                left: -72px;
+            }
+        }
+    }
+    &_main-image {
+        width: 100%;
+    }
+    &_item {
+        margin: 0 0 52px;
+        display: flex;
+        flex-direction: column;
+        @include desktop {
+            flex-direction: row;
+            margin-bottom: 236px;
+            gap: 130px;
+        }
+
+        &:nth-of-type(even) {
+            @include desktop {
+                flex-direction: row-reverse;
+            }
+        }
+        &:last-child {
+            @include desktop {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &_item-content {
+        display: contents;
+        @include desktop {
+            display: block;
+            width: 55%;
+        }
+    }
+    &_item-image-wrapper {
+        position: relative;
+        margin: 0 0 55px;
+        order: 2;
+        @include desktop {
+            margin: 0;
+            order: initial;
+            width: 45%;
+        }
+
+        &::before,
+        &::after {
+            content: '';
+            background: no-repeat top right / 100%;
+            position: absolute;
+        }
+
+        &::before {
+            right: -$indent;
+            @include desktop {
+                right: -72px;
+            }
+        }
+        &::after {
+            left: -$indent;
+            @include desktop {
+                left: -72px;
+            }
+        }
+
+        .location_item:nth-of-type(3n+2) &::before {
+            background-image: url(#{$img}/figures/location-image-1-top.svg);
+            height: 135px;
+            width: 72px;
+            top: -32px;
+            @include desktop {
+                height: 303px;
+                width: 162px;
+                top: -74px;
+            }
+        }
+        .location_item:nth-of-type(3n+2) &::after {
+            background-image: url(#{$img}/figures/location-image-1-bottom.svg);
+            height: 114px;
+            width: 104px;
+            bottom: -23px;
+            @include desktop {
+                height: 211px;
+                width: 192px;
+                bottom: -46px;
+            }
+        }
+        .location_item:nth-of-type(3n+3) &::before {
+            background-image: url(#{$img}/figures/location-image-2-top.svg);
+            height: 120px;
+            width: 108px;
+            top: -21px;
+            @include desktop {
+                height: 219px;
+                width: 199px;
+                top: -40px;
+            }
+        }
+        .location_item:nth-of-type(3n+3) &::after {
+            background-image: url(#{$img}/figures/location-image-2-bottom.svg);
+            height: 114px;
+            width: 104px;
+            bottom: -23px;
+            @include desktop {
+                height: 211px;
+                width: 193px;
+                bottom: -46px;
+                left: -60px;
+            }
+            @include desktop-large {
+                width: 231px;
+                left: -72px;
+                height: 250px;
+                bottom: -76px;
+            }
+        }
+        .location_item:nth-of-type(3n+4) &::before {
+            background-image: url(#{$img}/figures/location-image-3-top.svg);
+            height: 211px;
+            width: 145px;
+            top: -40px;
+            @include desktop {
+                height: 398px;
+                width: 272px;
+                top: -78px;
+            }
+        }
+        .location_item:nth-of-type(3n+4) &::after {
+            background-image: url(#{$img}/figures/location-image-3-bottom.svg);
+            height: 116px;
+            width: 106px;
+            bottom: -44px;
+            @include desktop {
+                height: 211px;
+                width: 192px;
+                bottom: -78px;
+                left: -61px;
+            }
+        }
+    }
+    &_item-title {
+        font-size: 48px;
+        line-height: .94;
+        font-weight: 400;
+        margin: 0 0 56px;
+        order: 1;
+        @include desktop {
+            font-size: vw(140);
+            order: initial;
+        }
+    }
+    &_item-text {
+        order: 3;
+        @include desktop {
+            order: initial;
+            font-size: vw(24);
+        }
+
+        .button {
+            margin-top: 10px;
+        }
+    }
+    &_item-image {
+        width: 100%;
     }
 }
