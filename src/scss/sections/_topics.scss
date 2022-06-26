@@ -52,12 +52,12 @@
             content: '';
             background: url(#{$img}/figures/topics-right-top.svg) no-repeat center / 100%;
             position: absolute;
-            top: -23px;
+            top: -22px;
             right: 0;
             height: 97px;
             width: 94px;
             @include desktop {
-                top: -110px;
+                top: -109px;
                 height: 429px;
                 width: 382px;
             }

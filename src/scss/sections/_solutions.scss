@@ -156,8 +156,18 @@
 
     .tns-outer {
         margin-right: -$indent;
+        margin-left: -$indent;
         @include desktop {
             margin-right: 0;
+        }
+    }
+
+    .tns-ovh {
+        padding-right: $indent;
+        padding-left: $indent;
+        @include desktop {
+            padding-right: 0;
+            padding-left: 0;
         }
     }
 }

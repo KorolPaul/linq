@@ -113,18 +113,18 @@
 
         &::before {
             content: '';
-            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / auto 100%;
-            width: 253px;
-            height: 341px;
+            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / 100% 100%;
+            width: 300px;
+            height: 485px;
             position: absolute;
-            right: -107px;
-            top: -70px;
+            right: -147px;
+            top: -77px;
             z-index: 0;
             pointer-events: none;
             @include desktop {
                 width: 200%;
-                height: 160%;
-                top: 40%;
+                height: 152%;
+                top: 44.6%;
                 transform: translateY(-50%);
                 right: vw(-420);
             }

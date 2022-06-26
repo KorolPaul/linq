@@ -4,6 +4,7 @@
     right: $indent;
     bottom: $indent;
     z-index: 5;
+    transition: .4s $easingSmooth opacity;
     @include tablet {
         left: auto;
         right: 48px;
@@ -15,5 +16,9 @@
 
     .button {
         width: 100%;
+    }
+    &.hidden {
+        opacity: 0;
+        pointer-events: none;
     }
 }

@@ -85,14 +85,26 @@
     }
     .tns-outer {
         margin-right: -$indent;
+        margin-left: -$indent;
         @include tablet {
             margin-right: -48px;
+            margin-left: -48px;
         }
         @include desktop {
             margin-bottom: 24px;
         }
         @include desktop-large {
+            margin-left: -72px;
             margin-right: -72px;
+        }
+    }
+    .tns-ovh {
+        padding-left: $indent;
+        @include tablet {
+            padding-left: 48px;
+        }
+        @include desktop-large {
+            padding-left: 72px;
         }
     }
     .tns-controls {

@@ -1,95 +1,16 @@
-.location {
-    margin: 0 0 64px;
+.about {
+    margin: 0 0 72px;
     @include desktop {
         margin-bottom: vw(150);
         position: relative;
-    }
-
-    &::after {
-        @include desktop {
-            content: '';
-            background: url(#{$img}/figures/location-figure-bottom.svg) no-repeat center / auto 100%;
-            position: absolute;
-            bottom: 50px;
-            left: -22px;
-            height: 219px;
-            width: 194px;
-        }
-    }
-
-    &__no-background {
-        margin-top: -20px;
-        @include desktop {
-            margin-top: -75px;
-            overflow: hidden;
-            padding: 33px 0 92px;
-            margin-bottom: vw(100);
-        }
-
-        &::before,
-        &::after {
-            content: none;
-        }
+        margin-top: -75px;
+        overflow: hidden;
+        padding: 33px 0 0;
+        margin-bottom: vw(100);
     }
 
     &_holder {
         @include layout;
-    }
-    &_content {
-        display: flex;
-        flex-direction: column;
-        @include desktop {
-            flex-direction: row;
-            justify-content: space-between;
-            position: relative;
-            padding: vw(66) 0 0;
-        }
-    }
-    &_sticky-wrapper {
-        @include desktop {
-            position: sticky;
-            top: 6vh;
-            margin-right: 40px;
-            z-index: 5;
-            padding: 0 0 vw(210) 0;
-        }
-    }
-    &_images {
-        order: 1;
-        margin: 0 0 50px;
-        @include desktop {
-            order: initial;
-            margin: 0;
-            width: 45%;
-        }
-    }
-    &_image {
-        flex-shrink: 0;
-        margin-top: 40px;
-        width: 100%;
-
-        &:first-child {
-            margin-top: 0;
-        }
-    }
-    &_info {
-        font-size: 16px;
-        line-height: 1.5;
-        order: 2;
-        @include desktop {
-            width: 45%;
-            order: initial;
-            font-size: vw(24);
-            max-width: 48%;
-            margin-bottom: vw(40);
-        }
-
-        .button {
-            margin: 4px 0 0;
-            @include desktop {
-                margin-top: vw(24);
-            }
-        }
     }
     &_main-image-wrapper {
         position: relative;
@@ -105,7 +26,7 @@
             top: -16px;
             width: 128px;
             height: 85px;
-            background: url(#{$img}/figures/location-image-top-right.svg) no-repeat top right / 100%;
+            background: url(#{$img}/figures/about-image-top-right.svg) no-repeat top right / 100%;
             @include desktop {
                 width: 381px;
                 height: 293px;
@@ -122,7 +43,7 @@
             bottom: -13px;
             width: 64px;
             height: 65px;
-            background: url(#{$img}/figures/location-image-bottom-right.svg) no-repeat top right / 100%;
+            background: url(#{$img}/figures/about-image-bottom-right.svg) no-repeat top right / 100%;
             @include desktop {
                 width: 268px;
                 height: 271px;
@@ -137,7 +58,7 @@
             bottom: -13px;
             width: 90px;
             height: 101px;
-            background: url(#{$img}/figures/location-image-bottom-left.svg) no-repeat top right / 100%;
+            background: url(#{$img}/figures/about-image-bottom-left.svg) no-repeat top right / 100%;
             @include desktop {
                 width: 271px;
                 height: 313px;
@@ -207,29 +128,30 @@
             }
         }
 
-        .location_item:nth-of-type(3n+2) &::before {
-            background-image: url(#{$img}/figures/location-image-1-top.svg);
-            height: 135px;
-            width: 72px;
-            top: -32px;
+        .about_item:nth-of-type(3n+2) &::before {
+            background-image: url(#{$img}/figures/location-image-3-top.svg);
+            height: 211px;
+            width: 145px;
+            top: -40px;
             @include desktop {
-                height: 303px;
-                width: 162px;
-                top: -74px;
+                height: 398px;
+                width: 272px;
+                top: -78px;
             }
         }
-        .location_item:nth-of-type(3n+2) &::after {
-            background-image: url(#{$img}/figures/location-image-1-bottom.svg);
-            height: 114px;
-            width: 104px;
-            bottom: -23px;
+        .about_item:nth-of-type(3n+2) &::after {
+            background-image: url(#{$img}/figures/location-image-3-bottom.svg);
+            height: 116px;
+            width: 106px;
+            bottom: -44px;
             @include desktop {
                 height: 211px;
                 width: 192px;
-                bottom: -46px;
+                bottom: -78px;
+                left: -61px;
             }
         }
-        .location_item:nth-of-type(3n+3) &::before {
+        .about_item:nth-of-type(3n+3) &::before {
             background-image: url(#{$img}/figures/location-image-2-top.svg);
             height: 120px;
             width: 108px;
@@ -240,7 +162,7 @@
                 top: -40px;
             }
         }
-        .location_item:nth-of-type(3n+3) &::after {
+        .about_item:nth-of-type(3n+3) &::after {
             background-image: url(#{$img}/figures/location-image-2-bottom.svg);
             height: 114px;
             width: 104px;
@@ -258,29 +180,7 @@
                 bottom: -76px;
             }
         }
-        .location_item:nth-of-type(3n+4) &::before {
-            background-image: url(#{$img}/figures/location-image-3-top.svg);
-            height: 211px;
-            width: 145px;
-            top: -40px;
-            @include desktop {
-                height: 398px;
-                width: 272px;
-                top: -78px;
-            }
-        }
-        .location_item:nth-of-type(3n+4) &::after {
-            background-image: url(#{$img}/figures/location-image-3-bottom.svg);
-            height: 116px;
-            width: 106px;
-            bottom: -44px;
-            @include desktop {
-                height: 211px;
-                width: 192px;
-                bottom: -78px;
-                left: -61px;
-            }
-        }
+       
     }
     &_item-title {
         font-size: 48px;
@@ -306,5 +206,46 @@
     }
     &_item-image {
         width: 100%;
+    }
+    &_slider {
+        margin-top: -14px;
+        @include desktop {
+            margin-top: -54px;
+        }
+
+        .tns-outer {
+            margin-left: -$indent;
+            margin-right: -$indent;
+            @include tablet {
+                margin-right: -48px;
+                margin-left: -48px;
+            }
+            @include desktop-large {
+                margin-left: -72px;
+                margin-right: -72px;
+            }
+        }
+        .tns-ovh {
+            padding-left: $indent;
+            @include tablet {
+                padding-left: 48px;
+            }
+            @include desktop-large {
+                padding-left: 72px;
+            }
+        }
+        .section-label {
+            margin-bottom: 4px;
+            @include desktop {
+                margin-bottom: 12px;
+            }
+        }
+    }
+    &_slides {
+        display: flex;
+        align-items: flex-end;
+        @include desktop {
+            margin-top: 10px;
+        }
     }
 }

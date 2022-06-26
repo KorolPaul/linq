@@ -111,6 +111,88 @@ speakersGridSlider.forEach(el => {
         }
     });
 });
+
+const aboutSlider = document.querySelectorAll('.about_slides');
+aboutSlider.forEach(el => {
+
+    var isAnimated = false;
+
+    function handleCarouselScroll(isForward) {
+        if (isAnimated) {
+            return
+        }
+
+        isAnimated = true
+        setTimeout(() => {
+            isAnimated = false
+        }, 200);
+
+        const { slideCount, index } = slider.getInfo();
+        if (isForward) {
+            if (index >= slideCount / 2) {
+                document.removeEventListener(wheelEvent, preventScroll, { passive: false });
+                return;
+            }
+
+            slider.goTo('next');
+        } else {
+            if (index === 0) {
+                document.removeEventListener(wheelEvent, preventScroll, { passive: false });
+                return;
+            }
+            slider.goTo('prev');
+        }
+    }
+
+    function preventScroll(e) {
+        e.preventDefault()
+
+        handleCarouselScroll(e.deltaY > 0)
+    }
+
+    const observerCallback = function (e) {
+        const { intersectionRatio } = e[0];
+
+        if (intersectionRatio > 0.9) {
+            document.addEventListener(wheelEvent, preventScroll, { passive: false })
+        } else {
+            document.removeEventListener(wheelEvent, preventScroll, { passive: false })
+        }
+    };
+
+    const observer = new IntersectionObserver(observerCallback, {
+        rootMargin: '0px 0px 0px 0px',
+        threshold: thresholdSteps,
+        root: null
+    });
+
+    const slider = tns({
+        container: el,
+        items: 2.2,
+        gutter: 8,
+        mouseDrag: true,
+        autoplay: false,
+        nav: false,
+        controls: false,
+        loop: false,
+        responsive: {
+            1070: {
+                autoWidth: true,
+                gutter: 20,
+                items: 3.1
+            },
+            1440: {
+                autoWidth: true,
+            }
+        },
+        onInit: () => {
+            observer.observe(el.parentElement.parentElement.parentElement);
+        }
+    });
+    
+});
+
+
 const speakersSlider = document.querySelectorAll('.speakers_slider');
 speakersSlider.forEach(el => {
     const totalSlidesElement = el.parentElement.parentElement.querySelector('.speakers_slider-counter-total');
@@ -476,3 +558,28 @@ popupFormTriggers.forEach((trigger) => {
     trigger.addEventListener('click', toggleFormPopup);
     document.querySelector('.form-popup_close').addEventListener('click', toggleFormPopup);
 });
+
+
+/* hide BUY button when tickets block is visible */
+const fixedButtonEl = document.querySelector('.fixed-button')
+const ticketsEl = document.querySelector('.solutions_cards')
+
+if (fixedButtonEl && ticketsEl) {
+
+    const observerCallback = function (e) {
+        const { intersectionRatio } = e[0];
+    
+        if (intersectionRatio > 0.2) {
+            fixedButtonEl.classList.add('hidden');
+        } else {
+            fixedButtonEl.classList.remove('hidden');
+        }
+    };
+    
+    const observer = new IntersectionObserver(observerCallback, {
+        rootMargin: '0px 0px 0px 0px',
+        threshold: thresholdSteps,
+        root: null
+    });
+    observer.observe(ticketsEl)
+}

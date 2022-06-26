@@ -49,7 +49,7 @@
         transition: .2s $easing color;
         @include desktop {
             font-size: vw(140);
-            line-height: 1;
+            line-height: 1.1;
         }
 
         &:hover {
