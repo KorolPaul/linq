@@ -13,6 +13,7 @@
     line-height: 45px;
     padding: 0 24px;
     min-width: 146px;
+    white-space: nowrap;
     text-align: center;
     transform: scale(1);
     transition: .2s $easing color,
@@ -20,12 +21,12 @@
                 .2s $easing transform;
     @include desktop {
         font-size: vw(17);
-        height: 56px;
-        line-height: 52px;
+        height: vw(56);
+        line-height: vw(53);
     }
     @include desktop-large {
-        height: 70px;
-        line-height: 64px;
+        height: vw(70);
+        line-height: vw(66);
     }
 
     &:hover {

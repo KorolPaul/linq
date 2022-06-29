@@ -26,20 +26,35 @@ ticketsSlider.forEach(el => {
 
 const agendaSlider = document.querySelectorAll('.agenda_grid');
 agendaSlider.forEach(el => {
-    tns({
+    const totalSlidesElement = el.parentElement.parentElement.querySelector('.agenda_slider-counter-total');
+    const activeSlideElemwent = el.parentElement.parentElement.querySelector('.agenda_slider-counter-active');
+
+    const slider = tns({
         container: el,
         items: 1,
         gutter: 8,
-        autoWidth: true,
+        autoWidth: false,
         mouseDrag: true,
         autoplay: false,
         nav: false,
-        controls: false,
+        controls: true,
+        controlsPosition: 'bottom',
         loop: false,
         responsive: {
             1024: {
                 disable: true
             }
+        },
+        onInit: (info) => {
+            if (totalSlidesElement) {
+                totalSlidesElement.innerText = info.slideCount;
+            }
+        }
+    });
+
+    slider.events.on('transitionEnd', (info) => {
+        if (activeSlideElemwent) {
+            activeSlideElemwent.innerText = info.displayIndex;
         }
     });
 })
@@ -297,6 +312,7 @@ function closeAllOpened() {
     document.body.classList.remove('menu-opened');
     document.querySelectorAll('.popup-opened').forEach(el => el.classList.remove('popup-opened'));
     document.querySelectorAll('.js-form-popup').forEach(el => el.classList.remove('opened'));
+    document.querySelectorAll('.filters_content').forEach(el => el.classList.remove('opened'));
 }
 
 const fadeElement = document.querySelector('.fade');
@@ -402,6 +418,10 @@ if (filtersToggleElement) {
     function toggleFiltersPopup(e) {
         e.preventDefault();
         document.querySelector('.filters_content').classList.toggle('opened');
+
+        if (fadeElement) {
+            fadeElement.classList.toggle('opened');
+        }
     }
 
     filtersToggleElement.addEventListener('click', toggleFiltersPopup);
