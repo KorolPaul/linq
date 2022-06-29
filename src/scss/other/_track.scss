@@ -9,9 +9,11 @@
     background-size: 100% 100%;
     background-position: top left;
     position: relative;
+    width: 320px;
     @include desktop {
         min-height: 308px;
         padding: 40px;
+        width: auto;
     }
     @include desktop-large {
         min-height: 368px;
@@ -149,6 +151,7 @@
         width: 85px;
         height: 35px;
         border-radius: 8px 0;
+        box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: center;

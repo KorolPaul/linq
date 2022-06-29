@@ -30,13 +30,14 @@ agendaSlider.forEach(el => {
         container: el,
         items: 1,
         gutter: 8,
+        autoWidth: true,
         mouseDrag: true,
         autoplay: false,
         nav: false,
         controls: false,
         loop: false,
         responsive: {
-            1070: {
+            1024: {
                 disable: true
             }
         }

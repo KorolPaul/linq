@@ -91,8 +91,9 @@
         padding: 0;
         @include desktop {
             display: flex;
-            justify-content: space-between;
             flex-wrap: wrap;
+            gap: 0 150px;
+            padding-right: 100px;
         }
 
         li {
@@ -117,6 +118,7 @@
                 top: -4px;
                 width: 10px;
                 height: 10px;
+                border-radius: 4px 0 4px;
                 @include desktop {
                     width: 20px;
                     height: 20px;

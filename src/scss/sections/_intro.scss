@@ -11,7 +11,7 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                top: 170px;
+                top: 14vw;
                 width: 194px;
                 height: 219px;
                 background: url(#{$img}/figures/tickets-page-left.svg) no-repeat top right / 100%;
@@ -77,7 +77,9 @@
             background: url(#{$img}/figures/speaker-form-page-right.svg) no-repeat top right / 100%;
             z-index: -1;
             @include desktop {
-                display: none;
+                width: 176px;
+                height: 190px;
+                top: 30px;
             }
         }
     }
@@ -92,6 +94,35 @@
                 height: 178px;
                 background: url(#{$img}/figures/partners-page-right.svg) no-repeat top right / 100%;
                 z-index: -1;
+            }
+        }
+    }
+    &__background-6 {
+        &::before {
+            @include desktop {
+                content: '';
+                position: absolute;
+                background: url(#{$img}/figures/agenda-left.svg) no-repeat top right / 100% 100%;
+                z-index: -1;
+                width: 219px;
+                height: 194px;
+                top: 20vw;
+                left: 0;
+            }
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 172px;
+            width: 72px;
+            height: 76px;
+            background: url(#{$img}/figures/speakers-page-right.svg) no-repeat top right / 100%;
+            z-index: -1;
+            @include desktop {
+                width: 164px;
+                height: 174px;
+                top: 0;
             }
         }
     }

@@ -76,3 +76,14 @@ a[name] {
     position: relative;
     top: -50px;
 }
+
+#agendalist {
+    flex-grow: 1;
+}
+
+.menu-opened {
+    overflow: hidden;
+    @include desktop {
+        overflow: initial;
+    }
+}

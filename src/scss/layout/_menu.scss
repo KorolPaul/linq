@@ -1,6 +1,6 @@
 
 .menu {
-    background: #781AA8 url(#{$img}/menu-bg.svg) no-repeat right bottom / 600px;
+    background: #781AA8 url(#{$img}/menu-bg.svg) no-repeat right bottom -60px / 100vw;
     box-sizing: border-box;
     position: fixed;
     z-index: 11;
@@ -17,6 +17,7 @@
     transition: .6s $easing transform;
     @include desktop {
         padding: 22px 60px 51px;
+        background-size: 600px;
     }
 
     .menu-opened & {
@@ -44,7 +45,7 @@
         }
     }
     &_button {
-        margin: 100px 0 150px;
+        margin: 20vh 0 0;
         @include desktop {
             margin: 50px 0 75px;
         }

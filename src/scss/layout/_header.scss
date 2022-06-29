@@ -23,15 +23,19 @@
         }
     }
     &::before {
-        background: url(#{$img}/figures/header-bg-left.svg) no-repeat top left / auto 100%;
+        background: url(#{$img}/figures/header-bg-left.svg) no-repeat top left / 100% 100%;
         left: 0;
+        @include desktop {
+            background-size: auto 100%;
+        }
     }
     &::after {
-        background: url(#{$img}/figures/header-bg-right-mobile.svg) no-repeat top right / auto 100%;
+        background: url(#{$img}/figures/header-bg-right-mobile.svg) no-repeat top right -1px / auto 100%;
         right: 0;
-        height:110px;
+        height: 110px;
         @include desktop {
             height:238px;
+            background-position: top right -1px;
             background-image: url(#{$img}/figures/header-bg-right.svg);
         }
     }

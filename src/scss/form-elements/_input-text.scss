@@ -17,9 +17,9 @@ input[type="tel"] {
     width: 100%;
     transition: .2s ease-in border-color, .2s ease-in color;
 
-    &:focus,
-    &.focus {
+    &:focus {
         color: $color;
+        border-color: $color;
     }
 
     .error & {

@@ -114,11 +114,11 @@
         &::before {
             content: '';
             background: url(#{$img}/figures/comments-figure.svg) no-repeat center / 100% 100%;
-            width: 300px;
-            height: 485px;
+            width: 253px;
+            height: 371px;
             position: absolute;
-            right: -147px;
-            top: -77px;
+            right: -127px;
+            top: -69px;
             z-index: 0;
             pointer-events: none;
             @include desktop {

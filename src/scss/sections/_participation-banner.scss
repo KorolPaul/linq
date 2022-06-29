@@ -2,7 +2,7 @@
     margin: 0 0 110px;
     background-color: $cPurpleDark;
     color: $bg_color;
-    padding: 56px 40px;
+    padding: 56px 50px;
     text-align: center;
     position: relative;
     @include desktop {
@@ -31,14 +31,15 @@
     }
     &::after {
         content: '';
-        background: url(#{$img}/figures/participation-banner-right-figure.svg) no-repeat right center / auto 100%;
+        background: url(#{$img}/figures/participation-banner-right-figure.svg) no-repeat right -36px center / auto 100%;
         width: 50%;
         position: absolute;
         right: 0;
-        top: -50px;
+        top: -30px;
         bottom: -50px;
         @include desktop {
             top: -63px;
+            background-position: right -16px center;
             bottom: -58px;
         }
     }

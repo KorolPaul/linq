@@ -11,9 +11,9 @@
             position: absolute;
             left: 0;
             top: 497px;
-            width: 219px;
-            height: 194px;
-            background: url(#{$img}/figures/speaker-form-left.svg) no-repeat top right / 100%;
+            width: 194px;
+            height: 219px;
+            background: url(#{$img}/figures/speaker-form-left.svg) no-repeat top right / 100% 100%;
         }
     }
     &::after {
