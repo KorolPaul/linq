@@ -45,10 +45,11 @@
                 top: inherit;
                 border-top: 1px solid $color;
                 border-bottom: 1px solid $color;
-                padding: 40px 0;
+                padding: 40px 50px 40px 0;
                 margin: 0;
                 width: 100%;
                 cursor: pointer;
+                white-space: normal;
             }
         }
 
@@ -214,6 +215,7 @@
         .accordion__simple & {
             @include desktop {
                 padding-bottom: 80px;
+                padding-left: 4px;
             }
         }
     }

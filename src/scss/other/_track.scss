@@ -74,7 +74,7 @@
     &_participant {
         height: 44px;
         width: 44px;
-        background-color: $cPurpleDark;
+        background-color: $color;
         border-radius: 50%;
         overflow: hidden;
         display: flex;
@@ -128,8 +128,21 @@
         font-size: 32px;
         line-height: 1.2;
         margin: 0;
+        transform: translateY(0%);
+        opacity: 1;
+        transition: .15s $easing opacity,
+                    .4s $easing transform;
         @include desktop-large {
             font-size: 60px;
+        }
+
+        .track:hover & {
+            transform: translateY(-200%);
+            opacity: 0;
+            @include desktop {
+                transform: translateY(0%);
+                opacity: 1;
+            }
         }
 
         .track__big & {
@@ -142,8 +155,21 @@
         white-space: nowrap;
         flex-shrink: 0;
         font-size: 12px;
+        transform: translateY(0%);
+        opacity: 1;
+        transition: .15s $easing opacity,
+                    .4s $easing transform;
         @include desktop {
             font-size: 24px;
+        }
+
+        .track:hover & {
+            transform: translateY(-300%);
+            opacity: 0;
+            @include desktop {
+                transform: translateY(0%);
+                opacity: 1;
+            }
         }
 
         .track__big & {

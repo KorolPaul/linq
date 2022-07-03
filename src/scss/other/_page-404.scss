@@ -1,0 +1,40 @@
+.page-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: calc(80vh - 176px);
+    @include desktop {
+        height: calc(80vh - 318px);
+    }
+
+    h1 {
+        font-size: vw(240);
+        margin: vw(16);
+    }
+    p {
+        font-size: vw(40);
+        margin: 0 0 vw(60);
+    }
+
+    &_left,
+    &_right {
+        display: none;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 40vh;
+        @include desktop {
+            display: block;
+        }
+    }
+
+    &_left {
+        left: 0;
+        top: 70%;
+    }
+    &_right {
+        right: 0;
+    }
+}

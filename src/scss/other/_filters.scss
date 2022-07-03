@@ -101,10 +101,11 @@
         background-color: $cOrange;
         border-bottom: 1px solid $color;
         position: relative;
-        transition: .2s $easing border-radius;
+        transition: .2s $easing border-radius, .2s $easing border;
 
         &.inactive {
             border-radius: 10px 10px;
+            border-bottom-color: transparent;
         }
     }
     &_section-title-arrow {
@@ -122,7 +123,7 @@
         }
     }
     &_section-content {
-        max-height: 500px;
+        max-height: 1000px;
         overflow: hidden;
         box-sizing: border-box;
         transition: .3s linear max-height;

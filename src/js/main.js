@@ -161,8 +161,6 @@ aboutSlider.forEach(el => {
     }
 
     function preventScroll(e) {
-        e.preventDefault()
-
         handleCarouselScroll(e.deltaY > 0)
     }
 
@@ -236,12 +234,13 @@ speakersSlider.forEach(el => {
         },
         onInit: (info) => {
             if (totalSlidesElement) {
-                totalSlidesElement.innerText = info.slideCount;
+                totalSlidesElement.innerText = info.items - 1;
             }
         }
     });
 
     slider.events.on('transitionEnd', (info) => {
+        console.log(info);
         if (activeSlideElemwent) {
             activeSlideElemwent.innerText = info.displayIndex;
         }

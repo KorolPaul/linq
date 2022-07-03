@@ -186,13 +186,14 @@
     }
     &_card-image {
         max-width: 80%;
-        transition: .2s $easing opacity;
+        filter: grayscale(1);
+        transition: .2s $easing filter;
 
         .sponsors_card[href]:hover & {
-            opacity: .6;
+            filter: grayscale(0);
         }
         .sponsors_card[href]:active & {
-            opacity: .8;
+            filter: grayscale(.8);
         }
     }
 }

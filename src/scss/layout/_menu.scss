@@ -1,6 +1,6 @@
 
 .menu {
-    background: #781AA8 url(#{$img}/menu-bg.svg) no-repeat right bottom -60px / 100vw;
+    background: #781AA8 url(#{$img}/menu-bg.svg) no-repeat right bottom -35px / 40vh;
     box-sizing: border-box;
     position: fixed;
     z-index: 11;
@@ -35,6 +35,7 @@
         @include desktop {
             font-size: 48px;
             line-height: 1;
+            white-space: nowrap;
         }
         @include desktop-large {
             font-size: 72px;
@@ -56,11 +57,13 @@
     &_social {
         position: absolute;
         right: $indent;
-        top: 220px;
+        top: 50%;
         width: 48px;
+        transform: translateY(-50%);
         @include desktop {
             position: static;
             width: auto;
+            transform: none;
         }
     }
 }
