@@ -66,6 +66,14 @@
             font-size: vw(24);
             left: vw(48);
         }
+
+        .solutions_card__pink & {
+            left: auto;
+            right: 29px;
+            @include desktop {
+                right: vw(48);
+            }
+        }
     }
     &_card-title {
         font-weight: 600;

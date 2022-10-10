@@ -3,12 +3,11 @@
     @include desktop {
         margin-bottom: vw(150);
     }
-
+    
     &_holder {
         @include layout;
     }
     &_grid {
-        background-color: #E5E4E9;
         display: grid;
         gap: 1px;
         grid-template-columns: 1fr 1fr;
@@ -26,12 +25,24 @@
         justify-content: center;
         background-color: $bg_color;
         transition: .2s $easing opacity;
+        position: relative;
 
         &[href]:hover {
             opacity: .6;
         }
         &[href]:active {
             opacity: .8;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            bottom: -1px;
+            right: -1px;
+            border: 1px solid #E5E4E9;
+            pointer-events: none;
         }
     }
     &_image {

@@ -60,6 +60,7 @@
         right: 0;
         top: 50%;
         transform: rotate(-180deg);
+        pointer-events: none;
         transition: .2s $easing transform;
         @include tablet {
             height: 19px;

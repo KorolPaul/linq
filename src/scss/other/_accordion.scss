@@ -39,6 +39,7 @@
             margin: 0 0 16px;
             cursor: default;
             position: static;
+            white-space: normal;
             @include desktop {
                 font-size: vw(32);
                 position: relative;
