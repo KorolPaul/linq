@@ -8,6 +8,7 @@
     transition: .3s $easing background;
     
     .menu-opened &,
+    .special-menu-opened &,
     &.opened {
         background-color: rgba(0, 0, 0, 0.6);
         pointer-events: all;

@@ -1,0 +1,69 @@
+.unavailable-form {
+    color: #fff;
+    width: 228px;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include tablet {
+        font-size: 32px;
+        width: 420px;
+    }
+
+    &_title {
+        color: $cPurple;
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 120%;
+        display: block;
+        margin: 0 0 10px;
+        @include tablet {
+            font-size: 72px;
+            margin-bottom: 15px;
+        }
+    }
+    &_subtitle {
+        color: $cPink;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 120%;
+        display: block;
+        margin: 0 0 10px;
+        @include tablet {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .form_error {
+        position: absolute;
+        top: 90%;
+        left: 0;
+        right: 0;
+        background-color: $cPink;
+        color: $cPurpleDark;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 7px 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    input[type="search"],
+    input[type="email"],
+    input[type="url"],
+    input[type="tel"] {
+        @include placeholder-color(#fff);
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid #fff;
+        padding: 12px 0;
+        color: #fff;
+
+        &:focus {
+            border-color: $cPink;
+        }
+    }
+}

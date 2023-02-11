@@ -8,6 +8,7 @@
     &_cell {
         margin: 0 0 18px;
         width: 100%;
+        position: relative;
         @include tablet {
             margin-bottom: 26px;
             flex-grow: 1;

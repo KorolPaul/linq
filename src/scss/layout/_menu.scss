@@ -20,8 +20,20 @@
         background-size: 600px;
     }
 
+    &__special {
+        max-width: 700px;
+
+        .special-menu-opened & {
+            transform: translateX(-100%);
+        }
+    }
+
     .menu-opened & {
         transform: translateX(-100%);
+
+        &__special {
+            transform: translateX(0);
+        }
     }
 
     &_link {
