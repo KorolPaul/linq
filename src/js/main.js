@@ -87,7 +87,6 @@ commentsSlider.forEach(el => {
     });
 
     slider.events.on('transitionEnd', (info) => {
-        console.log(info.displayIndex);
         if (activeSlideElemwent) {
             activeSlideElemwent.innerText = info.displayIndex;
         }
@@ -240,7 +239,6 @@ speakersSlider.forEach(el => {
     });
 
     slider.events.on('transitionEnd', (info) => {
-        console.log(info);
         if (activeSlideElemwent) {
             activeSlideElemwent.innerText = info.displayIndex;
         }
@@ -602,4 +600,25 @@ if (fixedButtonEl && ticketsEl) {
         root: null
     });
     observer.observe(ticketsEl)
+}
+
+/* unavailable ticketss form */
+const unavailableFormLink = document.querySelector('.js-tickets-unavailable-link');
+if (unavailableFormLink) {
+    unavailableFormLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.body.classList.remove('menu-opened');
+        document.body.classList.add('special-menu-opened');
+    });
+}
+
+const unavailableFormSubmit = document.querySelector('.js-unavailable-form-submit');
+if (unavailableFormSubmit) {
+    unavailableFormSubmit.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        // form sending logic
+
+        document.body.classList.remove('special-menu-opened');
+    });
 }
