@@ -300,7 +300,15 @@ eventsGalleryElements.forEach(el => {
 // menu
 const menuToggleElement = document.querySelector('.menu-toggle');
 if (menuToggleElement) {
-    menuToggleElement.addEventListener('click', () => document.body.classList.toggle('menu-opened'));
+    menuToggleElement.addEventListener('click', () => {
+        if (!document.body.classList.contains('menu-opened') && !document.body.classList.contains('special-menu-opened')) {
+            document.body.classList.toggle('menu-opened');
+        } else if (document.body.classList.contains('menu-opened') && !document.body.classList.contains('special-menu-opened')) {
+            document.body.classList.remove('menu-opened');
+        } else {
+            document.body.classList.remove('special-menu-opened');
+        }
+    });
 }
 
 

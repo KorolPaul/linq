@@ -40,7 +40,8 @@
                 margin-top: -10px;
             }
 
-            .menu-opened & {
+            .menu-opened &,
+            .special-menu-opened & {
                 transform: rotate(45deg) translate(5px, 4px);
                 @include desktop {
                     transform: rotate(45deg) translate(7px, 7px);
@@ -48,7 +49,8 @@
             }
         }
         &:nth-child(2) {
-            .menu-opened & {
+            .menu-opened &,
+            .special-menu-opened & {
                 opacity: 0;
             }
         }
@@ -58,7 +60,8 @@
                 margin-top: 10px;
             }
 
-            .menu-opened & {
+            .menu-opened &,
+            .special-menu-opened & {
                 transform: rotate(-45deg) translate(5px, -4px);
                 @include desktop {
                     transform: rotate(-45deg) translate(7px, -7px);
