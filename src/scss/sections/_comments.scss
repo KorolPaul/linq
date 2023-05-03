@@ -110,25 +110,6 @@
             order: 2;
             margin: 0;
         }
-
-        &::before {
-            content: '';
-            background: url(#{$img}/figures/comments-figure.svg) no-repeat center / 100% 100%;
-            width: 253px;
-            height: 371px;
-            position: absolute;
-            right: -127px;
-            top: -69px;
-            z-index: 0;
-            pointer-events: none;
-            @include desktop {
-                width: 200%;
-                height: 151.5%;
-                top: 44.6%;
-                transform: translateY(-50%);
-                right: vw(-420);
-            }
-        }
     }
     &_card-image {
         width: 100%;

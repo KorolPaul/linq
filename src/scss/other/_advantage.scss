@@ -15,31 +15,6 @@
         padding: 40px;
     }
 
-    &__orange {
-        background-image: url(#{$img}/figures/advantage-orange-mobile.svg);
-        @include tablet {
-            background-image: url(#{$img}/figures/advantage-orange.svg);
-        }
-    }
-    &__violet {
-        background-image: url(#{$img}/figures/advantage-violet-mobile.svg);
-        @include tablet {
-            background-image: url(#{$img}/figures/advantage-violet.svg);
-        }
-    }
-    &__pink {
-        background-image: url(#{$img}/figures/advantage-pink-mobile.svg);
-        @include tablet {
-            background-image: url(#{$img}/figures/advantage-pink.svg);
-        }
-    }
-    &__green {
-        background-image: url(#{$img}/figures/advantage-green-mobile.svg);
-        @include tablet {
-            background-image: url(#{$img}/figures/advantage-green.svg);
-        }
-    }
-
     &_title {
         font-weight: 600;
         font-size: 32px;

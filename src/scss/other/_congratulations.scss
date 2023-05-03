@@ -8,32 +8,6 @@
         position: relative;
     }
 
-    &::before,
-    &::after {
-        @include desktop {
-            content: '';
-            position: absolute;
-        }
-    }
-    &::before {
-        @include desktop {
-            background: url(#{$img}/figures/congratulations-left.svg) no-repeat center / 100%;
-            width: 202px;
-            height: 236px;
-            left: 0;
-            top: 20px;
-        }
-    }
-    &::after {
-        @include desktop {
-            background: url(#{$img}/figures/congratulations-right.svg) no-repeat center / contain;
-            width: 219px;
-            height: 194px;
-            right: -27px;
-            top: -33px;
-        }
-    }
-
     &_holder {
         @include tablet {
             margin: auto;

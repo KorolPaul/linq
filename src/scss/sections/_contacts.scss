@@ -1,5 +1,6 @@
 .contacts {
     margin: 0 0 64px;
+
     @include desktop {
         margin-bottom: vw(150);
     }
@@ -7,64 +8,20 @@
     &_holder {
         @include layout;
     }
+
     &_image-wrapper {
         position: relative;
         margin: 0 0 72px;
+
         @include desktop {
             margin-bottom: 200px;
         }
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            right: -$indent;
-            top: -16px;
-            width: 114px;
-            height: 85px;
-            background: url(#{$img}/figures/contacts-top-right.svg) no-repeat top right / 100%;
-            @include desktop {
-                width: 381px;
-                height: 293px;
-                top: -33px;
-                right: -72px;
-            }
-        }
-    }
-    &_image-background {
-        &::before {
-            content: '';
-            position: absolute;
-            right: -$indent;
-            bottom: -13px;
-            width: 64px;
-            height: 65px;
-            background: url(#{$img}/figures/contacts-bottom-right.svg) no-repeat top right / 100%;
-            @include desktop {
-                width: 268px;
-                height: 271px;
-                bottom: -53px;
-                right: -72px;
-            }
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            left: -$indent;
-            bottom: -13px;
-            width: 90px;
-            height: 101px;
-            background: url(#{$img}/figures/contacts-bottom-left.svg) no-repeat top right / 100%;
-            @include desktop {
-                width: 271px;
-                height: 313px;
-                bottom: -53px;
-                left: -72px;
-            }
-        }
-    }
     &_image {
         width: 100%;
     }
+
     &_columns {
         @include desktop {
             display: flex;
@@ -72,6 +29,7 @@
             gap: 100px;
         }
     }
+
     &_column {
         @include desktop {
             width: 50%;
@@ -79,15 +37,18 @@
 
         &:first-child {
             display: none;
+
             @include desktop {
                 display: block;
             }
         }
     }
+
     &_item {
         margin: 0 0 40px;
         width: vw(220);
     }
+
     &_item-title {
         display: block;
         font-size: vw(18);
@@ -95,6 +56,7 @@
         color: $cBlue;
         margin: 0 0 vw(16);
     }
+
     &_item-value {
         display: block;
         font-weight: 700;
@@ -108,6 +70,7 @@
             &:hover {
                 opacity: .6;
             }
+
             &:active {
                 opacity: .8;
             }

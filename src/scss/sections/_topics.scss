@@ -5,78 +5,8 @@
     position: relative;
     @include desktop {
         margin-bottom: vw(258);
-        background: $cPurpleDark url(#{$img}/figures/topics-left-middle.svg) no-repeat left 48% / 222px 243px;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        width: 60px;
-        height: 20px;
-        top: -18px;
-        left: -5px;
-        background-color: $cPurpleDark;
-        border-radius: 4px;
-        @include desktop {
-            width: 225px;
-            height: 70px;
-            border-radius: 8px;
-            top: -60px;
-        }
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        width: 80px;
-        height: 20px;
-        background-color: $cPurpleDark;
-        right: 0;
-        bottom: -14px;
-        border-radius: 4px;
-        @include desktop {
-            width: 260px;
-            height: 80px;
-            border-radius: 8px;
-            bottom: -58px;
-        }
-    }
-
-    &_figures-wrapper {
-        position: relative;
-        padding: 32px 0 56px 0;
-        @include desktop {
-            padding: vw(70) 0;
-        }
-
-        &::before {
-            content: '';
-            background: url(#{$img}/figures/topics-right-top.svg) no-repeat center / 100% 100%;
-            position: absolute;
-            top: -25px;
-            right: 0;
-            height: 97px;
-            width: 94px;
-            @include desktop {
-                top: -109px;
-                height: 429px;
-                width: 382px;
-            }
-        }
-        &::after {
-            content: '';
-            background: url(#{$img}/figures/topics-left-bottom.svg) no-repeat center / 100%;
-            position: absolute;
-            left: -1px;
-            bottom: -28px;
-            height: 64px;
-            width: 87px;
-            @include desktop {
-                bottom: -107px;
-                height:  237px;
-                width: 324px;
-            }
-        }
-    }
     &_holder {
         @include layout;
         position: relative;

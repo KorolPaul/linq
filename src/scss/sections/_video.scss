@@ -21,39 +21,6 @@
             margin-top: vw(140);
         }
 
-        &::before {
-            content: '';
-            background: url(#{$img}/figures/video-figure-top-right.svg) no-repeat top right / 100%;
-            position: absolute;
-            width: 104px;
-            height: 71px;
-            top: -18px;
-            right: -20px;
-            z-index: 1;
-            @include desktop {
-                top: -75px;
-                right: -81px;
-                width: 429px;
-                height: 293px;
-            }
-        }
-        &::after {
-            content: '';
-            background: url(#{$img}/figures/video-figure-left-bottom.svg) no-repeat top right / 100%;
-            position: absolute;
-            left: -20px;
-            bottom: -37px;
-            z-index: 1;
-            width: 87px;
-            height: 103px;
-            @include desktop {
-                left: -72px;
-                bottom: -50px;
-                width: 271px;
-                height: 322px;
-            }
-        }
-
         iframe {
             position: absolute;
             left: 0;

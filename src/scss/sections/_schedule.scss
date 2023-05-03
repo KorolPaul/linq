@@ -79,26 +79,6 @@
             padding-top: 34px;
         }
 
-
-        &__orange {
-            background-image: url(#{$img}/figures/schedule-day-orange.svg);
-        }
-        &__violet {
-            background-image: url(#{$img}/figures/schedule-day-violet.svg);
-        }
-        &__blue {
-            background-image: url(#{$img}/figures/schedule-day-blue.svg);
-        }
-        &__pink {
-            background-image: url(#{$img}/figures/schedule-day-pink.svg);
-        }
-        &__green {
-            background-image: url(#{$img}/figures/schedule-day-green.svg);
-        }
-        &__purple {
-            background-image: url(#{$img}/figures/schedule-day-purple.svg);
-        }
-
         .button {
             pointer-events: none;
         }

@@ -17,20 +17,6 @@
         width: 100%;
         background-color: $cPurpleDark;
         line-height: 0;
-
-        &::after {
-            content: '';
-            pointer-events: none;
-            background: url(#{$img}/figures/showcase-figure.svg) no-repeat center top / 100% 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: -16vw;
-            @include desktop {
-                bottom: -10.3vw;
-            }
-        }
     }
     &_image,
     &_video {

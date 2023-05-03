@@ -24,20 +24,6 @@
             border-radius: 8px;
         }
     }
-    &::after {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: -22px;
-        width: 170px;
-        height: 90px;
-        background: url(#{$img}/figures/terms-top-right.svg) no-repeat top right / 100%;
-        @include desktop {
-            width: 446px;
-            height: 236px;
-            top: -60px;
-        }
-    }
 
     &_bg-wrapper {
         padding: 100px 0 90px;
@@ -46,32 +32,6 @@
             padding: 64px 0 110px;
         }
 
-        &::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -28px;
-            width: 123px;
-            height: 78px;
-            background: url(#{$img}/figures/terms-bottom-left.svg) no-repeat top right / 100%;
-            @include desktop {
-                display: none;
-            }
-        }
-        &::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -28px;
-            width: 98px;
-            height: 142px;
-            background: url(#{$img}/figures/terms-bottom-right.svg) no-repeat top right / 100%;
-            @include desktop {
-                width: 186px;
-                height: 297px;
-                bottom: -60px;
-            }
-        }
     }
     &_holder {
         @include layout;

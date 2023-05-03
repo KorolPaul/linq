@@ -300,25 +300,12 @@
 
         .speakers-card__blue & {
             background-color: $cBlueLight;
-
-            &::before {
-                background-image: url(#{$img}/figures/speakers-figure-blue.svg);
-            }
         }
         .speakers-card__pink & {
             background-color: $cPink;
-
-            &::before {
-                background-image: url(#{$img}/figures/speakers-figure-pink.svg);
-                background-position: right top;
-            }
         }
         .speakers-card__orange & {
             background-color: $cOrange;
-
-            &::before {
-                background-image: url(#{$img}/figures/speakers-figure-orange.svg);
-            }
         }
     }
     &_name {

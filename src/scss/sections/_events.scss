@@ -105,37 +105,6 @@
             order: initial;
             padding: 0;
         }
-
-        &::before {
-            content: '';
-            background: url(#{$img}/figures/event-image-top.svg) no-repeat center / 100%;
-            position: absolute;
-            right: 0;
-            top: -26px;
-            height: 144px;
-            width: 99px;
-            @include desktop {
-                right: -72px;
-                top: -70px;
-                height: 398px;
-                width: 272px;
-            }
-        }
-        &::after {
-            content: '';
-            background: url(#{$img}/figures/event-image-bottom.svg) no-repeat center / 100%;
-            position: absolute;
-            left: 0;
-            bottom: -22px;
-            height: 79px;
-            width: 72px;
-            @include desktop {
-                left: -41px;
-                bottom: -81px;
-                height: 259px;
-                width: 239px;
-            }
-        }
     }
     &_gallery-image {
         @include desktop {
