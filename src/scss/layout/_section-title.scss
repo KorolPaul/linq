@@ -1,29 +1,23 @@
 .section-title {
-    font-size: 48px;
-    line-height: .94;
-    font-weight: 400;
-    margin: 0 0 32px;
-    width: 71%;
-    @include desktop {
-        font-size: vw(120);
-        margin-bottom: vw(62);
-    }
-    @include desktop-large {
-        width: 80%;
+    display: block;
+    font-family: $font-family__heading;
+    font-size: 32px;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    @include tablet {
+        font-size: 54px;
+        margin-bottom: 36px;
     }
 
-    &__wide {
-        width: 100%;
-    }
-    &__wide-desktop {
-        @include desktop {
-            width: 100%;
+    strong {
+        display: block;
+        font-size: 40px;
+        @include tablet {
+            font-size: 80px;
         }
     }
-    &__wide-mobile {
-        width: 100%;
-        @include desktop {
-            width: 70%;
-        }
+
+    &__center {
+        text-align: center;
     }
 }

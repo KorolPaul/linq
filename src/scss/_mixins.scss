@@ -39,13 +39,12 @@
 @mixin layout {
     padding-left: $indent;
     padding-right: $indent;
+    max-width: $max-width;
     @include tablet {
-        padding-left: 48px;
-        padding-right: 48px;
-    }
-    @include desktop-large() {
-        padding-left: 72px;
-        padding-right: 72px;
+        padding-left: 22px;
+        padding-right: 22px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -58,5 +57,6 @@
 }
 
 @function vw($px) {
-    @return $px * 0.068vw
+    // @return $px * 0.068vw
+    @return #{$px}px
 }

@@ -5,14 +5,15 @@ $bg_color: #F5DDB7;
 $color: #382D4D;
 $cGreen: #60E771;
 $cRed: #E1564F;
-$cPink: #F4A3DD;
-$cOrange: #E68549;
-$cGrey: #E9E9E9;
-$cGreyLight: rgba(56, 45, 77, .3);
 $cBlue: #357C8E;
 $cBlueLight: #6AC2C0;
 $cBlueMedium: #6AC2C0;
+$cOrange: #E68549;
 $cYellow: #EEBA44;
+
+$cPink: #F4A3DD;
+$cGrey: #E9E9E9;
+$cGreyLight: rgba(56, 45, 77, .3);
 $cPurple: #C859FF;
 $cPurpleDark: #781AA8;
 $cPurpleLight: #9778DD;
@@ -23,8 +24,8 @@ $font-family__heading: 'ITC Busorama Bold', Helvetica, sans-serif;
 $font-size: 18px;
 $font-size__small: 16px;
 
-$max-width: 1344px;
-$indent: 24px;
+$max-width: 1296px;
+$indent: 16px;
 
 // easings
 $easingSmooth: cubic-bezier(0.38, 0.005, 0.215, 1);

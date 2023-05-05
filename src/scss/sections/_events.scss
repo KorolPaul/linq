@@ -2,113 +2,101 @@
     overflow: hidden;
     margin: 0 0 64px;
     @include desktop {
-        position: relative;
         margin-bottom: vw(124);
+    }
+
+    &_title {
+        @include desktop {
+            position: absolute;
+            top: 0;
+            left: 360px;
+            max-width: 450px;
+            text-align: left;
+        }
     }
 
     &_holder {
         @include layout;
-
-        .tns-outer {
-            margin-top: -12px;
-            margin-bottom: 10px;
-            @include desktop {
-                margin-top: -6px;
-                margin-bottom: 0;
-            }
-
-            &:first-of-type {
-                margin-right: -$indent;
-                @include desktop {
-                    margin-right: calc(-50vh + 83px);
-                }
-            }
-        }
-    }
-    &_label {
-        display: block;
-        color: $cPurpleDark;
-        margin: 0 0 8px;
-        font-size: 12px;
-        line-height: 16px;
         @include desktop {
-            font-size: 18px;
-            line-height: 25px;
-            margin-bottom: 24px;
+            position: relative;
         }
     }
-    &_slider {
 
-        
-    }
-    &_slider-tab {
-        cursor: pointer;
-        font-size: 48px;
-        color: rgba(0, 0, 0, .15);
-        user-select: none;
-        transition: .2s $easing color;
-        @include desktop {
-            font-size: vw(140);
-            line-height: 1.1;
-        }
-
-        &:hover {
-            color: rgba($color, .5);
-        }
-        &:active,
-        &.active {
-            color: $color;
-        }
-    }
-    &_gallery-item {
+    &_items {
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 50px;
-        @include desktop {
-            flex-direction: row;
+        gap: 8px;
+        @include tablet {
+            flex-wrap: wrap;
             justify-content: space-between;
-            margin-top: vw(136);
-            padding-bottom: vw(80);
-            gap: 80px;
         }
     }
-    &_gallery-item-content {
-        order: 2;
-        @include desktop {
-            order: initial;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 40%;
-            padding: 0 0 vw(46);
+
+    &_items-column {
+        flex-grow: 1;
+        @include tablet {
+            display: contents;
         }
     }
-    &_gallery-item-text {
-        font-size: 16px;
+
+    &_item {
+        border-radius: 16px;
+        background-color: #fff;
+        padding: 6px;
+        margin: 0 0 $indent;
+        @include tablet {
+            width: 236px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        @include desktop {
+            width: 278px;
+        }
+
+        &__dummy {
+            display: none;
+            @include desktop {
+                display: block;
+                height: 0;
+                padding: 0;
+            }
+        }
+    }
+    &_item-content {
+        padding: 0 10px 10px;
+        @include tablet {
+            padding: 0 16px 16px;
+        }
+    }
+    &_item-title {
+        color: $cOrange;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.25;
+        display: block;
+        @include tablet {
+            font-size: 24px;
+            margin: 0 0 10px;
+        }
+    }
+    &_item-text {
+        font-size: 14px;
         line-height: 1.4;
-        padding: 0 26px 0 0;
-        margin: 0 0 24px;
-        @include desktop {
-            font-size: vw(24);
-            max-width: 80%;
-            padding: vw(56) 0 0;
+        margin: 0;
+        @include tablet {
+            font-size: 16px;
         }
     }
-    &_gallery-image-wrapper {
-        position: relative;
-        order: 1;
-        margin: 0 0 44px;
-        padding: 0 26px 0 15px;
-        @include desktop {
-            order: initial;
-            padding: 0;
+    &_item-image-wrapper {
+        // filter: drop-shadow(0px 6px 0px #E68549) drop-shadow(0px 12px 0px #EEBA44) drop-shadow(0px 18px 0px #FFEBCB);
+        margin: 0 0 20px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include tablet {
+            border-radius: 12px;
         }
     }
-    &_gallery-image {
-        @include desktop {
-            width: 55vw;
-        }
+    &_item-image {
+        display: block;
+        width: 100%;
     }
 }

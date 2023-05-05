@@ -1,11 +1,4 @@
 .intro {
-    margin: 0 0 64px;
-
-    @include desktop {
-        position: relative;
-        margin-bottom: vw(105);
-    }
-
     &_holder {
         @include layout;
     }
@@ -15,43 +8,25 @@
         line-height: .94;
         font-weight: 400;
         margin: 0 0 32px;
-
         @include desktop {
             font-size: vw(140);
             margin-bottom: vw(56);
         }
     }
 
-    &_label {
-        display: block;
-        color: $cPurpleDark;
-        margin: 0 0 8px;
-        font-size: 12px;
-        line-height: 1.3;
-
-        @include desktop {
-            font-size: vw(18);
-            margin-bottom: vw(24);
-        }
-    }
-
     &_content {
-        @include desktop {
-            display: flex;
-            justify-content: flex-end;
+        @include tablet {
+            max-width: 640px;
         }
     }
 
     &_text {
-        font-size: 16px;
-        line-height: 1.4;
+        font-size: 14px;
+        line-height: 1.3;
         font-weight: 400;
-        margin: 0 0 24px;
-
-        @include desktop {
-            font-size: vw(24);
-            margin-bottom: vw(40);
-            max-width: 46%;
+        margin: 0 0 30px;
+        @include tablet {
+            font-size: 18px;
         }
     }
 
@@ -60,14 +35,6 @@
 
         @include desktop {
             margin-bottom: vw(64);
-        }
-    }
-
-    .button {
-        margin: 4px 0 0;
-
-        @include desktop {
-            margin-top: vw(22);
         }
     }
 }
