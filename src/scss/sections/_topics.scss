@@ -36,39 +36,103 @@
     &_items {
         @include tablet {
             display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            justify-content: space-between;
         }
     }
     &_item {
-        background-color: $cBlue;
+        background-color: #4DB0B2;
         font-size: 24px;
         line-height: 1.2;
-        color: $cBlue;
+        color: $bg_color;
         width: 100%;
         border-radius: 8px;
         min-height: 72px;
         align-items: center;
         justify-content: center;
-        padding: 8px;
         box-sizing: border-box;
         text-align: center;
         position: relative;
         overflow: hidden;
+        flex-grow: 1;
         transition: .3s $easeInCirc color,
-                    .3s $easeInCirc border-color;
+        .3s $easeInCirc border-color;
+        @include tablet {
+            width: 50%;
+        }
         @include desktop {
-            padding: vw(26);
+            width: 22%;
         }
 
         &__orange {
-            background-color: $cOrange;
+            background-color: $cRed;
         }
 
         &__purple {
-            background-color: $cPurple;
+            background-color: $cPurpleDark;
         }
 
         &__yellow {
+            background-color: #EEBA44;
+        }
+    }
+
+    &_item-title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        display: block;
+        margin: 14px 0;
+        padding: 0 $indent;
+        @include desktop {
+            font-size: 24px;
+            margin: 28px 0;
+            padding: 0 28px;
+        }
+    }
+    
+    &_item-content {
+        padding: $indent;
+        border-radius: 16px;
+        text-align: left;
+        background-color: $cBlue;
+        @include desktop {
+            padding-left: 28px;
+            padding-right: 28px;
+            border-radius: 20px;
+        }
+
+        .topics_item__orange & {
+            background-color: $cOrange;
+        }
+
+        .topics-item__purple & {
+            background-color: $cPurple;
+        }
+
+        .topics-item__yellow & {
             background-color: $cYellow;
+        }
+    }
+
+    &_item-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            font-size: 14px;
+            line-height: 1.4;
+            padding: 12px 0;
+            border-bottom: 1px dashed currentColor;
+            @include desktop {
+                font-size: 16px;
+            }
+
+            &:last-child {
+                border-bottom: none;
+            }
         }
     }
 }

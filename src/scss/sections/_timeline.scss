@@ -11,18 +11,12 @@
     &::before {
         content: '';
         position: absolute;
-        background-color: rgba(56, 45, 77, 0.3);
-        width: 1px;
+        background: url(#{$img}/tickets-bg.svg) repeat-x center center;
         height: 100%;
         top: 0;
-        left: 73px;
+        left: 20px;
+        right: 20px;
         z-index: -1;
-        @include desktop {
-            height: 1px;
-            top: 46px;
-            width: 100%;
-            left: 0;
-        }
     }
 
     &_item {

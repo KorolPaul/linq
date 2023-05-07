@@ -1,19 +1,14 @@
 .sponsors {
-    background-color: $cPurpleDark;
     margin: 0 0 112px;
     position: relative;
-    padding: 31px 0 75px;
     @include desktop {
         margin-top: vw(190);
-        margin-bottom: vw(310);
-        padding: vw(54) 0 vw(200);
     }
     
     &_holder {
         @include layout;
     }
     &_title {
-        color: $bg_color;
         margin-bottom: 56px;
         @include desktop {
             margin-bottom: vw(110);
@@ -27,7 +22,7 @@
         column-gap: 12px;
         row-gap: 28px;
         @include tablet {
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             column-gap: vw(35);
             row-gap: vw(40);
         }
@@ -52,7 +47,7 @@
         }
     }
     &_card {
-        background-color: $bg_color;
+        background-color: #fff;
         border-radius: 4px;
         height: 40px;
         display: flex;
@@ -152,5 +147,11 @@
         .sponsors_card[href]:active & {
             filter: grayscale(.8);
         }
+    }
+
+    &_card-name {
+        position: absolute;
+        left: 0;
+        bottom: 110%;
     }
 }

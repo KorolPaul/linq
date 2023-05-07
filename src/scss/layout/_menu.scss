@@ -1,6 +1,6 @@
 
 .menu {
-    background: #781AA8 url(#{$img}/menu-bg.svg) no-repeat right bottom -35px / 40vh;
+    background-color: $bg_color;
     box-sizing: border-box;
     position: fixed;
     z-index: 11;
@@ -12,71 +12,100 @@
     top: 0;
     max-width: 1148px;
     width: 100%;
-    padding: 22px 24px 51px;
+    padding: 88px 0 51px;
     transform: translateX(0);
     transition: .6s $easing transform;
     @include desktop {
-        padding: 22px 60px 51px;
-        background-size: 600px;
-    }
-
-    &__special {
-        max-width: 700px;
-        background-size: auto 40%;
-
-        .special-menu-opened & {
-            transform: translateX(-100%);
-        }
+        background-color: transparent;
+        padding: 0;
+        position: static;
+        text-align: center;
+        height: auto;
     }
 
     .menu-opened & {
         transform: translateX(-100%);
-
-        &__special {
-            transform: translateX(0);
+        @include desktop {
+            transform: none;
         }
     }
 
-    &_link {
-        font-weight: 600;
-        font-size: 32px;
-        line-height: 1.2;
-        color: $cGreen;
-        max-width: 400px;
-        margin: 4px 0;
-        transition: .3s $easing color;
+    &_links {
         @include desktop {
-            font-size: 48px;
-            line-height: 1;
-            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
         }
         @include desktop-large {
-            font-size: 72px;
+            gap: 40px;
+        }
+    }
+    &_link {
+        font-family: $font-family__heading;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 88px;
+        height: 88px;
+        color: $bg_color;
+        background-color: $cRed;
+        padding: 0 44px;
+        text-transform: uppercase;
+        border-radius: 100px 0 0 100px;
+        transition: .3s $easing color;
+        @include desktop {
+            font-family: $font-family;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 130%;
+            line-height: 1;
+            white-space: nowrap;
+            background-color: transparent;
+            padding: 0;
+            text-transform: none;
+            display: inline;
+            color: $cBlue;
+            height: auto;
+        }
+
+        &:nth-child(2n) {
+            background-color: $cOrange;
+            @include desktop {
+                background-color: transparent;
+            }
+        }
+        &:nth-child(3n) {
+            background-color: $cYellow;
+            @include desktop {
+                background-color: transparent;
+            }
+        }
+        &:nth-child(4n) {
+            background-color: $cBlueLight;
+            @include desktop {
+                background-color: transparent;
+            }
+        }
+        &:nth-child(5n) {
+            background-color: $cBlueMedium;
+            @include desktop {
+                background-color: transparent;
+            }
+        }
+        &:nth-child(6n) {
+            background-color: $cBlue;
+            @include desktop {
+                background-color: transparent;
+            }
+        }
+        &:nth-child(7n) {
+            background-color: $cPurple;
+            @include desktop {
+                background-color: transparent;
+            }
         }
 
         &:hover {
             color: $cPurple;
-        }
-    }
-    &_button {
-        margin: 20vh 0 0;
-        @include desktop {
-            margin: 50px 0 75px;
-        }
-        @include desktop-large {
-            margin: 100px 0 150px;
-        }
-    }
-    &_social {
-        position: absolute;
-        right: $indent;
-        top: 50%;
-        width: 48px;
-        transform: translateY(-50%);
-        @include desktop {
-            position: static;
-            width: auto;
-            transform: none;
         }
     }
 }

@@ -1,129 +1,92 @@
 .comments {
+    background-color: $cOrange;
     margin: 0 0 64px;
-    overflow: hidden;
+    padding: 32px 0;
+    border-radius: 30px;
+    @include tablet {
+        padding: 40px 0;
+    }
     @include desktop {
+        padding: 54px 0;
         margin-bottom: vw(150);
     }
 
-    &_title {
-        width: 100%;
-        margin-bottom: 58px;
-        @include desktop {
-            margin-bottom: vw(120);
-        }
-    }
-    &_background {
-        background-color: $cOrange;
-        padding: 40px 0 110px;
-        margin: 0 0 22px;
-        position: relative;
-        @include desktop {
-            position: relative;
-            padding: vw(92) 0 vw(40) 0;
-            margin-bottom: vw(54);
-        }
 
-        &::before {
-            @include desktop {
-                content: '';
-                position: absolute;
-                left: 0;
-                top: -58px;
-                border-radius: 8px;
-                width: 187px;
-                height: 80px;
-                background-color: $cOrange;
-                z-index: -1;
-            }
-        }
-
-        .tns-controls {
-            position: absolute;
-            right: $indent;
-            bottom: 35px;
-            @include desktop {
-                bottom: 15px;
-                right: auto;
-                left: 72px;
-            }
-        }
-    }
     &_holder {
         @include layout;
         @include desktop {
             position: relative;
         }
+    }
 
-        .tns-ovh {
-            overflow: visible;
+    &_grid {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 50px;
+        @include tablet {
+            grid-template-columns: 1fr 1fr 1fr;
         }
-        .tns-outer:first-of-type {
-            margin-right: -$indent;
-            @include desktop {
-                margin-right: calc(-50vh + 83px);
-            }
+        @include desktop {
+            gap: 100px 80px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
-    &_slider {
-        will-change: transform;
-    }
+   
     &_card {
-        display: flex;
-        flex-direction: column;
+        font-size: 14px;
+        line-height: 140%;
+        text-align: center;
         @include desktop {
-            flex-direction: row;
-            gap: vw(40);
+            font-size: 16px;
         }
     }
-    &_card-info {
-        max-width: 638px;
-        font-size: 20px;
-        line-height: 1.4;
-        order: 2;
-        @include desktop {
-            max-width: 44.3vw;
-            font-size: vw(40);
-            order: 1;
-        }
-    }
+
     &_card-text {
-        margin-bottom: 32px;
-        @include desktop {
-            margin-bottom: vw(64);
-        }
     }
     &_card-name,
     &_card-position {
-        font-size: 16px;
-        line-height: 1.4;
-        @include desktop {
-            font-size: vw(24);
+        display: inline-block;
+        padding: 6px;
+
+        .comments_card:nth-child(1n) & {
+            background-color: $cBlueLight;
+        }
+
+        .comments_card:nth-child(2n) & {
+            background-color: $cOrange;
+        }
+
+        .comments_card:nth-child(3n) & {
+            background-color: $cRed;
+        }
+
+        .comments_card:nth-child(4n) & {
+            background-color: $cBlueLight;
+        }
+
+        .comments_card:nth-child(5n) & {
+            background-color: $cPurpleDark;
+        }
+
+        .comments_card:nth-child(6n) & {
+            background-color: $bg_color;
+        }
+
+        .comments_card:nth-child(7n) & {
+            background-color: $cBlueLight;
+        }
+
+        .comments_card:nth-child(8n) & {
+            background-color: $cRed;
         }
     }
-    &_card-image-wrapper {
-        position: relative;
-        width: 70%;
-        order: 1;
-        margin: 0 0 50px;
-        @include desktop {
-            width: auto;
-            order: 2;
-            margin: 0;
-        }
-    }
+
     &_card-image {
         width: 100%;
+        display: block;
         @include desktop {
-            width: vw(419);
-        }
-    }
-    &_slider-counter {
-        position: absolute;
-        left: $indent;
-        bottom: 35px;
-        font-size: 16px;
-        @include desktop {
-            display: none;
+
         }
     }
 }

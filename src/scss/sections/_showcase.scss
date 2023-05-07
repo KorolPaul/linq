@@ -12,9 +12,7 @@
     
     &_holder {
         @include layout;
-        display: flex;
         position: relative;
-        justify-content: space-between;
         padding-bottom: 100px;
         @include tablet {
             display: flex;
@@ -37,7 +35,7 @@
             height: 75px;
             background: url(#{$img}/showcase-rainbow-mobile.svg) no-repeat top right / 100% auto;
             z-index: -1;
-            @include tablet {
+            @include desktop {
                 background-image: url(#{$img}/showcase-rainbow.svg);
                 background-size: auto 100%;
                 bottom: auto;
@@ -48,7 +46,7 @@
                 right: $indent;
             }
 
-            @include desktop {
+            @include desktop-large {
                 height: 533px;
             }
         }

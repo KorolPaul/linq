@@ -2,17 +2,16 @@
     display: inline-block;
     background: transparent;
     box-sizing: border-box;
-    border: 2px solid $cGreen;
-    border-radius: 8px 0px;
-    background-color: $cGreen;
+    border: none;
+    border-radius: 50px;
+    background-color: $cRed;
     cursor: pointer;
-    color: $color;
+    color: $bg_color;
     font-size: 14px;
-    font-weight: 600;
-    height: 49px;
-    line-height: 45px;
+    font-weight: 500;
+    height: 44px;
+    line-height: 43px;
     padding: 0 24px;
-    min-width: 146px;
     white-space: nowrap;
     text-align: center;
     transform: scale(1);
@@ -20,13 +19,9 @@
                 .2s $easing background-color,
                 .2s $easing transform;
     @include desktop {
-        font-size: vw(17);
-        height: vw(56);
-        line-height: vw(53);
-    }
-    @include desktop-large {
-        height: vw(70);
-        line-height: vw(66);
+        font-size: 18px;
+        height: 60px;
+        line-height: 60px;
     }
 
     &:hover {
@@ -53,9 +48,11 @@
 
     &:hover {
         transform: none;
+        background: transparent;
     }
     &:active {
         transform: none;
+        background: transparent;
     }
 }
 

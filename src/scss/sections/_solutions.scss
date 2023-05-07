@@ -28,7 +28,10 @@
         background-size: 100% 100%;
         background-position: top left;
         position: relative;
+        border-radius: 16px;
+        background-color: $cPurpleDark;
         @include desktop {
+            border-radius: 30px;
             width: vw(419);
             min-height: vw(800);
             padding: vw(38) vw(34) vw(44) vw(40);
@@ -39,16 +42,12 @@
             padding: vw(57) vw(35) vw(66) vw(48);
         }
 
-        &__orange {
-            background-image: url(#{$img}/ticket-orange.svg);
+        &__red {
+            background-color: $cRed;
         }
 
-        &__pink {
-            background-image: url(#{$img}/ticket-pink.svg);
-        }
-
-        &__green {
-            background-image: url(#{$img}/ticket-green.svg);
+        &__blue {
+            background-color: $cBlue;
         }
     }
     &_card-label {

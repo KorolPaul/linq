@@ -1,71 +1,42 @@
 .menu-toggle {
     @include button-reset;
     position: fixed;
-    top: $indent;
+    top: 24px;
     right: $indent;
-    width: 40px;
+    width: 30px;
     height: 40px;
     z-index: 12;
-    border-radius: 8px 0 8px 0;
-    background-color: $cGreen;
-    @include tablet {
-        right: 48px;
-    }
     @include desktop {
-        width: 72px;
-        height: 72px;
-    }
-    @include desktop-large {
-        right: 74px;
+        display: none;
     }
 
-    &:hover {
-        background-color: $cGreen;
-    }
     
     &_line {
-        position: absolute;
-        height: 2px;
-        top: 50%;
-        left: 25%;
-        right: 25%;
-        border-radius: 1px;
-        background-color: $color;
+        height: 4px;
+        border-radius: 10px;
+        background-color: $cBlueMedium;
         transition: .4s $easing opacity,
                     .4s $easing transform;
 
         &:nth-child(1) {
-            margin-top: -6px;
-            @include desktop {
-                margin-top: -10px;
-            }
+            background-color: $cBlueLight;
 
-            .menu-opened &,
-            .special-menu-opened & {
+            .menu-opened &{
                 transform: rotate(45deg) translate(5px, 4px);
-                @include desktop {
-                    transform: rotate(45deg) translate(7px, 7px);
-                }
             }
         }
         &:nth-child(2) {
-            .menu-opened &,
-            .special-menu-opened & {
+            margin: 4px 0;
+
+            .menu-opened & {
                 opacity: 0;
             }
         }
         &:nth-child(3) {
-            margin-top: 6px;
-            @include desktop {
-                margin-top: 10px;
-            }
+            background-color: $cBlue;
 
-            .menu-opened &,
-            .special-menu-opened & {
-                transform: rotate(-45deg) translate(5px, -4px);
-                @include desktop {
-                    transform: rotate(-45deg) translate(7px, -7px);
-                }
+            .menu-opened & {
+                transform: rotate(-45deg) translate(7px, -6px);
             }
         }
     }

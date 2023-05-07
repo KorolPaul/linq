@@ -5,6 +5,20 @@
         margin-bottom: vw(150);
     }
 
+    &::before {
+        content: '';
+        background: url(#{$img}/faq-bg.svg) no-repeat center / 100% auto;
+        position: absolute;
+        top: -50px;
+        left: 50%;
+        width: 100vw;
+        padding-bottom: 33%;
+        transform: translate(-50%, 0);
+        @include desktop {
+            top: 0
+        }
+    }
+
     &_holder {
         @include layout;
     }

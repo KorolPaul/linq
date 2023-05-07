@@ -13,301 +13,103 @@
             padding-bottom: 0;
         }
     }
-    &_label {
-        font-size: 12px;
-        line-height: 1.4;
-        color: $cPurpleDark;
-        margin-bottom: 32px;
-        @include desktop {
-            font-size: 18px;
-        }
-    }
-    &_slider-counter {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        font-size: 16px;
-        left: $indent;
-        @include desktop {
-            font-size: 24px;
-            left: auto;
-            right: 367px;
-            bottom: -96px;
-        }
 
-        &__mobile {
-            @include desktop {
-                display: none;
-            }
-        }
-    }
-    &_bottom {
-        @include layout;
-        margin-top: 24px;
-        @include desktop {
-            margin-top: vw(56);
-        }
-    }
+    
     &_grid {
-        padding-top: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: $indent 8px;
         @include tablet {
             padding-top: 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            row-gap: vw(48);
-            column-gap: vw(20);
-        }
-        @include desktop {
             grid-template-columns: 1fr 1fr 1fr;
-        }
-
-        &.tns-slider {
-            padding-top: 0;
-        }
-    }
-    &_grid-item {
-        margin: 0 0 34px;
-        @include tablet {
-            margin-bottom: 0;
-        }
-
-        .tns-outer & {
-            margin-bottom: 0;
-        }
-    }
-
-    .tns-ovh {
-        padding-top: 10px;
-        @include desktop {
-            padding-top: 16px;
-        }
-    }
-    .tns-outer {
-        margin-right: -$indent;
-        margin-left: -$indent;
-        @include tablet {
-            margin-right: -48px;
-            margin-left: -48px;
+            grid-template-rows: auto;
         }
         @include desktop {
-            margin-bottom: 24px;
-        }
-        @include desktop-large {
-            margin-left: -72px;
-            margin-right: -72px;
-        }
-    }
-    .tns-ovh {
-        padding-left: $indent;
-        @include tablet {
-            padding-left: 48px;
-        }
-        @include desktop-large {
-            padding-left: 72px;
-        }
-    }
-    .tns-controls {
-        position: absolute;
-        right: $indent;
-        bottom: 4px;
-        @include desktop {
-            bottom: -91px;
-            right: 72px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 }
 
 .speakers-card {
-    display: flex;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 8px;
     position: relative;
     color: $color;
     text-decoration: none;
     box-sizing: border-box;
+    overflow: hidden;
+    height: 288px;
+    @include tablet {
+    }
     @include desktop {
-        border-radius: 8px;
+        border-radius: 16px;
+        height: 300px;
+    }
+    @include desktop-large {
+        height: 310px;
     }
 
-    .speakers_grid-item & {
-        width: 100%;
-        height: auto;
-    }
-
-    &__all {
-        background-color: $cBlueLight;
-        justify-content: center;
-        align-items: center;
-        padding: 0 30px;
-        min-height: calc(101.2vw - 48px + 100px);
-        @include tablet {
-             min-height: calc(100.5vw - 96px + 100px);
-        }
-        @include desktop {
-            min-height: calc(46.9vw - 48px - 20px);
-        }
-        @include media(1190px) {
-            min-height: calc(46.5vw - 48px - 20px);
-        }
-        @include media(1260px) {
-            min-height: calc(46.3vw - 48px - 20px);
-        }
-        @include desktop-large {
-            min-height: calc(47.1vw - 72px - 20px);
-        }
-        @include media(1500px) {
-            min-height: calc(47vw - 72px - 20px);
-        }
-        @include media(1600px) {
-            min-height: calc(46.9vw - 72px - 20px);
-        }
-        @include media(1700px) {
-            min-height: calc(46.8vw - 72px - 20px);
-        }
-        @include media(1800px) {
-            min-height: calc(46.7vw - 72px - 20px);
-        }
-        @include media(1900px) {
-            min-height: calc(46.5vw - 72px - 20px);
-        }
-
-        &::before {
-            content: "";
-            background-color: $cBlueLight;
-            position: absolute;
-            left: 0;
-            top: -10px;
-            height: 40px;
-            width: 35%;
-            border-radius: 4px;
-            @include desktop {
-                top: -14px;
-                border-radius: 8px;
-            }
-        }
-    }
-
-    &_all-link {
-        font-weight: 600;
-        font-size: 24px;
-
-        &::after {
-            content: url(#{$img}/arrow-right-small.svg);
-            vertical-align: middle;
-            margin: 0 0 0 16px;
-        }
-    }
-    &_label {
-        font-size: 16px;
-        line-height: 1.26;
-        font-weight: 600;
-        position: absolute;
-        top: -10px;
-        left: 0;
-        padding: 16px $indent;
-        border-radius: 4px;
-        z-index: 1;
-        @include desktop {
-            font-size: vw(24);
-            padding: $indent 40px;
-            border-radius: 8px;
-            top: -16px;
-        }
-
-        &::before {
-            content: "";
-            height: 35px;
-            width: 58px;
-            border-radius: 4px;
-            position: absolute;
-            left: 0;
-            bottom: -25px;
-            z-index: 0;
-            @include desktop {
-                border-radius: 8px;
-                height: 45px;
-                width: 85px;
-                bottom: -37px;
-            }
-        }
-
-        .speakers-card__blue &,
-        .speakers-card__blue &::before {
-            background-color: $cBlueLight;
-        }
-        .speakers-card__pink &,
-        .speakers-card__pink &::before {
-            background-color: $cPink;
-        }
-        .speakers-card__orange &,
-        .speakers-card__orange &::before {
-            background-color: $cOrange;
-        }
-    }
     &_image {
         width: 100%;
         aspect-ratio: 1 / 1.1;
         object-fit: cover;
     }
     &_content {
+        color: $color;
+        background-color: $cRed;
         position: relative;
         overflow: hidden;
-        border-radius: 4px;
-        padding: 0 0 100px;
-        width: 100%;
-        @include desktop {
-            border-radius: 8px;
-            padding-bottom: 31%;
-        }
-    }
-    &_bottom {
-        padding: 24px 32px 32px;
+        border-radius: 8px;
         position: absolute;
         left: 0;
-        right: 0;
-        border-radius: 0 0 4px 4px;
-        top: 100%;
+        top: 168px;
         height: 100%;
-        z-index: 2;
-        transform: translateY(-107px);
-        transition: .3s $easing top, .3s $easing transform;
+        width: 100%;
+        padding: $indent;
+        box-sizing: border-box;
+        transition: .3s $easeOutCirc top;
         @include desktop {
-            padding-top: 32px;
-            transform: translateY(-9.7vw);
-            border-radius: 0 0 8px 8px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 97%;
-            height: 55px;
-            background-repeat: no-repeat;
-            background-position: left top;
-            background-size: auto 100%;
-            @include desktop {
-                height: 70px;
-            }
+            border-radius: 16px;
         }
 
         .speakers-card:hover & {
             top: 0;
-            transform: translateY(0);
         }
 
-        .speakers-card__blue & {
+        .speakers-card:nth-child(1n) & {
+            background-color: $cRed;
+            color: $bg_color;
+        }
+        .speakers-card:nth-child(2n) & {
             background-color: $cBlueLight;
+            color: $color;
         }
-        .speakers-card__pink & {
-            background-color: $cPink;
+        .speakers-card:nth-child(3n) & {
+            background-color: $cPurpleDark;
+            color: $bg_color;
         }
-        .speakers-card__orange & {
+        .speakers-card:nth-child(4n) & {
+            background-color: $cRed;
+            color: $bg_color;
+        }
+        .speakers-card:nth-child(5n) & {
             background-color: $cOrange;
+            color: $bg_color;
+        }
+        .speakers-card:nth-child(6n) & {
+            background-color: $cYellow;
+            color: $color;
+        }
+        .speakers-card:nth-child(7n) & {
+            background-color: $cBlue;
+            color: $bg_color;
+        }
+        .speakers-card:nth-child(8n) & {
+            background-color: $cBlueLight;
+            color: $color;
         }
     }
+
     &_name {
         font-weight: 600;
         font-size: 18px;
@@ -322,7 +124,6 @@
     &_position {
         font-size: 16px;
         line-height: 1.4;
-        color: $cGreyLight;
         display: block;
         margin: 0 0 20px;
         @include desktop {
@@ -331,11 +132,51 @@
         }
     }
     &_text {
+        padding: $indent;
+        margin: 0 #{-$indent};
+        border-radius: 8px;
         opacity: 0;
         transition: .2s $easing opacity;
+        @include tablet {
+            border-radius: 16px;
+        }
 
         .speakers-card:hover & {
             opacity: 1;
+        }
+
+        .speakers-card:nth-child(1n) & {
+            background-color: #aa2e27;
+        }
+
+        .speakers-card:nth-child(2n) & {
+            background-color: $cBlue;
+        }
+
+        .speakers-card:nth-child(3n) & {
+            background-color: rgb(26, 19, 37);
+            color: $bg_color;
+        }
+
+        .speakers-card:nth-child(4n) & {
+            background-color: #aa2e27;
+        }
+
+        .speakers-card:nth-child(5n) & {
+            background-color: #914b21;
+        }
+
+        .speakers-card:nth-child(6n) & {
+            background-color: $cOrange;
+        }
+
+        .speakers-card:nth-child(7n) & {
+            background-color: #15373f;
+        }
+
+        .speakers-card:nth-child(8n) & {
+            background-color: $cBlue;
+            color: $color;
         }
     }
 }

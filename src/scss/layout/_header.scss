@@ -1,17 +1,32 @@
 .header {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     box-sizing: border-box;
-    padding: $indent 0 0;
-    height: 88px;
+    padding: 24px 0;
+    min-height: 88px;
+    z-index: 11;
     @include desktop {
-        height: 134px;
+        padding: 13px 0;
     }
+
+        background: rgba(245, 221, 183, 0.2);
+        backdrop-filter: blur(25px);
     
     &_holder {
+        @include layout;
         display: flex;
+        align-items: center;
         justify-content: space-between;
+        padding-right: 74px;
+        @include desktop {
+            padding-left: 22px;
+        }
+    }
+
+    .button {
+        position: relative;
+        z-index:12;
     }
 }

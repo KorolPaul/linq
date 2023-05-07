@@ -1,25 +1,25 @@
 .video {
-    padding: 14px 0 87px 0;
+    padding: 32px 0;
     margin: 0 0 14px;
+    border-radius: 30px;
+    background-color: $cPurpleDark;
+    color: $bg_color;
+    @include tablet {
+        padding: 40px 0;
+    }
     @include desktop {
-        margin-bottom: vw(140);
-        padding: 0 0 vw(60) 0;
-        overflow: hidden;
+        padding: 54px 0;
     }
 
     &_holder {
-        padding: 0 24px;
-        @include desktop {
-            padding: 0 72px;
+        padding: 0;
+        @include tablet {
+            @include layout;
         }
     }
     &_item {
         position: relative;
         padding: 0 0 56%;
-        margin-top: 44px;
-        @include desktop {
-            margin-top: vw(140);
-        }
 
         iframe {
             position: absolute;

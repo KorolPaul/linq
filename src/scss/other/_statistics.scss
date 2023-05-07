@@ -21,89 +21,34 @@
         }
     }
     &_item {
-        padding: 6px 10px 6px;
+        padding: $indent;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        border-radius: 20px;
         @include desktop {
-            padding: vw(21) vw(32) vw(24) vw(32);
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            z-index: 2;
-            border-radius: 4px;
-            @include desktop {
-                border-radius: 8px;
-            }
+            border-radius: 30px;
+            padding: 32px;
         }
 
         &__first {
-            position: relative;
-            background-color: $cGreen;
-            border-radius: 8px;
+            background-color: $cBlueLight;
             grid-row: 1;
             grid-column: 1;
             @include desktop {
                 grid-column: 1 / 4;
             }
-
-            &::after {
-                width: 33px;
-                height: 36px;
-                background-color: $cGreen;
-                right: 0;
-                top: -16px;
-                @include desktop {
-                    width: 80px;
-                    height: 80px;
-                    top: -40px;
-                }
-            }
         }
         &__second {
-            position: relative;
-            background-color: $cPurpleLight;
-            border-radius: 8px;
+            background-color: $cYellow;
             grid-row: 1 / 2 span;
             grid-column: 2;
-            border-top-left-radius: 0;
             @include desktop {
                 grid-row: 1;
                 grid-column: 4 / 8;
             }
-
-            &::before {
-                content: '';
-                top: -16px;
-                background-color: $cPurpleLight;
-                position: absolute;
-                left: 0;
-                right: 0;
-                height: 16px;
-                border-radius: 4px 4px 0 0;
-                @include desktop {
-                    content: none   ;
-                }
-            }
-            &::after {
-                width: 23px;
-                height: 159px;
-                right: -12px;
-                top: -16px;
-                background-color: $cPurpleLight;
-                @include desktop {
-                    width: 309px;
-                    height: 80px;
-                    left: 0;
-                    top: -40px;
-                    right: auto;
-                }
-            }
         }
         &__third {
-            border-radius: 8px;
             background-color: $cOrange;
             grid-row: 3;
             grid-column: 2 / 3;
@@ -111,82 +56,44 @@
                 grid-row: 1;
                 grid-column: 8 / 11;
             }
-
-            &::after {
-                content: none;
-            }
         }
         &__fourth {
-            position: relative;
-            background-color: $cPink;
-            border-radius: 8px;
+            background-color: $cRed;
             grid-row: 2;
             grid-column: 1;
+            color: $bg_color;
             @include desktop {
                 grid-column: 1 / 6;
             }
-
-            &::after {
-                width: 20px;
-                height: 45px;
-                right: -1px;
-                bottom: -1px;
-                border-radius: 4px 0 0;
-                background-color: $bg_color;
-                @include desktop {
-                    right: 0;
-                    bottom: 0;
-                    width: 36%;
-                    height: 80px;
-                    border-radius: 8px 0 0;
-                }
-            }
         }
         &__fifth {
-            position: relative;
-            background-color: $cGreen;
-            border-radius: 8px;
+            background-color: $cBlue;
             grid-row: 3;
             grid-column: 1;
+            color: $bg_color;
             @include desktop {
                 grid-row: 2;
                 grid-column: 6 / 11;
             }
-
-            &::after {
-                background-color: $bg_color;
-                width: 41px;
-                height: 34px;
-                right: -1px;
-                bottom: -1px;
-                border-radius: 0 4px 0 4px;
-                @include desktop {
-                    width: 110px;
-                    height: 110px;
-                    right: 0;
-                    top: 0;
-                    border-radius: 0 8px 0 8px;
-                }
-            }
         }
     }
     &_item-number {
-        position: relative;
-        font-size: 48px;
-        line-height: 0.94;
+        font-weight: 700;
+        font-family: $font-family__heading;
+        font-size: 32px;
+        line-height: 1.2;
         margin-bottom: 25px;
-        z-index: 5;
         @include desktop {
-            font-size: vw(140);
-            margin-bottom: vw(29);
+            font-size: 56px;
         }
     }
     &_item-text {
+        font-weight: 500;
         font-size: 16px;
         line-height: 1.4;
         width: 90%;
         @include desktop {
-            font-size: vw(32);
+            font-size: 30px;
         }
     }
 }

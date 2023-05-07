@@ -1,0 +1,64 @@
+.join {
+    position: relative;
+    margin: 0 0 125px;
+    @include tablet {
+        margin-bottom: 110px;
+    }
+    @include desktop {
+        margin-bottom: 250px;
+    }
+
+    &::before {
+        content: '';
+        background: url(#{$img}/rainbow-join.svg) no-repeat center / 100% auto;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        width: 100vw;
+        padding-bottom: 33%;
+        transform: translate(-50%, -37%);
+    }
+
+    &_holder {
+        @include layout;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &_form {
+        max-width: 460px;
+        position: relative;
+        margin: 0;
+    }
+
+    &_form-input[type] {
+        width: 100%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &_form-button[type] {
+        @include button-reset;
+        background: url(#{$img}/arrow-button.svg) no-repeat center / cover;
+        position: absolute;
+        height: 32px;
+        width: 32px;
+        top: 2px;
+        right: 16px;
+        transform: scale(1);
+        transition: .2s $easing transform;
+        @include desktop {
+            top: 9px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: transparent;
+        }
+        &:active {
+            transform: scale(0.9);
+        }
+    }
+}
