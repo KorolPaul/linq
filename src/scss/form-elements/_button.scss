@@ -103,4 +103,15 @@ input[type="submit"] {
             color: $cOrange;
         }
     }
+    &__secondary {
+        color: $bg_color;
+        background: transparent;
+        border: 2px solid $cRed;
+        color: $cRed;
+
+        &:hover {
+            background: transparent;
+            color: $cOrange;
+        }
+    }
 }

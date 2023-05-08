@@ -37,21 +37,21 @@
     text-decoration: none;
     box-sizing: border-box;
     overflow: hidden;
-    height: 288px;
+    //height: 288px;
     @include tablet {
     }
     @include desktop {
         border-radius: 16px;
-        height: 300px;
+        //height: 300px;
     }
     @include desktop-large {
-        height: 310px;
+        //height: 310px;
     }
 
     &_image {
         width: 100%;
-        aspect-ratio: 1 / 1.1;
-        object-fit: cover;
+        // aspect-ratio: 1 / 1.1;
+        // object-fit: cover;
     }
     &_content {
         color: $color;
@@ -64,11 +64,17 @@
         top: 168px;
         height: 100%;
         width: 100%;
-        padding: $indent;
+        padding: $indent $indent 0;
         box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
         transition: .3s $easeOutCirc top;
         @include desktop {
             border-radius: 16px;
+            padding-left: 24px;
+            padding-right: 24px;
         }
 
         .speakers-card:hover & {
@@ -116,28 +122,31 @@
         margin-bottom: 4px;
         display: block;
         @include desktop {
-            font-size: vw(24);
-            margin-bottom: vw(12);
+            font-size: 24px;
         }
     }
     &_position {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 1.4;
         display: block;
         margin: 0 0 20px;
         @include desktop {
-            font-size: vw(24);
-            margin-bottom: 56px;
+            font-size: 16px;
         }
     }
     &_text {
+        flex-grow: 2;
         padding: $indent;
         margin: 0 #{-$indent};
         border-radius: 8px;
         opacity: 0;
+        font-size: 14px;
         transition: .2s $easing opacity;
-        @include tablet {
+        @include desktop {
             border-radius: 16px;
+            font-size: 16px;
+            padding: 24px;
+            margin: 0 -24px;
         }
 
         .speakers-card:hover & {

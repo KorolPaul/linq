@@ -36,43 +36,44 @@
             background-color: $cBlueLight;
             grid-row: 1;
             grid-column: 1;
-            @include desktop {
+            @include tablet {
                 grid-column: 1 / 4;
             }
         }
         &__second {
             background-color: $cYellow;
-            grid-row: 1 / 2 span;
+            grid-row: 1;
             grid-column: 2;
-            @include desktop {
+            @include tablet {
                 grid-row: 1;
                 grid-column: 4 / 8;
             }
         }
         &__third {
             background-color: $cOrange;
-            grid-row: 3;
+            grid-row: 2;
             grid-column: 2 / 3;
-            @include desktop {
+            @include tablet {
                 grid-row: 1;
                 grid-column: 8 / 11;
             }
         }
         &__fourth {
             background-color: $cRed;
-            grid-row: 2;
-            grid-column: 1;
+            grid-row: 3;
+            grid-column: 1 / 2 span;
             color: $bg_color;
-            @include desktop {
-                grid-column: 1 / 6;
+            @include tablet {
+                grid-row: 2;
+                grid-column:1 / 6;
             }
         }
         &__fifth {
             background-color: $cBlue;
-            grid-row: 3;
+            grid-row: 2;
             grid-column: 1;
             color: $bg_color;
-            @include desktop {
+            @include tablet {
                 grid-row: 2;
                 grid-column: 6 / 11;
             }

@@ -1,5 +1,6 @@
 .location {
     @include section;
+    position: relative;
     @include desktop {
         position: relative;
     }
@@ -12,10 +13,11 @@
         position: relative;
         padding-bottom: 280px;
         @include tablet {
-            padding-bottom: 180px;
+            padding-bottom: 200px;
         }
         @include desktop {
-            padding-bottom: 345px;
+            padding-bottom: 350px;
+            position: relative;
         }
     }
 
@@ -31,18 +33,47 @@
 
     &_image {
         position: absolute;
+        z-index: -1;
 
         &:nth-of-type(1) {
-            left: 0;
-            bottom: 0;
+            width: 164px;
+            left: -80px;
+            bottom: 80px;
+            @include tablet {
+                bottom: 0;
+                left: 40px;
+            }
+            @include desktop {
+                width: 360px;
+                left: 0;
+            }
         }
         &:nth-of-type(2) {
+            width: 160px;
             right: 0;
-            top: 0;
+            bottom: 140px;
+            @include tablet {
+                bottom: 110px;
+                right: -50px;
+            }
+            @include desktop {
+                width: 340px;
+                right: -20px;
+                bottom: 320px;
+            }
         }
         &:nth-of-type(3) {
-            right: 0;
+            width: 200px;
+            right: 40px;
             bottom: 0;
+            @include tablet {
+                bottom: 0;
+                right: auto;
+                left: 47%;
+            }
+            @include desktop {
+                width: 448px;
+            }
         }
     }
 
