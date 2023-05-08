@@ -1,10 +1,9 @@
 @mixin button {
     display: inline-block;
-    background: transparent;
+    background: $cRed url(#{$img}/pattern.png) no-repeat center;
     box-sizing: border-box;
     border: none;
     border-radius: 50px;
-    background-color: $cRed;
     cursor: pointer;
     color: $bg_color;
     font-size: 14px;

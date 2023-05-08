@@ -2,7 +2,7 @@
     @include button-reset;
     position: fixed;
     top: 24px;
-    right: $indent;
+    right: $indent + 8;
     width: 30px;
     height: 40px;
     z-index: 12;

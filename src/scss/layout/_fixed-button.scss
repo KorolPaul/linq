@@ -1,20 +1,49 @@
 .fixed-button {
     position: fixed;
+    left: $indent;
     right: $indent;
     bottom: $indent;
+    padding: 12px 20px;
     z-index: 5;
+    border-radius: 16px;
+    background: $cRed url(#{$img}/pattern.png) no-repeat -100px -100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
     transition: .4s $easingSmooth opacity;
     @include tablet {
-        left: auto;
-        right: 48px;
+        left: 50%;
+        right: auto;
         bottom: 48px;
+        width: 390px;
+        transform: translateX(-50%);
     }
-    @include desktop-large {
-        right: 72px;
+    @include desktop {
+        width: 475px;
+        transform: translateX(-652px);
+    }
+
+    &_text {
+        color: $bg_color;
+        font-size: 14px;
+        @include desktop {
+            font-size: 16px;
+        }
+
+        span {
+            display: block;
+            font-size: 18px;
+            @include desktop {
+                font-size: 24px;
+            }
+        }
     }
 
     .button {
-        width: 100%;
+        background-color: $cYellow;
+        color: $color;
     }
     &.hidden {
         opacity: 0;

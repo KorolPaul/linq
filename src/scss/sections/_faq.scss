@@ -1,9 +1,6 @@
 .faq {
-    margin: 0 0 64px;
+    @include section;
     position: relative;
-    @include desktop {
-        margin-bottom: vw(150);
-    }
 
     &::before {
         content: '';

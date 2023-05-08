@@ -1,9 +1,6 @@
 .topics {
-    margin: 0 0 90px;
+    @include section;
     position: relative;
-    @include desktop {
-        margin-bottom: vw(258);
-    }
 
     &_holder {
         @include layout;
@@ -44,7 +41,7 @@
         }
     }
     &_item {
-        background-color: #4DB0B2;
+        background: #4DB0B2 url(#{$img}/pattern.png) no-repeat -100px -100px;
         font-size: 24px;
         line-height: 1.2;
         color: $bg_color;
@@ -105,13 +102,13 @@
         padding: $indent;
         border-radius: 16px;
         text-align: left;
-        background-color: $cBlue;
         flex-grow: 1;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
+        background: $cBlue url(#{$img}/pattern.png) repeat -150px -130px;
         @include desktop {
             padding-left: 28px;
             padding-right: 28px;

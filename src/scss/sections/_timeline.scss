@@ -1,8 +1,7 @@
 .timeline {
-    margin: 0 0 60px;
+    @include section;
     position: relative;
     @include desktop {
-        margin-bottom: vw(88);
         display: flex;
         justify-content: space-between;
         gap: 20px;

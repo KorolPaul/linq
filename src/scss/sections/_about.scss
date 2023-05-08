@@ -1,13 +1,11 @@
 .about {
-    margin: 0 0 72px;
-
+    @include section;
     @include desktop {
         margin-bottom: vw(150);
         position: relative;
         margin-top: -75px;
         overflow: hidden;
         padding: 33px 0 0;
-        margin-bottom: vw(100);
     }
 
     &_holder {

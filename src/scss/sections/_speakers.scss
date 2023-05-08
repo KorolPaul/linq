@@ -1,8 +1,7 @@
 .speakers {
-    margin: 0 0 64px;
+    @include section;
     @include desktop {
         overflow: hidden;
-        margin-bottom: vw(150);
     }
 
     &_holder {

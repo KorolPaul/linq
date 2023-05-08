@@ -1,7 +1,6 @@
 .location {
-    margin: 0 0 64px;
+    @include section;
     @include desktop {
-        margin-bottom: vw(150);
         position: relative;
     }
 

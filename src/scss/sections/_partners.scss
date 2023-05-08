@@ -1,8 +1,5 @@
 .partners {
-    margin: 0 0 64px;
-    @include desktop {
-        margin-bottom: vw(150);
-    }
+    @include section;
     
     &_holder {
         @include layout;
