@@ -1,6 +1,6 @@
 .comments {
+    @include section;
     background-color: $cOrange;
-    margin: 0 0 64px;
     padding: 32px 0;
     border-radius: 30px;
     @include tablet {
@@ -8,7 +8,6 @@
     }
     @include desktop {
         padding: 54px 0;
-        margin-bottom: vw(150);
     }
 
 
@@ -37,8 +36,28 @@
         font-size: 14px;
         line-height: 140%;
         text-align: center;
+        position: relative;
         @include desktop {
             font-size: 16px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -28px;
+            top: 0;
+            height: 100%;
+            width: 5px;
+            background: url(#{$img}/vertical-divider.svg) repeat-y top left / 100% auto;
+            @include desktop {
+                right: -42px;
+            }
+        }
+
+        &:nth-child(4n)::after {
+            @include desktop {
+                content: none;
+            }
         }
     }
 
@@ -47,44 +66,59 @@
     &_card-name,
     &_card-position {
         display: inline-block;
-        padding: 6px;
+        position: relative;
+        border-radius: 6px;
 
         .comments_card:nth-child(1n) & {
+            box-shadow: 0 0 0 6px $cBlueLight;
             background-color: $cBlueLight;
         }
 
         .comments_card:nth-child(2n) & {
-            background-color: $cOrange;
+            box-shadow: 0 0 0 6px $cYellow;
+            background-color: $cYellow;
         }
 
         .comments_card:nth-child(3n) & {
+            box-shadow: 0 0 0 6px $cRed;
             background-color: $cRed;
         }
 
         .comments_card:nth-child(4n) & {
+            box-shadow: 0 0 0 6px $cBlueLight;
             background-color: $cBlueLight;
         }
 
         .comments_card:nth-child(5n) & {
+            color: #fff;
+            box-shadow: 0 0 0 6px $cPurpleDark;
             background-color: $cPurpleDark;
         }
 
         .comments_card:nth-child(6n) & {
+            box-shadow: 0 0 0 6px $bg_color;
             background-color: $bg_color;
         }
 
         .comments_card:nth-child(7n) & {
+            box-shadow: 0 0 0 6px $cBlueLight;
             background-color: $cBlueLight;
         }
 
         .comments_card:nth-child(8n) & {
+            box-shadow: 0 0 0 6px $cRed;
             background-color: $cRed;
         }
+    }
+
+    &_card-position {
+        margin-top: 5px;
     }
 
     &_card-image {
         width: 100%;
         display: block;
+        margin: 0 0 10px;
         @include desktop {
 
         }
