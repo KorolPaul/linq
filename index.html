@@ -23,13 +23,13 @@
             </a>
             <div class="menu">
                 <nav class="menu_links">
-                    <div class="menu_link">Agenda</div>
-                    <div class="menu_link">Speakers</div>
-                    <div class="menu_link">Location</div>
-                    <div class="menu_link">Partners</div>
-                    <div class="menu_link">About us</div>
-                    <div class="menu_link">FAQ</div>
-                    <div class="menu_link">Contact us</div>
+                    <a href="#agenda" class="menu_link">Agenda</a>
+                    <a href="#speakers" class="menu_link">Speakers</a>
+                    <a href="#location" class="menu_link">Location</a>
+                    <a href="#partners" class="menu_link">Partners</a>
+                    <a href="#about" class="menu_link">About us</a>
+                    <a href="#faq" class="menu_link">FAQ</a>
+                    <a href="#contact" class="menu_link">Contact us</a>
                 </nav>
             </div>
             <div>
@@ -74,6 +74,7 @@
         </div>
 
         <section class="intro intro__background-2">
+            <a name="about"></a>
             <div class="intro_holder">
                 <h2 class="section-title">
                     <strong>tech happining</strong>
@@ -166,6 +167,7 @@
 
         
         <section class="topics">
+            <a name="agenda"></a>
             <div class="topics_figures-wrapper">
                 <div class="topics_holder">
                     <div class="topics_content">
@@ -192,7 +194,9 @@
                                     <li>Emerging Markets</li>
                                     <li>Leadership in 2025</li>
                                 </ul>
-                                <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                <div class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </div>
                             </div>
                         </a>
                         <a href="#" class="topics_item topics_item__purple">
@@ -208,7 +212,9 @@
                                     <li>Future of startup accelerators in Cyprus</li>
                                     <li>Opportunities for Cyprus based Start-ups</li>
                                 </ul>
-                                <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                <div class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </div>
                             </div>
                         </a>
                         <a href="#" class="topics_item topics_item__orange">
@@ -222,7 +228,9 @@
                                     <li>New ways of UA</li>
                                     <li>Emerging markets</li>
                                 </ul>
-                                <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                <div class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </div>
                             </div>
                         </a>
                         <a href="#" class="topics_item  topics_item__yellow">
@@ -238,7 +246,9 @@
                                     <li>Kinky in tech</li>
                                     <li>Music & party</li>
                                 </ul>
-                                <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                <div class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </div>
                             </div>
                         </a>
                     </div>
@@ -302,8 +312,12 @@
         </section>
 
         <section class="speakers">
+            <a name="speakers"></a>
             <div class="speakers_holder">
-                <h2 class="section-title">Speakers</h2>
+                <div class="section-top">
+                    <h2 class="section-title">Speakers</h2>
+                    <a href="#" class="button">All speakers</a>
+                </div>
                 <div class="speakers_grid">
                     <a href="#" class="speakers-card">
                         <img class="speakers-card_image" src="src/img/speakers/speaker-1.png" alt="Madison Hutchinson">
@@ -422,6 +436,8 @@
         </section>
 
         <section class="join">
+            <a name="contact"></a>
+
             <div class="join_holder">
                 <h2 class="section-title section-title__center">
                     <strong>join the community</strong>
@@ -435,6 +451,7 @@
         </section>
 
         <section class="location">
+            <a name="location"></a>
             <div class="location_holder">
                 <h2 class="section-title">Limassol</h2>
                 <div class="location_content">
@@ -625,19 +642,21 @@
                                 <span class="solutions_card-price">$100</span>
                             </div>
                             <div class="solutions_card-bottom">
-                                <span class="solutions_card-list-title">Professional Value </span>
-                                <ul class="solutions_card-list">
-                                    <li>Access to all stages & an after-party</li>
-                                    <li>One place on LINQ's job board</li>
-                                    <li>Access to the networking app 14 days prior to the event</li>
-                                </ul>
-                                <span class="solutions_card-list-title">Fun features </span>
-                                <ul class="solutions_card-list">
-                                    <li>Participation in prize lotteries & access to special offers from sponsors</li>
-                                    <li>Great afterparties with the 70's music, electronic late night rave</li>
-                                    <li>Merch “Tech Mind & Soul”</li>
-                                </ul>
-                                <a class="button button__dark" href="#">Get Ticket</a>
+                                <div>
+                                    <span class="solutions_card-list-title">Professional Value </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Access to all stages & an after-party</li>
+                                        <li>One place on LINQ's job board</li>
+                                        <li>Access to the networking app 14 days prior to the event</li>
+                                    </ul>
+                                    <span class="solutions_card-list-title">Fun features </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Participation in prize lotteries & access to special offers from sponsors</li>
+                                        <li>Great afterparties with the 70's music, electronic late night rave</li>
+                                        <li>Merch “Tech Mind & Soul”</li>
+                                    </ul>
+                                </div>
+                                <span class="solutions_card-sold">SOLD OUT</span>
                             </div>
                         </div>
                     </div>
@@ -648,26 +667,31 @@
                                 <span class="solutions_card-price">$860</span>
                             </div>
                             <div class="solutions_card-bottom">
-                                <span class="solutions_card-list-title">Professional Value </span>
-                                <ul class="solutions_card-list">
-                                    <li>Set of start-ups' contact details, pitchdecks</li>
-                                    <li>Specially curated content</li>
-                                    <li>Safe networking</li>
-                                    <li>Access to speakers' area</li>
-                                </ul>
-                                <span class="solutions_card-list-title">Comfort features</span>
-                                <ul class="solutions_card-list">
-                                    <li>Dedicated private networking zone</li>
-                                    <li>Lunch & dinner, bar, shisha</li>
-                                    <li>Reserved</li>
-                                </ul>
-                                <span class="solutions_card-list-title">Fun features </span>
-                                <ul class="solutions_card-list">
-                                    <li>Dedicated cycling event</li>
-                                    <li>Exclusive merch "Tech Community Supporter"</li>
-                                    <li>Our respect & gratitude</li>
-                                </ul>
-                                <a class="button button__dark" href="#">Get Ticket</a>
+                                <div>
+                                    <span class="solutions_card-list-title">Professional Value </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Set of start-ups' contact details, pitchdecks</li>
+                                        <li>Specially curated content</li>
+                                        <li>Safe networking</li>
+                                        <li>Access to speakers' area</li>
+                                    </ul>
+                                    <span class="solutions_card-list-title">Comfort features</span>
+                                    <ul class="solutions_card-list">
+                                        <li>Dedicated private networking zone</li>
+                                        <li>Lunch & dinner, bar, shisha</li>
+                                        <li>Reserved</li>
+                                    </ul>
+                                    <span class="solutions_card-list-title">Fun features </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Dedicated cycling event</li>
+                                        <li>Exclusive merch "Tech Community Supporter"</li>
+                                        <li>Our respect & gratitude</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a class="button button__dark" href="#">Get Ticket</a>
+                                    <span class="solutions_card-vat">VAT not included</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -678,20 +702,25 @@
                                 <span class="solutions_card-price">$2000</span>
                             </div>
                             <div class="solutions_card-bottom">
-                                <span class="solutions_card-list-title">Professional Value </span>
-                                <ul class="solutions_card-list">
-                                    <li>Business tickets for up to 3 team members</li>
-                                    <li>Mini-stand with a TV screen included</li>
-                                    <li>Safe networking</li>
-                                    <li>Pitchdeck & contact details sent to investors</li>
-                                    <li>Pitch work-shop included</li>
-                                </ul>
-                                <span class="solutions_card-list-title">Fun features </span>
-                                <ul class="solutions_card-list">
-                                    <li>Exclusive team merch «StartUp Mind Inside»</li>
-                                    <li>Registration for Pimp My Start-up Competition</li>
-                                </ul>
-                                <a class="button button__dark" href="#">Get Ticket</a>
+                                <div>
+                                    <span class="solutions_card-list-title">Professional Value </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Business tickets for up to 3 team members</li>
+                                        <li>Mini-stand with a TV screen included</li>
+                                        <li>Safe networking</li>
+                                        <li>Pitchdeck & contact details sent to investors</li>
+                                        <li>Pitch work-shop included</li>
+                                    </ul>
+                                    <span class="solutions_card-list-title">Fun features </span>
+                                    <ul class="solutions_card-list">
+                                        <li>Exclusive team merch «StartUp Mind Inside»</li>
+                                        <li>Registration for Pimp My Start-up Competition</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <a class="button button__dark" href="#">Get Ticket</a>
+                                    <span class="solutions_card-vat">VAT not included</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -702,7 +731,10 @@
 
         <section class="sponsors">
             <div class="sponsors_holder">
-                <h2 class="section-title sponsors_title">generals sponsors</h2>
+                <div class="section-top">
+                    <h2 class="section-title">generals sponsors</h2>
+                    <a href="#" class="button">Become sponsor</a>
+                </div>
                 <div class="sponsors_grid sponsors_grid__pro">
                     <a href="#" class="sponsors_card sponsors_card__pro">
                         <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
@@ -808,6 +840,8 @@
         </section>
 
         <section class="partners">
+            <a name="partners"></a>
+
             <div class="partners_holder">
                 <h2 class="section-title  section-title__wide">Media partners</h2>
             </div>
@@ -846,7 +880,9 @@
         </section>
 
         <section class="faq">
+            <a name="faq"></a>
             <div class="faq_holder">
+
                 <h1 class="section-title section-title__center">FAQ</h1>
 
                 <div class="faq_content">

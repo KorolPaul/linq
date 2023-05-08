@@ -21,6 +21,7 @@
         position: static;
         text-align: center;
         height: auto;
+        overflow-y: initial;
     }
 
     .menu-opened & {

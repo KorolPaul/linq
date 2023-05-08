@@ -301,12 +301,10 @@ eventsGalleryElements.forEach(el => {
 const menuToggleElement = document.querySelector('.menu-toggle');
 if (menuToggleElement) {
     menuToggleElement.addEventListener('click', () => {
-        if (!document.body.classList.contains('menu-opened') && !document.body.classList.contains('special-menu-opened')) {
+        if (!document.body.classList.contains('menu-opened') ) {
             document.body.classList.toggle('menu-opened');
-        } else if (document.body.classList.contains('menu-opened') && !document.body.classList.contains('special-menu-opened')) {
+        } else if (document.body.classList.contains('menu-opened')) {
             document.body.classList.remove('menu-opened');
-        } else {
-            document.body.classList.remove('special-menu-opened');
         }
     });
 }
@@ -326,7 +324,11 @@ if (fadeElement) {
 }
 
 const menuLinkElements = document.querySelectorAll('.menu_link');
-menuLinkElements.forEach(el => el.addEventListener('click', () => document.body.classList.toggle('menu-opened')));
+menuLinkElements.forEach(el => el.addEventListener('click', () => {
+    if (isMobile) {
+        document.body.classList.toggle('menu-opened')
+    }
+}));
 
 /* Popup */
 const popupToggleElements = document.querySelectorAll('.js-popup-toggle');

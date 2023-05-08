@@ -34,7 +34,9 @@
         }
     }
     &_items {
+        margin: 0 0 24px;
         @include tablet {
+            margin-bottom: 32px;
             display: flex;
             flex-wrap: wrap;
             gap: 32px;
@@ -47,7 +49,7 @@
         line-height: 1.2;
         color: $bg_color;
         width: 100%;
-        border-radius: 8px;
+        border-radius: 16px;
         min-height: 72px;
         align-items: center;
         justify-content: center;
@@ -56,12 +58,16 @@
         position: relative;
         overflow: hidden;
         flex-grow: 1;
-        transition: .3s $easeInCirc color,
-        .3s $easeInCirc border-color;
+        display: flex;
+        flex-direction: column;
+        transition: .3s $easeInCirc color;
+        margin: 0 0 20px;
         @include tablet {
-            width: 50%;
+            width: 48%;
         }
         @include desktop {
+            border-radius: 20px;
+            margin: 0;
             width: 22%;
         }
 
@@ -75,6 +81,7 @@
 
         &__yellow {
             background-color: #EEBA44;
+            color: $color;
         }
     }
 
@@ -85,6 +92,7 @@
         display: block;
         margin: 14px 0;
         padding: 0 $indent;
+        flex-grow: 0;
         @include desktop {
             font-size: 24px;
             margin: 28px 0;
@@ -93,10 +101,17 @@
     }
     
     &_item-content {
+        box-sizing: border-box;
         padding: $indent;
         border-radius: 16px;
         text-align: left;
         background-color: $cBlue;
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
         @include desktop {
             padding-left: 28px;
             padding-right: 28px;
@@ -105,14 +120,16 @@
 
         .topics_item__orange & {
             background-color: $cOrange;
+            color: $color;
         }
 
-        .topics-item__purple & {
+        .topics_item__purple & {
             background-color: $cPurple;
         }
 
-        .topics-item__yellow & {
-            background-color: $cYellow;
+        .topics_item__yellow & {
+            background-color: #FACD68;
+            color: $color;
         }
     }
 
@@ -134,5 +151,19 @@
                 border-bottom: none;
             }
         }
+    }
+
+    &_item-logo-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 48px;
+        @include desktop {
+            height: 80px;
+        }
+    }
+
+    &_bottom {
+        text-align: center;
     }
 }

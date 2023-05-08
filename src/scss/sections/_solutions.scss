@@ -7,6 +7,21 @@
     &_holder {
         @include layout;
     }
+
+    &_subtitle {
+        font-family: $font-family;
+        font-size: 18px;
+        line-height: 130%;
+        margin: 0 auto 32px;
+        max-width: 240px;
+        text-align: center;
+        @include desktop {
+            font-size: 24px;
+            max-width: 400px;
+            margin-bottom: 56px;
+        }
+    }
+
     &_cards {
         padding: 6px 0 0;
         @include desktop {
@@ -20,10 +35,9 @@
         flex-direction: column;
         justify-content: space-between;
         box-sizing: border-box;
-        width: 289px;
-        height: 554px;
+        width: 258px;
+        height: 520px;
         display: flex;
-        padding: 40px 26px 47px 29px;
         background-repeat: no-repeat;
         background-size: 100% 100%;
         background-position: top left;
@@ -32,14 +46,12 @@
         background-color: $cPurpleDark;
         @include desktop {
             border-radius: 30px;
-            width: vw(419);
-            min-height: vw(800);
-            padding: vw(38) vw(34) vw(44) vw(40);
+            height: auto;
+            min-height: vw(650);
+            width: 325px;
         }
         @include desktop-large {
-            width: vw(419);
-            min-height: vw(746);
-            padding: vw(57) vw(35) vw(66) vw(48);
+            width: 418px;
         }
 
         &__red {
@@ -50,69 +62,39 @@
             background-color: $cBlue;
         }
     }
-    &_card-label {
-        position: absolute;
-        padding: 10px 16px;
-        background-color: #382d4d;
-        color: $bg_color;
-        border-radius: 8px;
-        top: -6px;
-        left: 29px;
-        font-size: 18px;
-        line-height: 1;
-        z-index: 1;
-        @include desktop {
-            font-size: vw(24);
-            left: vw(48);
-        }
 
-        .solutions_card__pink & {
-            left: auto;
-            right: 29px;
-            @include desktop {
-                right: vw(48);
-            }
-        }
-    }
     &_card-title {
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 120%;
-        margin: 0 0 10px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 125%;
         min-height: 53px;
+        color: #fff;
         @include desktop {
-            font-size: vw(32);
-            margin-bottom: vw(16);
-            min-height: vw(76);
+            font-size: 38px;
         }
     }
     &_card-vat {
-        font-size: 12px;
-        line-height: 1.3;
+        font-size: 14px;
+        line-height: 1.2;
+        display: block;
+        margin: 10px 0 0;
+        color: $bg_color;
+        text-align: center;
         @include desktop {
-            font-size: vw(18);
+            font-size: 16px;
+        }
+
+        .solutions_card__blue & {
+            color: $color;
         }
     }
     &_card-price {
-        margin-bottom: 16px;
-        @include desktop-large {
-            margin-bottom: vw(22);
-        }
-    }
-    &_card-price-currency {
-        font-size: 32px;
-        line-height: 1;
-        font-weight: 600;
-        margin-right: 6px;
-        vertical-align: middle;
-        top: -1.4em;
+        font-family: $font-family__heading;
+        font-weight: 700;
+        font-size: 36px;
+        color: $bg_color;
         @include desktop {
-            font-size: 40px;
-            top: -1.35em;
-        }
-        @include desktop-large {
-            font-size: vw(60);
-            top: -1.25em;
+            font-size: 48px;
         }
     }
     &_card-price-value {
@@ -163,6 +145,54 @@
         }
     }
 
+    &_card-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 0 $indent;
+        flex-grow: 0;
+        @include desktop {
+            padding: 0 32px;
+        }
+    }
+
+    &_card-bottom {
+        border-radius: 16px;
+        background-color: #5D4D7E;
+        padding: $indent;
+        flex-grow: 1;
+        color: $bg_color;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        @include desktop {
+            border-radius: 30px;
+            padding: 24px 32px;
+        }
+
+        .solutions_card__red & {
+            background-color: $cOrange;
+            color: $color;
+        }
+        .solutions_card__blue & {
+            background-color: $cBlueLight;
+            color: $color;
+        }
+    }
+
+    &_card-sold {
+        display: block;
+        font-family: $font-family__heading;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 120%;
+        text-align: center;
+        @include desktop {
+            font-size: 56px;
+        }
+    }
+
     .tns-outer {
         margin-right: -$indent;
         margin-left: -$indent;
@@ -178,5 +208,9 @@
             padding-right: 0;
             padding-left: 0;
         }
+    }
+
+    .button {
+        width: 100%;
     }
 }
