@@ -84,6 +84,7 @@
         .timeline_item__ended & {
             background: $cPurpleDark url(#{$img}/pattern.png) center no-repeat;
             color: $bg_color;
+            text-decoration: line-through;
         }
         .timeline_item__current & {
             background: $cRed url(#{$img}/pattern.png) center no-repeat;
@@ -114,11 +115,13 @@
             }
         }
     }
+
     &_item-date {
         font-size: 14px;
         text-align: center;
         position: absolute;
-        top: 100%;
+        top: 95%;
+        white-space: nowrap;
         left: 50%;
         transform: translate(-50%, 5px);
         @include desktop {

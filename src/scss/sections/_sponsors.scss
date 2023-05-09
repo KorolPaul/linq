@@ -19,12 +19,10 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
-        column-gap: 12px;
-        row-gap: 28px;
-        @include tablet {
+        gap: 50px 16px;
+        @include desktop {
+            gap: 64px 16px;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-            column-gap: vw(35);
-            row-gap: vw(40);
         }
 
         &__pro {
@@ -72,70 +70,24 @@
             }
         }
     }
+
     &_card-label {
-        background-color: $cPurple;
+        @include button;
         position: absolute;
-        left: -5px;
+        left: 0;
         bottom: calc(100% - 8px);
-        font-size: 6px;
-        line-height: 1.26;
-        font-weight: 600;
-        padding: 2px 4px 8px;
-        border-radius: 4px;
+        filter: drop-shadow(0px 6px 0px $cOrange) drop-shadow(0px 6px 0px $cYellow) drop-shadow(0px 6px 0px #FFEBCB);
+        pointer-events: none;
         @include tablet {
-            border-radius: 8px;
-            font-size: 16px;
-            padding: 5px 12px 24px;
             bottom: calc(100% - 18px);
-            left: -15px;
-            border-radius: 8px;
         }
 
-        &::before {
-            content: '';
-            background: $cPurpleDark;
-            width: calc(100% - 5px);
-            height: 7px;
-            border-radius: 4px 0 4px 0;
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            @include tablet {
-                border-radius: 8px 0 8px 0;
-                height: 18px;
-                width: calc(100% - 15px);
-            }
-        }
-
-        .sponsors_card__lead & {
-            background-color: $cGreen;
-            left: -6px;
-            font-size: 8px;
-            @include desktop {
-                font-size: 18px;
-            }
-
-            &::before {
-                width: calc(100% - 6px);
-            }
-        }
-        .sponsors_card__pro & {
-            background-color: $cOrange;
-            left: -9px;
-            font-size: 12px;
-            @include desktop {
-                left: -20px;
-                font-size: 24px;
-            }
-
-            &::before {
-                width: calc(100% - 9px);
-                @include tablet {
-                    width: calc(100% - 20px);
-                }
-            }
+        .sponsors_card:nth-child(even) & {
+            background-color: $cBlue;
+            filter: drop-shadow(0px 6px 0px #4BAFB1) drop-shadow(0px 6px 0px #68C1BF) drop-shadow(0px 6px 0px #A4DAD9);
         }
     }
+
     &_card-image {
         max-width: 80%;
         filter: grayscale(1);

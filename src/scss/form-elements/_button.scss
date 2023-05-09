@@ -15,7 +15,8 @@
     text-align: center;
     transform: scale(1);
     transition: .2s $easing color,
-                .2s $easing background-color,
+                .2s $easing filter,
+                .2s $easing border,
                 .2s $easing transform;
     @include desktop {
         font-size: 18px;
@@ -23,13 +24,7 @@
         line-height: 60px;
     }
 
-    &:hover {
-        background-color: $bg_color;
-        transform: scale(1.02);
-    }
-    &:active {
-        transform: scale(.98);
-    }
+    
     &:disabled {
         opacity: .6;
     }
@@ -63,55 +58,42 @@ input[type="submit"] {
 }
 
 .button {
-    &__dark {
-        color: $bg_color;
-        background-color: $color;
-        border-color: $color;
+    &:hover {
+        transform: translateY(-4px);
+        filter: drop-shadow(0px 6px 0px $cOrange) drop-shadow(0px 6px 0px $cYellow) drop-shadow(0px 6px 0px #FFEBCB);
+    }
+
+    &:active {
+        transform: translateY(0);
+        filter: drop-shadow(0px -6px 0px #b4413b)
+    }
+
+    &__blue {
+        background-color: $cBlue;
 
         &:hover {
-            color: $color;
-            background-color: $bg_color;
+            filter: drop-shadow(0px 6px 0px #4BAFB1) drop-shadow(0px 6px 0px #68C1BF) drop-shadow(0px 6px 0px #A4DAD9);;
         }
-    }
-    &__pink {
-        color: $bg_color;
-        background-color: $cPink;
-        border-color: $cPink;
 
-        &:hover {
-            background-color: $bg_color;
-            color: $cPink;
+        &:active {
+            filter: drop-shadow(0px -6px 0px #405d65);
         }
     }
-    &__purple {
-        color: $bg_color;
-        background-color: $cPurpleLight;
-        border-color: $cPurpleLight;
 
-        &:hover {
-            background-color: $bg_color;
-            color: $cPurpleLight;
-        }
-    }
-    &__orange {
-        color: $bg_color;
-        background-color: $cOrange;
-        border-color: $cOrange;
-
-        &:hover {
-            background-color: $bg_color;
-            color: $cOrange;
-        }
-    }
     &__secondary {
         color: $bg_color;
         background: transparent;
-        border: 2px solid $cRed;
+        border: 2px solid currentColor;
         color: $cRed;
 
         &:hover {
-            background: transparent;
             color: $cOrange;
+            filter: none;
+            transform: scale(1.02);
+        }
+        &:active {
+            filter: none;
+            transform: scale(.98);
         }
     }
 }

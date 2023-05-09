@@ -1,8 +1,5 @@
 .speakers {
     @include section;
-    @include desktop {
-        overflow: hidden;
-    }
 
     &_holder {
         @include layout;
