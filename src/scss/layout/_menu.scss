@@ -24,6 +24,7 @@
         height: auto;
         overflow-y: initial;
         opacity: 1;
+        pointer-events: all;
     }
 
     .menu-opened & {

@@ -1,8 +1,8 @@
 .fixed-button {
-    position: fixed;
+    position: absolute;
     left: $indent;
     right: $indent;
-    bottom: $indent;
+    bottom: 0;
     padding: 12px 20px;
     z-index: 5;
     border-radius: 16px;
@@ -16,11 +16,11 @@
     @include tablet {
         left: 50%;
         right: auto;
-        bottom: 48px;
         width: 390px;
         transform: translateX(-50%);
     }
     @include desktop {
+        bottom: 100px;
         width: 475px;
         transform: translateX(-652px);
     }

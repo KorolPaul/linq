@@ -38,9 +38,14 @@
             height: 75px;
             background: url(#{$img}/showcase-rainbow-mobile.svg) no-repeat top right / 100% auto;
             z-index: -1;
+            @include tablet {
+                background-repeat: repeat-x;
+                background-size: auto 75px;
+            }
             @include desktop {
                 background-image: url(#{$img}/showcase-rainbow.svg);
                 background-size: auto 100%;
+                background-repeat: no-repeat;
                 bottom: auto;
                 top: 100%;
                 margin-top: -120px;

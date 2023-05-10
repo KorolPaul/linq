@@ -74,11 +74,12 @@
         font-size: 14px;
         line-height: 1.2;
         display: block;
-        margin: 10px 0 0;
+        margin: 16px 0 0;
         color: $bg_color;
         text-align: center;
         @include desktop {
             font-size: 16px;
+            margin-top: 24px;
         }
 
         .solutions_card__blue & {
@@ -177,6 +178,7 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
+        gap: 8px;
         @include desktop {
             border-radius: 30px;
             padding: 24px 32px;

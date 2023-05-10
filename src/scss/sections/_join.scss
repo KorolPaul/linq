@@ -28,9 +28,12 @@
     }
 
     &_form {
-        max-width: 460px;
         position: relative;
         margin: 0;
+        width: 300px;
+        @include desktop {
+            width: 460px; 
+        }
     }
 
     &_form-input[type] {
@@ -45,12 +48,12 @@
         position: absolute;
         height: 32px;
         width: 32px;
-        top: 2px;
+        top: 11px;
         right: 16px;
         transform: scale(1);
         transition: .2s $easing transform;
         @include desktop {
-            top: 9px;
+            top: 11px;
         }
 
         &:hover {

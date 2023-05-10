@@ -40,6 +40,7 @@
     padding-left: $indent;
     padding-right: $indent;
     max-width: $max-width;
+    box-sizing: border-box;
     @include tablet {
         padding-left: 22px;
         padding-right: 22px;

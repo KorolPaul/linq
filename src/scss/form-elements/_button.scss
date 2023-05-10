@@ -15,6 +15,7 @@
     text-align: center;
     transform: scale(1);
     transition: .2s $easing color,
+                .2s $easing background-color,
                 .2s $easing filter,
                 .2s $easing border,
                 .2s $easing transform;
@@ -87,13 +88,14 @@ input[type="submit"] {
         color: $cRed;
 
         &:hover {
-            color: $cOrange;
+            color: $bg_color;
+            background-color: $cRed;
             filter: none;
-            transform: scale(1.02);
+            transform: none;
         }
         &:active {
             filter: none;
-            transform: scale(.98);
+            transform: none;
         }
     }
 }

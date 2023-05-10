@@ -547,14 +547,23 @@ accordionElements.forEach(accordion => {
         function toggle(e) {
             e.preventDefault();
 
+            if (e.target.classList.contains('active')) {
+                e.target.classList.remove('active');
+                e.currentTarget.nextElementSibling.classList.remove('active');
+                e.currentTarget.parentElement.classList.remove('active');
+                return;
+            }
+
             if (isDesktop) {
                 accordionButtons.forEach(el => el.classList.remove('active'))
                 accordionContent.forEach(el => el.classList.remove('active'))
                 e.currentTarget.classList.add('active');
                 e.currentTarget.nextElementSibling.classList.add('active');
+                e.currentTarget.parentElement.classList.add('active');
             } else {
                 e.currentTarget.classList.toggle('active');
                 e.currentTarget.nextElementSibling.classList.toggle('active');
+                e.currentTarget.parentElement.classList.toggle('active');
             }
         }
 

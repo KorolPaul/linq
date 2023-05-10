@@ -8,18 +8,26 @@
         padding: 40px 0;
     }
     @include desktop {
-        padding: 54px 0;
+        padding: 54px 0 70px;
     }
 
     &_holder {
         padding: 0;
         @include tablet {
             @include layout;
+            max-width: 858px;
         }
     }
     &_item {
         position: relative;
         padding: 0 0 56%;
+        border-radius: 16px;
+        box-shadow: 0px 6px 0px #E68549, 0px 12px 0px #EEBA44, 0px 18px 0px #FFEBCB;
+        @include desktop {
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0px 9px 0px #E68549, 0px 18px 0px #EEBA44, 0px 27px 0px #FFEBCB;
+        }
 
         iframe {
             position: absolute;

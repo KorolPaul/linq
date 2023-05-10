@@ -35,9 +35,12 @@
     box-sizing: border-box;
     overflow: hidden;
     //height: 288px;
+    aspect-ratio: 1 / 1.8;
     @include tablet {
+        aspect-ratio: 1 / 1.3;
     }
     @include desktop {
+        aspect-ratio: 1 / 1;
         border-radius: 16px;
         //height: 300px;
     }
@@ -47,8 +50,9 @@
 
     &_image {
         width: 100%;
-        // aspect-ratio: 1 / 1.1;
-        // object-fit: cover;
+        object-fit: cover;
+        @include desktop {
+        }
     }
     &_content {
         color: $color;
@@ -58,7 +62,7 @@
         border-radius: 8px;
         position: absolute;
         left: 0;
-        top: 168px;
+        top: 40vw;
         height: 100%;
         width: 100%;
         padding: $indent $indent 0;
@@ -68,10 +72,23 @@
         justify-content: space-between;
         align-items: stretch;
         transition: .3s $easeOutCirc top;
+        @include tablet {
+            top:20vw;
+        }
+        @include media(700px) {
+            top: 27vw;
+        }
+        @include media(800px) {
+            top: 30vw;
+        }
         @include desktop {
             border-radius: 16px;
             padding-left: 24px;
             padding-right: 24px;
+            top: 12vw;
+        }
+        @include media(1200px) {
+            top: 200px;
         }
 
         .speakers-card:hover & {
