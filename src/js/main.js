@@ -596,31 +596,6 @@ popupFormTriggers.forEach((trigger) => {
     document.querySelector('.form-popup_close').addEventListener('click', toggleFormPopup);
 });
 
-
-/* hide BUY button when tickets block is visible */
-const fixedButtonEl = document.querySelector('.fixed-button')
-const ticketsEl = document.querySelector('.solutions_cards')
-
-if (fixedButtonEl && ticketsEl) {
-
-    const observerCallback = function (e) {
-        const { intersectionRatio } = e[0];
-    
-        if (intersectionRatio > 0.2) {
-            fixedButtonEl.classList.add('hidden');
-        } else {
-            fixedButtonEl.classList.remove('hidden');
-        }
-    };
-    
-    const observer = new IntersectionObserver(observerCallback, {
-        rootMargin: '0px 0px 0px 0px',
-        threshold: thresholdSteps,
-        root: null
-    });
-    observer.observe(ticketsEl)
-}
-
 /* unavailable ticketss form */
 const unavailableFormLink = document.querySelector('.js-tickets-unavailable-link');
 if (unavailableFormLink) {
@@ -640,4 +615,33 @@ if (unavailableFormSubmit) {
 
         document.body.classList.remove('special-menu-opened');
     });
+}
+
+
+/* appaerance animation */
+const animatedElements = document.querySelectorAll('.js-animation');
+
+if (animatedElements.length) {
+    animatedElements.forEach(el => {
+        const isExpericenceBlock = el.classList.contains('experience');
+
+        let ratio = (isMobile || isExpericenceBlock) ? 0.0005 : 0.3;
+        if (el.classList.contains('section_image-wrapper') && !isMobile) {
+            ratio = 0.6;
+        }
+
+        const observerCallback = function (e) {
+            const { target, intersectionRatio } = e[0];
+            if (intersectionRatio > ratio) {
+                target.classList.add('animated');
+            }
+        };
+
+        const observer = new IntersectionObserver(observerCallback, {
+            rootMargin: '0px 0px -15% 0px',
+            threshold: thresholdSteps,
+            //root: document.body
+        });
+        observer.observe(el);
+    })
 }

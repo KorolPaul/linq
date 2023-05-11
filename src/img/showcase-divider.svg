@@ -1,27 +1,34 @@
-<svg width="373" height="6" viewBox="0 0 373 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.2">
-<line x1="371.688" y1="4.97859" x2="367.445" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="355.022" y1="4.97859" x2="350.779" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="338.356" y1="4.97859" x2="334.113" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="321.69" y1="4.97859" x2="317.447" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="305.024" y1="4.97859" x2="300.781" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="288.358" y1="4.97859" x2="284.115" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="271.692" y1="4.97859" x2="267.449" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="255.026" y1="4.97859" x2="250.783" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="238.36" y1="4.97859" x2="234.117" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="221.694" y1="4.97859" x2="217.451" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="205.028" y1="4.97859" x2="200.785" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="188.362" y1="4.97859" x2="184.119" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="171.696" y1="4.97859" x2="167.453" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="155.03" y1="4.97859" x2="150.787" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="138.364" y1="4.97859" x2="134.121" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="121.698" y1="4.97859" x2="117.455" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="105.032" y1="4.97859" x2="100.789" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="88.3656" y1="4.97859" x2="84.123" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="71.6996" y1="4.97859" x2="67.457" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="55.0336" y1="4.97859" x2="50.791" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="38.3676" y1="4.97859" x2="34.125" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="21.7016" y1="4.97859" x2="17.4589" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
-<line x1="5.03557" y1="4.97859" x2="0.792929" y2="0.73595" stroke="#357C8E" stroke-width="2"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 26.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 366.7 6" style="enable-background:new 0 0 366.7 6;" xml:space="preserve">
+<style type="text/css">
+	.st0{opacity:0.2;}
+	.st1{fill:none;stroke:#357C8E;stroke-width:2;}
+</style>
+<g class="st0">
+	<line class="st1" x1="371.7" y1="5" x2="367.4" y2="0.7"/>
+	<line class="st1" x1="355" y1="5" x2="350.8" y2="0.7"/>
+	<line class="st1" x1="338.4" y1="5" x2="334.1" y2="0.7"/>
+	<line class="st1" x1="321.7" y1="5" x2="317.4" y2="0.7"/>
+	<line class="st1" x1="305" y1="5" x2="300.8" y2="0.7"/>
+	<line class="st1" x1="288.4" y1="5" x2="284.1" y2="0.7"/>
+	<line class="st1" x1="271.7" y1="5" x2="267.4" y2="0.7"/>
+	<line class="st1" x1="255" y1="5" x2="250.8" y2="0.7"/>
+	<line class="st1" x1="238.4" y1="5" x2="234.1" y2="0.7"/>
+	<line class="st1" x1="221.7" y1="5" x2="217.5" y2="0.7"/>
+	<line class="st1" x1="205" y1="5" x2="200.8" y2="0.7"/>
+	<line class="st1" x1="188.4" y1="5" x2="184.1" y2="0.7"/>
+	<line class="st1" x1="171.7" y1="5" x2="167.5" y2="0.7"/>
+	<line class="st1" x1="155" y1="5" x2="150.8" y2="0.7"/>
+	<line class="st1" x1="138.4" y1="5" x2="134.1" y2="0.7"/>
+	<line class="st1" x1="121.7" y1="5" x2="117.5" y2="0.7"/>
+	<line class="st1" x1="105" y1="5" x2="100.8" y2="0.7"/>
+	<line class="st1" x1="88.4" y1="5" x2="84.1" y2="0.7"/>
+	<line class="st1" x1="71.7" y1="5" x2="67.5" y2="0.7"/>
+	<line class="st1" x1="55" y1="5" x2="50.8" y2="0.7"/>
+	<line class="st1" x1="38.4" y1="5" x2="34.1" y2="0.7"/>
+	<line class="st1" x1="21.7" y1="5" x2="17.5" y2="0.7"/>
+	<line class="st1" x1="5" y1="5" x2="0.8" y2="0.7"/>
 </g>
 </svg>

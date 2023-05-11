@@ -14,15 +14,13 @@
     box-sizing: border-box;
     transition: .4s $easingSmooth opacity;
     @include tablet {
-        left: 50%;
+        left: 22px;
         right: auto;
         width: 390px;
-        transform: translateX(-50%);
     }
     @include desktop {
         bottom: 100px;
         width: 475px;
-        transform: translateX(-652px);
     }
 
     &_text {

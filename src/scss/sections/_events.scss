@@ -151,4 +151,15 @@
         display: block;
         width: 100%;
     }
+
+    &_item-text-with-image {
+        display: flex;
+        gap: 8px;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &_item-text-image {
+        max-width: 45%;
+    }
 }

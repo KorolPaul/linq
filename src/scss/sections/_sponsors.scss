@@ -22,7 +22,7 @@
         gap: 50px 16px;
         @include desktop {
             gap: 64px 16px;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         }
 
         &__pro {

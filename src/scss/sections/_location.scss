@@ -46,6 +46,14 @@
             @include desktop {
                 width: 360px;
                 left: 0;
+                opacity: 0;
+            }
+
+            &.animated {
+                @include desktop {
+                    animation: appearance-1 2s $easeOutCirc forwards;
+                    transform-origin: center;
+                }
             }
         }
         &:nth-of-type(2) {
@@ -60,6 +68,14 @@
                 width: 340px;
                 right: -20px;
                 bottom: 320px;
+                opacity: 0;
+            }
+
+            &.animated {
+                @include desktop {
+                    animation: appearance-2 2.5s $easeOutCirc 1s forwards;
+                    transform-origin: center;
+                }
             }
         }
         &:nth-of-type(3) {
@@ -73,6 +89,14 @@
             }
             @include desktop {
                 width: 448px;
+                opacity: 0;
+            }
+
+            &.animated {
+                @include desktop {
+                    animation: appearance-2 3s $easeOutCirc .5s forwards;
+                    transform-origin: center;
+                }
             }
         }
     }
@@ -177,5 +201,27 @@
 
     &_item-image {
         width: 100%;
+    }
+}
+
+@keyframes appearance-1 {
+    from {
+        transform: rotate(25deg) translate(-300px, -300px);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes appearance-2 {
+    from {
+        transform: rotate(-25deg) translate(300px, 300px);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0deg) translate(0, 0);
+        opacity: 1;
     }
 }

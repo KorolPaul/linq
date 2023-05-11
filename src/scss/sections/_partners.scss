@@ -1,5 +1,6 @@
 .partners {
     @include section;
+    overflow: hidden;
     
     &_holder {
         @include layout;
@@ -44,5 +45,14 @@
     }
     &_image {
         max-width: 80%;
+        filter: grayscale(1);
+        transition: .2s $easing filter;
+
+        .partners_item[href]:hover & {
+            filter: grayscale(0);
+        }
+                .partners_item[href]:active & {
+            filter: grayscale(.8);
+        }
     }
 }

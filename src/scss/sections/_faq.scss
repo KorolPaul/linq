@@ -11,6 +11,7 @@
         width: 100vw;
         padding-bottom: 33%;
         transform: translate(-50%, 0);
+        z-index: -1;
         @include desktop {
             top: 0
         }
