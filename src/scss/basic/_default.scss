@@ -4,7 +4,7 @@ html {
 
 body {
     color: $color;
-    background: $bg_color url(#{$img}/bg.jpg) repeat;
+    background: $bg_color /* url(#{$img}/pattern.png) -30px -40px repeat*/;
     font: 500 #{$font-size__small}/#{1.4} $font-family;
     padding: 0;
     scroll-behavior: smooth;

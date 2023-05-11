@@ -156,3 +156,23 @@
         background: url(#{$img}/arrow-right.svg) no-repeat center / 100% auto;
     }
 }
+
+.tns-nav {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-top: $indent;
+
+    button {
+        @include button-reset;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+
+    button:hover,
+    .tns-nav-active {
+        background-color: $cPurpleDark;
+    }
+}

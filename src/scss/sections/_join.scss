@@ -1,6 +1,5 @@
 .join {
     position: relative;
-    overflow: hidden;
     margin: 0 0 125px;
     @include tablet {
         margin-bottom: 110px;
@@ -11,13 +10,17 @@
 
     &::before {
         content: '';
-        background: url(#{$img}/rainbow-join.svg) no-repeat center / 100% auto;
+        background: url(#{$img}/rainbow-join.svg) no-repeat center / 420px auto;
         position: absolute;
         top: 100%;
-        left: 50%;
-        width: 100vw;
+        left: 0;
+        right: 0;
         padding-bottom: 33%;
-        transform: translate(-50%, -37%);
+        transform: translate(0, -37%);
+        pointer-events: none;
+        @include media(400px) {
+            background-size: 100% auto;
+        }
     }
 
     &_holder {

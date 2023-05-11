@@ -13,7 +13,8 @@ ticketsSlider.forEach(el => {
         gutter: 16,
         mouseDrag: true,
         autoplay: false,
-        nav: false,
+        nav: true,
+        navPosition: 'bottom',
         controls: false,
         loop: false,
         responsive: {
