@@ -27,6 +27,7 @@
         justify-content: space-between;
         border-radius: 20px;
         position: relative;
+        background: url(#{$img}/pattern.png) -30px -40px repeat;
         @include desktop {
             border-radius: 30px;
             padding: 32px;

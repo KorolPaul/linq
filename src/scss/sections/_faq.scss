@@ -1,6 +1,7 @@
 .faq {
     @include section;
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: '';

@@ -1,5 +1,6 @@
 .join {
     position: relative;
+    overflow: hidden;
     margin: 0 0 125px;
     @include tablet {
         margin-bottom: 110px;

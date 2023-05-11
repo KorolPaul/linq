@@ -159,7 +159,12 @@
         align-items: center;
     }
 
-    &_item-text-image {
+    &_item-text-images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
         max-width: 45%;
     }
 }

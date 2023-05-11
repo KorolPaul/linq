@@ -645,3 +645,6 @@ if (animatedElements.length) {
         observer.observe(el);
     })
 }
+
+// .speakers cards
+document.querySelectorAll('.speakers-card').forEach(el => el.addEventListener('click', () => el.classList.toggle('active')))
