@@ -648,4 +648,6 @@ if (animatedElements.length) {
 }
 
 // .speakers cards
-document.querySelectorAll('.speakers-card').forEach(el => el.addEventListener('click', () => el.classList.toggle('active')))
+document.querySelectorAll('.speakers-card').forEach(el => el.addEventListener('click', (e) => {
+    e.currentTarget.classList.toggle('active')
+}))

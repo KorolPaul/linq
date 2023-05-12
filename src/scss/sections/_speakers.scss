@@ -91,9 +91,13 @@
             top: 200px;
         }
 
-        .speakers-card:hover &,
         .speakers-card.active & {
             top: 0;
+        }
+        .speakers-card:hover & {
+            @include desktop {
+                top:0;
+            }
         }
 
         .speakers-card:nth-child(1n) & {
@@ -164,9 +168,13 @@
             margin: 0 -24px;
         }
 
-        .speakers-card:hover &,
         .speakers-card.active & {
             opacity: 1;
+        }
+        .speakers-card:hover & {
+            @include desktop {
+                opacity: 1;
+            }
         }
 
         .speakers-card:nth-child(1n) & {

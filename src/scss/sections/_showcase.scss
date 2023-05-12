@@ -43,22 +43,28 @@
                 background-size: auto 75px;
             }
             @include desktop {
-                background-image: url(#{$img}/showcase-rainbow.svg);
-                background-size: auto 100%;
-                background-repeat: no-repeat;
-                bottom: auto;
-                top: 100%;
-                margin-top: -120px;
-                height: 430px;
-                width: 100vw;
-                right: $indent;
-            }
-
-            @include desktop-large {
-                height: 533px;
+                content: none;
             }
         }
     }
+
+    &_rainbow {
+        display: none;
+        @include desktop {
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 100%;
+            margin-top: -120px;
+            height: 430px;
+            width: 100vw;
+            right: $indent;
+        }
+        @include desktop-large {
+            height: 533px;
+        }
+    }
+
     &_image,
     &_video {
         width: 100%;

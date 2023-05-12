@@ -4,12 +4,15 @@ html {
 
 body {
     color: $color;
-    background: $bg_color /* url(#{$img}/pattern.png) -30px -40px repeat*/;
+    background: $bg_color url(#{$img}/pattern-big.png)  repeat-y top center;
     font: 500 #{$font-size__small}/#{1.4} $font-family;
     padding: 0;
     scroll-behavior: smooth;
     @include tablet {
         font-size: $font-size;
+    }
+    @include desktop-large {
+        background-size: 100% auto;
     }
 }
 
