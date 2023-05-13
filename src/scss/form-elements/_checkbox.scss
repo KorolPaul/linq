@@ -16,6 +16,7 @@ input[type="checkbox"] {
         }
 
         &::before {
+            background-color: #fff;
             content: '';
             box-sizing: border-box;
             border: 1px solid #ECECEC;

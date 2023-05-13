@@ -40,9 +40,15 @@
     }
     &_error {
         display: none;
-        color: $cRed;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: $bg_color;
         font-size: 14px;
-        margin: 8px 0 0;
+        line-height: 140%;
+        background-color: $cRed;
+        padding: $indent 30px;
 
         .error & {
             display: block;

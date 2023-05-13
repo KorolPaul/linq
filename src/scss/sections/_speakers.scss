@@ -56,7 +56,7 @@
     }
     &_content {
         color: $color;
-        background-color: $cRed;
+        background: $cRed url(#{$img}/pattern.png) -30px -40px repeat;
         position: relative;
         overflow: hidden;
         border-radius: 8px;
@@ -160,6 +160,7 @@
         border-radius: 8px;
         opacity: 0;
         font-size: 14px;
+        background: url(#{$img}/pattern.png) -30px -40px repeat;
         transition: .2s $easing opacity;
         @include desktop {
             border-radius: 16px;

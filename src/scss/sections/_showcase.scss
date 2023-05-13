@@ -57,11 +57,13 @@
             top: 100%;
             margin-top: -120px;
             height: 430px;
-            width: 100vw;
-            right: $indent;
+            right: -200px;
+            mask: url(#{$img}/pattern-invert.png);
+            mask-composite: add;
         }
         @include desktop-large {
             height: 533px;
+            right: $indent;
         }
     }
 

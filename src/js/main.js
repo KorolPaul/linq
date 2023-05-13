@@ -556,8 +556,6 @@ accordionElements.forEach(accordion => {
             }
 
             if (isDesktop) {
-                accordionButtons.forEach(el => el.classList.remove('active'))
-                accordionContent.forEach(el => el.classList.remove('active'))
                 e.currentTarget.classList.add('active');
                 e.currentTarget.nextElementSibling.classList.add('active');
                 e.currentTarget.parentElement.classList.add('active');

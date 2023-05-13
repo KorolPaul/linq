@@ -32,7 +32,6 @@
     }
 
     &_form {
-        position: relative;
         margin: 0;
         width: 300px;
         @include desktop {
@@ -40,30 +39,59 @@
         }
     }
 
+    &_form-accept {
+        margin-bottom: $indent;
+        @include desktop {
+            margin-bottom: 24px;
+        }
+    }
+
+    &_form-input-wrapper {
+        position: relative;
+    }
+
     &_form-input[type] {
+        @include placeholder-color(rgba($color, .5));
         width: 100%;
         border-bottom-right-radius: 0;
         border-bottom-left-radius: 0;
+        border: none;
+        @include desktop {
+            border-radius: 16px 16px 0 0;
+            height: 88px;
+            line-height: 88px;
+            font-size: 24px;
+        }
     }
 
     &_form-button[type] {
         @include button-reset;
-        background: url(#{$img}/arrow-button.svg) no-repeat center / cover;
+        background: url(#{$img}/arrow-button.svg) no-repeat center / contain;
         position: absolute;
         height: 32px;
         width: 32px;
         top: 11px;
         right: 16px;
         transform: scale(1);
+        border: none;
+        outline: none;
         transition: .2s $easing transform;
         @include desktop {
-            top: 11px;
+            top: 25px;
+            height: 40px;
+            width: 40px;
+            right: 20px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
+            border: none;
+            outline: none;
             transform: scale(1.1);
         }
         &:active {
+            border: none;
+            outline: none;
             transform: scale(0.9);
         }
     }

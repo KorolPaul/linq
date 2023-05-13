@@ -1,21 +1,22 @@
 .comments {
     @include section;
-    background-color: $cOrange;
-    padding: 32px 0;
-    border-radius: 30px;
     overflow: hidden;
-    @include tablet {
-        padding: 40px 0;
-    }
-    @include desktop {
-        padding: 54px 0;
-    }
 
 
     &_holder {
         @include layout;
+        border-radius: 30px;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        background: $cOrange url(#{$img}/pattern-big.png) no-repeat center / cover;
+        @include tablet {
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
         @include desktop {
             position: relative;
+            padding-top: 54px;
+            padding-bottom: 54px;
         }
     }
 
@@ -45,10 +46,10 @@
         &::after {
             content: '';
             position: absolute;
-            right: -28px;
+            right: -30px;
             top: 0;
             height: 100%;
-            width: 5px;
+            width: 7px;
             background: url(#{$img}/vertical-divider.svg) repeat-y top left / 100% auto;
             @include desktop {
                 right: -42px;
@@ -119,9 +120,9 @@
     &_card-image {
         width: 100%;
         display: block;
-        margin: 0 0 10px;
+        margin: 0 auto 10px;
         @include desktop {
-
+            width: 124px;
         }
     }
 }
