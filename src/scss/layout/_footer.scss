@@ -201,18 +201,31 @@
             transform: scale(0.9);
         }
     }
+    &_form-accept {
+        color: $bg_color;
+        margin: 0 0 $indent;
+
+        label[for] {
+            color: $bg_color;
+            font-size: 12px !important;
+            @include desktop {
+                font-size: 16px !important;
+            }
+        }
+    }
     &_form-success {
         display: none;
-        color: $cRed;
         font-size: 12px;
         line-height: 1.4;
         padding: 0 0 0 33px;
         background: url(#{$img}/success-check.svg) no-repeat top left;
         @include desktop {
-            font-size: vw(16);
+            font-size: 16px;
         }
 
-        &.shown {
+        &.active,
+        &.shown,
+        .success & {
             display: block;
         }
     }

@@ -96,6 +96,22 @@
         }
     }
 
+    &_form-success {
+        display: none;
+        font-size: 12px;
+        line-height: 1.4;
+        padding: 0 0 30px 33px;
+        background: url(#{$img}/success-check.svg) no-repeat top left;
+        @include desktop {
+            font-size: vw(16);
+        }
+
+        &.shown,
+        .success & {
+            display: block;
+        }
+    }
+
     a {
         color: $cRed;
 

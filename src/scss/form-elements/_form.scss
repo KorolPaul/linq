@@ -56,10 +56,18 @@
     }
     &_success {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        color: $bg_color;
         font-size: 14px;
-        margin: 8px 0 0 10px;
+        line-height: 140%;
+        background-color: $cGreen;
+        padding: $indent 30px;
 
-        &.active {
+        &.active,
+        .success & {
             display: block;
         }
     }
