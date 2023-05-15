@@ -95,4 +95,12 @@
             transform: scale(0.9);
         }
     }
+
+    a {
+        color: $cRed;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

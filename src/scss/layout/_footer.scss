@@ -13,7 +13,7 @@
         right: 0;
         left: 0;
         bottom: 0;
-        background-color: $cBlue;
+        background: $cBlue url(#{$img}/pattern-big.png) repeat-y center center;
         border-radius: 16px 16px 0 0;
         z-index: -1;
         @include desktop {
@@ -162,7 +162,7 @@
         }
     }
     &_form-input[type] {
-        @include placeholder-color($cYellow);
+        @include placeholder-color(rgba($cYellow, .8));
         border-radius: 0;
         border: none;
         border-bottom: 1px solid $bg_color;
@@ -236,6 +236,14 @@
         margin: 0 0 8px;
         @include desktop {
             margin: 0 0 0 vw(30);
+        }
+    }
+
+    a {
+        color: $cBlueLight;
+
+        &:hover {
+            color: $cRed;
         }
     }
 }

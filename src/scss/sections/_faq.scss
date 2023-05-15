@@ -13,7 +13,10 @@
         pointer-events: none;
         z-index: -1;
         @include desktop {
-            top: 0
+            top: 0;
+        }
+        @include desktop-large {
+            top: -100px;
         }
     }
 
