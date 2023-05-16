@@ -17,6 +17,7 @@
     transition: .2s $easing color,
                 .2s $easing background-color,
                 .2s $easing filter,
+                .2s $easing box-shadow,
                 .2s $easing border,
                 .2s $easing transform;
     @include desktop {
@@ -61,23 +62,23 @@ input[type="submit"] {
 .button {
     &:hover {
         transform: translateY(-4px);
-        filter: drop-shadow(0px 6px 0px $cOrange) drop-shadow(0px 6px 0px $cYellow) drop-shadow(0px 6px 0px #FFEBCB);
+        box-shadow: 0px 6px 0px $cOrange, 0px 12px 0px $cYellow, 0px 18px 0px #FFEBCB;
     }
 
     &:active {
         transform: translateY(0);
-        filter: drop-shadow(0px -6px 0px #b4413b)
+        box-shadow: 0px -6px 0px #b4413b;
     }
 
     &__blue {
         background-color: $cBlue;
 
         &:hover {
-            filter: drop-shadow(0px 6px 0px #4BAFB1) drop-shadow(0px 6px 0px #68C1BF) drop-shadow(0px 6px 0px #A4DAD9);;
+            box-shadow: 0px 6px 0px #4BAFB1, 0px 12px 0px #68C1BF, 0px 18px 0px #A4DAD9;
         }
 
         &:active {
-            filter: drop-shadow(0px -6px 0px #405d65);
+            box-shadow: 0px -6px 0px #405d65;
         }
     }
 
