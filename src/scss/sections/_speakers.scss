@@ -22,13 +22,14 @@
         }
         @include desktop {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap:28px 20px;
         }
     }
 }
 
 .speakers-card {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     position: relative;
     color: $color;
     text-decoration: none;
@@ -41,7 +42,7 @@
     }
     @include desktop {
         aspect-ratio: 1 / 1;
-        border-radius: 16px;
+        border-radius: 16px 16px 0 0;
         //height: 300px;
     }
     @include desktop-large {
@@ -59,10 +60,10 @@
         background: $cRed url(#{$img}/pattern.png) -30px -40px repeat;
         position: relative;
         overflow: hidden;
-        border-radius: 8px;
+        border-radius: 8px 8px 0 0;
         position: absolute;
         left: 0;
-        top: 40vw;
+        top: calc(100% - 126px);
         height: 100%;
         width: 100%;
         padding: $indent $indent 0;
@@ -72,6 +73,9 @@
         justify-content: space-between;
         align-items: stretch;
         transition: .3s $easeOutCirc top;
+        @include media(400px) {
+            top: calc(100% - 100px);
+        }
         @include tablet {
             top:20vw;
         }
@@ -82,13 +86,13 @@
             top: 30vw;
         }
         @include desktop {
-            border-radius: 16px;
+            border-radius: 16px 16px 0 0;
             padding-left: 24px;
             padding-right: 24px;
             top: 12vw;
         }
         @include media(1200px) {
-            top: 200px;
+            top: 212px;
         }
 
         .speakers-card.active & {
@@ -157,13 +161,13 @@
         flex-grow: 2;
         padding: $indent;
         margin: 0 #{-$indent};
-        border-radius: 8px;
+        border-radius: 8px 8px 0 0;
         opacity: 0;
         font-size: 14px;
         background: url(#{$img}/pattern.png) -30px -40px repeat;
         transition: .2s $easing opacity;
         @include desktop {
-            border-radius: 16px;
+            border-radius: 16px 16px 0 0;
             font-size: 16px;
             padding: 24px;
             margin: 0 -24px;

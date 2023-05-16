@@ -16,4 +16,12 @@ label {
             color: $cRed;
         }
     }
+
+    a {
+        color: $cRed;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
 }

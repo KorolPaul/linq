@@ -73,14 +73,11 @@
         }
     }
     &_column-title {
-        font-size: 32px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 500;
         line-height: 1.2;
         display: block;
         margin-bottom: 24px;
-        @include desktop {
-            font-size: vw(32);
-        }
     }
     &_copyrights {
         order: 2;
@@ -203,7 +200,7 @@
     }
     &_form-accept {
         color: $bg_color;
-        margin: 0 0 $indent;
+        margin: $indent 0;
 
         label[for] {
             color: $bg_color;

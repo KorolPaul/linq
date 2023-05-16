@@ -10,17 +10,27 @@
         margin: 0 0 24px;
         position: relative;
         z-index: 1;
+        font-size: 18ox;
+        text-align: center;
         @include desktop {
             display: flex;
             justify-content: space-between;
+            text-align: left;
+        }
+
+        .section-title {
+            @include desktop {
+                text-align: left;
+            }
         }
     }
     &_text {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 1.4;
         @include desktop {
             font-size: vw(24);
             max-width: 50%;
+            padding-top: 8px;
         }
 
         .button {
@@ -36,8 +46,11 @@
             margin-bottom: 32px;
             display: flex;
             flex-wrap: wrap;
-            gap: 32px;
+            gap: 20px;
             justify-content: space-between;
+        }
+        @include desktop {
+            flex-wrap: nowrap;
         }
     }
     &_item {
@@ -65,7 +78,8 @@
         @include desktop {
             border-radius: 20px;
             margin: 0;
-            width: 22%;
+            width: calc(25% - 60px);
+            flex-grow: 1;
         }
 
         &__orange {
@@ -92,7 +106,7 @@
         flex-grow: 0;
         @include desktop {
             font-size: 24px;
-            margin: 28px 0;
+            margin: 20px 0;
             padding: 0 28px;
         }
     }
@@ -139,7 +153,7 @@
             font-size: 14px;
             line-height: 1.4;
             padding: 12px 0;
-            border-bottom: 1px dashed currentColor;
+            border-bottom: 1px dashed rgba($bg_color, .5);
             @include desktop {
                 font-size: 16px;
             }
@@ -147,6 +161,11 @@
             &:last-child {
                 border-bottom: none;
             }
+        }
+
+        .topics_item__orange & li,
+        .topics_item__yellow & li {
+            border-bottom: 1px dashed rgba($color, .5);
         }
     }
 
@@ -162,5 +181,12 @@
 
     &_bottom {
         text-align: center;
+
+        .button {
+            @include desktop {
+                padding-left: 57px;
+                padding-right: 57px;
+            }
+        }
     }
 }

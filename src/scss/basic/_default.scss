@@ -77,7 +77,7 @@ ul {
 
 a[name] {
     position: relative;
-    top: -150px;
+    top: -100px;
 }
 
 #agendalist {
@@ -97,4 +97,9 @@ a[name] {
 
 .cold {
     color: $cBlue;
+}
+
+mark {
+    padding: 6px;
+    border-radius: 6px;
 }
