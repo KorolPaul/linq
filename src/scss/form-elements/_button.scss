@@ -10,7 +10,7 @@
     font-weight: 500;
     height: 44px;
     line-height: 46px;
-    padding: 0 24px;
+    padding: 0 30px;
     white-space: nowrap;
     text-align: center;
     transform: scale(1);
@@ -61,24 +61,32 @@ input[type="submit"] {
 
 .button {
     &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0px 6px 0px $cOrange, 0px 12px 0px $cYellow, 0px 18px 0px #FFEBCB;
+        @include tablet {
+            transform: translateY(-4px);
+            box-shadow: 0px 6px 0px $cOrange, 0px 12px 0px $cYellow, 0px 18px 0px #FFEBCB;
+        }
     }
 
     &:active {
-        transform: translateY(0);
-        box-shadow: 0px -6px 0px #b4413b;
+        @include tablet {
+            transform: translateY(0);
+            box-shadow: 0px -6px 0px #b4413b;
+        }
     }
 
     &__blue {
         background-color: $cBlue;
 
         &:hover {
-            box-shadow: 0px 6px 0px #4BAFB1, 0px 12px 0px #68C1BF, 0px 18px 0px #A4DAD9;
+            @include tablet {
+                box-shadow: 0px 6px 0px #4BAFB1, 0px 12px 0px #68C1BF, 0px 18px 0px #A4DAD9;
+            }
         }
 
         &:active {
-            box-shadow: 0px -6px 0px #405d65;
+            @include tablet {
+                box-shadow: 0px -6px 0px #405d65;
+            }
         }
     }
 

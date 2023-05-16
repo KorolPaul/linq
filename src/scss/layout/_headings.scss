@@ -33,11 +33,11 @@
 
 %heading-4 {
     font-size: 20px;
-    font-family: $font-family__heading;
-    line-height: 1.2;
-    font-weight: 400;
+    font-family: $font-family;
+    line-height: 1.25;
+    font-weight: 500;
     @include desktop {
-        font-size: vw(40);
+        font-size: 24px;
     }
 }
 

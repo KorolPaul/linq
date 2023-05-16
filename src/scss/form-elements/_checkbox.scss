@@ -6,13 +6,14 @@ input[type="checkbox"] {
     & + label:not([class]) {
         cursor: pointer;
         display: inline-block;
-        padding: 0 0 0 36px;
+        padding: 0 0 0 30px;
         min-height: 20px;
         position: relative;
         margin: 0;
         transition: .2s $easing color;
-        @include tablet {
+        @include desktop {
             font-size: 18px;
+            padding: 0 0 0 36px;
         }
 
         &::before {
@@ -60,8 +61,8 @@ input[type="checkbox"] {
     }
     &:checked + label {
         &::before {
-            background-color: $cBlue ;
-            border-color: $cBlue;
+            background-color: $cBlueLight ;
+            border-color: $cBlueLight;
         }
         &::after {
             opacity: 1;

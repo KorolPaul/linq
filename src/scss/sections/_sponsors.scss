@@ -1,9 +1,6 @@
 .sponsors {
-    margin: 0 0 112px;
+    @include section;
     position: relative;
-    @include desktop {
-        margin-top: vw(190);
-    }
     
     &_holder {
         @include layout;
@@ -17,7 +14,7 @@
 
     &_grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto;
         gap: 50px 16px;
         @include desktop {

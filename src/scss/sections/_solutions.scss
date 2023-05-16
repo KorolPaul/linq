@@ -84,7 +84,8 @@
             margin-top: 24px;
         }
 
-        .solutions_card__blue & {
+        .solutions_card__blue &,
+        .solutions_card__red & {
             color: $color;
         }
     }
@@ -187,7 +188,7 @@
         }
 
         .solutions_card__red & {
-            background-color: $cOrange;
+            background-color: $cYellow;
             color: $color;
         }
         .solutions_card__blue & {

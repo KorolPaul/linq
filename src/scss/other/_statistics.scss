@@ -18,6 +18,8 @@
         @include desktop {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             padding-top: vw(40);
+            row-gap: 24px;
+            column-gap: 20px;
         }
     }
     &_item {

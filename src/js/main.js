@@ -327,7 +327,9 @@ if (fadeElement) {
 const menuLinkElements = document.querySelectorAll('.menu_link');
 menuLinkElements.forEach(el => el.addEventListener('click', () => {
     if (isMobile) {
-        document.body.classList.toggle('menu-opened')
+        setTimeout(() => {
+            document.body.classList.toggle('menu-opened')
+        }, 50);
     }
 }));
 

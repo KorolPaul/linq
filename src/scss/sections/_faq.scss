@@ -16,7 +16,7 @@
             top: 0;
         }
         @include desktop-large {
-            top: -100px;
+            top: -80px;
         }
     }
 
@@ -26,8 +26,5 @@
 
     &_content {
         padding: 24px 0 0;
-        @include desktop {
-            padding-top: 100px;
-        }
     }
 }
