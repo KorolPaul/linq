@@ -57,9 +57,7 @@
             top: 100%;
             margin-top: -120px;
             height: 430px;
-            right: -200px;
-            mask: url(#{$img}/pattern-invert.png);
-            mask-composite: add;
+            right: 0;
         }
         @include desktop-large {
             height: 533px;

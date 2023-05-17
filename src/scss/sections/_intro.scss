@@ -47,4 +47,11 @@
             margin-bottom: vw(64);
         }
     }
+
+    .section-title {
+        max-width: 680px;
+        @include desktop-large {
+            max-width: 750px;
+        }
+    }
 }
