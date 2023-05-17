@@ -174,8 +174,17 @@
         align-items: center;
         justify-content: center;
         height: 48px;
+        transform-origin: center;
+        transition: .2s $easing transform;
         @include desktop {
             height: 80px;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+        &:active {
+            transform: scale(1.05);
         }
     }
 
