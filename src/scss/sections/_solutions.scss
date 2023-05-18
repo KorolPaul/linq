@@ -1,9 +1,8 @@
 .solutions {
     @include section;
-
-    .main__small-top-indent & {
-        overflow: hidden;
-    }
+    overflow: hidden;
+    padding-top: 50px;
+    margin-top: -50px;
 
     &_holder {
         @include layout;
