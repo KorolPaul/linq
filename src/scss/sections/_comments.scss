@@ -121,8 +121,11 @@
         width: 100%;
         display: block;
         margin: 0 auto 10px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 0px $cOrange, 0px 6px 0px $cYellow, 0px 9px 0px #FFEBCB;
         @include desktop {
             width: 124px;
+            box-shadow: 0px 6px 0px $cOrange, 0px 12px 0px $cYellow, 0px 18px 0px #FFEBCB;
         }
     }
 }

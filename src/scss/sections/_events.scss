@@ -154,17 +154,26 @@
 
     &_item-text-with-image {
         display: flex;
+        flex-wrap: wrap;
         gap: 8px;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
+
+        p {
+            width: 40%;
+            text-align: center;
+        }
     }
 
     &_item-text-images {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         gap: 8px;
-        max-width: 45%;
+        width: 100%;
+    }
+
+    &_item-text-image {
+        width: 40%;
     }
 }

@@ -45,6 +45,7 @@
     }
     &_image {
         max-width: 80%;
+        max-height: 95%;
         filter: grayscale(1);
         transition: .2s $easing filter;
 

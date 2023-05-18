@@ -325,7 +325,7 @@ if (fadeElement) {
 }
 
 const menuLinkElements = document.querySelectorAll('.menu_link');
-menuLinkElements.forEach(el => el.addEventListener('click', () => {
+menuLinkElements.forEach(el => el.addEventListener('touchend', () => {
     if (isMobile) {
         setTimeout(() => {
             document.body.classList.toggle('menu-opened')
