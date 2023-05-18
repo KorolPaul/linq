@@ -101,9 +101,11 @@ input[type="submit"] {
             background-color: $cRed;
             filter: none;
             transform: none;
+            box-shadow: none;
         }
         &:active {
             filter: none;
+            box-shadow: none;
             transform: none;
         }
     }

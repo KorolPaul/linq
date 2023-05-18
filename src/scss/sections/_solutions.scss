@@ -1,6 +1,9 @@
 .solutions {
     @include section;
-    overflow: hidden;
+
+    .main__small-top-indent & {
+        overflow: hidden;
+    }
 
     &_holder {
         @include layout;
@@ -134,7 +137,7 @@
             &::before {
                 content: '';
                 border-radius: 50%;
-                background-color: $color;
+                background-color: $bg_color;
                 position: absolute;
                 height: 5px;
                 width: 5px;
@@ -147,6 +150,11 @@
                     top: 8px;
                 }
             }
+        }
+
+        .solutions_card__red & li::before,
+        .solutions_card__blue & li::before {
+            background-color: $color;
         }
 
         .solutions_card__red &,

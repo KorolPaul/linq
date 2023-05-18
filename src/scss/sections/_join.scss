@@ -53,12 +53,10 @@
     &_form-input[type] {
         @include placeholder-color(rgba($color, .5));
         width: 100%;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0;
         border: none;
         padding: 0 50px 0 32px;
         @include desktop {
-            border-radius: 16px 16px 0 0;
+            border-radius: 16px;
             height: 88px;
             line-height: 90px;
             font-size: 24px;
@@ -77,6 +75,7 @@
         transform: scale(1);
         border: none;
         outline: none;
+        transform-origin: center;
         transition: .2s $easing transform;
         @include desktop {
             top: 25px;
@@ -89,12 +88,12 @@
         &:focus {
             border: none;
             outline: none;
-            transform: scale(1.1);
+            transform: scale(1.09);
         }
         &:active {
             border: none;
             outline: none;
-            transform: scale(0.9);
+            transform: scale(0.91);
         }
     }
 

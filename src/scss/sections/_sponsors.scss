@@ -6,9 +6,9 @@
         @include layout;
     }
     &_title {
-        margin-bottom: 56px;
+        margin-bottom: 36px;
         @include desktop {
-            margin-bottom: vw(110);
+            padding-bottom: 56px;
         }
     }
 
