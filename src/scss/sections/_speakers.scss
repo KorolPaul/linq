@@ -15,8 +15,8 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 38px 8px;
+        padding-top: 20px;
         @include tablet {
-            padding-top: 20px;
             grid-template-columns: 1fr 1fr 1fr;
             grid-template-rows: auto;
         }
@@ -271,9 +271,13 @@
             }
         }
 
-        .speakers-card.active &,
-        .speakers-card:hover & {
+        .speakers-card.active & {
             opacity: 0;
+        }
+        .speakers-card:hover & {
+            @include desktop {
+                opacity: 0;
+            }
         }
     }   
 }
