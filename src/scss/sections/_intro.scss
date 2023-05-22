@@ -1,6 +1,6 @@
 .intro {
     @include section;
-    padding-bottom: 70px;
+    padding-bottom: 135px;
     background: url(#{$img}/about-mobile-bg.svg) no-repeat right bottom;
     @include tablet {
         padding-bottom: 0;

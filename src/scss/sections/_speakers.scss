@@ -14,7 +14,7 @@
     &_grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: $indent 8px;
+        gap: 38px 8px;
         @include tablet {
             padding-top: 20px;
             grid-template-columns: 1fr 1fr 1fr;
@@ -22,29 +22,18 @@
         }
         @include desktop {
             grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap:28px 20px;
+            gap: 38px 20px;
         }
     }
 }
 
 .speakers-card {
     width: 100%;
-    border-radius: 8px 8px 0 0;
     position: relative;
     color: $color;
     text-decoration: none;
     box-sizing: border-box;
-    overflow: hidden;
     //height: 288px;
-    aspect-ratio: 1 / 1.8;
-    @include tablet {
-        aspect-ratio: 1 / 1.3;
-    }
-    @include desktop {
-        aspect-ratio: 1 / 1;
-        border-radius: 16px 16px 0 0;
-        //height: 300px;
-    }
     @include desktop-large {
         //height: 310px;
     }
@@ -72,8 +61,15 @@
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
+        z-index: 2;
         transition: .3s $easeOutCirc top;
-        @include media(400px) {
+        @include media(350px) {
+            top: calc(100% - 120px);
+        }
+        @include media(430px) {
+            top: calc(100% - 130px);
+        }
+        @include media(470px) {
             top: calc(100% - 100px);
         }
         @include tablet {
@@ -82,8 +78,11 @@
         @include media(700px) {
             top: 27vw;
         }
-        @include media(800px) {
-            top: 30vw;
+        @include media(750px) {
+            top: 25vw;
+        }
+        @include media(850px) {
+            top: 27vw;
         }
         @include desktop {
             border-radius: 16px 16px 0 0;
@@ -92,7 +91,10 @@
             top: 12vw;
         }
         @include media(1200px) {
-            top: 212px;
+            top: 182px;
+        }
+        @include media(1250px) {
+            top: 192px;
         }
 
         .speakers-card.active & {
@@ -216,4 +218,62 @@
             color: $color;
         }
     }
+
+    &_holder {
+        overflow: hidden;
+        position: relative;
+        border-radius: 8px 8px 0 0;
+        aspect-ratio: 1 / 1.8;
+        @include media(350px) {
+            aspect-ratio: 1 / 1.6;
+        }
+        @include media(470px) {
+            aspect-ratio: 1 / 1.3;
+        }
+        @include tablet {
+            aspect-ratio: 1 / 1.2;
+        }
+        @include desktop {
+            aspect-ratio: 1 / 1;
+            border-radius: 16px 16px 0 0;
+            //height: 300px;
+        }
+    }
+
+    &_label {
+        @include button;
+        position: absolute;
+        left: 0;
+        padding: 0 $indent;
+        height: 32px;
+        line-height: 32px;
+        bottom: calc(100% - 8px);
+        filter: drop-shadow(0px 3px 0px $cOrange) drop-shadow(0px 3px 0px $cYellow) drop-shadow(0px 3px 0px #FFEBCB);
+        pointer-events: none;
+        z-index: 1;
+        transition: .2s ease opacity;
+        @include tablet {
+            bottom: calc(100% - 18px);
+        }
+        @include desktop {
+            padding: 0 24px;
+            height: 40px;
+            line-height: 40px;
+            filter: drop-shadow(0px 6px 0px $cOrange) drop-shadow(0px 6px 0px $cYellow) drop-shadow(0px 6px 0px #FFEBCB);
+        }
+
+        .speakers-card:nth-child(even) & {
+            background-color: $cBlue;
+            filter: drop-shadow(0px 3px 0px #4BAFB1) drop-shadow(0px 3px 0px #68C1BF) drop-shadow(0px 3px 0px #A4DAD9);
+
+            @include desktop {
+                filter: drop-shadow(0px 6px 0px #4BAFB1) drop-shadow(0px 6px 0px #68C1BF) drop-shadow(0px 6px 0px #A4DAD9);
+            }
+        }
+
+        .speakers-card.active &,
+        .speakers-card:hover & {
+            opacity: 0;
+        }
+    }   
 }
