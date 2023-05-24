@@ -142,10 +142,14 @@
         }
 
         &:hover {
-            transform: scale(1.05);
+            @include tablet {
+                transform: scale(1.05);
+            }
         }
         &:active {
-            transform: scale(.98);
+            @include tablet {
+                transform: scale(.98);
+            }
         }
     }
 
@@ -171,8 +175,12 @@
         background-color: #fff;
     }
 
-    button:hover,
     .tns-nav-active {
         background-color: $cPurpleDark;
+    }
+    button:hover {
+        @include tablet {
+            background-color: $cPurpleDark;
+        }
     }
 }
