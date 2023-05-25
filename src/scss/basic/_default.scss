@@ -84,13 +84,6 @@ a[name] {
     flex-grow: 1;
 }
 
-.menu-opened {
-    overflow: hidden;
-    @include desktop {
-        overflow: initial;
-    }
-}
-
 .bright {
     color: $cRed;
 }

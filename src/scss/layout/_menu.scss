@@ -61,8 +61,8 @@
         border-radius: 100px 0 0 100px;
         display: block;
         transform: translateX(100%);
-        transition: .3s $easing color,
-                    .6s $easing transform;
+        transition: .2s $easing color,
+                    .3s $easing transform;
         @include desktop {
             font-family: $font-family;
             font-weight: 500;
@@ -77,48 +77,56 @@
             height: auto;
             min-height: 0;
             transform: none;
+            transition: .3s $easing color,
+                        .6s $easing transform;
         }
 
         &:nth-child(2n) {
             background-color: $cOrange;
-            transition-delay: 0s, .1s;
+            transition-delay: 0s, .05s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .1s;
             }
         }
         &:nth-child(3n) {
             background-color: $cYellow;
-            transition-delay: 0s, .2s;
+            transition-delay: 0s, .1s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .2s;
             }
         }
         &:nth-child(4n) {
             background-color: $cBlueLight;
-            transition-delay: 0s, .3s;
+            transition-delay: 0s, .15s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .3s;
             }
         }
         &:nth-child(5n) {
             background-color: $cBlueMedium;
-            transition-delay: 0s, .4s;
+            transition-delay: 0s, .2s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .4s;
             }
         }
         &:nth-child(6n) {
             background-color: $cBlue;
-            transition-delay: 0s, .5s;
+            transition-delay: 0s, .25s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .4s;
             }
         }
         &:nth-child(7n) {
             background-color: $cPurple;
-            transition-delay: 0s, .6s;
+            transition-delay: 0s, .3s;
             @include desktop {
                 background-color: transparent;
+                transition-delay: 0s, .4s;
             }
         }
 

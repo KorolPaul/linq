@@ -325,7 +325,6 @@ if (fadeElement) {
 }
 
 const menuLinkElements = document.querySelectorAll('.menu_link, .header .button');
-console.log(menuLinkElements);
 menuLinkElements.forEach(el => el.addEventListener('touchend', () => {
     if (isMobile) {
 
