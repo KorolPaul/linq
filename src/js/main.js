@@ -324,12 +324,14 @@ if (fadeElement) {
     fadeElement.addEventListener('click', closeAllOpened);
 }
 
-const menuLinkElements = document.querySelectorAll('.menu_link');
+const menuLinkElements = document.querySelectorAll('.menu_link, .header .button');
+console.log(menuLinkElements);
 menuLinkElements.forEach(el => el.addEventListener('touchend', () => {
     if (isMobile) {
+
         setTimeout(() => {
-            document.body.classList.toggle('menu-opened')
-        }, 50);
+            document.body.classList.remove('menu-opened')
+        }, 75);
     }
 }));
 
