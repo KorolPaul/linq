@@ -16,5 +16,9 @@
         @include desktop {
             width: 98px;
         }
+
+        .blue-page & {
+            filter: hue-rotate(180deg) brightness(2.5);
+        }
     }
 }

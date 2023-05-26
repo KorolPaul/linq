@@ -136,6 +136,18 @@
             }
         }
 
+        .blue-page & {
+            @include desktop {
+                color: $bg_color;
+            }
+        }
+
+        .blue-page &:hover {
+            @include desktop {
+                color: $cBlueLight;
+            }
+        }
+
         .menu-opened & {
             transform: translateX(0);
         }

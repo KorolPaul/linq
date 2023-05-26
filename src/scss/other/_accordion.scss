@@ -13,6 +13,41 @@
     &_holder {
         @include layout;
     }
+    &_tab-button {
+        @include button-reset;
+        display: block;
+        font-size: 18px;
+        text-align: left;
+        position: relative;
+        line-height: 1.2;
+        color: $color;
+        padding: $indent 40px $indent 0;
+        white-space: normal;
+        color: $cRed;
+        @include desktop {
+            position: absolute;
+            left: 0;
+            font-size: 24px;
+            padding-top: 30px;
+            padding-bottom: 24px;
+        }
+
+        @for $i from 1 through 6 {
+            &:nth-of-type(#{$i}) {
+                @include desktop {
+                    top: vw(($i - 1) * 50)
+                }
+            }
+        }
+
+        &.active {
+            color: $color;
+
+            &::before {
+                content: '—';
+            }
+        }
+    }
     &_button {
         @include button-reset;
         display: block;
@@ -24,34 +59,19 @@
         color: $color;
         padding: $indent 40px $indent 0;
         white-space: normal;
+        transition: .2s $easing color .2s;
         @include desktop {
-            position: absolute;
             left: 0;
             font-size: 24px;
             padding-top: 30px;
             padding-bottom: 24px;
+            width: 100%;
         }
 
         &.active,
         &:hover {
             background-color: transparent;
             color: rgba($color, .6);
-        }
-
-        @for $i from 1 through 6 {
-            &:nth-of-type(#{$i}) {
-                @include desktop {
-                    top: vw(($i - 1) * 112)
-                }
-            }
-        }
-
-        .accordion__simple &[class] {
-            transition: .2s $easing color .2s;
-            @include desktop {
-                position: relative;
-                width: 100%;
-            }
         }
     }
     &_button-icon {
@@ -131,6 +151,16 @@
             background-color: #fff;
         }
     }
+    &_tab-content {
+        display: none;
+        @include desktop {
+            display: none;
+        }
+
+        &.active {
+            display: block;
+        }
+    }
     &_content {
         max-height: 0;
         overflow: hidden;
@@ -152,20 +182,6 @@
                 display: block;
                 margin-bottom: 0;
                 padding-bottom: 1px;
-            }
-        }
-
-        &__inner {
-            max-height: none;
-            @include desktop {
-                max-height: 0;
-                display: block;
-            }
-
-            &.active {
-                @include desktop {
-                    max-height: 1000px;
-                }
             }
         }
     }

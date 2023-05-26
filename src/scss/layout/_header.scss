@@ -12,6 +12,10 @@
     @include desktop {
         padding: 13px 0;
     }
+
+    .blue-page & {
+        background-color: transparent
+    }
     
     &_holder {
         @include layout;
