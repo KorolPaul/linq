@@ -171,9 +171,14 @@
         align-items: center;
         gap: 8px;
         width: 100%;
+
+        a {
+            display: block;
+            width: 40%;
+        }
     }
 
     &_item-text-image {
-        width: 40%;
+        width: 100%;
     }
 }
