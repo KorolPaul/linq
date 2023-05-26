@@ -11,7 +11,7 @@
         flex-direction: column;
         align-items: center;
         position: relative;
-        padding-bottom: 280px;
+        padding-bottom: 380px;
         @include tablet {
             padding-bottom: 200px;
         }
@@ -37,13 +37,9 @@
         z-index: -1;
 
         &:nth-of-type(1) {
-            width: 164px;
-            left: -72px;
-            bottom: 50px;
-            @include tablet {
-                bottom: 0;
-                left: 40px;
-            }
+            width: 136px;
+            left: $indent;
+            bottom: 150px;
             @include desktop {
                 width: 360px;
                 left: 0;
@@ -59,12 +55,8 @@
         }
         &:nth-of-type(2) {
             width: 160px;
-            right: 0;
-            bottom: 140px;
-            @include tablet {
-                bottom: 110px;
-                right: -50px;
-            }
+            right: $indent;
+            bottom: 200px;
             @include desktop {
                 width: 340px;
                 right: -20px;
@@ -80,15 +72,14 @@
             // }
         }
         &:nth-of-type(3) {
-            width: 200px;
-            right: 40px;
+            width: 204px;
+            left: 50%;
             bottom: 0;
-            @include tablet {
-                bottom: 0;
-                right: auto;
-                left: 47%;
-            }
+            transform: translateX(-50%);
             @include desktop {
+                right: auto;
+                transform: none;
+                left: 47%;
                 width: 448px;
                 // opacity: 0;
             }
