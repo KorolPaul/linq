@@ -21,7 +21,6 @@
         height: 145px;
         align-items: center;
         justify-content: center;
-        background-color: $bg_color;
         transition: .2s $easing opacity;
         position: relative;
 
@@ -41,6 +40,10 @@
             right: -1px;
             border: 2px dashed $cOrange;
             pointer-events: none;
+        }
+
+        .blue-page &::before {
+            border-color: $bg_color;
         }
     }
     &_image {

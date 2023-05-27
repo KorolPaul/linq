@@ -3,55 +3,72 @@
     min-height: 180px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding: 30px;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-position: top left;
+    justify-content: space-between;
+    background: url(#{$img}/pattern.png) -30px -40px no-repeat;
     position: relative;
     overflow: hidden;
+    border-radius: 16px 16px 0 0;
+    color: $color;
     @include desktop {
-        min-height: 308px;
-        padding: 40px;
+        border-radius: 30px 30px 0 0;
+        min-height: 320px;
+    }
+
+    &__blue {
+        background-color: $cBlueLight;
+    }
+    &__orange {
+        background-color: $cYellow;
+    }
+    &__red {
+        background-color: $cRed;
+    }
+    &__purple {
+        background-color: $cPurpleDark;
+        color: $bg_color;
     }
 
     &_title {
-        font-weight: 600;
-        font-size: 32px;
+        font-family: $font-family;
+        font-weight: 500;
+        font-size: 38px;
         line-height: 1.2;
         margin: 0;
-        position: absolute;
-        left: 30px;
-        bottom: 30px;
-        transition: .3s $easing transform,
-                    .1s $easing opacity;
-        @include tablet {
-            left: 40px;
-            bottom: 40px;
-        }
-        @include desktop-large {
-            font-size: 60px;
+        padding: 20px;
+        @include desktop {
+            padding:40px;
         }
 
-        .advantage:hover &,
-        .advantage.active & {
-            opacity: 0;
-            transform: translateY(100%);
+        .advantage__red & {
+            color: $bg_color;
         }
     }
     &_text {
-        opacity: 0;
-        transform: translateY(-100%);
-        transition: .3s $easing transform,
-                    .3s $easing opacity;
+        font-size: 18px;
+        line-height: 130%;
+        padding: 20px;
+        border-radius: 16px 16px 0 0;
+        background: url(#{$img}/pattern.png) -50px -60px no-repeat;
         @include desktop {
-            max-width: vw(500);
+            border-radius: 30px 30px 0 0;
+            padding: 40px;
         }
 
-        .advantage:hover &,
-        .advantage.active & {
-            opacity:1;
-            transform: translateY(0%);
+        .advantage__blue & {
+            background-color: $cBlueMedium;
+        }
+        .advantage__orange & {
+            background-color: $cOrange;
+        }
+        .advantage__red & {
+            background-color: $cOrange;
+        }
+        .advantage__purple & {
+            background-color: $cPurple;
+        }
+
+        p {
+            max-width: 490px;
         }
     }
 }

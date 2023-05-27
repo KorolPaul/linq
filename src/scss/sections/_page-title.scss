@@ -15,5 +15,13 @@
         @include desktop {
             font-size: 80px;
         }
+
+        span {
+            display: block;
+            font-size: 32px;
+            @include desktop {
+                font-size: 56px;
+            }
+        }
     }
 }

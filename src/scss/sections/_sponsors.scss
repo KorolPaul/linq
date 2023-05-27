@@ -117,5 +117,9 @@
         position: absolute;
         left: 0;
         bottom: 110%;
+
+        .blue-page & {
+            color: $bg_color;
+        }
     }
 }
