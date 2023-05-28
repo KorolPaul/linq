@@ -17,7 +17,7 @@
     font-weight: 600;
     margin: 0 0 20px;
     @include desktop {
-        font-size: vw(72);
+        font-size: 72px;
     }
 }
 
@@ -27,7 +27,7 @@
     line-height: 1.4;
     font-weight: 400;
     @include desktop {
-        font-size: vw(60);
+        font-size: 60px;
     }
 }
 

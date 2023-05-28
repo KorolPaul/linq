@@ -1,0 +1,8 @@
+.divider {
+    display: block;
+    margin: 45px auto;
+    @include desktop {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+}

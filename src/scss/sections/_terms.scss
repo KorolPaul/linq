@@ -1,49 +1,29 @@
 .terms {
     margin: 84px 0 90px;
-    background: $cPurpleDark;
-    color: $bg_color;
     position: relative;
     @include desktop {
-        margin-top: vw(150);
-        margin-bottom: vw(200);
+        margin-top: 100px;
+        margin-bottom: 150px;
     }
 
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: -16px;
-        width: 30%;
-        height: 25px;
-        background-color: $cPurpleDark;
-        border-radius: 4px;
-        @include desktop {
-            top: -25px;
-            width: 363px;
-            height: 107px;
-            border-radius: 8px;
-        }
-    }
-
-    &_bg-wrapper {
-        padding: 100px 0 90px;
-        position: relative;
-        @include desktop {
-            padding: 64px 0 110px;
-        }
-
-    }
     &_holder {
         @include layout;
     }
     &_title {
-        font-size: 32px;
+        text-align: center;
+        font-size: 48px;
         line-height: 1.2;
-        font-weight: 600;
-        margin: 0 0 46px;
+        margin: 0 0 35px;
         @include desktop {
-            width: 50%;
-            margin-bottom: 68px;
+            font-size: 56px;
+        }
+        
+        span {
+            display: block;
+            font-size: 32px;
+            @include desktop {
+                font-size: 48px;
+            }
         }
     }
     &_list {
@@ -51,39 +31,35 @@
         padding: 0;
         @include desktop {
             display: flex;
-            flex-wrap: wrap;
-            gap: 0 150px;
-            padding-right: 100px;
+            gap: 20px;
         }
 
         li {
+            border-radius: 16px;
             font-size: 16px;
-            line-height: 1.4;
+            line-height: 1.3;
+            padding: 30px;
             margin: 0 0 30px;
-            position: relative;
-            padding: 0 0 0 18px;
+            color: $bg_color;
+            background: $cBlueMedium url(#{$img}/pattern.png) -40px -30px no-repeat;
             @include desktop {
-                font-size: 24px;
-                line-height: 1.5;
-                margin-bottom: 44px;
-                padding-left: 28px;
-                width: 35%;
+                font-size: 18px;
+                flex-grow: 1;
+                border-radius: 30px;
+                margin: 0;
+                padding: 40px;
+                width: calc(25% - 60px);
             }
 
-            &::before {
-                content: '';
-                background-color: $cGreen;
-                position: absolute;
-                left: 0;
-                top: -4px;
-                width: 10px;
-                height: 10px;
-                border-radius: 4px 0 4px;
-                @include desktop {
-                    width: 20px;
-                    height: 20px;
-                    top: -10px;
-                }
+            &:nth-child(2n) {
+                background-color: $cPurpleDark;
+            }
+            &:nth-child(3n) {
+                background-color: $cOrange;
+            }
+            &:nth-child(4n) {
+                background-color: $cYellow;
+                color: $color;
             }
         }
     }
