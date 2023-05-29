@@ -88,7 +88,7 @@
             <div class="partner_holder">
                 <div class="section-top">
                     <h2 class="section-title">LET’S COLLABORATE</h2>
-                    <a href="#" class="button">Apply now</a>
+                    <a href="#" class="button js-popup-form-trigger" data-form="welcome">Apply now</a>
                 </div>
 
                 <div class="partner_accordion">
@@ -109,7 +109,7 @@
                                     <p>
                                         If you’re unable to visit Linq this year, you can transfer your ticket to Linq 2023. To do this, please contact us through this form (ссылка на форму get in touch).
                                     </p>
-                                    <button class="button js-popup-form-trigger">Submit request</button>
+                                    <button class="button js-popup-form-trigger" data-form="partners">Submit request</button>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                                     <p>
                                         If you’re unable to visit Linq this year, you can transfer your ticket to Linq 2023. To do this, please contact us through this form (ссылка на форму get in touch).
                                     </p>
-                                    <button class="button js-popup-form-trigger">Submit request</button>
+                                    <button class="button js-popup-form-trigger" data-form="partners">Submit request</button>
                                 </div>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                                     <p>
                                         If you’re unable to visit Linq this year, you can transfer your ticket to Linq 2023. To do this, please contact us through this form (ссылка на форму get in touch).
                                     </p>
-                                    <button class="button js-popup-form-trigger">Submit request</button>
+                                    <button class="button js-popup-form-trigger"  data-form="partners">Submit request</button>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                                     <p>
                                         If you’re unable to visit Linq this year, you can transfer your ticket to Linq 2023. To do this, please contact us through this form (ссылка на форму get in touch).
                                     </p>
-                                    <button class="button js-popup-form-trigger">Submit request</button>
+                                    <button class="button js-popup-form-trigger" data-form="partners">Submit request</button>
                                 </div>
                             </div>
                         </div>
@@ -406,7 +406,7 @@
     </footer>
 
     <div class="fade"></div>
-    <div class="form-popup js-form-popup">
+    <div class="form-popup js-form-popup" data-form="partners">
         <button class="form-popup_close"></button>
         <form class="form">
             <h2 class="form_title">Apply for partnership</h2>
@@ -482,8 +482,44 @@
         </form>
     </div>
 
+    <div class="form-popup js-form-popup" data-form="welcome">
+        <button class="form-popup_close"></button>
+        <div class="form-popup_header">
+            <h2 class="form_title">Welcome to Linq!</h2>
+            <p>While we are updating our big plans for 2023, please leave your details to get the early bird offer once we are ready!</p>
+        </div>
+        <form class="form">
+            <div class="form_row">
+                <div class="form_cell">
+                    <label for="">Enter your name</label>
+                    <input type="text">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="form_cell">
+                    <label for="">Enter your email address</label>
+                    <input type="email">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="form_cell">
+                    <label for="">Enter your telegram</label>
+                    <input type="email">
+                </div>
+            </div>
+            <div class="form_row">
+                <div class="form_cell">
+                    <input type="submit" value="Send">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./src/js/tiny-slider.js"></script>
     <script src="./src/js/js-cookie.js"></script>
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/script.js"></script>
+    
 </body>
 </html>

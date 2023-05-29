@@ -591,7 +591,9 @@ const popupFormTriggers = document.querySelectorAll('.js-popup-form-trigger');
 function toggleFormPopup(e) {
     e.preventDefault();
 
-    document.querySelector('.js-form-popup').classList.toggle('opened');
+    const form = e.target.dataset.form;
+
+    document.querySelector(`.js-form-popup[data-form="${form}"]`).classList.toggle('opened');
     if (fadeElement) {
         fadeElement.classList.toggle('opened');
     }
@@ -599,8 +601,10 @@ function toggleFormPopup(e) {
 
 popupFormTriggers.forEach((trigger) => {
     trigger.addEventListener('click', toggleFormPopup);
-    document.querySelector('.form-popup_close').addEventListener('click', toggleFormPopup);
 });
+
+console.log(document.querySelector('.form-popup_close'));
+document.querySelectorAll('.form-popup_close').forEach(el => el.addEventListener('click', closeAllOpened));
 
 /* unavailable ticketss form */
 const unavailableFormLink = document.querySelector('.js-tickets-unavailable-link');

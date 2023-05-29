@@ -5,18 +5,23 @@
     top: 0;
     right: 0;
     bottom: 0;
-    padding: 35px 24px;
+    padding: 85px 24px 35px;
     box-sizing: border-box;
     z-index: 20;
     pointer-events: none;
     opacity: 0;
     overflow: auto;
     transform: translateX(100%);
+    max-width: 672px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
     transition: .3s $easingSmooth transform,
                 .3s $easingSmooth opacity;
     @include desktop {
         border-radius: 30px 0 0 30px;
-        padding: 82px 110px 40px;
+        padding: 56px 74px;
     }
 
     &.opened {
@@ -31,13 +36,15 @@
         height: 40px;
         width: 40px;
         position: absolute;
-        top: 32px;
+        top: 28px;
         right: 24px;
         z-index: 3;
         min-width: 0;
         padding: 0;
         transition: .2s $easing opacity;
-
+        @include desktop {
+            display: none;
+        }
 
         &:hover {
             opacity: .6;
@@ -61,25 +68,17 @@
         }
     }
 
-    h1 {
-        font-weight: 700;
-        text-transform: uppercase;
+    label {
+        color: $bg_color;
     }
+
     h2 {
-        font-family: $font-family;
-        font-size: 24px;
-        font-weight: 700;
         @include desktop {
-            font-size: 32px;
+            font-size: 56px;
         }
     }
-    h3 {
-        font-family: $font-family;
-        font-size: 18px;
-        font-weight: 700;
-        margin: 40px 0 20px;
-        @include desktop {
-            font-size: 24px;
-        }
+
+    p {
+        font-size: 24px;
     }
 }
