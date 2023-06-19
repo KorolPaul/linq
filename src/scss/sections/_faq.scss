@@ -20,6 +20,10 @@
         }
     }
 
+    &__without-rainbow::before {
+        content: none;
+    }
+
     &_holder {
         @include layout;
     }

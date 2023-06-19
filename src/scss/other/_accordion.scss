@@ -23,7 +23,7 @@
         color: $color;
         padding: $indent 40px $indent 0;
         white-space: normal;
-        color: $cRed;
+        color: $color;
         @include desktop {
             position: absolute;
             left: 0;
@@ -35,17 +35,21 @@
         @for $i from 1 through 6 {
             &:nth-of-type(#{$i}) {
                 @include desktop {
-                    top: vw(($i - 1) * 50)
+                    top: vw(($i - 1) * 50);
                 }
             }
         }
 
         &.active {
-            color: $color;
+            color: $cRed;
 
             &::before {
-                content: '—';
+                content: '•';
             }
+        }
+
+        &:hover {
+            color: $cRed;
         }
     }
     &_button {
@@ -65,6 +69,7 @@
             font-size: 24px;
             padding-top: 30px;
             padding-bottom: 24px;
+            padding-right: 60px;
             width: 100%;
         }
 

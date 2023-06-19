@@ -97,6 +97,13 @@
                 filter: drop-shadow(0px 6px 0px #4BAFB1) drop-shadow(0px 6px 0px #68C1BF) drop-shadow(0px 6px 0px #A4DAD9);
             }
         }
+        .blue-page .sponsors_card:nth-child(even) & {
+            background-color: $cRed;
+            filter: drop-shadow(0px 3px 0px $cOrange) drop-shadow(0px 3px 0px $cYellow) drop-shadow(0px 3px 0px #FFEBCB);
+            @include desktop {
+                filter: drop-shadow(0px 6px 0px $cOrange) drop-shadow(0px 6px 0px $cYellow) drop-shadow(0px 6px 0px #FFEBCB);
+            }
+        }
     }
 
     &_card-image {
