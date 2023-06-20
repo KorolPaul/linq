@@ -14,7 +14,7 @@
         display: inline-block;
         margin: 0;
         padding: 0 0 90px;
-        background: url(#{$img}/page-title-bg.svg) no-repeat bottom 20px center;
+        background: url(#{$img}/page-title-bg.svg) no-repeat bottom 20px center / 100% 39px;
         @include desktop {
             font-size: 80px;
         }
