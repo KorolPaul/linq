@@ -28,7 +28,6 @@
         padding: $indent 40px $indent 0;
         white-space: normal;
         color: $color;
-        order: 1;
         @include desktop {
             position: absolute;
             left: 0;
@@ -173,7 +172,6 @@
     }
     &_tab-content {
         display: none;
-        order: 2;
         @include desktop {
             display: none;
         }
