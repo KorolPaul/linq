@@ -13,10 +13,12 @@
     h1 {
         display: inline-block;
         margin: 0;
-        padding: 0 0 90px;
-        background: url(#{$img}/page-title-bg.svg) no-repeat bottom 20px center / 100% 39px;
+        padding: 0 0 70px;
+        background: url(#{$img}/page-title-bg.svg) repeat-x bottom 20px center;
+        font-size: 40px;
         @include desktop {
             font-size: 80px;
+            padding: 0 0 90px;
         }
 
         span {

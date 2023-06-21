@@ -42,6 +42,11 @@
                 display: block;
             }
         }
+
+        &__mobile:first-child {
+            display: block;
+            text-align: center;
+        }
     }
 
     &_item {

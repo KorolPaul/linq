@@ -1,10 +1,14 @@
 .accordion {
     position: relative;
+    display: flex;
+    flex-direction: column;
     @include desktop {
+        display: block;
         padding: 0 0 0 30%
     }
 
     &__simple {
+        display: block;
         @include desktop {
             padding-left: 0;
         }
@@ -24,6 +28,7 @@
         padding: $indent 40px $indent 0;
         white-space: normal;
         color: $color;
+        order: 1;
         @include desktop {
             position: absolute;
             left: 0;
@@ -168,6 +173,7 @@
     }
     &_tab-content {
         display: none;
+        order: 2;
         @include desktop {
             display: none;
         }

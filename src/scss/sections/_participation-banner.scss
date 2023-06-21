@@ -1,11 +1,23 @@
 .participation-banner {
     margin: 0 0 80px;
-    color: $bg_color;
     text-align: center;
     position: relative;
+    display: none;
+    @include tablet {
+        display: block;
+    }
     @include desktop {
         margin-top: 115px;
         margin-bottom: 155px;
+    }
+
+    &__mobile {
+        padding-top: 56px;
+        display: block;
+        width: 100%;
+        @include tablet {
+            display: none;
+        }
     }
 
     &_holder {
@@ -25,6 +37,7 @@
         span {
             display: block;
             font-size: 50px;
+            color: $cRed;
             @include desktop {
                 font-size: 80px;
             }
