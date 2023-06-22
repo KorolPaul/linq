@@ -51,5 +51,8 @@
         line-height: 60px;
         min-width: 80%;
         font-size: 18px;
+        @include tablet {
+            min-width: 200px;
+        }
     }
 }

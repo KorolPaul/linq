@@ -5,9 +5,11 @@
     text-align: center;
     font-size: 18px;
     position: relative;
+    margin-bottom: 32px;
     @include desktop {
         font-size: 24px;
         max-width: 960px;
+        margin-bottom: 64px;
     }
 
     h1 {

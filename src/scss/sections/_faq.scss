@@ -20,6 +20,13 @@
         }
     }
 
+    &__without-rainbow {
+        margin-top: -16px;
+        @include tablet {
+            margin-top: 0;
+        }
+    }
+
     &__without-rainbow::before {
         content: none;
     }
@@ -30,5 +37,9 @@
 
     &_content {
         padding: 24px 0 0;
+
+        .faq__without-rainbow & {
+            padding-top: 0;
+        }
     }
 }
