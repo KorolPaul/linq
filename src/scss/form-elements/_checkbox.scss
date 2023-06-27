@@ -11,9 +11,11 @@ input[type="checkbox"] {
         position: relative;
         margin: 0;
         transition: .2s $easing color;
+        line-height: 16px;
         @include desktop {
             font-size: 18px;
             padding: 0 0 0 36px;
+            line-height: 29px;
         }
 
         &::before {

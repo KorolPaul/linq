@@ -46,10 +46,13 @@
     .back-button {
         display: none;
         position: absolute;
-        left: -270px;
         top: 0;
         @include desktop {
+        }
+        @include media(1300px) {
             display: block;
+            left: 50%;
+            transform: translateX(-630px);
         }
     }
 }

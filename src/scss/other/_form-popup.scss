@@ -78,4 +78,25 @@
     p {
         font-size: 24px;
     }
+
+    input[type="text"],
+    input[type="email"], 
+    input[type="tel"] {
+        border-radius: 12px;
+        box-shadow: 0px 3px 0px 0px #4BAFB1, 0px 6px 0px 0px #68C1BF, 0px 9px 0px 0px #A4DAD9;
+        @include desktop {
+            box-shadow: 0px 6px 0px 0px #4BAFB1, 0px 12px 0px 0px #68C1BF, 0px 18px 0px 0px #A4DAD9;
+        }
+    }
+
+    .form_error {
+        top: calc(100% + 12px);
+        @include tablet {
+            top:calc(100% + 20px);
+        }
+    }
+
+    .form_accept a {
+        color: $cBlueLight;
+    }
 }
