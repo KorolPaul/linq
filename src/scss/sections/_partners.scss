@@ -11,8 +11,13 @@
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         padding: 1px 0;
+        border-bottom: 2px dotted $cOrange;
         @include desktop {
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        }
+
+        .blue-page & {
+            border-color: $bg_color;
         }
     }
     &_item {
@@ -38,7 +43,8 @@
             left: -1px;
             bottom: -1px;
             right: -1px;
-            border: 2px dotted $cOrange;
+            border-top: 2px dotted $cOrange;
+            border-left: 2px dotted $cOrange;
             pointer-events: none;
         }
 
@@ -55,7 +61,7 @@
         .partners_item[href]:hover & {
             filter: grayscale(0);
         }
-                .partners_item[href]:active & {
+        .partners_item[href]:active & {
             filter: grayscale(.8);
         }
     }
