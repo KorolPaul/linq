@@ -4,12 +4,14 @@
     max-width: 710px;
     text-align: center;
     font-size: 18px;
-    position: relative;
     margin-bottom: 32px;
     @include desktop {
         font-size: 24px;
         max-width: 960px;
         margin-bottom: 64px;
+    }
+    @include media(1300px) {
+        position: relative;
     }
 
     h1 {
@@ -46,11 +48,13 @@
     .back-button {
         display: none;
         position: absolute;
-        top: 0;
         @include desktop {
+            display: block;
+            top: 150px;
+            left: $indent;
         }
         @include media(1300px) {
-            display: block;
+            top: 0;
             left: 50%;
             margin-left: -630px;
         }
