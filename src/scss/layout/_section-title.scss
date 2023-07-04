@@ -17,6 +17,17 @@
         }
     }
 
+    p {
+        font-family: $font-family;
+        font-size: 14px;
+        line-height: 1.4;
+        max-width: 860px;
+        margin: auto;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
+
     &__center {
         text-align: center;
     }

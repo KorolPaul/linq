@@ -68,6 +68,7 @@
     &_video-wrapper {
         width: 100%;
         position: relative;
+        z-index: 6;
         @include tablet {
             flex-shrink: 1;
             max-width: 530px;
@@ -78,7 +79,7 @@
         @include desktop {
             width: 585px;
             max-width: 650px;
-            margin-left: -70px;
+            margin-left: -35px;
             flex-grow: 0;
             flex-shrink: 1;
         }
@@ -94,31 +95,31 @@
 
     &_video-text-wrapper {
         position: absolute;
-        width: 20%;
+        width: 18%;
         padding-bottom: 9%;
-        left: 44.8%;
+        left: 43.8%;
         top: 25vw;
         overflow: hidden;
         border-radius: 12px;
         transform: rotate(-2deg);
         @include tablet {
             top: 90px;
-            width: 72px;
+            width: 62px;
             height: 37px;
             padding-bottom: 0;
             left: 50%;
             margin-left: -19px;
         }
         @include desktop {
-            width: 118px;
-            height: 54px;
-            margin-left: -31px;
+            width: 104px;
+            height: 56px;
+            margin-left: -35px;
             top: 150px;
         }
         @include desktop-large {
-            width: 130px;
+            width: 114px;
             height: 62px;
-            margin-left: -34px;
+            margin-left: -38px;
             top: 165px;
         }
 
@@ -128,12 +129,12 @@
     &_video-text-line {
         min-width: 300%;
         position: absolute;
-        left: 0;
+        left: 100%;
         top: -50%;
         height: 200%;
         display: flex;
         transform-origin: center;
-        animation: text-line 6s linear infinite;
+        animation: text-line 5s linear infinite;
     }
 
     &_video-text {
@@ -203,13 +204,13 @@
 
 @keyframes text-line {
     0% {
-        transform: translateX(30%);
+        transform: translateX(0%);
     }
     99.9% {
-        transform: translateX(-100%);
+        transform: translateX(-140%);
     }
     100% {
-        transform: translateX(30%);
+        transform: translateX(0%);
     }
 }
 
