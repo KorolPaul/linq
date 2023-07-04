@@ -129,15 +129,16 @@
     &_video-text-line {
         min-width: 300%;
         position: absolute;
-        left: 100%;
+        left: 80%;
         top: -50%;
         height: 200%;
         display: flex;
         transform-origin: center;
-        animation: text-line 5s linear infinite;
+        animation: text-line 3.5s linear infinite;
     }
 
     &_video-text {
+        transform-origin: center;
         transform: rotate(2deg);
         height: 100%;
         max-width: none;
@@ -206,11 +207,8 @@
     0% {
         transform: translateX(0%);
     }
-    99.9% {
-        transform: translateX(-140%);
-    }
     100% {
-        transform: translateX(0%);
+        transform: translateX(-120%);
     }
 }
 

@@ -22,6 +22,9 @@
         bottom: 80px;
         width: 475px;
     }
+    @include desktop-large {
+        width: 575px;
+    }
 
     &_text {
         color: $bg_color;
