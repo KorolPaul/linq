@@ -29,12 +29,12 @@
         transition: .2s $easing opacity;
         position: relative;
 
-        &[href]:hover {
-            opacity: .6;
-        }
-        &[href]:active {
-            opacity: .8;
-        }
+        // &[href]:hover {
+        //     opacity: .6;
+        // }
+        // &[href]:active {
+        //     opacity: .8;
+        // }
 
         &::before {
             content: '';
@@ -53,16 +53,16 @@
         }
     }
     &_image {
-        max-width: 80%;
+        max-width: 60%;
         max-height: 95%;
-        filter: grayscale(1);
+        filter: grayscale(1) brightness(.6);
         transition: .2s $easing filter;
 
         .partners_item[href]:hover & {
-            filter: grayscale(0);
+            filter: grayscale(0) brightness(1);
         }
         .partners_item[href]:active & {
-            filter: grayscale(.8);
+            filter: grayscale(.8) brightness(1);
         }
     }
 }
