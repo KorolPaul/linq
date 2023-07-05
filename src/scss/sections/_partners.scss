@@ -63,6 +63,15 @@
         }
         .partners_item[href]:active & {
             filter: grayscale(.8) brightness(1);
+
+            .blue-page & {
+                filter: grayscale(1) brightness(1.7) sepia(1) hue-rotate(-15deg);
+            }
         }
+
+        .blue-page & {
+            filter: grayscale(1) brightness(1.5) sepia(1) hue-rotate(-15deg);
+        }
+
     }
 }
