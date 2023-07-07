@@ -21,7 +21,7 @@
         &:nth-child(1) {
             background-color: $cBlueLight;
 
-            .menu-opened &{
+            .menu-opened & {
                 transform: rotate(45deg) translate(5px, 4px);
             }
         }
@@ -38,6 +38,13 @@
             .menu-opened & {
                 transform: rotate(-45deg) translate(7px, -6px);
             }
+        }
+
+        .blue-page & {
+            background-color: $bg_color;
+        }
+        .blue-page.menu-opened & {
+            background-color: $cBlueMedium;
         }
     }
 }

@@ -1,6 +1,7 @@
 .about {
+    margin-bottom: 64px;
     @include desktop {
-        margin-bottom: vw(150);
+        margin-bottom: 150px;
         position: relative;
         margin-top: -75px;
         overflow: hidden;
@@ -23,7 +24,7 @@
             font-size: 80px;
             flex-grow: 0;
             background-size: 164px;
-            background-position: left bottom;
+            background-position: left bottom 15px;
         }
     }
 
@@ -39,7 +40,9 @@
 
     &_intro {
         margin: 0 0 56px;
+        text-align: center;
         @include desktop {
+            text-align: initial;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
@@ -79,8 +82,11 @@
 
     &_main-image {
         width: 100%;
-        border-radius: 34px;
+        border-radius: 12px;
         box-shadow: $image-shadow;
+        @include desktop {
+            border-radius: 34px;
+        }
     }
 
     &_location {
@@ -108,12 +114,12 @@
 
     &_slider-title {
         text-align: center;
-        font-size: 40px;
+        font-size: 32px;
         font-weight: 700;
         line-height: 1.2;
         margin: 80px 0 16px;
         @include desktop {
-            font-size: 80px;
+            font-size: 56px;
             text-align: left;
             margin-top: 130px;
         }
@@ -121,9 +127,9 @@
         span {
             display: block;
             color: $cBlue;
-            font-size: 32px;
+            font-size: 40px;
             @include desktop {
-                font-size: 56px;
+                font-size: 80px;
             }
         }
     }
@@ -151,7 +157,7 @@
         display: flex;
         align-items: flex-end;
         gap: 16px;
-        animation: infinite-rotation 16s linear infinite;
+        animation: infinite-rotation 24s linear infinite;
         flex-shrink: 0;
         padding-right: 20px;
         @include desktop {
@@ -171,8 +177,10 @@
         display: block;
         box-shadow: $image-shadow;
         border-radius: 16px;
+        max-width: 232px;
         @include desktop {
             border-radius: 32px;
+            max-width: none;
         }
     }
 }

@@ -118,7 +118,10 @@
         margin: 0 0 42px;
         display: flex;
         flex-direction: column;
+        text-align: center;
         @include desktop {
+            text-align: initial;
+            align-items: center;
             flex-direction: row;
             margin-bottom: 80px;
             gap: 100px;
@@ -180,7 +183,7 @@
 
         span {
             font-size: 40px;
-            color: $cOrange;
+            color: $cRed;
             display: block;
             @include desktop {
                 font-size: 56px;

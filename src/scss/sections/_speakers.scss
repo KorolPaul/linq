@@ -1,6 +1,13 @@
 .speakers {
     @include section;
 
+    &__rainbow-right {
+        margin-bottom: 0;
+        @include desktop() {
+            margin-bottom: 64px;
+        }
+    }
+
     &_holder {
         @include layout;
         position: relative;
@@ -45,6 +52,11 @@
                     z-index: -1;
                 }
             }
+        }
+
+        &__no-indent-mobile {
+            padding-bottom: 0;
+            margin-bottom: 18px;
         }
     }
 

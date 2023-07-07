@@ -69,6 +69,7 @@
         width: 100%;
         position: relative;
         z-index: 6;
+        pointer-events: none;
         @include tablet {
             flex-shrink: 1;
             max-width: 530px;
@@ -134,7 +135,7 @@
         height: 200%;
         display: flex;
         transform-origin: center;
-        animation: text-line 3.5s linear infinite;
+        animation: text-line 4s linear infinite;
     }
 
     &_video-text {

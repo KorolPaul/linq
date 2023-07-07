@@ -11,7 +11,7 @@ input[type="checkbox"] {
         position: relative;
         margin: 0;
         transition: .2s $easing color;
-        line-height: 16px;
+        line-height: 26px;
         @include desktop {
             font-size: 18px;
             padding: 0 0 0 36px;
@@ -84,10 +84,12 @@ input[type="checkbox"] {
             pointer-events: none;
         }
     }
+
     .error & + label:not([class])::before {
         border-color: $cRed;
         box-shadow: 0 0 2px $cRed;
     }
+
     .form_accept & + label:not([class]) {
         &::before {
             top: 2px;
