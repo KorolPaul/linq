@@ -151,6 +151,9 @@
         display: flex;
         align-items: flex-end;
         position: relative;
+        @include desktop {
+            padding-bottom: 27px;
+        }
     }
 
     &_slides-row {
