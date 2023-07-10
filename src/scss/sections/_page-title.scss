@@ -40,6 +40,13 @@
         margin-top: 10px;
     }
 
+    &_caption,
+    p {
+        max-width: 640px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .button {
         margin-top: 40px;
         @include desktop {

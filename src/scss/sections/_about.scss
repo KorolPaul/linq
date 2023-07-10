@@ -15,7 +15,7 @@
     &_title {
         font-size: 40px;
         padding-bottom: 56px;
-        background: url(#{$img}/about-title-bg.svg) no-repeat bottom 24px center / 135px auto;
+        background: url(#{$img}/rainbow-title-bg.svg) no-repeat bottom 24px center / 135px auto;
         text-align: center;
         margin: 0;
         @include desktop {
@@ -112,106 +112,6 @@
         }
     }
 
-    &_slider-title {
-        text-align: center;
-        font-size: 32px;
-        font-weight: 700;
-        line-height: 1.2;
-        margin: 80px 0 16px;
-        @include desktop {
-            font-size: 56px;
-            text-align: left;
-            margin-top: 130px;
-        }
     
-        span {
-            display: block;
-            color: $cBlue;
-            font-size: 40px;
-            @include desktop {
-                font-size: 80px;
-            }
-        }
-    }
-
-    &_slider-button {
-        display: block;
-        margin: 0 auto 30px;
-        @include desktop {
-            margin-left: 0;
-            margin-right: 0;
-        }
-    }
-
-    &_slider {
-        
-    }
-
-    &_slides {
-        display: flex;
-        align-items: flex-end;
-        position: relative;
-        @include desktop {
-            padding-bottom: 27px;
-        }
-    }
-
-    &_slides-row {
-        display: flex;
-        align-items: flex-end;
-        gap: 16px;
-        animation: infinite-rotation 24s linear infinite;
-        flex-shrink: 0;
-        padding-right: 20px;
-        @include desktop {
-            gap: 20px;
-        }
-
-        &__dublicate {
-            animation-name: infinite-rotation-dublicate;
-        }
-    }
-
-    &_slide {
-        display: block;
-    }
-    
-    &_slide-image {
-        display: block;
-        box-shadow: $image-shadow;
-        border-radius: 16px;
-        max-width: 232px;
-        @include desktop {
-            border-radius: 32px;
-            max-width: none;
-        }
-    }
 }
 
-@keyframes infinite-rotation {
-    0% {
-        transform: translate(0)
-    }
-
-    50% {
-        transform: translate(-100%)
-    }
-
-    50.01% {
-        transform: translate(100%)
-    }
-
-    100% {
-        transform: translate(0)
-    }
-}
-
-@keyframes infinite-rotation-dublicate {
-    0% {
-        transform: translate(0);
-    }
-
-    100% {
-        transform: translate(-200%);
-    }
-}

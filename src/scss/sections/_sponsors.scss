@@ -10,6 +10,12 @@
         @include desktop {
             padding-bottom: 56px;
         }
+
+        &__small-indent {
+            @include desktop {
+                margin-bottom: 0;
+            }
+        }
     }
 
     &_grid {

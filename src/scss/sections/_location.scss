@@ -1,6 +1,7 @@
 .location {
     @include section;
     position: relative;
+    overflow: hidden;
     @include desktop {
         position: relative;
     }
@@ -19,6 +20,10 @@
             padding-bottom: 350px;
             position: relative;
         }
+
+        &__no-indent {
+            padding-bottom: 0;
+        }
     }
 
     &_content {
@@ -35,7 +40,7 @@
     &_image {
         position: absolute;
         z-index: -1;
-        box-shadow: $image-shadow;
+        // box-shadow: $image-shadow;
 
         &:nth-of-type(1) {
             width: 136px;
@@ -114,6 +119,22 @@
         width: 100%;
     }
 
+    &_items {
+        position: relative;
+        &::after {
+            @include desktop {
+                content: '';
+                background: url(#{$img}/speakers-rainbow-right.svg) no-repeat;
+                position: absolute;
+                left: 85%;
+                top: 230px;
+                z-index: -1;
+                height: 398px;
+                width: 1353px;
+            }
+        }
+    }
+
     &_item {
         margin: 0 0 42px;
         display: flex;
@@ -189,6 +210,10 @@
                 font-size: 56px;
             }
         }
+
+        .location_item:nth-child(odd) & span {
+            color: $cBlue;
+        }
     }
 
     &_item-subtitle {
@@ -207,6 +232,26 @@
         @include desktop {
             order: initial;
             font-size: 16px;
+        }
+    }
+
+    &_item-title-decoration {
+        margin: 0 auto 30px;
+        width: 134px;
+        @include desktop {
+            margin: 0 0 40px;
+        }
+    }
+
+    &_main-image {
+        display: block;
+        width: 100%;
+        margin-bottom: 54px;
+        border-radius: 12px;
+        box-shadow: $image-shadow;
+        @include desktop {
+            border-radius: 34px;
+            margin-bottom: 100px;
         }
     }
 }
