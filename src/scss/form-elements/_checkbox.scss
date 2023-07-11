@@ -27,13 +27,13 @@ input[type="checkbox"] {
             height: 20px;
             width: 20px;
             position: absolute;
-            top: -2px;
+            top: 2px;
             left: 0;
             transition: .1s ease-in-out border-color, .1s ease-in-out background-color;
             @include desktop {
                 height: 26px;
                 width: 26px;
-                top: 1px;
+                top: 0px;
             }
         }
         &::after {
@@ -43,7 +43,7 @@ input[type="checkbox"] {
             width: 9px;
             height: 9px;
             position: absolute;
-            top: 4px;
+            top: 8px;
             left: 6px;
             opacity: 0;
             transform: scale(.3);

@@ -32,12 +32,6 @@
             }
         }
     }
-    &_submit[type] {
-        width: 100%;
-        @include tablet {
-            width: auto;
-        }
-    }
     &_error {
         display: none;
         position: absolute;

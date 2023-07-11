@@ -155,8 +155,9 @@
         }
 
         &:last-child {
+            margin-bottom: 0;
             @include desktop {
-                margin-bottom: 0;
+                margin-bottom: 30px;
             }
         }
     }
@@ -211,7 +212,7 @@
             }
         }
 
-        .location_item:nth-child(odd) & span {
+        .location_item:nth-child(even) & span {
             color: $cBlue;
         }
     }

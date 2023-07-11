@@ -36,7 +36,7 @@
         right: 20px;
         position: absolute;
         border-radius: 50%;
-        background-color: $cBlue;
+        background: $cBlue url(#{$img}/pattern.png) -30px -40px no-repeat;
     }
 
     &_title {

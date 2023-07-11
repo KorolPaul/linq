@@ -93,7 +93,7 @@
         margin-top: 42px;
         @include desktop {
             margin-top: 100px;
-            margin-bottom: 100px;
+            margin-bottom: 70px;
             position: relative;
         }
 
@@ -102,7 +102,7 @@
                 content: '';
                 background: url(#{$img}/rainbow-about-location.svg) no-repeat left top / auto 100%;
                 position: absolute;
-                bottom: -218px;
+                bottom: -190px;
                 left: 13%;
                 width: 2500px;
                 height: 300px;
