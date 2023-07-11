@@ -1,10 +1,11 @@
 .about {
     margin-bottom: 64px;
+    overflow: hidden;
+    padding-bottom: 30px;
     @include desktop {
         margin-bottom: 150px;
         position: relative;
         margin-top: -75px;
-        overflow: hidden;
         padding: 33px 0 0;
     }
 

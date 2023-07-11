@@ -2,6 +2,7 @@
     @include section;
     position: relative;
     overflow: hidden;
+    padding-bottom: 30px;
     @include desktop {
         position: relative;
     }
