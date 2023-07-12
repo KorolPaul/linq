@@ -2,8 +2,8 @@
     @include section;
     position: relative;
     overflow: hidden;
-    padding-bottom: 30px;
     @include desktop {
+        padding-bottom: 30px;
         position: relative;
     }
 
@@ -241,7 +241,7 @@
         margin: 0 auto 30px;
         width: 134px;
         @include desktop {
-            margin: 0 0 40px;
+            margin: 0 0 30px;
         }
     }
 

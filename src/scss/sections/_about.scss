@@ -92,23 +92,32 @@
 
     &_location {
         margin-top: 42px;
+        position: relative;
+        padding-bottom: 130px;
         @include desktop {
             margin-top: 100px;
             margin-bottom: 70px;
-            position: relative;
+            padding-bottom: 0;
         }
 
         &::after {
+            content: '';
+            background: url(#{$img}/rainbow-about-location.svg) no-repeat 20% bottom / auto 100%;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 100vw;
+            height: 140px;
+            margin-left: -50vw;
+            pointer-events: none;
+            z-index: -1;
             @include desktop {
-                content: '';
-                background: url(#{$img}/rainbow-about-location.svg) no-repeat left top / auto 100%;
-                position: absolute;
                 bottom: -160px;
                 left: 13%;
                 width: 2500px;
                 height: 300px;
-                pointer-events: none;
-                z-index: -1;
+                margin: 0;
+                background-position: left top;
             }
         }
     }

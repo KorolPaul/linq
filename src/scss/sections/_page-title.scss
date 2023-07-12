@@ -36,8 +36,11 @@
     }
 
     &_caption {
-        font-size: 18px;
+        font-size: 14px;
         margin-top: 10px;
+        @include desktop {
+            font-size: 18px;
+        }
     }
 
     &_caption,
