@@ -14,6 +14,13 @@
             flex-grow: 1;
             width: 50%;
         }
+
+        .form_row__small-indent & {
+            margin-bottom: 15px;
+            @include tablet {
+                margin-bottom: 20px;
+            }
+        }
     }
     &_accept {
         margin: 32px 0 56px;

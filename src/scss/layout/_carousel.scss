@@ -58,6 +58,10 @@
         &__dublicate {
             animation-name: infinite-rotation-dublicate;
         }
+
+        .carousel_slides__slow & {
+            animation-duration: 44s;
+        }
     }
 
     &_slide {

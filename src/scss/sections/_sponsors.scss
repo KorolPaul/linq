@@ -46,6 +46,13 @@
                 row-gap: vw(60);
             }
         }
+
+        &__small-gap {
+            gap: 28px 16px;
+            @include desktop {
+                gap: 32px 16px;
+            }
+        }
     }
     &_card {
         background-color: #fff;

@@ -212,10 +212,6 @@
                 font-size: 56px;
             }
         }
-
-        .location_item:nth-child(even) & span {
-            color: $cBlue;
-        }
     }
 
     &_item-subtitle {

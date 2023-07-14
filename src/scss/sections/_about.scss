@@ -47,7 +47,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            margin-bottom: 70px;
+            margin-bottom: 48px;
         }
     }
 
@@ -91,7 +91,7 @@
     }
 
     &_location {
-        margin-top: 42px;
+        margin-top: 48px;
         position: relative;
         padding-bottom: 130px;
         @include desktop {
