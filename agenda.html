@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>agenda</title>
+    <title>LINQ</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,691 +17,272 @@
 </head>
 <body>
     <header class="header">
-        <a class="logo" href="/">
-            <img class="logo_image" src="src/img/logo.svg" alt="logo">
-        </a>
-        <button class="menu-toggle">
-            <div class="menu-toggle_line"></div>
-            <div class="menu-toggle_line"></div>
-            <div class="menu-toggle_line"></div>
-        </button>
-        <div class="menu">
-            <nav class="menu_links">
-                <div class="menu_link">Speakers</div>
-                <div class="menu_link">Agenda</div>
-                <div class="menu_link">Partners</div>
-                <div class="menu_link">Location</div>
-                <div class="menu_link">About us</div>
-                <div class="menu_link">Contact us</div>
-                <div class="menu_link">FAQ</div>
-            </nav>
-            <div class="menu_button">
-                <a class="button" href="#">
+        <div class="header_holder">
+            <a class="logo" href="/">
+                <img class="logo_image" src="src/img/logo.svg" alt="logo">
+            </a>
+            <div class="menu">
+                <nav class="menu_links">
+                    <a href="#about" class="menu_link">About us</a>
+                    <a href="#agenda" class="menu_link">Agenda</a>
+                    <a href="#speakers" class="menu_link">Speakers</a>
+                    <a href="#location" class="menu_link">Location</a>
+                    <a href="#partners" class="menu_link">Partners</a>
+                    <a href="#faq" class="menu_link">FAQ</a>
+                    <a href="#contact" class="menu_link">Contact us</a>
+                </nav>
+            </div>
+            <div>
+                <a class="button" href="#tickets">
                     Get Tickets
                 </a>
-            </div>
-            <div class="menu_social">
-                <div class="social social__menu">
-                    <a href="#" class="social_link" target="__blank">
-                        <img src="src/img/social/fb.svg" alt="facebook">
-                    </a>
-                    <a href="#" class="social_link" target="__blank">
-                        <img src="src/img/social/insta.svg" alt="instagram">
-                    </a>
-                    <a href="#" class="social_link" target="__blank">
-                        <img src="src/img/social/tg.svg" alt="telegram">
-                    </a>
-                    <a href="#" class="social_link" target="__blank">
-                        <img src="src/img/social/in.svg" alt="linkedin">
-                    </a>
-                </div>
+                <button class="menu-toggle">
+                    <div class="menu-toggle_line"></div>
+                    <div class="menu-toggle_line"></div>
+                    <div class="menu-toggle_line"></div>
+                </button>
             </div>
         </div>
     </header>
 
     <main class="main">
-        <section class="intro intro__background-6">
-            <div class="intro_holder">
-                <h2 class="section-title">Agenda</h2>
-                <div class="intro_content">
-                    <div class="intro_text">
-                        <p>
-                            In a world of constant change, it is important to stay curious and open-minded. Find our what our speakers will discuss on stage at this year's conference!
-                        </p>
-                        <a href="#" class="button">Get tickets</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section class="agenda">
             <div class="agenda_holder">
-                <p>Tracks 2022</p>
-                <div class="agenda_grid">
-                    <div>
-                        <div class="track track__orange">
-                            <div class="track_top">
-                                <h3 class="track_title">ML/AI</h3>
-                                <span class="track_date">October 15-16</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +12
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
+                <div class="agenda_content">
+                    <div class="agenda_header">
+                        <h2 class="agenda_title">
+                            program linq <span>2023</span>
+                        </h2>
+                        <a href="#" class="button">See program</a>
                     </div>
-                    <div>
-                        <div class="track track__blue">
-                            <div class="track_top">
-                                <h3 class="track_title">Investments in Tech</h3>
-                                <span class="track_date">October 12</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +2
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="track track__violet">
-                            <div class="track_top">
-                                <h3 class="track_title">GameDev</h3>
-                                <span class="track_date">October 15-16</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +12
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="track track__green">
-                            <div class="track_top">
-                                <h3 class="track_title">Marketing </h3>
-                                <span class="track_date">October 12</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +12
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="track track__pink">
-                            <div class="track_top">
-                                <h3 class="track_title">Metaverse</h3>
-                                <span class="track_date">October 15-16</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +12
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="track track__purple">
-                            <div class="track_top">
-                                <h3 class="track_title">Relocate.IT</h3>
-                                <span class="track_date">October 12</span>
-                            </div>
-                            <div class="track_bottom">
-                                <div class="track_participants">
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-1.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        <img class="track_participant-avatar" src="src/img/track-avatar-2.png" alt="">
-                                    </div>
-                                    <div class="track_participant">
-                                        +12
-                                    </div>
-                                </div>
-                                <a href="/track.html" class="track_button">Learn more</a>
-                            </div>
-                            <div class="track_text">
-                                <p>If you want to be on top of the game, it's important that your business is up-to date with technology. Explore how machine learning and artificial intelligence change daily trends in every industry across multiple sectors - from healthcare right through finance. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <span class="agenda_slider-counter">
-                <span class="agenda_slider-counter-active">1</span>
-                /
-                <span class="agenda_slider-counter-total">4</span>
-            </span>
-        </section>
-
-        <section class="schedule">
-            <div class="schedule_holder">
-                <h2 class="section-title section-title__wide">Schedule 2022</h2>
-                <div class="tabs">
-                    <div class="tabs_header">
-                        <div class="tabs_buttons">
-                            <button class="tabs_button" data-tab="1">Pre-party</button>
-                            <button class="tabs_button active" data-tab="2">Day 1</button>
-                            <button class="tabs_button" data-tab="3">Day 2</button>
-                        </div>
-                        <span class="tabs_header-label">Viewing 8 Sessions</span>
-                    </div>
-                    <div class="schedule_content">
-                        <div class="schedule_filters">
-                            <div class="filters">
-                                <button class="filters_toggle">
-                                    <span class="filters_toggle-icon"></span>
-                                    Filters
-                                </button>
-                                <div class="filters_content">
-                                    <span class="filters_content-title">Filters</span>
-                                    <button class="filters_close"></button>
-                                    <div class="filters_section">
-                                        <button class="filters_section-title">
-                                            Location
-                                            <span class="filters_section-title-arrow"></span>
-                                        </button>
-                                        <div class="filters_section-content">
-                                            <div class="filters_items">
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-1">
-                                                    <label for="filter-1">Main stage</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-2">
-                                                    <label for="filter-2">ML/AI Room</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-3">
-                                                    <label for="filter-3">GameDev Room</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-4">
-                                                    <label for="filter-4">Investments in Tech Room</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-5">
-                                                    <label for="filter-5">Marketing Room</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-6">
-                                                    <label for="filter-6">Relocate.IT Room</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-7">
-                                                    <label for="filter-7">Metaverse Room</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="filters_section">
-                                        <button class="filters_section-title">
-                                            Track
-                                            <span class="filters_section-title-arrow"></span>
-                                        </button>
-                                        <div class="filters_section-content">
-                                            <div class="filters_items">
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-11">
-                                                    <label for="filter-11">Keynote</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-12">
-                                                    <label for="filter-12">ML/AI</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-13">
-                                                    <label for="filter-13">Investments in Tech</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-14">
-                                                    <label for="filter-14">GameDev</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-15">
-                                                    <label for="filter-15">Marketing </label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-16">
-                                                    <label for="filter-16">Metaverse</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-17">
-                                                    <label for="filter-17">Relocate.IT</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-    
-                                    <div class="filters_section">
-                                        <button class="filters_section-title">
-                                            Type
-                                            <span class="filters_section-title-arrow"></span>
-                                        </button>
-                                        <div class="filters_section-content">
-                                            <div class="filters_items">
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-21">
-                                                    <label for="filter-21">Content sessions</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-22">
-                                                    <label for="filter-22">Networking breaks</label>
-                                                </div>
-                                                <div class="filters_item">
-                                                    <input type="checkbox" name="" id="filter-23">
-                                                    <label for="filter-23">After-hours activities </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="filters_buttons">
-                                        <button class="button button__dark">Clear all</button>
-                                        <button class="button">Apply</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tabs_content" data-tab="1">
-                                <div class="schedule_timeline">
-                                    <h3 class="schedule_date">Friday, October 14 th</h3>
-    
-                                    <div class="schedule_day">
-                                        <span class="schedule_time">9:00 AM</span>
-                                        <div class="schedule_day-content schedule_day-content__violet">
-                                            <span class="schedule_duration">9:00 - 10:00 AM (60mins)</span>
-                                            <h4 class="schedule_day-title">Registration</h4>
-                                        </div>
-                                    </div>
-                                </div>
-                        </div>
-                        <div class="tabs_content active" data-tab="2">
-                            <div class="schedule_timeline">
-                                <h3 class="schedule_date">Saturday, October 15 th</h3>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">9:00 AM</span>
-                                    <div class="schedule_day-content schedule_day-content__violet">
-                                        <span class="schedule_duration">9:00 - 10:00 AM (60mins)</span>
-                                        <h4 class="schedule_day-title">Registration</h4>
-                                    </div>
-                                </div>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">10:00 AM</span>
-                                    <div class="schedule_day-content">
-                                        <span class="schedule_duration">10:00 - 10:15 AM (15mins)</span>
-                                        <h4 class="schedule_day-title">Opening of the conference</h4>
-                                        <a href="#" class="button button__dark schedule_day-button">Location name 1</a>
-                                    </div>
-                                    <div class="schedule_day-content">
-                                        <span class="schedule_duration">10:15 - 10:45 AM (30mins)</span>
-                                        <h4 class="schedule_day-title">The bioogy of humans at our best and our worst </h4>
-                                        <span class="schedule_day-caption">Speakers: Keynote #1</span>
-                                        <a href="#" class="button button__dark schedule_day-button">Location name 1</a>
-                                    </div>
-                                    <div class="schedule_day-content">
-                                        <span class="schedule_duration">10:45 - 11:15 AM (30mins)</span>
-                                        <h4 class="schedule_day-title">Looking into Black Mirror </h4>
-                                        <a href="#" class="button button__dark schedule_day-button">Location name 1</a>
-                                    </div>
-                                </div>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">11:00 AM</span>
-                                    <div class="schedule_day-content schedule_day-content__purple">
-                                        <span class="schedule_duration">11:15 - 12:00 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Coffee break </h4>
-                                    </div>
-                                </div>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">12:00 PM</span>
-                                    <div class="schedule_day-content">
-                                        <span class="schedule_duration">12:00 - 12:45 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Embedded banking will become more widespread</h4>
-                                        <span class="schedule_day-caption">Phill Rosen (CEO, Microsoft), Even Financial (CEO, Microsoft)</span>
-                                        <div class="schedule_day-buttons">
-                                            <a href="#" class="button button__dark schedule_day-button">Location name 1</a>
-                                            <a href="#" class="button button__orange schedule_day-button">Location name 1</a>
-                                        </div>
-                                    </div>
-                                    <div class="schedule_day-content">
-                                        <span class="schedule_duration">12:00 - 12:45 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Game licensing in China: no pain, no gain</h4>
-                                        <span class="schedule_day-caption">Phill Rosen (CEO, Microsoft), Even Financial (CEO, Microsoft)</span>
-                                        <div class="schedule_day-buttons">
-                                            <a href="#" class="button button__dark schedule_day-button">Location name 1</a>
-                                            <a href="#" class="button button__purple schedule_day-button">GameDev</a>
-                                        </div>
-                                    </div>
-                                </div>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">17:00 PM</span>
-                                    <div class="schedule_day-content schedule_day-content__pink">
-                                        <span class="schedule_duration">17:15 - 18:00 PM (45mins)</span>
-                                        <h4 class="schedule_day-title">Closing Words</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__green">
-                                        <span class="schedule_duration">17:15 - 18:00 PM (45mins)</span>
-                                        <h4 class="schedule_day-title">Closing drinks</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__purple">
-                                        <span class="schedule_duration">11:15 - 12:00 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Lunch</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__orange">
-                                        <span class="schedule_duration">11:15 - 12:00 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Afterparty</h4>
-                                    </div>
-                                </div>
-                    
-                            </div>
-                        </div>
-    
-                        <div class="tabs_content" data-tab="3">
-                            <div class="schedule_timeline">
-                                <h3 class="schedule_date">Sunday, October 16 th</h3>
-    
-                                <div class="schedule_day">
-                                    <span class="schedule_time">17:00 PM</span>
-                                    <div class="schedule_day-content schedule_day-content__pink">
-                                        <span class="schedule_duration">17:15 - 18:00 PM (45mins)</span>
-                                        <h4 class="schedule_day-title">Closing Words</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__green">
-                                        <span class="schedule_duration">17:15 - 18:00 PM (45mins)</span>
-                                        <h4 class="schedule_day-title">Closing drinks</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__purple">
-                                        <span class="schedule_duration">11:15 - 12:00 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Lunch</h4>
-                                    </div>
-                                    <div class="schedule_day-content schedule_day-content__orange">
-                                        <span class="schedule_duration">11:15 - 12:00 AM (45mins)</span>
-                                        <h4 class="schedule_day-title">Afterparty</h4>
-                                    </div>
-                                </div>
-                    
-                            </div>
-                        </div>
-                        
+                    <div class="agenda_images">
+                        <img src="src/img/agenda-back-mobile.png" alt="" class="agenda_image">
+                        <img src="src/img/agenda-back.png" alt="" class="agenda_image agenda_image__desktop">
                     </div>
                 </div>
             </div>
         </section>
-
         
-        <section class="sponsors">
-            <div class="sponsors_holder">
-                <h2 class="section-title sponsors_title">Our sponsors</h2>
-                <div class="sponsors_grid sponsors_grid__pro">
-                    <div class="sponsors_card sponsors_card__pro">
-                        <span class="sponsors_card-label">Pro</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
+        <section class="topics">
+            <a name="agenda"></a>
+            <div class="topics_figures-wrapper">
+                <div class="topics_holder">
+                    <div class="topics_content">
+                        <h2 class="section-title section-title__center">
+                            <strong>What we’ll be</strong>
+                            <span class="bright">talking about</span>
+                        </h2>
+                        <div class="topics_text">
+                            <p>
+                                We're committed to giving you an experience like no other –a vibrant hub for innovation in tech
+                            </p>
+                        </div>
                     </div>
-                    <div class="sponsors_card sponsors_card__pro">
-                        <span class="sponsors_card-label">Pro</span>
-                        <img class="sponsors_card-image" src="src/img/partners/vm.svg" alt="sponsor icon">
+                    <div class="topics_items">
+                        <div class="topics_item">
+                            <span class="topics_item-title">C-level & Head of</span>
+                            <div class="topics_item-content">
+                                <ul class="topics_item-list">
+                                    <li>Negotiation Skills</li>
+                                    <li>Sales and Pitches</li>
+                                    <li>Team Efficiency</li>
+                                    <li>Modern Marketing&PR in Tech</li>
+                                    <li>Business Intelligence</li>
+                                    <li>Emerging Markets</li>
+                                    <li>Leadership in 2025</li>
+                                </ul>
+                                <a href="#" class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div href="#" class="topics_item topics_item__purple">
+                            <span class="topics_item-title">Startups & investors</span>
+                            <div class="topics_item-content">
+                                <ul class="topics_item-list">
+                                    <li>Pitching start-ups</li>
+                                    <li>Pimp My Start-up</li>
+                                    <li>Team Efficiency</li>
+                                    <li>Competition</li>
+                                    <li>Venture Capital Trends </li>
+                                    <li>Angel Investor Communities</li>
+                                    <li>Future of startup accelerators in Cyprus</li>
+                                    <li>Opportunities for Cyprus based Start-ups</li>
+                                </ul>
+                                <a href="#" class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="topics_item topics_item__orange">
+                            <span class="topics_item-title">Game camp</span>
+                            <div class="topics_item-content">
+                                <ul class="topics_item-list">
+                                    <li>Match 3 genre issues for SMBs</li>
+                                    <li>Hybrid models of monetisation</li>
+                                    <li>Complicated regulatory cases</li>
+                                    <li>Game marketing</li>
+                                    <li>New ways of UA</li>
+                                    <li>Emerging markets</li>
+                                </ul>
+                                <a href="#" class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="topics_item  topics_item__yellow">
+                            <span class="topics_item-title">Shape stage</span>
+                            <div class="topics_item-content">
+                                <ul class="topics_item-list">
+                                    <li>Creativity</li>
+                                    <li>Secret recipes for effective time management</li>
+                                    <li>Verbal Skills for Founder's </li>
+                                    <li>Speech</li>
+                                    <li>Tech community of Cyprus</li>
+                                    <li>Panel discussion SexTech</li>
+                                    <li>Kinky in tech</li>
+                                    <li>Music & party</li>
+                                </ul>
+                                <a href="#" class="topics_item-logo-wrapper">
+                                    <img src="src/img/partners/vacant.png" alt="" class="topics_item-logo">
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="sponsors_card sponsors_card__pro">
-                        <span class="sponsors_card-label">Pro</span>
-                        <img class="sponsors_card-image" src="src/img/partners/alive-media.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__pro">
-                        <span class="sponsors_card-label">Pro</span>
-                        <img class="sponsors_card-image" src="src/img/partners/deloitte.svg" alt="sponsor icon">
-                    </div>
-                </div>
-                <div class="sponsors_grid sponsors_grid__lead">
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/alive-media.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/deloitte.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/alive-media.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/deloitte.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/deloitte.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card sponsors_card__lead">
-                        <span class="sponsors_card-label">Lead</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                </div>
-                <div class="sponsors_grid">
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
-                    </div>
-                    <div class="sponsors_card">
-                        <span class="sponsors_card-label">Starter</span>
-                        <img class="sponsors_card-image" src="src/img/partners/chrysostomides.svg" alt="sponsor icon">
+                    <div class="topics_bottom">
+                        <a href="#" class="button">See program</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="partners">
-            <div class="partners_holder">
-                <h2 class="section-title">Media partners</h2>
-            </div>
-            <div class="partners_grid">
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/alive-media.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/chrysostomides.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/tengo.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/deloitte.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/alive-media.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/g.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/tengo.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/deloitte.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/alive-media.svg" alt="partners logo">
-                </div>
-                <div class="partners_item">
-                    <img class="partners_image" src="src/img/partners/g.svg" alt="partners logo">
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="footer">
-        <div class="footer_top">
-            <div class="footer_left">
-                <div class="footer_column">
-                    <span class="footer_column-title">
-                        Let’s stay linqed
-                    </span>
-                    <p class="footer_text">
-                        Enter your email to stay up-to-date with the Linq latest news and offers
-                    </p>
-                    <form class="footer_form">
-                        <input class="footer_form-input" type="text" placeholder="Enter your email address">
-                        <input class="footer_form-button" type="submit" value="">
-                    </form>
+        <a name="contact"></a>
+
+        <div class="footer_holder">
+            <div class="footer_top">
+                <div class="footer_left">
+                    <div class="footer_column">
+                        <span class="footer_column-title">
+                            Let’s stay linqed
+                        </span>
+                        <p class="footer_text">
+                            Enter your email to stay up-to-date with the Linq latest news and offers
+                        </p>
+                        <!--
+                            <form class="footer_form success">
+                                <input class="footer_form-input" type="email" placeholder="Enter your email address">
+                                <input class="footer_form-button" type="submit" value="">
+                            </form>
+                            <span class="footer_form-success active">
+                                We know that your email address is sacred. We promise to treat it with respect and only send valuable information, news, and updates!
+                            </span>
+                        -->
+                        <form class="footer_form error">
+                            <input class="footer_form-input" type="email" placeholder="Enter your email address">
+                            <input class="footer_form-button" type="submit" value="">
+                            <span class="form_error">Please write correct email</span>
+                            <div class="footer_form-accept">
+                                <input type="checkbox" name="" id="accept" required="">
+                                <label for="accept">By filling out the form you agree to the <a href="/terms">Terms and Conditions</a> and our <a href="/privacy">Privacy Policy</a>.</label>
+                            </div>
+                        </form>
+                        
+                    </div>
                 </div>
-            </div>
-            <div class="footer_right">
-                <div class="footer_column">
-                    <span class="footer_column-title">
-                        Contact us
-                    </span>
-                    <p class="footer_text">
-                        <span>Star Hills Production Ltd</span>
-                        <span>registered office:</span>
-                        <span>9 Spyrou Kyprianou street,</span>
-                        <span>Neda Center, Office 1B, 3070,</span>
-                        <span> Limassol, Cyprus</span>
-                        <span>Vat No: 10377100 H</span>
-                    </p>
-                    <p class="footer_text">
-                        <a href="mailto:team@shp.agency">team@shp.agency</a>
-                        <a href="tel:357 94 05 86 55">357 94 05 86 55</a>
-                    </p>
-                </div>
-                <div class="footer_column">
-                    <span class="footer_column-title">
-                        Follow us
-                    </span>
-                    <div class="footer_social">
-                        <div class="social">
-                            <a href="#" class="social_link" target="__blank">
-                                <img src="src/img/social/fb.svg" alt="facebook">
-                            </a>
-                            <a href="#" class="social_link" target="__blank">
-                                <img src="src/img/social/insta.svg" alt="instagram">
-                            </a>
-                            <a href="#" class="social_link" target="__blank">
-                                <img src="src/img/social/tg.svg" alt="telegram">
-                            </a>
-                            <a href="#" class="social_link" target="__blank">
-                                <img src="src/img/social/in.svg" alt="linkedin">
-                            </a>
+                <div class="footer_right">
+                    <div class="footer_column">
+                        <span class="footer_column-title">
+                            Contact us
+                        </span>
+                        <p class="footer_text">
+                            <span>Star Hills Production Ltd</span>
+                            <span>registered office:</span>
+                            <span>9 Spyrou Kyprianou street,</span>
+                            <span>Neda Center, Office 1B, 3070,</span>
+                            <span> Limassol, Cyprus</span>
+                            <span>Vat No: 10377100 H</span>
+                        </p>
+                        <p class="footer_text">
+                            <a href="mailto:team@shp.agency">team@shp.agency</a>
+                            <a href="tel:357 94 05 86 55">357 94 05 86 55</a>
+                        </p>
+                    </div>
+                    <div class="footer_column">
+                        <span class="footer_column-title">
+                            Follow us
+                        </span>
+                        <div class="footer_social">
+                            <div class="social">
+                                <a href="#" class="social_link" target="__blank">
+                                    <img src="src/img/social/fb.svg" alt="facebook">
+                                </a>
+                                <a href="#" class="social_link" target="__blank">
+                                    <img src="src/img/social/insta.svg" alt="instagram">
+                                </a>
+                                <a href="#" class="social_link" target="__blank">
+                                    <img src="src/img/social/tg.svg" alt="telegram">
+                                </a>
+                                <a href="#" class="social_link" target="__blank">
+                                    <img src="src/img/social/in.svg" alt="linkedin">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer_cards">
+                            <span  class="footer_card">
+                                <img src="/src/img/visa.svg" alt="visa">
+                            </span >
+                            <span class="footer_card">
+                                <img src="/src/img/mastercard.svg" alt="mastercard">
+                            </span >
                         </div>
                     </div>
-                    <div class="footer_cards">
-                        <span  class="footer_card">
-                            <img src="/src/img/visa.svg" alt="visa">
-                        </span >
-                        <span class="footer_card">
-                            <img src="/src/img/mastercard.svg" alt="mastercard">
-                        </span >
-                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="footer_bottom">
-            <span class="footer_copyrights">
-                Created by
-                <a class="footer_copyrights-link" href="https://shp.agency/">shp.agency</a>
-                <span class="footer_copyrights-text">All rights the Linq Conference 2022</span>
-            </span>
-            <div class="footer_menu">
-                <a class="footer_link" href="/page/terms">Terms &amp; Conditions</a>
-                <a class="footer_link footer-bottom__link-mobile" href="/page/сookie">Cookie Statement</a>
-                <a class="footer_link" href="/page/privacy">Privacy Statement</a>
+    
+            <div class="footer_bottom">
+                <span class="footer_copyrights">
+                    Created by
+                    <a class="footer_copyrights-link" href="https://shp.agency/" target="__blank">shp.agency</a>
+                    <span class="footer_copyrights-text">All rights the Linq Conference 2022</span>
+                </span>
+                <div class="footer_menu">
+                    <a class="footer_link" href="/page/terms">Terms &amp; Conditions</a>
+                    <a class="footer_link footer-bottom__link-mobile" href="/page/сookie">Cookie Statement</a>
+                    <a class="footer_link" href="/page/privacy">Privacy Statement</a>
+                </div>
             </div>
         </div>
     </footer>
 
+    <div class="popup" data-popup="cookie-policy">
+        <button class="popup_close"></button>
+        <div class="popup_content">
+            <h1>Privacy & Cookie Policy</h1>
+            <h2>Compliance</h2>
+            <p>
+                All personal data gathered by STAR HILLS PRODUCTION LTD (hereinafter referred to as the ''Company'') in the course of its business shall be kept and handled in accordance with the Cyprus Processing of Personal Data (Protection of the Individual) Law of 2001, as amended from time to time, on protection of personal data and any other applicable legislation as per the relevant jurisdiction.
+            </p>
+            <h3>Gathering of Personal Data</h3>
+            <p>
+                The Company primarily gathers your personal data in the case of any contractual relations. You may be asked to provide your personal data upon usage of any websites of the Company. The data is gathered discretely and only the Company has access to it during this topics. By engaging in contractual relations with the Company, you give your express consent to the Company to gather and process your personal data. You are fully responsible for the accuracy of the data provided to the Company. By engaging in contractual relations with the Company, you agree that the Company may collect, store, disclose and transfer internationally (including disclosure to any related legal entities of the Company or to its subcontractors) personal data, including sensitive personal data, relating to you and/or your employees for various purposes including (i) processing, reviewing and administering your registration/purchase form to seminars/conferences/events, (ii) maintaining the administrative or client relationship management systems of the Company, (iii) quality and risk management reviews, (iv) statistical reviews, (v) providing you with information about the Company and of seminars/conferences/events offers and/or organized, (vi) meeting the requirements of applicable laws and regulations. When you provide personal data to us about your employees and other individuals, you confirm that you only do so provided that you have the authority to act as their agent and that you have obtained any required approval and/or consent from such employees and/or other individuals.
+            </p>
+        </div>
+    </div>
+
     <div class="fade"></div>
+
+    <div class="cookies">
+        <div class="cookies_content">
+            <p class="cookies_text">
+                We use cookies to improve your experience on our website. By browsing this website, you agree to our <a href="#">use of cookies</a>.
+            </p>
+            <button class="cookies_button button">Accept all cookies</button>
+        </div>
+    </div>
+
 
     <script src="./src/js/tiny-slider.js"></script>
     <script src="./src/js/js-cookie.js"></script>
