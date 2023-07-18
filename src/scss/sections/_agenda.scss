@@ -1,9 +1,9 @@
 .agenda {
-    margin: 0 0 64px;
+    margin: 0 0 80px;
     position: relative;
     overflow: hidden;
     @include desktop {
-        margin-bottom: 150px;
+        margin-bottom: 100px;
         overflow: visible
     }
 
