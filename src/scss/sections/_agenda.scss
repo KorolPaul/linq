@@ -27,10 +27,13 @@
             top: 0;
             right: 0;
             left: 0;
-            bottom: 20px;
+            bottom: 0;
             pointer-events: none;
-            box-shadow: $image-shadow;
             border-radius: 20px;
+            box-shadow: 0px 9px 0px 0px #FFEBCB inset,
+                        0px 18px 0px 0px #EEBA44 inset,
+                        0px 27px 0px 0px #E68549 inset;
+            transform: rotate(180deg);
             @include desktop {
                 bottom: 0;
             }
