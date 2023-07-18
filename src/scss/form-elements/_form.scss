@@ -21,6 +21,12 @@
                 margin-bottom: 20px;
             }
         }
+        .form_row__small-indent-mobile & {
+            margin-bottom: 15px;
+            @include tablet {
+                margin-bottom: 40px;
+            }
+        }
     }
     &_accept {
         margin: 32px 0 56px;

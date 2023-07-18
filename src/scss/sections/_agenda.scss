@@ -1,8 +1,10 @@
 .agenda {
     margin: 0 0 64px;
     position: relative;
+    overflow: hidden;
     @include desktop {
         margin-bottom: 150px;
+        overflow: visible
     }
 
     &_holder {
@@ -14,11 +16,25 @@
         border-radius: 20px;
         padding: 30px 16px 75px;
         position: relative;
-        box-shadow: $image-shadow;
         @include tablet {
             padding: 55px;
             padding-bottom: 200px;
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 20px;
+            pointer-events: none;
+            box-shadow: $image-shadow;
+            border-radius: 20px;
+            @include desktop {
+                bottom: 0;
+            }
+        } 
     }
 
     &_header {
@@ -64,14 +80,18 @@
             content: '';
             background: url(#{$img}/agenda-front-mobile.png) no-repeat center bottom / 100% auto;
             position: absolute;
-            bottom: 0;
-            right: -81px;
-            left: -22px;
+            bottom: -1px;
+            right: -18.7vw;
+            left: -14.5vw;
+            border-radius: 0 0  20px 20px;
             top: 0;
-            max-width: 200%;
+            max-width: 300%;
             pointer-events: none;
-            @include tablet {
+            @include desktop {
+                bottom: 0;
                 background-image: url(#{$img}/agenda-front.png);
+                right: -81px;
+                left: -22px;
             }
         }
     }
