@@ -28,6 +28,13 @@
         }
     }
 
+    strong + p {
+        margin-top: 16px;
+        @include desktop {
+            margin-top: 0;
+        }
+    }
+
     &__center {
         text-align: center;
     }

@@ -75,6 +75,9 @@
         gap: 20px;
         align-items: center;
         justify-content: center;
+        @include desktop {
+            justify-content: space-between;
+        }
 
         &::after {
             content: '';
