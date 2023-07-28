@@ -408,7 +408,7 @@
     <div class="fade"></div>
     <div class="form-popup js-form-popup" data-form="partners">
         <button class="form-popup_close"></button>
-        <form class="form">
+        <form class="form" id="apply-form">
             <h2 class="form_title">Apply for partnership</h2>
             <div class="form_row">
                 <div class="form_cell error">
@@ -486,6 +486,10 @@
                 </div>
             </div>
         </form>
+        <div class="form-popup_success">
+            <h2>Thank you!</h2>
+            <p>Your request has been sent</p>
+        </div>
     </div>
 
     <div class="form-popup js-form-popup" data-form="welcome">
@@ -519,7 +523,17 @@
                 </div>
             </div>
         </form>
+        <div class="form-popup_success">
+            <h2>Thank you!</h2>
+            <p>Your request has been sent</p>
+        </div>
     </div>
+
+    <script>
+        document.querySelectorAll('input[type="submit"]').forEach(el => el.addEventListener('click', (e) => {
+            e.target.parentElement.parentElement.parentElement.parentElement.classList.add('success')
+        }));
+    </script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./src/js/tiny-slider.js"></script>

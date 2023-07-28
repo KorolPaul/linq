@@ -102,4 +102,20 @@
     .form_accept a {
         color: $cBlueLight;
     }
+
+    &_success {
+        display: none;
+
+        .success & {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    }
+
+    &.success .form {
+        display: none;
+    }
 }
