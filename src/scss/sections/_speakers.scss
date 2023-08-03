@@ -4,7 +4,14 @@
     &__rainbow-right {
         margin-bottom: 0;
         @include desktop() {
-            margin-bottom: 64px;
+            overflow: hidden;
+            padding-bottom: 164px;
+        }
+
+        & + section {
+            @include desktop {
+                margin-top: -10px;
+            }
         }
     }
 
