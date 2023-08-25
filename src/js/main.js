@@ -247,12 +247,12 @@ if (fadeElement) {
 
 const menuLinkElements = document.querySelectorAll('.menu_link, .header .button');
 menuLinkElements.forEach(el => el.addEventListener('touchend', () => {
-    if (isMobile) {
+    // if (isMobile) {
 
         setTimeout(() => {
             document.body.classList.remove('menu-opened')
         }, 75);
-    }
+    // }
 }));
 
 /* Popup */
