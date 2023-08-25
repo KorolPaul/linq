@@ -1,4 +1,10 @@
 html {
+    @include desktop {
+        scroll-behavior: smooth;
+    }
+}
+
+html.loaded {
     scroll-behavior: smooth;
 }
 

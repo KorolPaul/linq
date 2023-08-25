@@ -255,6 +255,9 @@ menuLinkElements.forEach(el => el.addEventListener('touchend', () => {
     // }
 }));
 
+// mobile smooth scroll fix
+window.addEventListener('load', () => document.querySelector('html').classList.add('loaded'));
+
 /* Popup */
 const popupToggleElements = document.querySelectorAll('.js-popup-toggle');
 
